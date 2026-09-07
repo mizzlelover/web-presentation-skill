@@ -33,13 +33,21 @@ cp -r web-presentation-skill ~/.config/agents/skills/     # 用户级
 
 # 2. 看一眼可运行的完整示例（零依赖，浏览器直接打开）
 open examples/demo/index.html
-#    快捷键：→/Space 推进 · ← 回退 · / 搜索 · P 讲者台 · R 阅读模式 · Esc 深潜返回
+#    快捷键：→/Space 推进 · ← 回退 · O 总览 · M 静帧 · / 搜索 · P 讲者台 · R 阅读模式 · ? 帮助
 
 # 3. 校验一份 Presentation IR
 python3 scripts/validate_ir.py examples/demo/presentation.ir.json
 ```
 
 各 harness 的详细接入方式见 [adapters/](adapters/README.md)。· See [adapters/](adapters/README.md) for Claude Code / Codex / OpenCode setup.
+
+## 键位速查 · Keyboard Map
+
+产物自带完整的演示操作层：总览平铺、静帧开关、讲者控制台、自读模式、搜索与帮助——所有键位在演示界面右下角常驻隐晦提示，`?` 随时唤起完整面板。
+
+<p align="center">
+  <img src="assets/keys-card.svg" alt="文质 Wenzhi 键位速查：→/Space 推进 · ← 回退 · Home/End 首末幕 · O 总览 · R 自读 · P 讲者台 · M 静帧 · / 搜索 · ? 帮助 · Esc 返回" width="100%">
+</p>
 
 ## 工作流程 · The Pipeline
 

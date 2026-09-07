@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+  <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#3b5bff"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ff6a4d"/>
+  </linearGradient>
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0"/></filter>
+</defs>
+<rect width="1200" height="630" fill="#faf8f4"/>
+<rect width="1200" height="630" filter="url(#noise)"/>
+<rect x="0" y="0" width="1200" height="6" fill="url(#spectrum)"/>
+
+<text x="60" y="86" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="15" letter-spacing="4" fill="#8a857a">文质 WENZHI · WEB-NATIVE PRESENTATION</text>
+<text x="60" y="132" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="38" font-weight="700" fill="#17150f">键位速查 <tspan fill="#8a857a" font-size="22" font-weight="400"> Keyboard Map</tspan></text>
+<rect x="60" y="154" width="120" height="4" rx="2" fill="url(#spectrum)"/>
+<text x="60" y="212" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="13" letter-spacing="3" font-weight="600" fill="#8a857a">推进 · NAVIGATE</text>
+<rect x="60" y="232" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="60" y="274" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="83.0" y="262" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">→</text>
+<text x="112" y="262" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" fill="#8a857a">/</text>
+<rect x="128" y="232" width="101" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="128" y="274" width="101" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="178.5" y="262" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">Space</text>
+<text x="60" y="304" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">下一步 · 先走完本幕揭示</text>
+<rect x="60" y="336" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="60" y="378" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="83.0" y="366" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">←</text>
+<text x="60" y="408" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">回退一步</text>
+<rect x="60" y="440" width="86" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="60" y="482" width="86" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="103.0" y="470" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">Home</text>
+<text x="152" y="470" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" fill="#8a857a">/</text>
+<rect x="168" y="440" width="71" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="168" y="482" width="71" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="203.5" y="470" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">End</text>
+<text x="60" y="512" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">第一幕 / 最后一幕</text>
+<text x="455" y="212" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="13" letter-spacing="3" font-weight="600" fill="#8a857a">视图 · VIEWS</text>
+<rect x="455" y="232" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="455" y="274" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="478.0" y="262" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">O</text>
+<text x="455" y="304" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">总览 · 全页缩略平铺跳转</text>
+<rect x="455" y="336" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="455" y="378" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="478.0" y="366" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">R</text>
+<text x="455" y="408" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">自读模式 · 纵向完整滚动</text>
+<rect x="455" y="440" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="455" y="482" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="478.0" y="470" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">P</text>
+<text x="455" y="512" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">讲者控制台 · 笔记/计时</text>
+<rect x="455" y="544" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="455" y="586" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="478.0" y="574" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">M</text>
+<text x="455" y="616" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">静帧 · 关闭动效整幕直出</text>
+<text x="850" y="212" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="13" letter-spacing="3" font-weight="600" fill="#8a857a">辅助 · ASSIST</text>
+<rect x="850" y="232" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="850" y="274" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="873.0" y="262" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">/</text>
+<text x="850" y="304" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">搜索场景 / 论点 / 证据</text>
+<rect x="850" y="336" width="46" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="850" y="378" width="46" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="873.0" y="366" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">?</text>
+<text x="850" y="408" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">快捷键帮助面板</text>
+<rect x="850" y="440" width="71" height="46" rx="10" fill="#ffffff" stroke="rgba(23,21,15,.14)" stroke-width="1.2"/><rect x="850" y="482" width="71" height="4" rx="2" fill="rgba(23,21,15,.08)"/><text x="885.5" y="470" text-anchor="middle" font-family="ui-monospace,SF Mono,Menlo,monospace" font-size="19" font-weight="600" fill="#17150f">Esc</text>
+<text x="850" y="512" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="16" fill="#4a463c">退出总览 · 深潜返回主线</text>
+<text x="60" y="598" font-family="ui-sans-serif,system-ui,PingFang SC,sans-serif" font-size="13" fill="#8a857a">提示常驻右下角 · 6 秒无操作自动淡化 · <tspan fill="url(#spectrum)" font-weight="600">?</tspan> 随时唤起完整帮助</text>
+<text x="1140" y="598" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#8a857a">present.mizzlelover.xyz</text>
+</svg>
