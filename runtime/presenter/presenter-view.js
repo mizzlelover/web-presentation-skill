@@ -65,7 +65,11 @@
       const d = this.win.document;
       const eng = this.engine;
       d.getElementById("t").textContent = this._fmt(Date.now() - this.startedAt);
-      d.getElementById("pos").textContent = `${eng.current + 1} / ${eng.scenes.length}`;
+      d.getElementById("pos").textContent = (() => {
+        const total = eng.currentScene ? eng.currentScene.querySelectorAll("[data-reveal]").length : 0;
+        const topic = eng.currentScene ? (eng.currentScene.dataset.topic || eng.currentScene.dataset.sceneId) : "";
+        return `${eng.current + 1} / ${eng.scenes.length} · ${topic} · 揭示 ${eng.revealStep}/${total}`;
+      })();
       d.getElementById("cur").textContent = this._text(eng.currentScene);
       d.getElementById("nxt").textContent = this._text(eng.scenes[eng.current + 1]);
       const notes = eng.currentScene ? eng.currentScene.querySelector(".wp-notes") : null;

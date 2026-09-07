@@ -46,7 +46,7 @@ description: Web-native Presentation Intelligence（HTML 原生智能演示系�
 - 标题类型由 Cognitive Job 决定：Question / Assertion / Topic / Decision / Contrast / Narrative Headline。Skill 必须解释"为什么当前场景选择这一类标题"。
 - 认知负荷曲线：禁止连续大量 HIGH 负荷 Scene，用 Concept→Example→Data→Story→Synthesis 形成节奏。
 - 信息密度由 Mode × 受众专业度 × 讲者在场 × 时间共同决定，不是"字越少越好"。
-- 同一 Scene 分离 `stage`（精简）与 `reader`（完整）内容；Speaker Notes 独立保存。
+- 同一 Scene 分离 `stage`（精简）与 `reader`（完整）内容；**Speaker Notes 必须是三层中最详细的——写成可照本宣科的完整脚本**（含上台/停顿/手势/转场/应急提示），让讲者脱稿也能读稿。
 - 默认支持非线性 Presentation Graph：Core Path / Optional Path / Deep Dive / Evidence Appendix / Objection Handling / 分支。
 - 详见 `workflows/build_scene_plan.md` 与 `knowledge/presentation/`。
 
@@ -63,6 +63,13 @@ description: Web-native Presentation Intelligence（HTML 原生智能演示系�
 - 3D（Three.js）仅用于空间关系/架构/产品/地理/科学结构，禁止"为了高级感用 3D"。
 - 主题用 design_tokens（font/color/spacing/radius/shadow/motion/grid），禁止每个 Scene 随意写 CSS。见 `themes/` 与 `DESIGN_SYSTEM.md`。
 - 必须支持：键盘导航、Presenter View（当前/下一幕/笔记/计时/跳转/搜索）、Reader Mode（可滚动/完整/可展开/可引用/hash 深链）、Print Mode（@media print，冻结动画、展开关键内容、显示引用）、离线运行（local assets，现场不依赖 CDN）、Performance Budget（Stable > Fancy）。
+- **展示层必备（讲者与现场体验）**：
+  - **Overview 总览模式**（O 键）：全部 Scene 以实时缩略图平铺，点击任意一幕直接跳转——服务"重新选页跳过去看"的自由导航，不属于内嵌演示逻辑但必须支持；
+  - **页码锚点指示**：常驻低存在感的「当前页 / 总页数 · 主题」，让讲者与观众都能预期进度；
+  - **隐晦按键提示**：常驻极简提示（如「→ 推进 · O 总览 · ? 快捷键」），无操作数秒后自动淡化，? 键呼出完整快捷键面板；
+  - **静帧开关**（M 键）：一键关闭全部动效与逐步揭示，整幕直出——时间紧的现场不能被动效拖住；
+  - **场景状态保持**：非线性切出再返回时，该幕保持切出前的揭示进度，不得重置回初始态；
+  - **分支返回提示上下文化**：返回提示与返回锚点只在深潜（Deep Dive）进入时显示；线性浏览到达同一幕时不出现。
 - 运行时实现见 `runtime/`（零依赖原生 JS，可直接使用或作为参考）。
 
 ### 第 6 步：QA 与评测

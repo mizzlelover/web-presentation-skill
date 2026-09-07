@@ -69,6 +69,69 @@ body {
 .wp-progress { position: fixed; inset: auto 0 0; height: 3px; background: color-mix(in srgb, var(--wp-fg) 12%, transparent); }
 .wp-progress > i { display: block; height: 100%; background: var(--wp-accent); transition: width .3s ease; }
 
+/* 页码锚点（左下）+ 隐晦按键提示（右下）：默认低存在感，6s 无操作再淡化 */
+.wp-status, .wp-hints {
+  position: fixed; bottom: 12px; z-index: 70;
+  font-size: 11.5px; letter-spacing: .06em; color: var(--wp-muted);
+  transition: opacity .6s ease; pointer-events: none; user-select: none;
+}
+.wp-status { left: 18px; font-variant-numeric: tabular-nums; }
+.wp-hints { right: 18px; }
+.wp-dim { opacity: .25; }
+
+/* ? 帮助面板 */
+.wp-help { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: color-mix(in srgb, var(--wp-bg) 55%, transparent); }
+.wp-help[hidden] { display: none; }
+.wp-help-card { max-width: 480px; background: color-mix(in srgb, var(--wp-bg) 92%, var(--wp-fg)); color: var(--wp-fg); border-radius: 14px; padding: 26px 30px; box-shadow: 0 24px 64px rgba(0,0,0,.35); }
+.wp-help-card h2 { margin: 0 0 14px; font-size: 16px; }
+.wp-help-card dl { display: grid; grid-template-columns: auto 1fr; gap: 7px 18px; margin: 0; font-size: 13px; }
+.wp-help-card dt { font-family: ui-monospace, monospace; color: var(--wp-accent); white-space: nowrap; }
+.wp-help-card dd { margin: 0; }
+.wp-help-card p { margin: 14px 0 0; font-size: 12px; color: var(--wp-muted); }
+
+/* 总览模式：全部 Scene 实时缩略平铺（cqi 随格宽等比缩放），点击跳转 */
+.wp-ov-bar {
+  position: fixed; inset: 0 0 auto; z-index: 75; padding: 12px; text-align: center;
+  font-size: 12.5px; letter-spacing: .08em; color: var(--wp-muted);
+  background: color-mix(in srgb, var(--wp-bg) 88%, transparent); cursor: pointer;
+}
+.wp-ov-bar[hidden] { display: none; }
+body.wp-overview-mode { overflow: hidden; }
+body.wp-overview-mode .wp-deck {
+  height: 100dvh; overflow: auto; display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr));
+  gap: 16px; padding: 60px 22px 22px; align-content: start;
+}
+body.wp-overview-mode .wp-scene {
+  display: grid !important; height: 100dvh; overflow: hidden; transform-origin: top left;
+  border: 1px solid color-mix(in srgb, var(--wp-fg) 16%, transparent);
+  border-radius: 10px; cursor: pointer; position: relative;
+  transition: border-color .2s, box-shadow .2s;
+}
+body.wp-overview-mode .wp-scene:hover { border-color: var(--wp-accent); }
+body.wp-overview-mode .wp-scene.wp-ov-current { border-color: var(--wp-accent); box-shadow: 0 0 0 2px var(--wp-accent); }
+body.wp-overview-mode .wp-scene [data-reveal] { opacity: 1 !important; transform: none !important; }
+.wp-ov-num {
+  display: none; position: absolute; top: 8px; left: 10px; z-index: 2;
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--wp-muted);
+}
+body.wp-overview-mode .wp-ov-num { display: block; }
+body.wp-overview-mode .wp-status, body.wp-overview-mode .wp-hints { display: none; }
+
+/* 分支返回提示：仅在深潜（dive）进入该幕时显示；线性浏览到达不显示 */
+.wp-scene [data-branch-return] { display: none; }
+.wp-scene[data-entered-via="dive"] [data-branch-return] { display: inline; }
+
+/* 静帧模式（M）：关闭一切动效与过渡 */
+body.wp-no-motion *, body.wp-no-motion *::before, body.wp-no-motion *::after {
+  animation: none !important; transition: none !important;
+}
+body.wp-no-motion [data-reveal] { opacity: 1; transform: none; }
+
+@media print {
+  .wp-status, .wp-hints, .wp-help, .wp-ov-bar, .wp-ov-num { display: none !important; }
+}
+
 /* Reader Mode */
 body.wp-reader-mode { overflow: auto; }
 body.wp-reader-mode .wp-deck { height: auto; }

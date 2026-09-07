@@ -50,11 +50,36 @@ body::after{
   container-type:inline-size;text-align:center;position:relative;
 }
 .wp-scene[hidden]{display:none}
-/* 每幕右下角页码式场景标记 */
-.wp-scene::after{
-  content:attr(data-scene-id);position:absolute;right:clamp(20px,3cqi,44px);bottom:clamp(14px,2cqi,26px);
-  font-size:10.5px;letter-spacing:.22em;color:var(--ink3);font-family:Georgia,serif;
-}
+/* ── 运行时 UI：页码锚点 / 隐晦按键提示 / 帮助面板 / 总览 / 静帧 ── */
+.wp-status,.wp-hints{position:fixed;bottom:14px;z-index:70;font-size:11px;letter-spacing:.1em;color:var(--ink3);transition:opacity .6s ease;pointer-events:none;user-select:none;font-family:Georgia,serif}
+.wp-status{left:22px;font-variant-numeric:tabular-nums}
+.wp-hints{right:22px}
+.wp-dim{opacity:.22}
+.wp-help{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:rgba(250,248,244,.7);backdrop-filter:blur(8px)}
+.wp-help[hidden]{display:none}
+.wp-help-card{max-width:500px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 34px;box-shadow:var(--shadow)}
+.wp-help-card h2{margin:0 0 14px;font-size:16px;max-inline-size:none}
+.wp-help-card dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0;font-size:13px;color:var(--ink2)}
+.wp-help-card dt{font-family:ui-monospace,monospace;color:var(--accent);white-space:nowrap}
+.wp-help-card dd{margin:0}
+.wp-help-card p{margin:14px 0 0;font-size:12px;color:var(--ink3)}
+.wp-ov-bar{position:fixed;inset:0 0 auto;z-index:75;padding:12px;text-align:center;font-size:12.5px;letter-spacing:.1em;color:var(--ink2);background:rgba(250,248,244,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);cursor:pointer}
+.wp-ov-bar[hidden]{display:none}
+body.wp-overview-mode .wp-deck{height:100dvh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(560px,100%),1fr));gap:16px;padding:64px 24px 24px;align-content:start}
+body.wp-overview-mode .wp-scene{display:grid!important;height:100dvh;overflow:hidden;transform-origin:top left;border:1px solid var(--line);border-radius:12px;cursor:pointer;background:#fff;transition:border-color .2s,box-shadow .2s}
+body.wp-overview-mode .wp-scene:hover{border-color:var(--accent)}
+body.wp-overview-mode .wp-scene.wp-ov-current{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+body.wp-overview-mode .wp-scene [data-reveal]{opacity:1!important;transform:none!important}
+.wp-ov-num{display:none;position:absolute;top:8px;left:12px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink3);font-family:Georgia,serif}
+body.wp-overview-mode .wp-ov-num{display:block}
+body.wp-overview-mode .wp-status,body.wp-overview-mode .wp-hints{display:none}
+/* 分支返回提示：仅深潜进入时显示；线性浏览到本幕不显示 */
+.wp-scene [data-branch-return]{display:none}
+.wp-scene[data-entered-via="dive"] [data-branch-return]{display:inline}
+/* 静帧模式（M）：关闭一切动效与过渡，整幕直出 */
+body.wp-no-motion *,body.wp-no-motion *::before,body.wp-no-motion *::after{animation:none!important;transition:none!important}
+body.wp-no-motion [data-reveal]{opacity:1;transform:none}
+@media print{.wp-status,.wp-hints,.wp-help,.wp-ov-bar,.wp-ov-num{display:none!important}}
 .kicker{font-size:clamp(11px,1.1cqi,13.5px);letter-spacing:.3em;color:var(--accent);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:12px}
 .kicker::before,.kicker::after{content:"";width:30px;height:1px;background:var(--line2)}
 h1{font-size:clamp(36px,6.4cqi,80px);font-weight:900;line-height:1.18;letter-spacing:-.015em;max-inline-size:22ch}
@@ -173,7 +198,7 @@ body.wp-reader-mode .wp-progress{display:none}
     <span class="kicker">文质 Wenzhi · Web-native Presentation Intelligence</span>
     <h1>演示的质量瓶颈，<br>从来不在<em>视觉生成能力</em></h1>
     <p class="sub">HTML 原生智能演示系统：先想清楚<b>为谁讲、讲什么、怎么让人听懂</b>，再谈渲染。</p>
-    <aside class="wp-notes">直接念标题，停顿两秒。"今天这份演示本身，就是这个系统的输出。"</aside>
+    <aside class="wp-notes">（站定，环视全场两秒，再开口）各位好。今天想讲一个判断：演示的质量瓶颈，从来不在视觉生成能力。（停顿两秒）先声明一件事——你现在看到的每一页，不是 PPT 也不是 Keynote，而是我今天要介绍的系统现场生成的。所以接下来每一页，既是内容，也是证据。（换页前补一句）如果这套东西连自己的推介都说服不了你，它就没有资格发布。</aside>
     <div class="wp-reader"><p>HTML 原生智能演示系统（Web-native Presentation Intelligence）是一套 AI Skill：给定内容、受众、目标与场景，先推演演示策略与论证架构，经由 Presentation IR，再渲染为可现场运行、可分支深潜的演示应用。它面向所有受够了"一键生成但不能用"的 AI 幻灯片的人。——本页即由该系统生成。</p></div>
   </section>
 
@@ -187,7 +212,7 @@ body.wp-reader-mode .wp-progress{display:none}
       <div class="pain" data-reveal><div class="no">03</div><h3>跳过论证</h3><p>断言不举证、逻辑有跳跃、结论超出证据——视觉合格，策略缺席。</p></div>
     </div>
     <p class="sub" data-reveal>输入 → HTML 的一步生成，正好跳过了决定成败的三个环节。</p>
-    <aside class="wp-notes">每张卡停一拍：无情境（对谁都一套）、无受众（自说自话）、无论证（断言不举证）。</aside>
+    <aside class="wp-notes">（语气放缓，先泼冷水）AI 现在一分钟能生成一份看起来很炫的 HTML 幻灯片，但它回答不了三个问题。（指第一张卡）第一，这是什么情境——给高管汇报和给新人培训，规则完全不同，"每页最多 6 行"对谁都不成立；（指第二张卡）第二，谁在看——不回答"对方为什么要听"，就只是在自说自话；（指第三张卡）第三，论证在哪——断言不举证、逻辑有跳跃，视觉再合格也是花架子。（收，语速放慢）"输入到 HTML"的一步生成，正好跳过了这三个决定成败的环节。</aside>
     <div class="wp-reader"><p>当前 AI 演示工具的通病是把"输入材料 → HTML 页面"一步完成，跳过三个决定成败的环节：情境判定（这到底是什么演示）、受众建模（为什么这个人要听）、论证架构（断言有没有证据支撑）。结果是"好看但不动脑"。</p></div>
     <p class="wp-source">依据：项目需求文档 §0–§2 · 对抗测试设计（evals/benchmark/adversarial.md）</p>
   </section>
@@ -210,7 +235,7 @@ body.wp-reader-mode .wp-progress{display:none}
       <div class="pnode" data-reveal><div class="step">STEP 05</div><h3>渲染 + QA</h3><p>L0–L6 最低充分渲染；18 维评测</p></div>
     </div>
     <p class="sub" data-reveal>方法论不依赖任何框架，Runtime 可整体替换——IR 是策略与技术的唯一耦合点。</p>
-    <aside class="wp-notes">强调 IR 是闸门："校验器不过，渲染器不开工。"这是和模板生成器的分水岭。</aside>
+    <aside class="wp-notes">（走到屏幕侧，沿管线手势移动）解法是把"想清楚"前置成六步强制管线：情境判定——二十类情境各有规则；受众建模——十二个字段把"谁在看"问到底；论证架构——六种逻辑漏洞逐一排查；Scene 规划——每一幕只承担一个认知任务。（指向第四步，加重语气）然后是 Presentation IR，整个系统的闸门：校验器不过，渲染器不开工——这是和模板生成器的分水岭。最后才是渲染加十八维评测。（收）注意，方法论不依赖任何框架，Runtime 可整体替换，IR 是策略与技术之间唯一的耦合点。</aside>
     <div class="wp-reader"><p>强制六步管线：①情境判定（20 类）②受众建模（12 字段）③论证架构（六查：无证据断言/逻辑跳跃/证据错配/论证跳跃/重复主张/过度声称）④Scene 规划（每幕一个认知任务 + 认知负荷曲线）⑤Presentation IR（唯一中间表示，validate_ir.py 强制校验）⑥渲染与 QA（L0–L6 最低充分渲染，18 维评测）。IR 是策略与技术的唯一耦合点。</p></div>
     <p class="wp-source">工件：workflows/ 九个标准工作流 · scripts/validate_ir.py</p>
   </section>
@@ -239,7 +264,7 @@ body.wp-reader-mode .wp-progress{display:none}
         </ul>
       </div>
     </div>
-    <aside class="wp-notes">这里主动接住"规则太多束手束脚"的异议："我们的规则都可以问一句为什么，也都有答案。"</aside>
+    <aside class="wp-notes">（语气转向对话感）这里主动接异议——可能有人正想问：你们自己不也是一堆规则吗？（指左栏）差别在这：传统做法是"每页最多 6 行""标题必须是问句"，无条件、无依据，答不上为什么；（指右栏）我们的每条命题都带机制、证据等级和边界条件，冲突证据显式登记，你的实践经验进来先登记为假设，验证之后才升级。（停一拍，看听众）换句话说，我们的每条规则，你都可以问一句"为什么"，而且都有答案。</aside>
     <div class="wp-reader"><p>传统工具内置无条件通用规则；本系统建立证据分级知识库：每条命题登记机制、支持证据、冲突证据与边界条件（A–E 级）；用户的实践经验不直接成为规则，先进入 Practitioner Hypothesis 层，经检验后才升级。冲突证据（如 Tufte vs Bateman 的数据墨水之争）也被显式登记。</p></div>
     <p class="wp-source">工件：knowledge/ 14 节点 · practitioner_hypotheses/registry.yaml</p>
   </section>
@@ -254,8 +279,8 @@ body.wp-reader-mode .wp-progress{display:none}
       <div class="mode" data-reveal><div class="ic">🖨</div><h3>Print · 打印</h3><p>自动分页、冻结动画、展开关键内容、显示引用。</p><span class="key">Cmd/Ctrl + P</span></div>
     </div>
     <p data-reveal><button class="keys-btn" data-interact="expand" data-target="#keys-panel" data-purpose="现场按需展开快捷键清单，保持主画面简洁">⌨ 全部快捷键 ▾</button></p>
-    <div class="keys-panel" id="keys-panel">→ 推进 · ← 回退 · / 搜索跳转 · P 讲者台（双屏：笔记+计时+分支） · R 阅读模式 · Esc 深潜返回 · Home/End 首尾</div>
-    <aside class="wp-notes">现场按 R 再按 R 返回，按 P 展示讲者台。"断网也能跑——整目录离线，没有一行 CDN。"</aside>
+    <div class="keys-panel" id="keys-panel">→ 推进 · ← 回退 · O 总览（全页预览跳转） · / 搜索 · P 讲者台（双屏：笔记+计时+分支） · R 阅读模式 · M 静帧（关动效整幕直出） · ? 帮助 · Esc 退出/深潜返回 · Home/End 首尾</div>
+    <aside class="wp-notes">（实操演示，语速放慢，让观众看清每次按键）同一份内容模型，三种运行模式。现在是讲演模式：渐进揭示、分支深潜、讲者控制台。（按 R）切到自读模式——完整内容纵向滚动，每一幕都有可分享的深链。（再按 R 返回）打印模式自动分页、冻结动画、显示引用。（按 P 打开讲者台，侧向展示）双屏时观众看画面，我看笔记、计时和分支。时间紧就按 M 进静帧，整幕直出不再逐条揭示；按 O 是全部页面的总览，点哪页跳哪页。（关讲者台）全程零依赖，断网也能跑。</aside>
     <div class="wp-reader"><p>One Content Model：每个 Scene 同时携带 stage（现场精简）与 reader（自足完整）两层内容。Stage 支持渐进揭示、Deep Dive 分支、讲者控制台；Reader 纵向滚动、hash 深链可分享任意一幕；Print 自动分页、冻结动画、显示引用。运行时零依赖，断网可用。</p></div>
     <p class="wp-source">实测：无头 Chrome 功能测试通过（导航/深潜/搜索/恢复/打印），2026-09-07</p>
   </section>
@@ -270,7 +295,7 @@ body.wp-reader-mode .wp-progress{display:none}
       <div class="num" data-reveal><div class="v">0</div><div class="l">IR 校验错误（validate_ir.py）</div></div>
     </div>
     <p data-reveal><a class="dd-link" data-deep-dive="appendix">⤵ 查看知识底座与证据来源</a></p>
-    <aside class="wp-notes">说完数字补一句："包括这份演示本身。"然后视现场质疑决定是否进附录。</aside>
+    <aside class="wp-notes">（语气收紧，逐个数）三个数字。七十九——知识节点、工作流、运行时、评测，全部在仓库里的工程文件数；十八——交付评测的维度数，每一维都有五分锚点；零——IR 校验器的错误数。（停顿，环视）最后一句是关键：你正在看的这份演示本身，就是这个系统的输出物。（视现场反应决策）如果有人质疑证据来源或技术立场，现在点下方链接深潜到附录；没人追问就直接进入收尾。</aside>
     <div class="wp-reader"><p>本演示经完整六步管线产出：情境判定为 pitch、受众为 skeptical 的开发者、论证六查通过、IR 经 validate_ir.py 校验 0 error 0 warning、运行时在无头 Chrome 完成功能测试（初始化显隐/渐进揭示/Deep Dive 返回/搜索/状态恢复全通过）。工程规模：79 个文件，含 14 个知识节点、9 个工作流、7 个 Schema、100 个测试案例登记、10 条对抗测试。</p></div>
     <p class="wp-source">来源：scripts/validate_ir.py 运行记录 · 2026-09-07 · examples/demo</p>
   </section>
@@ -285,7 +310,7 @@ body.wp-reader-mode .wp-progress{display:none}
       <div class="cta"><div class="n">ACTION 03</div><h3>🧠 换脑</h3><p>下次做演示，先问：这是什么情境？谁在看？要他们做什么决定？</p></div>
     </div>
     <p class="signature" data-reveal>文质 Wenzhi · Communication before Decoration · 开源 MIT · 作者：<b>谁是专家</b></p>
-    <aside class="wp-notes">收尾金句："Communication before Decoration——先解决传播，再谈好看。"</aside>
+    <aside class="wp-notes">（收尾，语速放慢，声音放低）三个动作。第一，给仓库点个 Star，关注后续迭代；第二，复制到你的 skills 目录，一分钟接入你正在用的 AI——Claude Code、Codex、OpenCode 都可以；第三，也是最贵的一个——下次做演示之前，先回答三个问题：这是什么情境？谁在看？要他们做什么决定？（停顿两秒）Communication before Decoration，先解决传播，再谈好看。我是谁是专家，谢谢各位。</aside>
     <div class="wp-reader"><p>下一步：① GitHub Star（mizzlelover/web-presentation-skill）；② 安装到 Claude Code / Codex / OpenCode / Kimi Code（复制到 skills 目录，一分钟完成）；③ 下次接到演示任务时先回答三个问题——这是什么情境？谁在看？要他们做什么决定？MIT 协议开源，作者：谁是专家。</p></div>
   </section>
 
@@ -318,8 +343,8 @@ body.wp-reader-mode .wp-progress{display:none}
         </ul>
       </div>
     </div>
-    <p class="sub">Esc 返回主线 · 来源登记见 knowledge/sources/seed_corpus.yaml</p>
-    <aside class="wp-notes">备查幕，只在被问到"和 Reveal.js 什么关系"或"证据哪来的"时进入；讲完 Esc 返回。</aside>
+    <p class="sub"><span data-branch-return>Esc 返回主线 · </span>来源登记见 knowledge/sources/seed_corpus.yaml</p>
+    <aside class="wp-notes">（备查幕，不主动进入；只在被问"证据哪来的"或"和 Reveal.js 什么关系"时深潜到此）左侧是三十五个分级登记的研究来源，全部带证据等级与边界条件；右侧是技术立场——Reveal.js、Slidev 对我们来说是参照物，不是依赖，知识层不引用任何框架 API。（答完问题后）好，我们回到刚才那一页。（按 Esc 返回主线）</aside>
     <div class="wp-reader"><p>知识底座：35+ 来源登记，全部标注证据等级 A–E 与边界条件，冲突证据显式登记。技术立场：Reveal.js / Slidev / Spectacle 仅作为 Runtime Reference，知识层不依赖任何框架 API；本仓库 runtime/ 为零依赖原生 JS 参考实现，可整体替换。</p></div>
     <p class="wp-source">来源：knowledge/sources/seed_corpus.yaml · knowledge/web_capabilities.yaml</p>
   </section>

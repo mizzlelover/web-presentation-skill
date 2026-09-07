@@ -16,8 +16,13 @@
 
 ## 运行时能力清单
 
-- **导航**：键盘/触控/搜索跳转/hash 深链/总览（router.js, scene-engine.js）
-- **Presenter View**：当前幕/下一幕/笔记/计时/分支/深潜返回（presenter-view.js）
+- **导航**：键盘/触控/搜索跳转/hash 深链（router.js, scene-engine.js）
+- **Overview 总览**：O 键全页缩略平铺、点击跳转、当前幕高亮（router.js WPOverview）
+- **页码锚点 + 隐晦按键提示**：左下「当前/总数 · 主题」，右下极简键位提示（6s 无操作淡化），? 键完整帮助面板（bootstrap.js）
+- **静帧开关**：M 键一键关闭动效与逐步揭示、整幕直出，选择持久化（bootstrap.js + scene-engine.js stepwise + motion-controller disabled）
+- **场景状态保持**：切出再入恢复揭示进度（scene-engine.js memory）；Deep Dive 返回精确恢复（diveStack）
+- **分支返回提示上下文化**：`data-entered-via="dive"` 时才显示 `[data-branch-return]` 内容；线性到达不显示
+- **Presenter View**：当前幕/下一幕/笔记（可照读脚本）/计时/揭示进度/分支/深潜返回（presenter-view.js）
 - **Motion**：Intent 注册、pause/resume/reverse/seek/skip/replay、reduced-motion 降级（motion-controller.js）
 - **Interaction**：expand/toggle/compare/drill + Core Path 完整性检查（interaction.js）
 - **Reader Mode**：滚动、完整内容、深链（reader.js）

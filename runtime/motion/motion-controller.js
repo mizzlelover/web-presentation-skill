@@ -15,6 +15,7 @@
   class WPMotionController {
     constructor() {
       this.animations = new Map();  // el -> Animation[]
+      this.disabled = false;        // 静帧模式（M 键）：不注册任何动效，直接呈现终态
       this.reducedMotion = global.matchMedia &&
         global.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (global.matchMedia) {
@@ -29,7 +30,7 @@
     register(el) {
       const intent = el.dataset.motionIntent;
       if (!intent) return null;
-      if (this.reducedMotion) { el.classList.add("wp-motion-final"); return null; }
+      if (this.reducedMotion || this.disabled) { el.classList.add("wp-motion-final"); return null; }
       const keyframes = this._keyframes(intent, el);
       if (!keyframes) return null;
       const anim = el.animate(keyframes, {

@@ -17,6 +17,8 @@
       this.current = -1;
       this.revealStep = 0;
       this.diveStack = [];        // [{ sceneId, revealStep }] 用于 Deep Dive 后返回
+      this.memory = new Map();    // sceneId -> revealStep（切出前的揭示进度，再入时恢复）
+      this.stepwise = true;       // false = 静帧模式：整幕直接呈现，不再逐步揭示
       this.reducedMotion = global.matchMedia &&
         global.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
@@ -59,15 +61,24 @@
       return this.index.has(m[1]) ? this.index.get(m[1]) : null;
     }
 
-    goTo(target, { preserveDive = false } = {}) {
+    goTo(target, { preserveDive = false, via = "linear" } = {}) {
       const i = typeof target === "number" ? target : this.index.get(target);
       if (i == null || i < 0 || i >= this.scenes.length) return false;
       if (!preserveDive) this.diveStack = this.diveStack.filter(() => false);
       const prev = this.currentScene;
-      if (prev) { prev.hidden = true; prev.setAttribute("aria-hidden", "true"); }
+      if (prev) {
+        this.memory.set(prev.dataset.sceneId, this.revealStep); // 记住切出前的揭示进度
+        prev.hidden = true;
+        prev.setAttribute("aria-hidden", "true");
+      }
       this.current = i;
-      this.revealStep = 0;
       const el = this.currentScene;
+      el.dataset.enteredVia = via;  // linear | dive | jump —— 返回提示只在 dive 上下文显示
+      // 再入恢复：曾经切出的幕保持切出时的进度；静帧模式整幕直接呈现
+      const items = el.querySelectorAll("[data-reveal]").length;
+      this.revealStep = this.stepwise
+        ? Math.min(this.memory.get(el.dataset.sceneId) ?? 0, items)
+        : items;
       el.hidden = false;
       el.removeAttribute("aria-hidden");
       this._applyReveal();
@@ -96,18 +107,28 @@
     deepDive(sceneId) {
       if (!this.index.has(sceneId)) return false;
       this.diveStack.push({ sceneId: this.currentId, revealStep: this.revealStep });
-      return this.goTo(sceneId, { preserveDive: true });
+      return this.goTo(sceneId, { preserveDive: true, via: "dive" });
     }
 
     returnFromDive() {
       const top = this.diveStack.pop();
       if (!top) return false;
-      const ok = this.goTo(top.sceneId, { preserveDive: true });
+      const ok = this.goTo(top.sceneId, { preserveDive: true, via: "dive-return" });
       if (ok) {
         this.revealStep = top.revealStep;
+        this.memory.set(top.sceneId, top.revealStep);
         this._applyReveal();
       }
       return ok;
+    }
+
+    /** 静帧开关（§演示现场：时间紧时整幕直出，不做逐步揭示） */
+    setStepwise(on) {
+      this.stepwise = !!on;
+      if (!this.stepwise && this.currentScene) {
+        this.revealStep = this._reveals().length;
+        this._applyReveal();
+      }
     }
 
     /** 搜索跳转：按 id / data-topic / data-claim / 文本匹配（§87） */
@@ -181,6 +202,7 @@
       this.diveStack = snap.diveStack || [];
       if (this.goTo(snap.sceneId, { preserveDive: true })) {
         this.revealStep = snap.revealStep || 0;
+        this.memory.set(snap.sceneId, this.revealStep);
         this._applyReveal();
       }
     }
