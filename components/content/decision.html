@@ -1,0 +1,23 @@
+<!-- Decision — Cognitive Job: Decide（§60）
+     规则：选项必须真实可执行；每项写清后果与下一步；本幕可作为会议决策记录打印。 -->
+<section class="wp-scene wp-decision">
+  <h2>{{DECISION_QUESTION}}</h2>
+  <div class="wp-decision__opts">
+    <div class="wp-card" data-reveal>
+      <h3>{{OPTION_1}}</h3><p>{{CONSEQUENCE_1}}</p>
+    </div>
+    <div class="wp-card" data-reveal>
+      <h3>{{OPTION_2}}</h3><p>{{CONSEQUENCE_2}}</p>
+    </div>
+    <div class="wp-card" data-reveal>
+      <h3>{{OPTION_3}}</h3><p>{{CONSEQUENCE_3}}</p>
+    </div>
+  </div>
+  <p data-reveal><strong>{{NEXT_ACTION}}</strong></p>
+  <aside class="wp-notes">{{SPEAKER_NOTES}}</aside>
+  <div class="wp-reader">{{FULL_READER_CONTENT}}</div>
+</section>
+
+<style>
+.wp-decision__opts { display: grid; gap: var(--wp-space); grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+</style>

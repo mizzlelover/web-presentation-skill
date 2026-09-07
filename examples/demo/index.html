@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据闭环项目 · 高管决策汇报（Demo）</title>
+<link rel="stylesheet" href="../../themes/corporate.css">
+<link rel="stylesheet" href="../../runtime/core/presentation.css">
+<link rel="stylesheet" href="../../runtime/print/print.css" media="print">
+<style>
+  /* 本示例特有的语义组件样式（生产中应入组件库） */
+  .wp-decision-hero { text-align: center; }
+  .ba-chart { display: flex; gap: 8cqi; align-items: flex-end; height: 34dvh; margin-top: 4cqi; }
+  .ba-bar { flex: 0 0 30%; border-radius: var(--wp-radius) var(--wp-radius) 0 0; display: grid; align-content: start; justify-items: center; padding-top: 12px; font-weight: 700; font-size: clamp(28px, 4cqi, 56px); }
+  .ba-before { background: #4a5568; height: 34%; }
+  .ba-after { background: var(--wp-accent); height: 92%; }
+  .ba-label { text-align: center; color: var(--wp-muted); margin-top: 8px; }
+  .opt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--wp-space); }
+  .opt-card { border: 1px solid color-mix(in srgb, var(--wp-fg) 18%, transparent); border-radius: var(--wp-radius); padding: var(--wp-space); }
+  .opt-card.rec { border-color: var(--wp-accent); }
+  .opt-card h3 { margin-top: 0; }
+  .opt-row { display: flex; justify-content: space-between; border-top: 1px dashed color-mix(in srgb, var(--wp-fg) 14%, transparent); padding: 10px 0; }
+  .gantt { display: grid; gap: 14px; margin-top: 2cqi; }
+  .gantt-row { display: grid; grid-template-columns: 10ch 1fr 6ch; gap: 12px; align-items: center; }
+  .gantt-bar { height: 28px; border-radius: 6px; background: var(--wp-accent); }
+  .decision-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--wp-space); margin-top: 4cqi; }
+  .decision-opt { border: 2px solid color-mix(in srgb, var(--wp-fg) 20%, transparent); border-radius: var(--wp-radius); padding: calc(var(--wp-space)*1.2); text-align: center; font-size: clamp(20px, 2.4cqi, 32px); font-weight: 700; }
+</style>
+</head>
+<body>
+<main class="wp-deck">
+
+  <section class="wp-scene wp-decision-hero" data-scene-id="opening" data-topic="议程" data-claim="今天需要一个决定">
+    <h2>今天需要一个决定：<br>是否追加 3 个月完成数据闭环</h2>
+    <p>15 分钟。问题 → 证据 → 方案 → 建议。</p>
+    <aside class="wp-notes">30 秒说完，直接点题，不寒暄。</aside>
+    <div class="wp-reader"><p>本次汇报的唯一议程是决策：是否追加 3 个月工期与 2 名工程师资源，使项目在 Q2 末形成完整数据闭环。以下按问题—证据—方案—建议展开，全部数据口径见附录。</p></div>
+  </section>
+
+  <section class="wp-scene" data-scene-id="problem" data-topic="问题定义" data-claim="核心问题不是数据缺失，而是身份映射缺失">
+    <h2 class="wp-assertion">核心问题不是数据缺失，<br>而是身份映射缺失</h2>
+    <p data-reveal>各业务系统数据入库率已达 <strong>87%</strong>——数据其实不缺。</p>
+    <p data-reveal data-motion-intent="focus">断点在系统之间：同一个人/设备，在 ERP、CRM、MES 里是三套不同的身份。</p>
+    <p data-reveal><a data-deep-dive="evidence-appendix">⤵ 查看口径与审计方法</a></p>
+    <aside class="wp-notes">预判异议"上次也是这么说的"：本次结论来自审计抽样而非主观估计，可现场打开附录。</aside>
+    <div class="wp-reader"><p>经排查，各业务系统数据入库率达 87%（ERP/CRM/MES 三系统抽样，2026-08，口径见附录）。闭环失败的原因是同一实体在不同系统中身份标识不一致（身份映射缺失），导致数据无法关联，而非数据本身缺失。</p></div>
+    <p class="wp-source">来源：三系统抽样审计，2026-08，范围：ERP/CRM/MES</p>
+  </section>
+
+  <section class="wp-scene" data-scene-id="evidence" data-topic="试点证据" data-claim="补齐映射后闭环率 31%→92%">
+    <h2 class="wp-assertion">补齐映射后，试点产线闭环率从 31% 升至 92%</h2>
+    <div class="ba-chart" role="img" aria-label="闭环率前后对比：31% 与 92%">
+      <div>
+        <div class="ba-bar ba-before" data-reveal>31%</div>
+        <div class="ba-label">试点前</div>
+      </div>
+      <div>
+        <div class="ba-bar ba-after" data-reveal data-motion-intent="compare">92%</div>
+        <div class="ba-label">6 周试点后</div>
+      </div>
+    </div>
+    <p data-reveal><button data-interact="expand" data-purpose="按需查看口径，降低主画面负荷">口径说明 ▾</button></p>
+    <div>闭环率 = 业务事件在 24h 内完成跨系统关联的比例。单产线试点，推广需考虑产线差异。</div>
+    <p data-reveal><a data-deep-dive="evidence-appendix">⤵ 证据附录</a></p>
+    <aside class="wp-notes">强调单产线边界，避免 Overclaim；被问推广风险时坦诚展开。</aside>
+    <div class="wp-reader"><p>A 产线 6 周试点（2026-07 至 2026-08）：补齐身份映射后，数据闭环率由 31% 提升至 92%，数据处理人工时下降 64%。试点范围与口径见附录；样本为单产线，推广需考虑产线差异（边界）。</p></div>
+    <p class="wp-source">来源：试点周报，2026-07~08，范围：A 产线</p>
+  </section>
+
+  <section class="wp-scene" data-scene-id="options" data-topic="方案对比" data-claim="同样预算回收期相差 14 个月">
+    <h2>同样的预算，两条路径的回收期相差 14 个月</h2>
+    <div class="opt-grid">
+      <div class="opt-card">
+        <h3>方案 A · 全量重构</h3>
+        <div class="opt-row"><span>周期</span><strong>18 个月</strong></div>
+        <div class="opt-row"><span>回收期</span><strong>26 个月</strong></div>
+        <div class="opt-row"><span>风险</span><strong>高（切换期）</strong></div>
+        <div class="opt-row"><span>长期架构</span><strong>干净</strong></div>
+      </div>
+      <div class="opt-card rec">
+        <h3>方案 B · 映射层补丁</h3>
+        <div class="opt-row"><span>周期</span><strong>3 个月</strong></div>
+        <div class="opt-row"><span>回收期</span><strong>12 个月</strong></div>
+        <div class="opt-row"><span>风险</span><strong>可控（可回滚）</strong></div>
+        <div class="opt-row"><span>技术债</span><strong>可管理</strong></div>
+      </div>
+    </div>
+    <aside class="wp-notes">两栏讲完后停顿 3 秒，让对比自然沉淀。</aside>
+    <div class="wp-reader"><p>两方案财务模型假设一致（折现率 8%，口径见附录）。方案 A 优势在长期架构；方案 B 以可回滚的增量方式在 Q2 末交付闭环。</p></div>
+    <p class="wp-source">来源：财务模型 v3，2026-08，假设：折现率 8%</p>
+  </section>
+
+  <section class="wp-scene wp-decision-hero" data-scene-id="recommendation" data-topic="建议" data-claim="建议批准方案 B">
+    <h2>建议批准方案 B，下周启动</h2>
+    <p class="wp-big-number" data-reveal>3<small style="font-size:.3em"> 个月</small></p>
+    <p data-reveal>2 名工程师 · Q2 末全量闭环 · 双周检查点</p>
+    <p data-reveal><a data-branch="tech-deep">⇢ 技术细节（为什么需要 3 个月）</a></p>
+    <aside class="wp-notes">说完停下来等反应，不要急着补充。</aside>
+    <div class="wp-reader"><p>建议批准方案 B：追加 3 个月工期与 2 名工程师，目标 Q2 末全量数据闭环。风险与缓解：试点为单产线，推广期设双周检查点，未达阈值即触发复盘。</p></div>
+  </section>
+
+  <section class="wp-scene wp-decision-hero" data-scene-id="decision" data-topic="决策" data-claim="请决定">
+    <h2>请决定</h2>
+    <div class="decision-opts">
+      <div class="decision-opt" data-reveal>批准<br><small style="font-weight:400">下周启动方案 B</small></div>
+      <div class="decision-opt" data-reveal>有条件批准<br><small style="font-weight:400">会上明确条件，48h 响应</small></div>
+      <div class="decision-opt" data-reveal>否决<br><small style="font-weight:400">启动收尾与复盘</small></div>
+    </div>
+    <aside class="wp-notes">冷场时复述三个选项，不要替他们选。</aside>
+    <div class="wp-reader"><p>请决策：1) 批准；2) 有条件批准——请明确条件，项目组 48 小时内响应；3) 否决——启动项目收尾与经验复盘。无论何种决定，本页构成会议决策记录。</p></div>
+  </section>
+
+  <section class="wp-scene" data-scene-id="tech-deep" data-topic="技术深潜" data-claim="8 周回填是串行工序">
+    <h2 class="wp-assertion">3 个月中 8 周用于历史数据身份回填——不可压缩的串行工序</h2>
+    <div class="gantt">
+      <div class="gantt-row"><span>映射层开发</span><div class="gantt-bar" style="width:25%"></div><span>3 周</span></div>
+      <div class="gantt-row"><span>历史数据回填</span><div class="gantt-bar" style="width:67%;background:#e0a34a"></div><span>8 周</span></div>
+      <div class="gantt-row"><span>联调验收</span><div class="gantt-bar" style="width:8%;background:#6b7280"></div><span>1 周</span></div>
+    </div>
+    <p>回填须按业务时序逐月进行并校验，加人无法线性压缩。</p>
+    <aside class="wp-notes">只在被问到时进入；讲完点"返回主线"（Esc）。</aside>
+    <div class="wp-reader"><p>工期分解：映射层开发 3 周；历史数据身份回填 8 周——须按业务时序逐月回填并校验，属串行工序，增加人力无法线性压缩；联调与验收 1 周。缓冲已含 1 周。</p></div>
+    <p class="wp-source">来源：项目组排期 v2，2026-08</p>
+  </section>
+
+  <section class="wp-scene" data-scene-id="evidence-appendix" data-topic="附录" data-claim="数据口径与审计方法">
+    <h2>附录：数据口径与审计方法</h2>
+    <ul>
+      <li><strong>抽样</strong>：2026-08 对 ERP/CRM/MES 各抽 500 条主数据记录交叉核验。</li>
+      <li><strong>入库率</strong>：关键字段非空且格式合规的比例。</li>
+      <li><strong>闭环率</strong>：业务事件 24h 内完成跨系统关联的比例。</li>
+      <li><strong>试点数据</strong>：A 产线周报，2026-07-06 至 2026-08-14，共 6 周。</li>
+    </ul>
+    <aside class="wp-notes">备查幕，不要主动展开讲。</aside>
+    <div class="wp-reader"><p>原始审计底稿见内网数据治理空间。本页可在打印版中作为引用页保留。</p></div>
+    <p class="wp-source">来源：数据治理组抽样审计，2026-08</p>
+  </section>
+
+</main>
+
+<script src="../../runtime/core/scene-engine.js"></script>
+<script src="../../runtime/navigation/router.js"></script>
+<script src="../../runtime/motion/motion-controller.js"></script>
+<script src="../../runtime/interaction/interaction.js"></script>
+<script src="../../runtime/presenter/presenter-view.js"></script>
+<script src="../../runtime/reader/reader.js"></script>
+<script src="../../runtime/core/bootstrap.js"></script>
+<script>WPBoot.start(".wp-deck");</script>
+</body>
+</html>

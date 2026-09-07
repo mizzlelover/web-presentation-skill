@@ -1,0 +1,28 @@
+# Knowledge Node Schema — 知识图谱节点（§14）
+id: str                        # KN-<DOMAIN>-<NNN>，如 KN-COG-001
+canonical_name_en: str
+canonical_name_zh: str
+domain: str                    # 一级领域，见 SKILL.md 知识检索
+knowledge_type: enum           # scientific_mechanism | presentation_principle | practitioner_hypothesis | design_heuristic | platform_capability | runtime_pattern
+definition: str
+core_claim: str
+mechanism: str                 # 为什么会这样（因果机制），必填
+evidence:
+  supporting: [str]            # source_id 列表
+  conflicting: [str]
+  meta_analysis: [str]
+  replication: [str]
+evidence_grade: enum           # A Strong | B Moderate | C Emerging | D Practitioner Heuristic | E Weak/Contested
+applicable_contexts: [str]     # 适用情境（对应 situation taxonomy）
+boundary_conditions: [str]     # 边界条件，必填
+failure_conditions: [str]      # 何时失效
+common_misinterpretations: [str]
+examples: [str]
+presentation_implications: str # 对演示策略的含义
+visual_implications: str
+motion_implications: str
+interaction_implications: str
+runtime_implications: str
+related_nodes: [str]           # 其他 node id
+source_ids: [str]
+last_reviewed: date

@@ -1,0 +1,13 @@
+# Source Registry Schema — 来源登记（§75）
+# 每个 seed corpus 来源一条记录。authority: S/A/B/C（S=meta-analysis/系统综述，A=原始实验，B=权威专著/手册，C=专业实践资料）
+source_id: str          # 唯一 ID，如 SRC-MAYER-2001
+title: str
+authors: [str]
+year: int
+source_type: enum       # meta_analysis | systematic_review | experiment | review | handbook | book | course | talk | professional
+doi: str | null
+url: str | null
+authority: enum         # S | A | B | C
+access_status: enum     # full_text | abstract | summary | secondary | not_accessed
+domain: [str]           # 对应 knowledge/ 一级领域
+notes: str

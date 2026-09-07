@@ -1,0 +1,28 @@
+# Presentation IR Schema — 渲染前唯一中间表示（§31）
+# 规则：Input → Strategy → IR → Renderer；禁止 Input → HTML。
+ir_version: "1.0"
+presentation: ref        # 见 schemas/presentation.yaml
+scenes: [ref]            # 见 schemas/scene.yaml，按 core_path 顺序
+theme:
+  name: str
+  tokens: ref            # design_tokens：font/color/spacing/radius/shadow/motion/grid
+assets:
+  images: [{ id: str, src: str, alt: str, local: bool }]   # local=true 表示离线打包
+  fonts: [{ family: str, src: str, license: str }]
+  data: [{ id: str, src: str, format: str }]
+runtime:
+  navigation: { keyboard: bool, search: bool, jump: bool }
+  presenter_view: { notes: bool, timer: bool, next_scene: bool }
+  motion: { respect_reduced_motion: bool, controllable: bool }  # pause/resume/reverse/seek/skip/replay
+  offline: bool
+  performance_budget:
+    first_load_kb: int
+    max_image_kb: int
+    target_fps: int
+modes:
+  stage: bool
+  reader: { enabled: bool, deep_links: bool }
+  print: { enabled: bool, expand_critical: bool, show_citations: bool }
+qa:
+  visual: [str]          # 需通过的视觉 QA 检查项
+  runtime: [str]         # 需通过的运行时 QA 检查项

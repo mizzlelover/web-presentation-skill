@@ -1,0 +1,33 @@
+# Presentation Schema — 一场演示的顶层模型（与 presentation_ir 配合）
+id: str
+title: str
+situation: enum          # executive_briefing | decision | sales | pitch | training | teaching | technical | scientific | project_report | government_report | consulting | data | internal_communication | public_speech | conference_talk | product_launch | pre_read | leave_behind | self_reading | hybrid
+communication_goal: [enum] # inform|explain|teach|persuade|convince|recommend|request_decision|build_trust|align|inspire|sell|demonstrate|defend|report|facilitate_discussion
+audience:
+  role: str
+  expertise: enum        # novice | intermediate | expert | mixed
+  prior_knowledge: str
+  decision_power: enum   # decider | influencer | executor | observer
+  attitude: enum         # supportive | neutral | skeptical | hostile | unknown
+  motivation: str
+  concerns: [str]
+  objections: [str]
+  time_budget: str
+  cognitive_load_tolerance: enum  # low | medium | high
+  expected_detail: enum  # headline | summary | full
+  likely_questions: [str]
+central_thesis: str
+duration_minutes: int
+modes: [enum]            # stage | reader | print（One Content Model, Multiple Modes）
+brand:
+  theme: str             # themes/ 下的主题名
+  constraints: str | null
+graph:                   # Presentation Graph（默认非线性）
+  core_path: [str]       # scene id 序列
+  optional_paths: [{ name: str, scenes: [str] }]
+  deep_dives: [{ from_scene: str, to_scene: str, trigger: str }]
+  evidence_appendix: [str]
+qa_preparation:
+  likely_questions: [{ question: str, answer_scene: str }]
+  objection_handling: [{ objection: str, response_scene: str }]
+constraints: str | null

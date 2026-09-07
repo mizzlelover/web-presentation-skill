@@ -1,0 +1,152 @@
+# Benchmark Case Registry — 100+ 测试案例登记（§67）
+# 每条案例：id / 类别 / 材料概要 / 关键考察点（评测该案例时重点看哪些维度）
+# status: designed=已定义待执行, passed=通过, failed=未通过
+
+categories:
+  executive: 15
+  government: 10
+  project_report: 10
+  sales: 10
+  pitch: 10
+  teaching: 10
+  technical: 10
+  data: 10
+  research: 5
+  story: 5
+  document_reader: 5
+  # 合计 100
+
+cases:
+  # ── Executive（15）──
+  - { id: EX-01, cat: executive, brief: "数据闭环项目追加投资决裁", focus: [goal_clarity, scene_purpose, presenter_usability], status: passed, note: "即 examples/demo" }
+  - { id: EX-02, cat: executive, brief: "季度经营回顾 + 下半年资源重分配", focus: [information_density, data_visualization] , status: designed }
+  - { id: EX-03, cat: executive, brief: "并购标的尽调结论汇报", focus: [evidence_quality, argument_quality], status: designed }
+  - { id: EX-04, cat: executive, brief: "组织变革方案沟通（怀疑型受众）", focus: [audience_fit, narrative_coherence], status: designed }
+  - { id: EX-05, cat: executive, brief: "危机事件董事会紧急通报", focus: [goal_clarity, runtime_stability], status: designed }
+  - { id: EX-06, cat: executive, brief: "年度预算申请（多部门竞争）", focus: [argument_quality, evidence_quality], status: designed }
+  - { id: EX-07, cat: executive, brief: "新业务线立项决策（三方案权衡）", focus: [argument_quality, scene_purpose], status: designed }
+  - { id: EX-08, cat: executive, brief: "海外扩张风险评估", focus: [evidence_quality, information_density], status: designed }
+  - { id: EX-09, cat: executive, brief: "数字化转型中期复盘（坏消息为主）", focus: [narrative_coherence, goal_clarity], status: designed }
+  - { id: EX-10, cat: executive, brief: "供应链中断应急预案决策", focus: [presenter_usability, runtime_stability], status: designed }
+  - { id: EX-11, cat: executive, brief: "AI 战略投资机会评审", focus: [audience_fit, argument_quality], status: designed }
+  - { id: EX-12, cat: executive, brief: "5 分钟电梯版季度汇报", focus: [information_density, cognitive_load], status: designed }
+  - { id: EX-13, cat: executive, brief: "双受众（董事会+外部董事）混合汇报", focus: [audience_fit, reader_usability], status: designed }
+  - { id: EX-14, cat: executive, brief: "项目下马建议（不受欢迎的结论）", focus: [argument_quality, narrative_coherence], status: designed }
+  - { id: EX-15, cat: executive, brief: "年度战略解码大会开场报告", focus: [narrative_coherence, aesthetic_quality], status: designed }
+
+  # ── Government（10）──
+  - { id: GV-01, cat: government, brief: "智慧城市阶段性成果汇报", focus: [evidence_quality, information_density], status: designed }
+  - { id: GV-02, cat: government, brief: "防汛应急预案桌面推演", focus: [runtime_stability, presenter_usability], status: designed }
+  - { id: GV-03, cat: government, brief: "民生工程人大专题询问答复", focus: [evidence_quality, argument_quality], status: designed }
+  - { id: GV-04, cat: government, brief: "环保督察整改情况报告", focus: [data_visualization, evidence_quality], status: designed }
+  - { id: GV-05, cat: government, brief: "十四五规划中期评估", focus: [information_density, reader_usability], status: designed }
+  - { id: GV-06, cat: government, brief: "招商引资政策宣讲（企业受众）", focus: [audience_fit, goal_clarity], status: designed }
+  - { id: GV-07, cat: government, brief: "政府工作报告配套图解演示", focus: [visual_hierarchy, aesthetic_quality], status: designed }
+  - { id: GV-08, cat: government, brief: "基层治理数字化平台上线汇报", focus: [cognitive_load, interaction_utility], status: designed }
+  - { id: GV-09, cat: government, brief: "突发公共事件新闻发布", focus: [goal_clarity, runtime_stability], status: designed }
+  - { id: GV-10, cat: government, brief: "对口帮扶成果展陈讲解", focus: [narrative_coherence, motion_utility], status: designed }
+
+  # ── Project Report（10）──
+  - { id: PR-01, cat: project_report, brief: "软件迭代月度进展（含延期风险）", focus: [goal_clarity, scene_purpose], status: designed }
+  - { id: PR-02, cat: project_report, brief: "工程项目里程碑评审", focus: [evidence_quality, visual_hierarchy], status: designed }
+  - { id: PR-03, cat: project_report, brief: "跨部门项目冲突升级汇报", focus: [argument_quality, audience_fit], status: designed }
+  - { id: PR-04, cat: project_report, brief: "项目复盘（成功）", focus: [narrative_coherence, scene_purpose], status: designed }
+  - { id: PR-05, cat: project_report, brief: "项目复盘（失败，根因分析）", focus: [argument_quality, evidence_quality], status: designed }
+  - { id: PR-06, cat: project_report, brief: "研发管线组合评审", focus: [data_visualization, information_density], status: designed }
+  - { id: PR-07, cat: project_report, brief: "客户交付验收汇报", focus: [evidence_quality, presenter_usability], status: designed }
+  - { id: PR-08, cat: project_report, brief: "敏捷季度规划（PI Planning）", focus: [cognitive_load, interaction_utility], status: designed }
+  - { id: PR-09, cat: project_report, brief: "OKR 季度述职", focus: [goal_clarity, data_visualization], status: designed }
+  - { id: PR-10, cat: project_report, brief: "外包供应商绩效季度评审", focus: [data_visualization, argument_quality], status: designed }
+
+  # ── Sales（10）──
+  - { id: SA-01, cat: sales, brief: "SaaS 产品对制造业客户首访", focus: [audience_fit, narrative_coherence], status: designed }
+  - { id: SA-02, cat: sales, brief: "招投标现场讲标（有评分表）", focus: [goal_clarity, presenter_usability], status: designed }
+  - { id: SA-03, cat: sales, brief: "续约谈判（客户有流失信号）", focus: [argument_quality, evidence_quality], status: designed }
+  - { id: SA-04, cat: sales, brief: "渠道伙伴招募宣讲", focus: [narrative_coherence, aesthetic_quality], status: designed }
+  - { id: SA-05, cat: sales, brief: "解决方案 POC 结果汇报", focus: [evidence_quality, data_visualization], status: designed }
+  - { id: SA-06, cat: sales, brief: "高价咨询方案提案（对比低价竞品）", focus: [argument_quality, audience_fit], status: designed }
+  - { id: SA-07, cat: sales, brief: "展会展位 3 分钟演示", focus: [cognitive_load, motion_utility], status: designed }
+  - { id: SA-08, cat: sales, brief: "客户高层回访（关系维护型）", focus: [audience_fit, narrative_coherence], status: designed }
+  - { id: SA-09, cat: sales, brief: "异议处理专场（价格/安全/集成）", focus: [presenter_usability, evidence_quality], status: designed }
+  - { id: SA-10, cat: sales, brief: "产品涨价沟通", focus: [argument_quality, narrative_coherence], status: designed }
+
+  # ── Pitch（10）──
+  - { id: PI-01, cat: pitch, brief: "种子轮融资 BP 路演", focus: [narrative_coherence, aesthetic_quality], status: designed }
+  - { id: PI-02, cat: pitch, brief: "A 轮投资人尽调问答", focus: [evidence_quality, presenter_usability], status: designed }
+  - { id: PI-03, cat: pitch, brief: "创业大赛 5 分钟路演", focus: [cognitive_load, scene_purpose], status: designed }
+  - { id: PI-04, cat: pitch, brief: "内部创新项目立项 pitch", focus: [argument_quality, audience_fit], status: designed }
+  - { id: PI-05, cat: pitch, brief: "硬科技项目产业资本对接", focus: [information_density, evidence_quality], status: designed }
+  - { id: PI-06, cat: pitch, brief: "产品发布会 keynote", focus: [motion_utility, aesthetic_quality], status: designed }
+  - { id: PI-07, cat: pitch, brief: "黑客松项目展示", focus: [scene_purpose, runtime_stability], status: designed }
+  - { id: PI-08, cat: pitch, brief: "政府引导基金申报答辩", focus: [evidence_quality, argument_quality], status: designed }
+  - { id: PI-09, cat: pitch, brief: "并购方管理层陈述", focus: [audience_fit, narrative_coherence], status: designed }
+  - { id: PI-10, cat: pitch, brief: "开源项目基金会路演", focus: [narrative_coherence, reader_usability], status: designed }
+
+  # ── Teaching（10）──
+  - { id: TE-01, cat: teaching, brief: "新员工入职培训（公司流程）", focus: [cognitive_load, scene_purpose], status: designed }
+  - { id: TE-02, cat: teaching, brief: "高校《数据结构》一课时", focus: [cognitive_load, motion_utility], status: designed }
+  - { id: TE-03, cat: teaching, brief: "销售话术训练营", focus: [interaction_utility, audience_fit], status: designed }
+  - { id: TE-04, cat: teaching, brief: "安全操作规程培训（考核导向）", focus: [information_density, reader_usability], status: designed }
+  - { id: TE-05, cat: teaching, brief: "管理层财务扫盲课", focus: [audience_fit, data_visualization], status: designed }
+  - { id: TE-06, cat: teaching, brief: "在线课程录屏版（无现场讲者）", focus: [reader_usability, information_density], status: designed }
+  - { id: TE-07, cat: teaching, brief: "工作坊：设计思维入门（含练习环节）", focus: [interaction_utility, cognitive_load], status: designed }
+  - { id: TE-08, cat: teaching, brief: "研究生文献研讨课", focus: [evidence_quality, argument_quality], status: designed }
+  - { id: TE-09, cat: teaching, brief: "客户成功团队产品认证培训", focus: [scene_purpose, reader_usability], status: designed }
+  - { id: TE-10, cat: teaching, brief: "混合受众（新手+熟手）工具培训", focus: [audience_fit, cognitive_load], status: designed }
+
+  # ── Technical（10）──
+  - { id: TC-01, cat: technical, brief: "微服务架构评审（ADR 答辩）", focus: [argument_quality, evidence_quality], status: designed }
+  - { id: TC-02, cat: technical, brief: "性能优化成果技术分享", focus: [data_visualization, information_density], status: designed }
+  - { id: TC-03, cat: technical, brief: "算法论文复现报告", focus: [evidence_quality, scene_purpose], status: designed }
+  - { id: TC-04, cat: technical, brief: "事故复盘（postmortem）", focus: [narrative_coherence, argument_quality], status: designed }
+  - { id: TC-05, cat: technical, brief: "技术选型对比（三框架）", focus: [data_visualization, argument_quality], status: designed }
+  - { id: TC-06, cat: technical, brief: "安全渗透测试发现汇报", focus: [evidence_quality, audience_fit], status: designed }
+  - { id: TC-07, cat: technical, brief: "给非技术高管讲技术债", focus: [audience_fit, cognitive_load], status: designed }
+  - { id: TC-08, cat: technical, brief: "API 设计评审（含时序图）", focus: [visual_hierarchy, information_density], status: designed }
+  - { id: TC-09, cat: technical, brief: "数据管道架构演进分享", focus: [motion_utility, scene_purpose], status: designed }
+  - { id: TC-10, cat: technical, brief: "开源项目贡献者大会技术演讲", focus: [aesthetic_quality, reader_usability], status: designed }
+
+  # ── Data（10）──
+  - { id: DA-01, cat: data, brief: "月度经营数据分析会", focus: [data_visualization, scene_purpose], status: designed }
+  - { id: DA-02, cat: data, brief: "用户增长漏斗诊断", focus: [data_visualization, argument_quality], status: designed }
+  - { id: DA-03, cat: data, brief: "A/B 实验结果评审", focus: [evidence_quality, cognitive_load], status: designed }
+  - { id: DA-04, cat: data, brief: "市场调研报告发布", focus: [data_visualization, reader_usability], status: designed }
+  - { id: DA-05, cat: data, brief: "实时运营大屏讲解（Live Data）", focus: [runtime_stability, performance], status: designed }
+  - { id: DA-06, cat: data, brief: "客户流失预警模型汇报", focus: [data_visualization, audience_fit], status: designed }
+  - { id: DA-07, cat: data, brief: "年度数据资产盘点", focus: [information_density, visual_hierarchy], status: designed }
+  - { id: DA-08, cat: data, brief: "异常检测案例复盘（含误导性图表纠偏）", focus: [evidence_quality, data_visualization], status: designed }
+  - { id: DA-09, cat: data, brief: "问卷数据洞察分享（学术严谨版）", focus: [evidence_quality, argument_quality], status: designed }
+  - { id: DA-10, cat: data, brief: "给一线的自助取数工具培训", focus: [interaction_utility, cognitive_load], status: designed }
+
+  # ── Research（5）──
+  - { id: RE-01, cat: research, brief: "学术会议 15 分钟论文报告", focus: [evidence_quality, scene_purpose], status: designed }
+  - { id: RE-02, cat: research, brief: "博士开题答辩", focus: [argument_quality, evidence_quality], status: designed }
+  - { id: RE-03, cat: research, brief: "课题中期检查（含不确定性表达）", focus: [evidence_quality, information_density], status: designed }
+  - { id: RE-04, cat: research, brief: "跨学科研讨会邀请报告", focus: [audience_fit, cognitive_load], status: designed }
+  - { id: RE-05, cat: research, brief: "期刊审稿意见回复演示", focus: [argument_quality, evidence_quality], status: designed }
+
+  # ── Story（5）──
+  - { id: ST-01, cat: story, brief: "创始人故事（品牌发布会）", focus: [narrative_coherence, aesthetic_quality], status: designed }
+  - { id: ST-02, cat: story, brief: "公益项目资助人汇报", focus: [narrative_coherence, evidence_quality], status: designed }
+  - { id: ST-03, cat: story, brief: "企业文化价值观宣贯", focus: [narrative_coherence, motion_utility], status: designed }
+  - { id: ST-04, cat: story, brief: "客户成功案例视频化演示", focus: [narrative_coherence, scene_purpose], status: designed }
+  - { id: ST-05, cat: story, brief: "年会开场回顾与展望", focus: [aesthetic_quality, motion_utility], status: designed }
+
+  # ── Document / Reader（5）──
+  - { id: DR-01, cat: document_reader, brief: "投资备忘录（纯阅读）", focus: [reader_usability, information_density], status: designed }
+  - { id: DR-02, cat: document_reader, brief: "技术白皮书网页版", focus: [reader_usability, accessibility], status: designed }
+  - { id: DR-03, cat: document_reader, brief: "政策解读长图（打印友好）", focus: [reader_usability, visual_hierarchy], status: designed }
+  - { id: DR-04, cat: document_reader, brief: "年度报告（线上+印刷双版本）", focus: [reader_usability, aesthetic_quality], status: designed }
+  - { id: DR-05, cat: document_reader, brief: "产品文档发布说明", focus: [information_density, accessibility], status: designed }
+
+acceptance_suites:
+  # §95–§99 验收套件
+  - id: ACC-AUDIENCE
+    desc: "受众适配证明（§97）：同一份'数据闭环项目'材料 → CEO版/技术团队版/一线员工版三份演示，thesis/密度/scene序列/证据深度必须明显不同"
+    status: partial  # demo 完成 CEO 版；另两版为生成器例行输出
+  - id: ACC-RUNTIME
+    desc: "Runtime 价值证明（§98）：静态解释幕/渐进解释幕/动画因果幕/交互数据幕/Deep Dive 分支/3D 适用幕，各附 render_rationale"
+    status: partial  # demo 覆盖 L0/L1/L2 与 deep dive；L3-L6 样例在组件库登记
+  - id: ACC-ADVERSARIAL
+    desc: "不滥用技术证明（§99）：adversarial.md T-01~T-10 全部通过"
+    status: designed

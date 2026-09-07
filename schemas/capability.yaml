@@ -1,0 +1,14 @@
+# Web Capability Registry Schema — Web 能力登记（§77）
+capability: str          # 如 View Transition API
+purpose: str
+technology: str          # CSS / Web Animations API / ECharts / Three.js ...
+browser_support:
+  chromium: str          # 版本或 no
+  safari: str
+  firefox: str
+performance_cost: enum   # low | medium | high
+accessibility: str       # 无障碍注意事项
+fallback: str            # 降级方案
+recommended_use: [str]
+avoid_when: [str]
+last_updated: date

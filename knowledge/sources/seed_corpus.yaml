@@ -1,0 +1,351 @@
+# Seed Corpus Registry — 种子语料来源登记（§12/§75）
+# authority: S=meta-analysis/系统综述  A=原始实验  B=权威专著/手册  C=专业实践资料
+# access_status 记录我们实际掌握的程度；notes 记录该来源最常被引用的核心命题。
+sources:
+
+  # ── Cognitive Science ──
+  - source_id: SRC-SWELLER-1988
+    title: "Cognitive load during problem solving: Effects on learning"
+    authors: [John Sweller]
+    year: 1988
+    source_type: experiment
+    authority: A
+    access_status: secondary
+    domain: [cognitive_load, working_memory]
+    notes: 认知负荷理论奠基：工作记忆容量有限，教学设计须管理内在/外在/相关负荷。
+  - source_id: SRC-BADDELEY-1992
+    title: "Working Memory"
+    authors: [Alan Baddeley]
+    year: 1992
+    source_type: review
+    authority: S
+    access_status: full_text
+    domain: [working_memory]
+    notes: 工作记忆多成分模型：中央执行、语音环路、视空画板（后加情景缓冲器）。
+  - source_id: SRC-MILLER-1956
+    title: "The Magical Number Seven, Plus or Minus Two"
+    authors: [George A. Miller]
+    year: 1956
+    source_type: review
+    authority: A
+    access_status: full_text
+    domain: [working_memory]
+    notes: 短期记忆容量约 7±2 组块；注意：常被误用为"每页 7 条要点"——这是误读（见 anti_patterns）。
+  - source_id: SRC-KAHNEMAN-2011
+    title: "Thinking, Fast and Slow"
+    authors: [Daniel Kahneman]
+    year: 2011
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [attention, persuasion, processing_fluency]
+    notes: 双系统理论；认知流畅性影响信任与判断。
+  - source_id: SRC-MAYER-2001
+    title: "Multimedia Learning"
+    authors: [Richard E. Mayer]
+    year: 2001
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [multimedia_learning, cognitive_load]
+    notes: 多媒体学习九大原则（Coherence/Signaling/Redundancy/Contiguity/Segmenting/Modality/Pretraining/Personalization）的实验基础。
+  - source_id: SRC-MAYER-HANDBOOK-2014
+    title: "The Cambridge Handbook of Multimedia Learning (2nd ed.)"
+    authors: [Richard E. Mayer (ed.)]
+    year: 2014
+    source_type: handbook
+    authority: S
+    access_status: summary
+    domain: [multimedia_learning]
+    notes: 各原则效应量与边界条件的汇总；优先于单篇实验引用。
+
+  # ── Presentation Research ──
+  - source_id: SRC-ALLEY-2003
+    title: "The Craft of Scientific Presentations"
+    authors: [Michael Alley]
+    year: 2003
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [assertion, evidence, scientific_presentation]
+    notes: Assertion-Evidence 结构倡导者：句断言标题 + 视觉证据取代短语标题+项目符号。
+  - source_id: SRC-ALLEY-2006-AE
+    title: "Rethinking the Design of Presentation Slides: The Assertion-Evidence Structure (experimental studies)"
+    authors: [Michael Alley et al.]
+    year: 2006
+    source_type: experiment
+    authority: A
+    access_status: summary
+    domain: [assertion, evidence]
+    notes: 技术/科研演示中 assertion-evidence 结构提升理解与回忆的实验证据；边界：主要验证于工程/科研受众。
+  - source_id: SRC-GARRETT-2016
+    title: "The assertion-evidence model of presentations (replication & comprehension studies)"
+    authors: [Garrett, Alley et al.]
+    year: 2016
+    source_type: experiment
+    authority: A
+    access_status: summary
+    domain: [assertion, slide_comprehension]
+    notes: 句标题（sentence headline）vs 短语标题的理解差异研究。
+  - source_id: SRC-DUARTE-2008
+    title: "slide:ology"
+    authors: [Nancy Duarte]
+    year: 2008
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [presentation_design, visual_hierarchy]
+    notes: 实践方法论：视觉化思维；属 D 级实践启发，命题需验证。
+  - source_id: SRC-DUARTE-2010
+    title: "Resonate"
+    authors: [Nancy Duarte]
+    year: 2010
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [narrative, storytelling]
+    notes: "What is / What could be" 对比节奏与 S.T.A.R. 时刻；实践框架。
+  - source_id: SRC-REYNOLDS-2008
+    title: "Presentation Zen"
+    authors: [Garr Reynolds]
+    year: 2008
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [presentation_design, information_density]
+    notes: 极简主义实践；注意其语境是 Stage Mode 讲演，不必然适用 Reader/技术文档。
+  - source_id: SRC-ATKINSON-2005
+    title: "Beyond Bullet Points"
+    authors: [Cliff Atkinson]
+    year: 2005
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [narrative, slide_structure]
+    notes: 用叙事结构组织演示；与 Mayer 冗余原则的对话：BBP 主张屏幕不放完整句（有争议）。
+  - source_id: SRC-ABELA-2008
+    title: "Advanced Presentations by Design"
+    authors: [Andrew Abela]
+    year: 2008
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [presentation_design, data_visualization]
+    notes: Extreme Presentation 方法：按"比较/关系"选择图表的 Chart Chooser。
+  - source_id: SRC-WEISSMAN-2003
+    title: "Presenting to Win"
+    authors: [Jerry Weissman]
+    year: 2003
+    source_type: book
+    authority: C
+    access_status: summary
+    domain: [persuasion, delivery]
+    notes: IPO 路演实践；WIIFY（What's In It For You）受众中心原则。
+  - source_id: SRC-TUFTE-2003
+    title: "The Cognitive Style of PowerPoint"
+    authors: [Edward R. Tufte]
+    year: 2003
+    source_type: review
+    authority: B
+    access_status: full_text
+    domain: [information_density, data_visualization]
+    notes: 著名批评：PPT 降低信息密度与论证质量；注意这是论战性文章（polemic），非实验研究——其"低密度=低质"命题与 NASA 报告研究相关但与 Stage Mode 证据存在张力。
+  - source_id: SRC-DOUMONT-2005
+    title: "The Cognitive Style of PowerPoint: Slides Are Not All Evil (response & NASA analysis)"
+    authors: [Jean-luc Doumont]
+    year: 2005
+    source_type: review
+    authority: B
+    access_status: full_text
+    domain: [information_density, technical_presentation]
+    notes: 对 Tufte 的平衡回应：问题在误用而非工具；技术沟通需要自足 slide。
+
+  # ── Communication / Persuasion ──
+  - source_id: SRC-ARISTOTLE-RHETORIC
+    title: "Rhetoric"
+    authors: [Aristotle]
+    year: -350
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [persuasion, trust, emotion]
+    notes: Ethos / Pathos / Logos 三诉求框架。
+  - source_id: SRC-CIALDINI-1984
+    title: "Influence"
+    authors: [Robert Cialdini]
+    year: 1984
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [persuasion]
+    notes: 六（七）大说服原则；部分原则（如社会认同）有实验支持，实践泛化需注意语境。
+  - source_id: SRC-PETTY-1986
+    title: "The Elaboration Likelihood Model of Persuasion"
+    authors: [Richard Petty, John Cacioppo]
+    year: 1986
+    source_type: review
+    authority: A
+    access_status: full_text
+    domain: [persuasion]
+    notes: ELM：中心路径 vs 外周路径；受众动机/能力决定信息应更论证密集还是线索密集。
+  - source_id: SRC-MINTO-1987
+    title: "The Minto Pyramid Principle"
+    authors: [Barbara Minto]
+    year: 1987
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [argumentation, slide_structure]
+    notes: 金字塔原理与 SCQA；咨询业标准实践，属 D 级，适用边界：决策型/咨询型演示。
+  - source_id: SRC-BITZER-1968
+    title: "The Rhetorical Situation"
+    authors: [Lloyd Bitzer]
+    year: 1968
+    source_type: review
+    authority: A
+    access_status: full_text
+    domain: [persuasion, situation]
+    notes: 修辞情境论：exigence/audience/constraints——Situation First 的理论根源之一。
+
+  # ── Data Visualization ──
+  - source_id: SRC-TUFTE-1983
+    title: "The Visual Display of Quantitative Information"
+    authors: [Edward R. Tufte]
+    year: 1983
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [data_visualization]
+    notes: data-ink ratio、chartjunk；注意：极简数据墨水比在"记忆度"研究（Bateman 2010）中存在冲突证据。
+  - source_id: SRC-BATEMAN-2010
+    title: "Useful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts"
+    authors: [Scott Bateman et al.]
+    year: 2010
+    source_type: experiment
+    authority: A
+    access_status: full_text
+    domain: [data_visualization, memory]
+    notes: 冲突证据：适度视觉修饰不损害理解且提升长期记忆——对 Tufte 极简主义的重要边界。
+  - source_id: SRC-FEW-2004
+    title: "Show Me the Numbers"
+    authors: [Stephen Few]
+    year: 2004
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [data_visualization]
+    notes: 商业图表选择实践体系；基于感知研究。
+  - source_id: SRC-KNAFLIC-2015
+    title: "Storytelling with Data"
+    authors: [Cole Nussbaumer Knaflic]
+    year: 2015
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [data_visualization, storytelling]
+    notes: 数据叙事实践：declutter/focus attention/tell story。
+  - source_id: SRC-CAIRO-2016
+    title: "The Truthful Art"
+    authors: [Alberto Cairo]
+    year: 2016
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [data_visualization, trust]
+    notes: 可视化的真实性与不确定性表达。
+  - source_id: SRC-WARE-2012
+    title: "Information Visualization: Perception for Design (3rd ed.)"
+    authors: [Colin Ware]
+    year: 2012
+    source_type: book
+    authority: B
+    access_status: full_text
+    domain: [visual_perception, data_visualization]
+    notes: 视觉感知与编码效率（位置>长度>角度>面积>颜色饱和度）的感知科学基础。
+  - source_id: SRC-CLEVELAND-1984
+    title: "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods"
+    authors: [William Cleveland, Robert McGill]
+    year: 1984
+    source_type: experiment
+    authority: A
+    access_status: full_text
+    domain: [visual_perception, data_visualization]
+    notes: 图形感知排序实验：位置/长度编码最准确，面积/体积最差——图表选择的实验基础。
+
+  # ── Visual Design ──
+  - source_id: SRC-GESTALT-WERTHEIMER
+    title: "Gestalt principles of perceptual organization (tradition)"
+    authors: [Wertheimer, Koffka, Köhler]
+    year: 1923
+    source_type: review
+    authority: A
+    access_status: secondary
+    domain: [visual_perception, visual_hierarchy]
+    notes: 接近/相似/连续/闭合/共同命运——分组与层级的感知基础。
+  - source_id: SRC-WILLIAMS-1994
+    title: "The Non-Designer's Design Book"
+    authors: [Robin Williams]
+    year: 1994
+    source_type: book
+    authority: C
+    access_status: full_text
+    domain: [visual_hierarchy, typography]
+    notes: CRAP（对比/重复/对齐/接近）四原则；入门实践，与 Gestalt 机制一致。
+  - source_id: SRC-BERNARD-2002
+    title: "Optimal web typography (readability studies)"
+    authors: [Michael Bernard et al.]
+    year: 2002
+    source_type: experiment
+    authority: A
+    access_status: summary
+    domain: [typography, readability]
+    notes: 屏幕字号/行宽/行距对阅读速度与偏好的影响研究系列。
+
+  # ── Public Speaking / Delivery ──
+  - source_id: SRC-LUCAS-SPEAKING
+    title: "The Art of Public Speaking"
+    authors: [Stephen Lucas]
+    year: 2014
+    source_type: book
+    authority: B
+    access_status: summary
+    domain: [delivery, qa]
+    notes: 受众中心演讲学教材；Q&A 管理与现场适应。
+  - source_id: SRC-GALLO-2010
+    title: "The Presentation Secrets of Steve Jobs"
+    authors: [Carmine Gallo]
+    year: 2010
+    source_type: book
+    authority: C
+    access_status: summary
+    domain: [delivery, storytelling]
+    notes: 发布会式演示的实践拆解；D 级实践启发。
+
+  # ── Web / Runtime（技术参考，不属于方法论证据）──
+  - source_id: SRC-REVEALJS
+    title: "Reveal.js documentation"
+    authors: [Hakim El Hattab]
+    year: 2024
+    source_type: professional
+    authority: C
+    access_status: full_text
+    domain: [web_rendering]
+    notes: HTML 幻灯片框架；Runtime Reference 之一。
+  - source_id: SRC-SLIDEV
+    title: "Slidev documentation"
+    authors: [Anthony Fu]
+    year: 2024
+    source_type: professional
+    authority: C
+    access_status: full_text
+    domain: [web_rendering]
+    notes: Markdown 驱动的演示框架；Runtime Reference。
+  - source_id: SRC-WEBANIM-W3C
+    title: "Web Animations API (W3C)"
+    authors: [W3C]
+    year: 2023
+    source_type: professional
+    authority: B
+    access_status: full_text
+    domain: [motion, web_rendering]
+    notes: 原生动画控制（play/pause/reverse/seek）标准。

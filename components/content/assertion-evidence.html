@@ -1,0 +1,12 @@
+<!-- AssertionEvidence — Cognitive Job: Answer / Prove（KN-PRES-004）
+     结构：可证伪断言标题 + 视觉证据 + 来源脚注。证据区可为图表/照片/示意图。 -->
+<section class="wp-scene wp-ae">
+  <h2 class="wp-assertion">{{FALSIFIABLE_ASSERTION}}</h2>
+  <figure class="wp-ae__evidence">
+    {{VISUAL_EVIDENCE}}  <!-- 图表必须包在 data/ChartWithSource 容器中 -->
+    <figcaption class="wp-source">{{SOURCE}} · {{TIME}} · {{SCOPE}} · 单位：{{UNIT}}</figcaption>
+  </figure>
+  <p data-reveal><a data-deep-dive="{{EVIDENCE_SCENE_ID}}">⤵ 证据附录</a></p>
+  <aside class="wp-notes">{{SPEAKER_NOTES}}</aside>
+  <div class="wp-reader">{{FULL_READER_CONTENT_WITH_CITATIONS}}</div>
+</section>

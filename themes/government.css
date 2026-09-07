@@ -1,0 +1,12 @@
+/* Theme: Government — 政务/机构报告（浅色、红金克制点缀、宋体感标题） */
+:root {
+  --wp-bg: #fbfaf7;
+  --wp-fg: #1a1c21;
+  --wp-accent: #b03a2e;
+  --wp-muted: #6b7280;
+  --wp-font-display: "Songti SC", "Noto Serif SC", serif;
+  --wp-font-body: "PingFang SC", system-ui, sans-serif;
+  --wp-space: clamp(16px, 3vw, 44px);
+  --wp-radius: 6px;
+  --wp-motion-duration: 300ms;
+}

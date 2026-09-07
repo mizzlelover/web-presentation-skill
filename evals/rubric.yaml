@@ -1,0 +1,80 @@
+# Evaluation Rubric — 评测维度与评分标准（§66）
+
+# 每维 1–5 分；任一维 ≤2 必须修复后复评。权重可在项目级调整。
+dimensions:
+  - id: audience_fit
+    name: Audience Fit 受众适配
+    q5: 每幕都能回答"这一幕为什么为这个受众服务"；密度/术语/证据深度与受众模型一致
+    q1: 内容对受众自说自话，术语与先备知识错配
+  - id: goal_clarity
+    name: Goal Clarity 目标清晰度
+    q5: Central Thesis 一句话可说清；成功标准可检验
+    q1: 目标是"做好 PPT"式的笼统表述
+  - id: argument_quality
+    name: Argument Quality 论证质量
+    q5: 六查全过；反方论点有安置
+    q1: 存在 Unsupported Claim 或 Overclaim
+  - id: cognitive_load
+    name: Cognitive Load 认知负荷
+    q5: 负荷曲线有节奏，无连续 HIGH 无缓冲
+    q1: 连续多幕极高负荷或全场单调
+  - id: information_density
+    name: Information Density 信息密度
+    q5: 密度与 Mode/受众/讲者在场匹配；stage/reader 分层正确
+    q1: 拿 Reader 密度去演讲或拿 Stage 密度做留存
+  - id: scene_purpose
+    name: Scene Purpose 幕目的
+    q5: 每幕 Cognitive Job 单一清晰，标题类型匹配并有 rationale
+    q1: 大量幕无明确认知任务
+  - id: visual_hierarchy
+    name: Visual Hierarchy 视觉层级
+    q5: 每幕一处最强权重；分组反映论证结构
+    q1: 多处元素争夺注意；对齐混乱
+  - id: evidence_quality
+    name: Evidence Quality 证据质量
+    q5: 证据分级明确；source/unit/time/scope 完整；附录可深潜
+    q1: 无来源数据或口径缺失
+  - id: narrative_coherence
+    name: Narrative Coherence 叙事连贯
+    q5: 结构工具与情境匹配（该叙事时叙事，该结论先行时先行）
+    q1: 强加叙事弧或论证断裂
+  - id: data_visualization
+    name: Data Visualization 数据可视化
+    q5: 图形与认知任务匹配；编码遵循感知排序；无误导
+    q1: chart-chart-chart 堆砌或扭曲坐标轴
+  - id: motion_utility
+    name: Motion Utility 动效效用
+    q5: 每个动效有 Intent 且可控制；reduced-motion 降级
+    q1: 无意义动效或不可控自动播放
+  - id: interaction_utility
+    name: Interaction Utility 交互效用
+    q5: 交互降低理解成本或支持探索；Core Path 不依赖交互
+    q1: 核心内容藏在交互之后
+  - id: runtime_stability
+    name: Runtime Stability 运行稳定性
+    q5: 断网可跑；控制台零报错；分支/返回全通
+    q1: 现场依赖 CDN 或存在 JS 错误
+  - id: accessibility
+    name: Accessibility 可访问性
+    q5: 键盘全程可达；对比度达标；alt/ARIA 完整
+    q1: 键盘无法导航或对比度严重不足
+  - id: performance
+    name: Performance 性能
+    q5: 满足 Performance Budget；动画 60fps；首屏快
+    q1: 现场卡顿
+  - id: presenter_usability
+    name: Presenter Usability 讲者可用性
+    q5: 讲者台/计时/搜索/跳页/深潜返回齐备
+    q1: 线性翻页器，无现场调整能力
+  - id: reader_usability
+    name: Reader Usability 读者可用性
+    q5: Reader Mode 自足完整、可搜索、可深链分享
+    q1: 离开讲者读不懂
+  - id: aesthetic_quality
+    name: Aesthetic Quality 美学质量
+    q5: 风格与受众/品牌/主题匹配；tokens 统一
+    q1: 风格杂糅或每幕各自为政
+
+scoring:
+  pass_rule: 所有维度 ≥3 且 runtime_stability = 5 方可交付
+  report: 输出 18 维得分 + 总分 + 雷达图 + 修复清单

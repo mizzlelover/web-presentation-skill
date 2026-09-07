@@ -1,0 +1,26 @@
+<!-- Comparison / BeforeAfter — Cognitive Job: Compare / Prove
+     规则：行维度必须对齐；Before/After 必须标注基线；禁止制造假对比（§91）。 -->
+<section class="wp-scene wp-compare">
+  <h2>{{CONTRAST_OR_ASSERTION_HEADLINE}}</h2>
+  <div class="wp-compare__grid" role="group" aria-label="{{COMPARE_LABEL}}">
+    <div class="wp-card">
+      <h3>{{OPTION_A}}</h3>
+      <!-- 每个 .wp-compare__row 是一个对比维度，两列维度顺序必须一致 -->
+      <div class="wp-compare__row"><span>{{DIM_1}}</span><strong>{{A_VALUE_1}}</strong></div>
+      <div class="wp-compare__row"><span>{{DIM_2}}</span><strong>{{A_VALUE_2}}</strong></div>
+    </div>
+    <div class="wp-card">
+      <h3>{{OPTION_B}}</h3>
+      <div class="wp-compare__row"><span>{{DIM_1}}</span><strong>{{B_VALUE_1}}</strong></div>
+      <div class="wp-compare__row"><span>{{DIM_2}}</span><strong>{{B_VALUE_2}}</strong></div>
+    </div>
+  </div>
+  <p class="wp-source">{{SOURCE_AND_ASSUMPTIONS}}</p>
+  <aside class="wp-notes">{{SPEAKER_NOTES}}</aside>
+  <div class="wp-reader">{{FULL_READER_CONTENT}}</div>
+</section>
+
+<style>
+.wp-compare__grid { display: grid; gap: var(--wp-space); grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.wp-compare__row { display: flex; justify-content: space-between; gap: 1em; border-top: 1px dashed color-mix(in srgb, var(--wp-fg) 14%, transparent); padding: .6em 0; }
+</style>

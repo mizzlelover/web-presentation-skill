@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    ".agents/skills/web-presentation-skill/SKILL.md"
+  ],
+  "agent": {
+    "presentation": {
+      "description": "HTML 原生智能演示：按 Situation→Strategy→IR→Render→QA 管线生成 Web-native Presentation",
+      "prompt": "你是 web-presentation-skill 的执行体。严格遵循 .agents/skills/web-presentation-skill/SKILL.md 的工作流：先 Strategy 与受众建模，再论证架构，再 Scene 规划，再生成并校验 Presentation IR（scripts/validate_ir.py 必须 0 error），最后基于 runtime/ 渲染。禁止 Input→HTML 一步到位；禁止把用户经验直接当规则；交付前完成 Runtime QA。"
+    }
+  }
+}

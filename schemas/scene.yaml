@@ -1,0 +1,33 @@
+# Scene Schema — 单幕定义（Scene，不是 Slide；§18/§31/§32）
+id: str
+role: enum               # opening | problem | argument | evidence | case | recommendation | decision | transition | summary | qa | backup | deep_dive | appendix
+cognitive_job: enum      # ask|answer|explain|compare|demonstrate|prove|orient|transition|summarize|challenge|reveal|visualize|quantify|simulate|decide
+audience_question: str   # 这一幕回答受众心里的哪个问题
+headline:
+  type: enum             # question | assertion | topic | decision | contrast | narrative
+  text: str
+  rationale: str         # 为什么选这一类标题（必填）
+assertion: str | null    # assertion-evidence 结构的核心断言
+content:
+  stage: str             # 现场版（精简，讲者在场）
+  reader: str            # 阅读版（完整自足）
+evidence: [{ type: str, ref: str, source: str, unit: str | null, time: str | null, scope: str | null }]
+visual_semantics: enum   # hero_statement|question|assertion_evidence|comparison|before_after|timeline|process|matrix|hierarchy|architecture|network|big_number|data_insight|decision|roadmap|risk_map|case_study|quote|evidence|summary|custom
+layout_intent: str       # 布局意图（自然语言，禁止固定像素坐标）
+information_density: enum # low | medium | high | very_high
+cognitive_load: enum     # low | medium | high | very_high
+render_level: enum       # L0|L1|L2|L3|L4|L5|L6（最低充分层级）
+render_rationale: str    # 为什么选择该层级（必填，防滥用）
+reveal_strategy: enum | null  # none | progressive | on_demand
+motion_intent: [enum] | null  # reveal|focus|connect|transform|trace|accumulate|compare|cause|continuity|remove
+interaction: [{ type: enum(hover|click|expand|drill_down|slider|filter|toggle|scrub|compare|explore), purpose: str }]  # purpose 必填：降低理解成本或支持探索
+deep_dive: str | null    # 指向 deep dive scene id
+speaker_notes: str
+screen_role: str         # 屏幕承担什么（§58 讲者-屏幕分工）
+speaker_role: str        # 讲者承担什么
+reader_content: str      # reader mode 完整内容
+print_state: str         # 打印态如何处理（展开/冻结/省略）
+branch_targets: [str]    # 可跳转的 scene id
+accessibility:
+  alt_text: str | null
+  notes: str | null

@@ -1,0 +1,83 @@
+/* WP Presentation Base — 基础样式（全部走 design tokens / CSS 变量，禁止散落魔法数） */
+
+:root {
+  /* tokens 由 themes/*.css 覆盖；此处为 minimal 默认值 */
+  --wp-font-display: var(--wp-font-display-fallback, system-ui), sans-serif;
+  --wp-font-body: var(--wp-font-body-fallback, system-ui), sans-serif;
+  --wp-bg: #0e1116;
+  --wp-fg: #f2f4f7;
+  --wp-accent: #4f8cff;
+  --wp-muted: #9aa4b2;
+  --wp-space: clamp(16px, 3vw, 48px);
+  --wp-radius: 12px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--wp-bg);
+  color: var(--wp-fg);
+  font-family: var(--wp-font-body);
+  overflow: hidden; /* Stage 模式；Reader 模式解除 */
+}
+
+.wp-deck { height: 100dvh; }
+
+.wp-scene {
+  height: 100dvh;
+  display: grid;
+  align-content: center;
+  gap: calc(var(--wp-space) * .6);
+  padding: calc(var(--wp-space) * 1.2) calc(var(--wp-space) * 1.6);
+  container-type: inline-size;
+}
+.wp-scene[hidden] { display: none; }
+
+/* 标题层级：每幕一个最强权重（KN-VIS-002） */
+.wp-scene h1, .wp-scene h2 {
+  font-family: var(--wp-font-display);
+  font-size: clamp(28px, 4.2cqi + 16px, 64px);
+  line-height: 1.15;
+  margin: 0;
+  max-inline-size: 24ch;
+}
+.wp-scene p, .wp-scene li { font-size: clamp(16px, 1.4cqi + 10px, 24px); max-inline-size: 62ch; }
+
+/* 渐进揭示 */
+[data-reveal] { opacity: 0; transform: translateY(12px); }
+[data-reveal].wp-revealed { opacity: 1; transform: none; transition: opacity .32s ease, transform .32s ease; }
+.wp-motion-final { opacity: 1 !important; transform: none !important; }
+
+/* Reader / notes / 引用层：Stage 隐藏 */
+.wp-reader, .wp-notes { display: none; }
+.wp-source { font-size: .7em; color: var(--wp-muted); }
+
+/* 语义组件基础 */
+.wp-big-number { font-size: clamp(56px, 12cqi, 160px); font-weight: 800; color: var(--wp-accent); line-height: 1; }
+.wp-assertion { border-inline-start: 4px solid var(--wp-accent); padding-inline-start: .8em; }
+.wp-grid { display: grid; gap: var(--wp-space); grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.wp-card { background: color-mix(in srgb, var(--wp-fg) 6%, transparent); border-radius: var(--wp-radius); padding: var(--wp-space); }
+
+/* 搜索浮层 */
+.wp-search { position: fixed; inset: 12% 20% auto; z-index: 50; background: #1c1c1e; border-radius: 12px; padding: 16px; box-shadow: 0 24px 64px rgba(0,0,0,.5); }
+.wp-search input { width: 100%; font-size: 18px; padding: 10px 14px; border-radius: 8px; border: 1px solid #444; background: #111; color: #eee; }
+.wp-search ul { list-style: none; margin: 8px 0 0; padding: 0; max-height: 40vh; overflow: auto; }
+.wp-search li { padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.wp-search li:hover, .wp-search li:focus { background: #2c2c2e; }
+
+/* 讲者提示条（可选，Stage 底部进度） */
+.wp-progress { position: fixed; inset: auto 0 0; height: 3px; background: color-mix(in srgb, var(--wp-fg) 12%, transparent); }
+.wp-progress > i { display: block; height: 100%; background: var(--wp-accent); transition: width .3s ease; }
+
+/* Reader Mode */
+body.wp-reader-mode { overflow: auto; }
+body.wp-reader-mode .wp-deck { height: auto; }
+body.wp-reader-mode .wp-scene { height: auto; min-height: 60dvh; border-bottom: 1px solid color-mix(in srgb, var(--wp-fg) 10%, transparent); display: block !important; }
+body.wp-reader-mode .wp-reader { display: block; }
+body.wp-reader-mode .wp-controls, body.wp-reader-mode .wp-progress { display: none; }
+
+/* 动效降级 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+}

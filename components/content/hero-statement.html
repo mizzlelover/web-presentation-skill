@@ -1,0 +1,15 @@
+<!-- HeroStatement — Cognitive Job: Orient / Decision / Summarize
+     用法：每幕唯一最强视觉权重；副题可挂 data-reveal。 -->
+<section class="wp-scene wp-hero">
+  <h1 class="wp-hero__statement">{{ASSERTION_OR_DECISION}}</h1>
+  <p class="wp-hero__sub" data-reveal>{{ONE_LINE_CONTEXT}}</p>
+  <aside class="wp-notes">{{SPEAKER_NOTES}}</aside>
+  <div class="wp-reader">{{FULL_READER_CONTENT}}</div>
+</section>
+
+<style>
+/* 片段示意：正式渲染时 tokens 来自 themes/ */
+.wp-hero { text-align: center; align-content: center; }
+.wp-hero__statement { margin-inline: auto; }
+.wp-hero__sub { margin-inline: auto; color: var(--wp-muted); }
+</style>

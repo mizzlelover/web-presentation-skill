@@ -1,0 +1,12 @@
+/* Theme: Corporate — 企业决策场景（稳重、高对比、低饱和） */
+:root {
+  --wp-bg: #10141c;
+  --wp-fg: #eef1f6;
+  --wp-accent: #3d7bfd;
+  --wp-muted: #8d99ad;
+  --wp-font-display: "Helvetica Neue", "PingFang SC", system-ui, sans-serif;
+  --wp-font-body: "Helvetica Neue", "PingFang SC", system-ui, sans-serif;
+  --wp-space: clamp(16px, 3vw, 48px);
+  --wp-radius: 10px;
+  --wp-motion-duration: 400ms;
+}

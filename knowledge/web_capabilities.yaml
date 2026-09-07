@@ -1,0 +1,103 @@
+# Web Capability Registry — Web 能力登记（§77）
+# 评估日期需定期复核；browser_support 为撰写时状态，使用前以 caniuse 为准。
+capabilities:
+  - capability: CSS Animations / Transitions
+    purpose: 简单 REVEAL/FOCUS/REMOVE 动效
+    technology: CSS
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: low
+    accessibility: 遵守 prefers-reduced-motion
+    fallback: 直接显示终态
+    recommended_use: [淡入淡出, 位移揭示, 高亮]
+    avoid_when: [复杂时间线编排]
+    last_updated: 2026-09
+  - capability: Web Animations API
+    purpose: 可编程控制的动效（pause/seek/reverse）
+    technology: WAAPI
+    browser_support: { chromium: "84+", safari: "13.1+", firefox: "75+" }
+    performance_cost: low
+    accessibility: 支持播放速率=0 降级
+    fallback: CSS transition 或静态
+    recommended_use: [讲者可控动效, 因果链动画]
+    avoid_when: [需极端复杂编排时（考虑 Motion/GSAP）]
+    last_updated: 2026-09
+  - capability: View Transition API
+    purpose: 跨 Scene 共享元素过渡（CONTINUITY）
+    technology: 原生 API
+    browser_support: { chromium: "111+", safari: "18+", firefox: no }
+    performance_cost: medium
+    accessibility: 需尊重 reduced-motion
+    fallback: 普通切换
+    recommended_use: [跨幕对象延续, 放大深潜]
+    avoid_when: [需兼容 Firefox 的正式交付（除非可降级）]
+    last_updated: 2026-09
+  - capability: GSAP
+    purpose: 复杂时间线/路径/物理动效
+    technology: JS 库
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: medium
+    accessibility: 需手动接入 reduced-motion
+    fallback: WAAPI 简化版
+    recommended_use: [复杂编排 timeline, scrub 叙事]
+    avoid_when: [简单淡入（用 CSS）]
+    last_updated: 2026-09
+  - capability: ECharts
+    purpose: 标准商务/数据图表
+    technology: JS 库（Canvas）
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: medium
+    accessibility: 需提供数据表替代文本
+    fallback: 静态 SVG 导出
+    recommended_use: [商务图表, 常规趋势/对比/构成]
+    avoid_when: [高度定制视觉编码（用 D3/SVG）]
+    last_updated: 2026-09
+  - capability: D3.js
+    purpose: 高度定制数据可视化
+    technology: JS 库（SVG/Canvas）
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: medium
+    accessibility: 需手动 ARIA/文本替代
+    fallback: 静态 SVG
+    recommended_use: [定制编码, 叙事可视化]
+    avoid_when: [常规商务图（用 ECharts 更省）]
+    last_updated: 2026-09
+  - capability: Mermaid
+    purpose: 流程/时序/状态/架构草稿
+    technology: JS 库（SVG）
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: low
+    accessibility: 生成的 SVG 需补 title/desc
+    fallback: 预渲染 SVG
+    recommended_use: [结构草稿, 中间表示]
+    avoid_when: [最终成品的精修视觉（转定制 SVG）]
+    last_updated: 2026-09
+  - capability: Three.js / WebGL
+    purpose: 3D 空间关系
+    technology: WebGL
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: high
+    accessibility: 必须提供 2D 等价描述
+    fallback: 静态渲染图/视频
+    recommended_use: [空间关系, 产品, 地理, 科学结构, 数字孪生]
+    avoid_when: [为了高级感, 现场性能无保障时]
+    last_updated: 2026-09
+  - capability: Container Queries
+    purpose: 组件级响应式
+    technology: CSS
+    browser_support: { chromium: "105+", safari: "16+", firefox: "110+" }
+    performance_cost: low
+    accessibility: 中性
+    fallback: 媒体查询
+    recommended_use: [语义组件自适应]
+    avoid_when: [需支持极旧浏览器]
+    last_updated: 2026-09
+  - capability: WebSocket / Live Data
+    purpose: 实时数据/投票/Q&A
+    technology: Web 标准
+    browser_support: { chromium: all, safari: all, firefox: all }
+    performance_cost: medium
+    accessibility: 需文本镜像
+    fallback: 静态快照数据
+    recommended_use: [明确需要 Live 的高级场景]
+    avoid_when: [默认演示（现场稳定性优先）]
+    last_updated: 2026-09

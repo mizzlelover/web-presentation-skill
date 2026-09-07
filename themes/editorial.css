@@ -1,0 +1,12 @@
+/* Theme: Editorial — 叙事/演讲场景（杂志排版、大留白、衬线标题） */
+:root {
+  --wp-bg: #faf7f2;
+  --wp-fg: #22201c;
+  --wp-accent: #c2703d;
+  --wp-muted: #8a8178;
+  --wp-font-display: Georgia, "Songti SC", serif;
+  --wp-font-body: Georgia, "Songti SC", serif;
+  --wp-space: clamp(20px, 4vw, 64px);
+  --wp-radius: 4px;
+  --wp-motion-duration: 600ms;
+}

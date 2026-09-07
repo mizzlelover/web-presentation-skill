@@ -1,0 +1,47 @@
+/* WP Print Mode — 打印/PDF 视图（§50）
+   冻结动画、展开全部内容、显示引用、分页、黑白可读。 */
+
+@page {
+  size: 297mm 167mm; /* 16:9 横版 */
+  margin: 12mm;
+}
+
+@media print {
+  :root { --wp-bg: #fff; --wp-fg: #000; }
+
+  body { background: #fff !important; color: #000 !important; }
+
+  /* 每幕一页 */
+  .wp-scene {
+    hidden: unset;
+    display: block !important;
+    page-break-after: always;
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+  .wp-scene[hidden] { display: block !important; }
+
+  /* 展开渐进元素与 reader 补充 */
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .wp-revealed { opacity: 1 !important; }
+  .wp-reader { display: block !important; }
+
+  /* 隐藏控制与交互控件 */
+  .wp-search, .wp-presenter-bar, .wp-controls,
+  [data-interact], nav, button { display: none !important; }
+
+  /* 冻结动画终态 */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* 显示引用来源 */
+  .wp-source, [data-citation] { display: block !important; font-size: 8pt; color: #444; }
+
+  /* 链接展开 URL（引用友好） */
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #444; }
+
+  /* 黑白可读性兜底 */
+  img, svg, canvas { filter: none !important; max-width: 100% !important; }
+}
