@@ -6,13 +6,15 @@
 <title>HTML 原生智能演示系统 · 产品推介（本演示即系统输出）</title>
 <link rel="stylesheet" href="../../runtime/print/print.css" media="print">
 <style>
-/* ── Demo 主题：paper（暖白纸感 + 墨色排版 + 单一克制强调色）── */
+/* ── Demo 主题：spectral-paper（暖纸底 × 编辑排版 × 克制的光谱）── */
 :root{
-  --paper:#faf9f7; --ink:#16161a; --ink2:#55555c; --ink3:#9b9ba2;
-  --line:#e6e3de; --line2:#d8d4cd;
-  --accent:#2b47e0; --accent-soft:#eef1fe;
+  --paper:#faf8f4; --paper2:#f3f0e9; --ink:#17150f; --ink2:#57534a; --ink3:#a39d90;
+  --line:#e8e4da; --line2:#d9d4c6;
+  --accent:#3b5bff; --accent-soft:#edf1ff;
+  --violet:#8b5cf6; --coral:#ff6a4d;
+  --spectrum:linear-gradient(100deg,#3b5bff,#8b5cf6 46%,#ff6a4d);
   --radius:18px;
-  --shadow:0 1px 2px rgba(22,22,26,.04),0 10px 32px rgba(22,22,26,.07);
+  --shadow:0 1px 2px rgba(23,21,15,.05),0 12px 34px rgba(23,21,15,.08);
   --wp-accent:var(--accent);
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -22,6 +24,23 @@ body{
   font-family:"PingFang SC","Helvetica Neue",system-ui,sans-serif;
   overflow:hidden;line-height:1.75;-webkit-font-smoothing:antialiased;
 }
+/* 光谱氛围层：极低饱和、缓慢漂移 */
+body::before{
+  content:"";position:fixed;inset:-10%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(38% 42% at 8% 6%,rgba(59,91,255,.10),transparent 62%),
+    radial-gradient(36% 40% at 96% 12%,rgba(139,92,246,.09),transparent 62%),
+    radial-gradient(42% 46% at 50% 108%,rgba(255,106,77,.08),transparent 62%);
+  animation:spdrift 36s ease-in-out infinite alternate;
+}
+@keyframes spdrift{to{transform:translate(2.5%,-2%) scale(1.06)}}
+/* 纸面颗粒 */
+body::after{
+  content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+.wp-scene{z-index:1}
+@media print{body::before,body::after{display:none!important}}
 /* ── Scene 基础 ── */
 .wp-deck{height:100dvh}
 .wp-scene{
@@ -41,7 +60,7 @@ body{
 h1{font-size:clamp(36px,6.4cqi,80px);font-weight:900;line-height:1.18;letter-spacing:-.015em;max-inline-size:22ch}
 h2{font-size:clamp(26px,4.2cqi,52px);font-weight:900;line-height:1.24;max-inline-size:26ch;letter-spacing:-.01em}
 em{font-style:normal;position:relative;white-space:nowrap;z-index:0}
-em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.3em;background:var(--accent-soft);z-index:-1;border-radius:3px}
+em::after{content:"";position:absolute;left:-1%;right:-1%;bottom:.06em;height:.32em;background:linear-gradient(100deg,rgba(59,91,255,.15),rgba(139,92,246,.15),rgba(255,106,77,.16));z-index:-1;border-radius:3px}
 .sub{color:var(--ink2);font-size:clamp(14.5px,1.7cqi,20px);max-inline-size:58ch;margin-inline:auto}
 .wp-source{font-size:clamp(10px,1cqi,12.5px);color:var(--ink3)}
 .wp-reader,.wp-notes{display:none}
@@ -64,9 +83,10 @@ em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.3em;b
 .pnode .step{font-size:clamp(9px,1cqi,11px);letter-spacing:.16em;color:var(--ink3);font-weight:700}
 .pnode h3{font-size:clamp(13px,1.6cqi,18px);margin:8px 0 5px;font-weight:800}
 .pnode p{font-size:clamp(10.5px,1.1cqi,12.5px);color:var(--ink2);line-height:1.6}
-.pnode.gate{border-top-color:var(--accent)}
+.pnode.gate{border-top:none}
+.pnode.gate::before{content:"";position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--spectrum)}
 .pnode.gate .step{color:var(--accent)}
-.pnode.gate h3{color:var(--accent)}
+.pnode.gate h3{background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
 .plink{align-self:flex-start;width:clamp(10px,1.6cqi,22px);flex:none;height:2.5px;background:var(--ink)}
 
 /* ── 对比（contrast）── */
@@ -96,6 +116,7 @@ em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.3em;b
 .num-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4cqi,60px);width:min(100%,940px)}
 .num{padding-bottom:14px;border-bottom:3px solid var(--ink)}
 .num .v{font-size:clamp(60px,9.5cqi,124px);font-weight:900;line-height:1;letter-spacing:-.02em}
+.num:nth-child(2) .v{background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
 .num .l{margin-top:10px;color:var(--ink2);font-size:clamp(12px,1.4cqi,15.5px)}
 
 /* ── CTA ── */
@@ -121,8 +142,8 @@ em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.3em;b
 .wp-search ul{list-style:none;margin:8px 0 0;padding:0;max-height:40vh;overflow:auto}
 .wp-search li{padding:8px 12px;border-radius:8px;cursor:pointer}
 .wp-search li:hover{background:var(--paper2, #f4f2ee)}
-.wp-progress{position:fixed;inset:auto 0 0;height:3px;background:var(--line)}
-.wp-progress>i{display:block;height:100%;background:var(--ink);transition:width .35s ease}
+.wp-progress{position:fixed;inset:auto 0 0;height:3px;background:var(--line);z-index:70}
+.wp-progress>i{display:block;height:100%;background:var(--spectrum);transition:width .35s ease}
 a{color:var(--accent)}
 .dd-link{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:9px 22px;background:#fff;font-size:clamp(12.5px,1.4cqi,15px);color:var(--ink);font-weight:600}
 .dd-link:hover{border-color:var(--accent);color:var(--accent)}
