@@ -1,5 +1,9 @@
-# Web-native Presentation Intelligence
-# HTML 原生智能演示系统
+# 文质 Wenzhi · Web-native Presentation Intelligence
+# 文质 · HTML 原生智能演示系统
+
+> 「质胜文则野，文胜质则史。文质彬彬，然后君子。」——《论语 · 雍也》
+>
+> 品牌释义：**质** = 内容、论证、策略（Strategy → IR 管线）；**文** = 渲染、视觉、呈现（Renderer）。AI 演示的常见失败是"文胜质"——形式压过内容。「文质」先把"质"立住，再让"文"恰如其分。
 
 > 不是又一个 PPT 模板生成器——而是一套把**演示科学**（认知科学 / 传播学 / 演示研究）与 **Web 演示工程**打通的 AI Skill。给定复杂内容、真实受众、沟通目标与场景，它产出的不是"幻灯片文件"，而是一个可现场运行、可分支深潜、可动态调整的 **Presentation Application（演示应用）**。
 >

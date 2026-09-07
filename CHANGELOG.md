@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.5] — 2026-09-07
+
+- 启用中文品牌「文质 Wenzhi」：取《论语·雍也》"质胜文则野，文胜质则史。文质彬彬，然后君子"——质 = 内容/论证/策略，文 = 渲染/视觉/呈现
+- 宣传页：导航 logo、页面标题、hero 新增《论语》原典句、作者区文案、页脚署名全量品牌化
+- README 顶部改为品牌双标题 + 品牌释义；Demo 开场 kicker 与结尾签名行加入品牌
+
 ## [0.1.4] — 2026-09-07
 
 - GitHub Pages 源从 /docs 切换到仓库根目录：宣传页移至根 index.html，Demo 现可在 https://present.mizzlelover.xyz/examples/demo/ 直接在线运行
