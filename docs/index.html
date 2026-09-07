@@ -7,130 +7,127 @@
 <meta name="description" content="把演示科学与 Web 工程打通的 AI Skill：情境 → 受众 → 论证 → 认知路径 → Presentation IR → 演示应用。支持 Claude Code / Codex / OpenCode。作者：谁是专家。">
 <style>
 :root{
-  --bg:#06070f; --bg2:#0b0e1d; --fg:#eef1ff; --muted:#8b93b8;
-  --c1:#5b8cff; --c2:#a06bff; --c3:#00e5c0; --c4:#ff6b9d;
-  --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.09);
-  --grad:linear-gradient(120deg,var(--c1),var(--c2) 45%,var(--c3));
+  --paper:#faf9f7; --paper2:#f4f2ee; --ink:#16161a; --ink2:#55555c; --ink3:#9b9ba2;
+  --line:#e6e3de; --line2:#d8d4cd;
+  --accent:#2b47e0;         /* 单一克制强调色 */
+  --accent-soft:#eef1fe;
+  --radius:20px;
+  --shadow:0 1px 2px rgba(22,22,26,.04),0 8px 28px rgba(22,22,26,.06);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font-family:"PingFang SC","Helvetica Neue",system-ui,sans-serif;overflow-x:hidden;line-height:1.7}
-::selection{background:var(--c2);color:#fff}
+body{background:var(--paper);color:var(--ink);font-family:"PingFang SC","Helvetica Neue",system-ui,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--ink);color:var(--paper)}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-/* ── 背景星空与光斑 ── */
-.aurora{position:fixed;inset:0;z-index:-2;background:
-  radial-gradient(60vw 60vw at 15% -10%,rgba(91,140,255,.20),transparent 60%),
-  radial-gradient(50vw 50vw at 90% 10%,rgba(160,107,255,.16),transparent 60%),
-  radial-gradient(45vw 45vw at 70% 90%,rgba(0,229,192,.10),transparent 60%),var(--bg)}
-.stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
-.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.5;animation:tw 4s infinite ease-in-out}
-@keyframes tw{0%,100%{opacity:.12}50%{opacity:.7}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 /* ── 导航 ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:10;backdrop-filter:blur(14px);background:rgba(6,7,15,.55);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
-.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.logo .dot{width:10px;height:10px;border-radius:50%;background:var(--grad);box-shadow:0 0 12px var(--c1)}
-nav ul{display:flex;gap:26px;list-style:none;font-size:14px;color:var(--muted)}
-nav ul a:hover{color:#fff}
-nav .cta{padding:8px 18px;border-radius:999px;background:var(--grad);color:#fff;font-size:14px;font-weight:600;transition:.25s}
-nav .cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(91,140,255,.4)}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(250,249,247,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:16px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo .mark{width:22px;height:22px;border-radius:6px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:12px;font-weight:900}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px;color:var(--ink2)}
+nav ul a{transition:.2s}
+nav ul a:hover{color:var(--ink)}
+nav .cta{padding:9px 20px;border-radius:999px;background:var(--ink);color:var(--paper);font-size:13.5px;font-weight:600;transition:.25s}
+nav .cta:hover{opacity:.82;transform:translateY(-1px)}
 /* ── Hero ── */
-header.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:120px 24px 80px}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--card)}
-.badge i{width:8px;height:8px;border-radius:50%;background:var(--c3);box-shadow:0 0 10px var(--c3);animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.4}}
-h1{font-size:clamp(38px,7vw,84px);line-height:1.12;font-weight:900;letter-spacing:-.01em;margin:26px 0 18px}
-h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.sub{font-size:clamp(16px,2.2vw,21px);color:var(--muted);max-width:760px;margin:0 auto}
-.hero .en{font-size:14px;color:#5c6486;margin-top:14px;letter-spacing:.06em}
-.btnrow{display:flex;gap:16px;justify-content:center;margin-top:42px;flex-wrap:wrap}
-.btn{padding:14px 30px;border-radius:14px;font-weight:700;font-size:16px;transition:.25s;display:inline-flex;align-items:center;gap:8px}
-.btn.primary{background:var(--grad);color:#fff;box-shadow:0 12px 40px rgba(91,140,255,.35)}
-.btn.primary:hover{transform:translateY(-2px);box-shadow:0 18px 54px rgba(160,107,255,.45)}
-.btn.ghost{border:1px solid var(--line);background:var(--card);color:var(--fg)}
-.btn.ghost:hover{border-color:var(--c1)}
-.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:12px;letter-spacing:.3em;animation:bob 2.4s infinite}
-@keyframes bob{50%{transform:translate(-50%,8px)}}
-/* ── 通用节 ── */
-section{padding:110px 0}
-.kicker{font-size:13px;letter-spacing:.28em;color:var(--c3);text-transform:uppercase;font-weight:700}
-h2{font-size:clamp(28px,4.4vw,48px);font-weight:900;margin:14px 0 16px;line-height:1.2}
-.lead{color:var(--muted);max-width:680px;font-size:17px}
+header.hero{min-height:96svh;display:grid;place-items:center;text-align:center;padding:150px 28px 90px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.22em;color:var(--ink2);font-weight:600;text-transform:uppercase}
+.eyebrow::before,.eyebrow::after{content:"";width:36px;height:1px;background:var(--line2)}
+h1{font-size:clamp(40px,7.2vw,86px);line-height:1.16;font-weight:900;letter-spacing:-.015em;margin:30px 0 24px}
+h1 em{font-style:normal;position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.32em;background:var(--accent-soft);z-index:-1;border-radius:3px}
+.hero .sub{font-size:clamp(16px,2vw,20px);color:var(--ink2);max-width:680px;margin:0 auto}
+.hero .en{margin-top:20px;font-size:12px;letter-spacing:.3em;color:var(--ink3)}
+.btnrow{display:flex;gap:14px;justify-content:center;margin-top:46px;flex-wrap:wrap}
+.btn{padding:15px 34px;border-radius:999px;font-weight:700;font-size:15.5px;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(22,22,26,.22)}
+.btn.ghost{border:1px solid var(--line2);color:var(--ink);background:#fff}
+.btn.ghost:hover{border-color:var(--ink)}
+.scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);color:var(--ink3);font-size:11px;letter-spacing:.34em;animation:bob 2.6s infinite ease-in-out}
+@keyframes bob{50%{transform:translate(-50%,7px)}}
+/* ── 节 ── */
+section{padding:120px 0}
+section:nth-of-type(even){background:var(--paper2)}
+.kicker{font-size:12.5px;letter-spacing:.26em;color:var(--accent);font-weight:700;text-transform:uppercase}
+h2{font-size:clamp(28px,4.4vw,46px);font-weight:900;margin:16px 0 18px;line-height:1.28;letter-spacing:-.01em}
+.lead{color:var(--ink2);max-width:660px;font-size:17px}
 /* ── 痛点对比 ── */
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px}
-.vs .col{border-radius:20px;padding:30px;border:1px solid var(--line)}
-.vs .bad{background:rgba(255,107,157,.05)}
-.vs .good{background:rgba(0,229,192,.05);border-color:rgba(0,229,192,.25)}
-.vs h3{font-size:19px;margin-bottom:18px;display:flex;gap:10px;align-items:center}
-.vs li{list-style:none;padding:9px 0;color:var(--muted);font-size:15px;border-top:1px dashed var(--line)}
-.vs .good li{color:#c8d2f0}
-.vs li b{color:var(--fg)}
-.x{color:var(--c4)} .v{color:var(--c3)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+.vs .col{border-radius:var(--radius);padding:36px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.vs .good{border-color:var(--ink);border-width:1.5px}
+.vs h3{font-size:18px;margin-bottom:20px;display:flex;gap:10px;align-items:center}
+.vs h3 .tag{margin-left:auto;font-size:11px;font-weight:600;color:var(--ink3);letter-spacing:.12em}
+.vs li{list-style:none;padding:12px 0 12px 18px;color:var(--ink2);font-size:14.5px;border-top:1px solid var(--paper2);position:relative}
+.vs li b{color:var(--ink)}
+.vs li::before{content:"";position:absolute;left:0;top:23px;width:6px;height:6px;border-radius:50%}
+.vs .bad li::before{background:var(--ink3)}
+.vs .good li::before{background:var(--accent)}
 /* ── 流水线 ── */
-.pipe{margin-top:52px;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.stage{position:relative;border:1px solid var(--line);border-radius:16px;padding:22px 16px;background:var(--card);transition:.3s;overflow:hidden}
-.stage:hover{transform:translateY(-6px);border-color:var(--c2);box-shadow:0 16px 40px rgba(160,107,255,.18)}
-.stage .no{font-size:12px;color:var(--c2);font-weight:800;letter-spacing:.15em}
-.stage h4{font-size:16px;margin:8px 0 6px}
-.stage p{font-size:12.5px;color:var(--muted);line-height:1.55}
-.stage::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--c2);font-weight:900;z-index:2}
-.stage:last-child::after{display:none}
-/* ── 特性网格 ── */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.feat{border:1px solid var(--line);border-radius:20px;padding:28px;background:var(--card);transition:.3s}
-.feat:hover{transform:translateY(-5px);border-color:var(--c1);box-shadow:0 18px 44px rgba(91,140,255,.16)}
-.feat .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:16px;background:linear-gradient(135deg,rgba(91,140,255,.2),rgba(160,107,255,.2));border:1px solid var(--line)}
-.feat h4{font-size:17px;margin-bottom:8px}
-.feat p{font-size:14px;color:var(--muted)}
+.pipe{margin-top:56px;display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.stage{padding:26px 18px 22px;border-top:2px solid var(--ink);position:relative}
+.stage:not(:last-child)::after{content:"";position:absolute;top:-2px;right:-1px;width:14px;height:2px;background:var(--ink)}
+.stage .no{font-family:Georgia,serif;font-size:34px;font-weight:400;color:var(--line2);line-height:1}
+.stage h4{font-size:16px;margin:14px 0 8px;font-weight:800}
+.stage p{font-size:12.5px;color:var(--ink2);line-height:1.65}
+.stage.gate{border-top-color:var(--accent)}
+.stage.gate .no{color:var(--accent)}
+.stage.gate h4::after{content:" · 闸门";color:var(--accent);font-size:12px;font-weight:600}
+/* ── 特性 ── */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.feat{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:#fff;transition:.3s}
+.feat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line2)}
+.feat .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:19px;margin-bottom:18px;background:var(--paper2);border:1px solid var(--line)}
+.feat h4{font-size:16.5px;margin-bottom:8px;font-weight:800}
+.feat p{font-size:13.5px;color:var(--ink2)}
 /* ── 证据带 ── */
-.strip{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
-.chip{border:1px solid var(--line);background:var(--card);padding:10px 18px;border-radius:999px;font-size:13.5px;color:var(--muted)}
-.chip b{color:var(--fg)}
+.strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px}
+.chip{border:1px solid var(--line);background:#fff;padding:9px 18px;border-radius:999px;font-size:13px;color:var(--ink2)}
+.chip b{color:var(--ink)}
 /* ── Harness ── */
-.harness{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
-.hcard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;background:var(--card);transition:.3s}
-.hcard:hover{border-color:var(--c3);transform:translateY(-4px)}
-.hcard .logo-t{font-weight:900;font-size:19px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hcard p{font-size:13px;color:var(--muted);margin-top:8px}
-.code{margin-top:36px;background:#0a0d1a;border:1px solid var(--line);border-radius:16px;padding:22px 26px;font-family:"SF Mono",ui-monospace,monospace;font-size:13.5px;overflow-x:auto;color:#c8d2f0}
-.code .c{color:#5c6486}.code .g{color:var(--c3)}
-/* ── 作者 IP ── */
-.author{margin-top:20px;border-radius:26px;padding:1px;background:var(--grad)}
-.author .inner{background:var(--bg2);border-radius:25px;padding:52px;display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:center}
-.author h3{font-size:clamp(26px,3.6vw,38px);font-weight:900}
-.author h3 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.author p{color:var(--muted);margin-top:12px;font-size:15px}
-.socials{display:flex;flex-direction:column;gap:12px;margin-top:26px}
-.socials a{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:13px 18px;background:var(--card);transition:.25s;font-size:15px}
-.socials a:hover{border-color:var(--c1);transform:translateX(6px)}
-.socials .tag{font-size:12px;color:var(--muted);margin-left:auto}
+.harness{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.hcard{border:1px solid var(--line);border-radius:16px;padding:28px 22px;text-align:center;background:#fff;transition:.25s}
+.hcard:hover{border-color:var(--ink);transform:translateY(-3px)}
+.hcard .t{font-weight:900;font-size:17px}
+.hcard p{font-size:12.5px;color:var(--ink2);margin-top:8px}
+.code{margin-top:36px;background:#17171c;color:#e8e8ee;border-radius:16px;padding:26px 30px;font-family:"SF Mono",ui-monospace,monospace;font-size:13.5px;overflow-x:auto;line-height:1.9}
+.code .c{color:#7a7a86}.code .g{color:#9db4ff}
+/* ── 作者 ── */
+.author{border-radius:26px;padding:56px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);display:grid;grid-template-columns:1.25fr .75fr;gap:52px;align-items:center}
+.author h3{font-size:clamp(26px,3.4vw,36px);font-weight:900;letter-spacing:-.01em}
+.author p{color:var(--ink2);margin-top:14px;font-size:15px}
+.socials{display:flex;flex-direction:column;gap:10px;margin-top:30px}
+.socials a{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:14px 20px;background:var(--paper);transition:.25s;font-size:14.5px}
+.socials a:hover{border-color:var(--ink);transform:translateX(6px)}
+.socials .tag{font-size:12px;color:var(--ink3);margin-left:auto}
 .qr{text-align:center}
 /* 官方物料为 1710×624 横版横幅：按原始比例显示，禁止强行裁方或拉伸 */
-.qr img{width:min(380px,100%);height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5);display:inline-block}
-.qr figcaption{margin-top:14px;font-size:13px;color:var(--muted)}
+.qr img{width:min(360px,100%);height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.qr figcaption{margin-top:14px;font-size:12.5px;color:var(--ink3)}
 /* ── footer ── */
-footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-size:13.5px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
-footer a{color:var(--c1)}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--ink3);font-size:13px;background:var(--paper)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--ink)}
+footer a:hover{color:var(--accent)}
 @media(max-width:900px){
-  .vs,.author .inner{grid-template-columns:1fr}
-  .pipe{grid-template-columns:repeat(2,1fr)}.stage::after{display:none}
+  .vs,.author{grid-template-columns:1fr}
+  .pipe{grid-template-columns:repeat(2,1fr);gap:16px}
+  .stage{border-top:none;border-left:2px solid var(--ink);padding:6px 18px}
+  .stage:not(:last-child)::after{display:none}
   .grid{grid-template-columns:1fr 1fr}.harness{grid-template-columns:1fr 1fr}
   nav ul{display:none}
+  .author{padding:36px}
 }
 @media(max-width:560px){.grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="aurora"></div>
-<div class="stars" id="stars"></div>
 
 <nav>
   <div class="wrap">
-    <div class="logo"><span class="dot"></span>Web-native <b>Presentation Intelligence</b></div>
+    <div class="logo"><span class="mark">演</span>Web-native Presentation Intelligence</div>
     <ul>
       <li><a href="#why">为什么</a></li>
       <li><a href="#pipeline">工作流</a></li>
@@ -144,16 +141,16 @@ footer a{color:var(--c1)}
 
 <header class="hero">
   <div>
-    <span class="badge"><i></i>开源 AI Skill · 适配 Claude Code / Codex / OpenCode</span>
-    <h1>别再让 AI<br><span class="g">直接吐 HTML 幻灯片</span></h1>
-    <p class="sub">HTML 原生智能演示系统——给定内容、受众、目标与场景，先推演<b>演示策略与论证架构</b>，再经由 Presentation IR 渲染成一个可现场运行、可分支深潜、可动态调整的<b>演示应用</b>。</p>
-    <p class="en">PRESENTATION SCIENCE × WEB ENGINEERING · STAGE / READER / PRINT · ONE CONTENT MODEL</p>
+    <span class="eyebrow">开源 AI Skill · 适配 Claude Code / Codex / OpenCode</span>
+    <h1>演示的质量瓶颈，<br>从来不在<em>视觉生成能力</em></h1>
+    <p class="sub">给定内容、受众、目标与场景，先推演<b>演示策略与论证架构</b>，再经由 Presentation IR 渲染成一个可现场运行、可分支深潜、可动态调整的演示应用。这是 HTML 原生智能演示系统。</p>
+    <p class="en">PRESENTATION SCIENCE × WEB ENGINEERING</p>
     <div class="btnrow">
-      <a class="btn primary" href="https://github.com/mizzlelover/web-presentation-skill">★ Star on GitHub</a>
+      <a class="btn primary" href="https://github.com/mizzlelover/web-presentation-skill">Star on GitHub →</a>
       <a class="btn ghost" href="https://github.com/mizzlelover/web-presentation-skill/tree/main/examples/demo">查看可运行 Demo</a>
     </div>
   </div>
-  <div class="scroll">SCROLL ▾</div>
+  <div class="scroll">SCROLL</div>
 </header>
 
 <section id="why">
@@ -163,7 +160,7 @@ footer a{color:var(--c1)}
     <p class="lead">AI 可以一分钟生成一份"看起来很炫"的 HTML 幻灯片——但它回答不了：面对什么人、在什么场景、为了什么目标，应该讲什么、删什么、先讲什么、何时揭示、何时深入。本系统先把这些问题答完，再谈渲染。</p>
     <div class="vs">
       <div class="col bad">
-        <h3><span class="x">✕</span> 常见做法</h3>
+        <h3>常见做法 <span class="tag">DECORATION FIRST</span></h3>
         <ul>
           <li>输入文档 → <b>直接生成 HTML</b>，结构与视觉耦合</li>
           <li>"每页最多 6 行""标题必须是问句"——<b>没有证据的通用规则</b></li>
@@ -173,11 +170,11 @@ footer a{color:var(--c1)}
         </ul>
       </div>
       <div class="col good">
-        <h3><span class="v">✓</span> 本系统</h3>
+        <h3>本系统 <span class="tag">COMMUNICATION FIRST</span></h3>
         <ul>
           <li><b>Strategy → IR → Renderer</b> 强制管线，禁止一步到位</li>
-          <li>规则带<b>机制 / 证据分级 A–E / 边界条件</b>；用户经验先登记为假设再验证</li>
-          <li><b>语义动效</b>：每个动效声明 Intent，讲者可暂停/跳转/跳过</li>
+          <li>规则带<b>机制 / 证据分级 A–E / 边界条件</b>；经验先登记为假设再验证</li>
+          <li><b>语义动效</b>：每个动效声明 Intent，讲者可暂停 / 跳转 / 跳过</li>
           <li><b>Presentation Graph</b>：核心路径 + Deep Dive + 证据附录 + 现场分支</li>
           <li><b>离线优先</b>、三模式（Stage / Reader / Print）、打印可读</li>
         </ul>
@@ -186,27 +183,27 @@ footer a{color:var(--c1)}
   </div>
 </section>
 
-<section id="pipeline" style="background:linear-gradient(180deg,transparent,rgba(91,140,255,.05),transparent)">
+<section id="pipeline">
   <div class="wrap">
     <div class="kicker">Pipeline · 六步工作流</div>
     <h2>从原始材料到演示应用</h2>
     <p class="lead">每一步都有独立的工件与质检门禁——IR 校验器不过，不允许进入渲染。</p>
     <div class="pipe">
-      <div class="stage"><div class="no">STEP 0</div><h4>情境判定</h4><p>20 类演示情境，Situation First；不同情境不同规则</p></div>
-      <div class="stage"><div class="no">STEP 1</div><h4>受众建模</h4><p>角色 / 决策权 / 态度 / 异议 / 认知负荷耐受，12 字段模型</p></div>
-      <div class="stage"><div class="no">STEP 2</div><h4>论证架构</h4><p>Thesis→Claim→Evidence 树，六查逻辑漏洞与过度声称</p></div>
-      <div class="stage"><div class="no">STEP 3</div><h4>Scene 规划</h4><p>每幕一个认知任务；标题类型由任务决定；负荷曲线有节奏</p></div>
-      <div class="stage"><div class="no">STEP 4</div><h4>Presentation IR</h4><p>声明式中间表示，validate_ir.py 强制校验</p></div>
-      <div class="stage"><div class="no">STEP 5</div><h4>渲染 + QA</h4><p>L0–L6 最低充分渲染；18 维评测；浏览器实测</p></div>
+      <div class="stage"><div class="no">00</div><h4>情境判定</h4><p>20 类演示情境，Situation First；不同情境不同规则</p></div>
+      <div class="stage"><div class="no">01</div><h4>受众建模</h4><p>角色 / 决策权 / 态度 / 异议 / 认知负荷耐受，12 字段模型</p></div>
+      <div class="stage"><div class="no">02</div><h4>论证架构</h4><p>Thesis→Claim→Evidence 树，六查逻辑漏洞与过度声称</p></div>
+      <div class="stage"><div class="no">03</div><h4>Scene 规划</h4><p>每幕一个认知任务；标题类型由任务决定；负荷曲线有节奏</p></div>
+      <div class="stage gate"><div class="no">04</div><h4>Presentation IR</h4><p>声明式中间表示，validate_ir.py 强制校验</p></div>
+      <div class="stage"><div class="no">05</div><h4>渲染 + QA</h4><p>L0–L6 最低充分渲染；18 维评测；浏览器实测</p></div>
     </div>
     <div class="strip">
-      <span class="chip">🧠 认知负荷理论 <b>Sweller</b></span>
-      <span class="chip">📚 多媒体学习九原则 <b>Mayer</b></span>
-      <span class="chip">🎯 Assertion-Evidence <b>Alley</b></span>
-      <span class="chip">📊 图形感知排序 <b>Cleveland & McGill</b></span>
-      <span class="chip">🗣 说服双路径 <b>Petty & Cacioppo</b></span>
-      <span class="chip">🔺 金字塔原理 <b>Minto</b></span>
-      <span class="chip">📈 数据墨水之争 <b>Tufte × Bateman</b></span>
+      <span class="chip">认知负荷理论 <b>Sweller</b></span>
+      <span class="chip">多媒体学习九原则 <b>Mayer</b></span>
+      <span class="chip">Assertion-Evidence <b>Alley</b></span>
+      <span class="chip">图形感知排序 <b>Cleveland & McGill</b></span>
+      <span class="chip">说服双路径 <b>Petty & Cacioppo</b></span>
+      <span class="chip">金字塔原理 <b>Minto</b></span>
+      <span class="chip">数据墨水之争 <b>Tufte × Bateman</b></span>
     </div>
   </div>
 </section>
@@ -229,15 +226,15 @@ footer a{color:var(--c1)}
   </div>
 </section>
 
-<section id="install" style="background:linear-gradient(180deg,transparent,rgba(0,229,192,.05),transparent)">
+<section id="install">
   <div class="wrap">
     <div class="kicker">Install · 一分钟接入</div>
     <h2>主流 AI Harness 全适配</h2>
     <div class="harness">
-      <div class="hcard"><div class="logo-t">Claude Code</div><p>.claude/skills/ 或 CLAUDE.md 片段</p></div>
-      <div class="hcard"><div class="logo-t">Codex</div><p>.agents/skills/ + AGENTS.md</p></div>
-      <div class="hcard"><div class="logo-t">OpenCode</div><p>opencode.json agent 配置</p></div>
-      <div class="hcard"><div class="logo-t">Kimi Code</div><p>~/.config/agents/skills/</p></div>
+      <div class="hcard"><div class="t">Claude Code</div><p>.claude/skills/ 或 CLAUDE.md 片段</p></div>
+      <div class="hcard"><div class="t">Codex</div><p>.agents/skills/ + AGENTS.md</p></div>
+      <div class="hcard"><div class="t">OpenCode</div><p>opencode.json agent 配置</p></div>
+      <div class="hcard"><div class="t">Kimi Code</div><p>~/.config/agents/skills/</p></div>
     </div>
     <div class="code"><span class="c"># 克隆并安装（用户级，全局可用）</span><br>git clone https://github.com/mizzlelover/web-presentation-skill.git<br>cp -r web-presentation-skill <span class="g">~/.config/agents/skills/</span><br><br><span class="c"># 然后对你的 AI 说：</span><br><span class="g">"把这份项目材料做成给高管的 15 分钟决策汇报，要能现场跳到证据附录"</span></div>
   </div>
@@ -246,22 +243,20 @@ footer a{color:var(--c1)}
 <section id="author">
   <div class="wrap">
     <div class="author">
-      <div class="inner">
-        <div>
-          <div class="kicker">Author · 作者</div>
-          <h3>由 <span>谁是专家</span> 打造</h3>
-          <p>长期实践 AI × 演示 × 知识工程。这个 Skill 源于一个朴素的不满：AI 生成的演示"好看但不动脑"。于是把认知科学、传播学与 Web 工程装进同一个系统——让每一次生成都先想清楚"为谁讲、讲什么、怎么让对方听懂"。</p>
-          <div class="socials">
-            <a href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener">📕 小红书 <b>&nbsp;谁是专家</b><span class="tag">关注日常实践 →</span></a>
-            <a href="https://x.com/dboy_yi2025" target="_blank" rel="noopener">𝕏 &nbsp;X (Twitter) <b>&nbsp;@dboy_yi2025</b><span class="tag">英文动态 →</span></a>
-            <a href="https://github.com/mizzlelover" target="_blank" rel="noopener">🐙 GitHub <b>&nbsp;mizzlelover</b><span class="tag">开源项目 →</span></a>
-          </div>
+      <div>
+        <div class="kicker">Author · 作者</div>
+        <h3>由「谁是专家」打造</h3>
+        <p>长期实践 AI × 演示 × 知识工程。这个 Skill 源于一个朴素的不满：AI 生成的演示"好看但不动脑"。于是把认知科学、传播学与 Web 工程装进同一个系统——让每一次生成都先想清楚"为谁讲、讲什么、怎么让对方听懂"。</p>
+        <div class="socials">
+          <a href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener">📕 小红书 <b>&nbsp;谁是专家</b><span class="tag">关注日常实践 →</span></a>
+          <a href="https://x.com/dboy_yi2025" target="_blank" rel="noopener">𝕏&nbsp; X (Twitter) <b>&nbsp;@dboy_yi2025</b><span class="tag">英文动态 →</span></a>
+          <a href="https://github.com/mizzlelover" target="_blank" rel="noopener">🐙 GitHub <b>&nbsp;mizzlelover</b><span class="tag">开源项目 →</span></a>
         </div>
-        <figure class="qr">
-          <img src="assets/wechat-qrcode.png" alt="微信公众号「谁是专家」官方二维码横幅">
-          <figcaption>微信搜一搜 / 扫码关注公众号</figcaption>
-        </figure>
       </div>
+      <figure class="qr">
+        <img src="assets/wechat-qrcode.png" alt="微信公众号「谁是专家」官方二维码横幅">
+        <figcaption>微信搜一搜 / 扫码关注公众号</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -273,20 +268,5 @@ footer a{color:var(--c1)}
   </div>
 </footer>
 
-<script>
-// 星空背景（轻量，尊重 reduced-motion）
-(function(){
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var box = document.getElementById("stars");
-  for (var i = 0; i < 90; i++) {
-    var s = document.createElement("i");
-    s.style.left = Math.random()*100 + "%";
-    s.style.top = Math.random()*100 + "%";
-    s.style.animationDelay = (Math.random()*4) + "s";
-    s.style.transform = "scale(" + (0.5 + Math.random()) + ")";
-    box.appendChild(s);
-  }
-})();
-</script>
 </body>
 </html>
