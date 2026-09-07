@@ -5,7 +5,7 @@
 >
 > Not another slide-template generator — an AI Skill that fuses **presentation science** (cognitive science, communication, presentation research) with **web presentation engineering**. Given complex content, a real audience, a communication goal and a situation, it produces not "slide files" but a runnable, branchable, adaptive **Presentation Application**.
 
-**官网 / Website**：https://present.mizzlelover.xyz · **演示 Demo**：`examples/demo/index.html`
+**官网 / Website**：https://present.mizzlelover.xyz · **在线 Demo / Live Demo**：https://present.mizzlelover.xyz/examples/demo/（本地运行：`examples/demo/index.html`）
 
 ---
 
@@ -72,9 +72,10 @@ themes/           — design tokens 主题 ×5
 visualization/    — ECharts/D3/SVG/Mermaid 选型指南
 evals/            — 18 维 rubric · 100 测试案例 · 10 对抗测试
 scripts/          — validate_ir.py（IR 校验器）
-examples/demo/    — 完整可运行示例（高管决策汇报）
+examples/demo/    — 完整可运行示例（自我推介，在线运行：/examples/demo/）
 adapters/         — Claude Code / Codex / OpenCode 接入
-docs/             — 官方宣传页（GitHub Pages）
+index.html        — 官方宣传页（GitHub Pages 站点首页）
+assets/           — 站点资源（公众号官方物料等）
 ```
 
 详细设计：[ARCHITECTURE.md](ARCHITECTURE.md) · [METHODOLOGY.md](METHODOLOGY.md) · [RUNTIME.md](RUNTIME.md) · [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) · [EVALS.md](EVALS.md) · [FINAL_REPORT.md](FINAL_REPORT.md)

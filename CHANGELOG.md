@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.4] — 2026-09-07
+
+- GitHub Pages 源从 /docs 切换到仓库根目录：宣传页移至根 index.html，Demo 现可在 https://present.mizzlelover.xyz/examples/demo/ 直接在线运行
+- 宣传页「查看可运行 Demo」按钮由 GitHub 目录改链至在线 Demo 页面
+- README 更新站点结构与在线 Demo 入口
+
 ## [0.1.3] — 2026-09-07
 
 - 视觉改为原创「纸上光谱 · Spectral Paper」设计（非临摹任何官网）：暖纸底 #faf8f4 + 暖墨 #17150f + 蓝→紫→珊瑚光谱渐变（仅用于关键词、闸门节点、进度条等焦点）+ 低饱和漂移光晕 + SVG 噪点纸纹
