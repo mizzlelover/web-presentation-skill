@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.2] — 2026-09-07
+
+- 键位卡生成器沉淀为 Skill 标准工具 `scripts/gen_keys_card.py`：零依赖纯标准库，默认输出与运行时 `?` 帮助一致的 10 键三组卡片；支持 `--keys` 自定义键位 JSON（`--print-keys` 导出默认版）、`--title/--brand/--site/--footer` 文案定制、`--bg/--ink/--ink2/--ink3/--cap/--cap-line/--stops` 全套主题参数（亮/暗主题均已截图验证）
+- SKILL.md 交付环节接入：生成产物时可用该脚本一键产出配套键位卡；目录导航 scripts/ 说明同步更新
+
 ## [0.2.1] — 2026-09-07
 
 - 新增键位速查视觉卡片 `assets/keys-card.svg`（纸上光谱风格，1200×630），嵌入 README「键位速查」一节：推进 / 视图 / 辅助三组十键，与运行时 `?` 帮助面板完全一致
