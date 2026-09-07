@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HTML 原生智能演示系统 · Web-native Presentation Intelligence</title>
-<meta name="description" content="把演示科学与 Web 工程打通的 AI Skill：情境 → 受众 → 论证 → 认知路径 → Presentation IR → 演示应用。支持 Claude Code / Codex / OpenCode。作者：水事专家。">
+<meta name="description" content="把演示科学与 Web 工程打通的 AI Skill：情境 → 受众 → 论证 → 认知路径 → Presentation IR → 演示应用。支持 Claude Code / Codex / OpenCode。作者：谁是专家。">
 <style>
 :root{
   --bg:#06070f; --bg2:#0b0e1d; --fg:#eef1ff; --muted:#8b93b8;
@@ -107,7 +107,8 @@ h2{font-size:clamp(28px,4.4vw,48px);font-weight:900;margin:14px 0 16px;line-heig
 .socials a:hover{border-color:var(--c1);transform:translateX(6px)}
 .socials .tag{font-size:12px;color:var(--muted);margin-left:auto}
 .qr{text-align:center}
-.qr img{width:210px;height:210px;border-radius:18px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+/* 官方物料为 1710×624 横版横幅：按原始比例显示，禁止强行裁方或拉伸 */
+.qr img{width:min(380px,100%);height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5);display:inline-block}
 .qr figcaption{margin-top:14px;font-size:13px;color:var(--muted)}
 /* ── footer ── */
 footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-size:13.5px}
@@ -248,17 +249,17 @@ footer a{color:var(--c1)}
       <div class="inner">
         <div>
           <div class="kicker">Author · 作者</div>
-          <h3>由 <span>水事专家</span> 打造</h3>
+          <h3>由 <span>谁是专家</span> 打造</h3>
           <p>长期实践 AI × 演示 × 知识工程。这个 Skill 源于一个朴素的不满：AI 生成的演示"好看但不动脑"。于是把认知科学、传播学与 Web 工程装进同一个系统——让每一次生成都先想清楚"为谁讲、讲什么、怎么让对方听懂"。</p>
           <div class="socials">
-            <a href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener">📕 小红书 <b>&nbsp;水事专家</b><span class="tag">关注日常实践 →</span></a>
+            <a href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener">📕 小红书 <b>&nbsp;谁是专家</b><span class="tag">关注日常实践 →</span></a>
             <a href="https://x.com/dboy_yi2025" target="_blank" rel="noopener">𝕏 &nbsp;X (Twitter) <b>&nbsp;@dboy_yi2025</b><span class="tag">英文动态 →</span></a>
             <a href="https://github.com/mizzlelover" target="_blank" rel="noopener">🐙 GitHub <b>&nbsp;mizzlelover</b><span class="tag">开源项目 →</span></a>
           </div>
         </div>
         <figure class="qr">
-          <img src="assets/wechat-qrcode.png" alt="微信公众号「水事专家」二维码">
-          <figcaption>微信扫码关注公众号<br><b style="color:var(--fg)">水事专家</b></figcaption>
+          <img src="assets/wechat-qrcode.png" alt="微信公众号「谁是专家」官方二维码横幅">
+          <figcaption>微信搜一搜 / 扫码关注公众号</figcaption>
         </figure>
       </div>
     </div>
@@ -267,7 +268,7 @@ footer a{color:var(--c1)}
 
 <footer>
   <div class="wrap">
-    <span>© 2026 水事专家 · MIT License</span>
+    <span>© 2026 谁是专家 · MIT License</span>
     <span><a href="https://github.com/mizzlelover/web-presentation-skill">GitHub 仓库</a> · <a href="https://github.com/mizzlelover/web-presentation-skill/blob/main/FINAL_REPORT.md">FINAL REPORT</a></span>
   </div>
 </footer>

@@ -85,13 +85,13 @@ docs/             — 官方宣传页（GitHub Pages）
 
 ## 作者 · Author
 
-**水事专家** — 关注 AI × 演示 × 知识工程的实践者。
+**谁是专家** — 关注 AI × 演示 × 知识工程的实践者。
 
-- 小红书：[水事专家](https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25)
+- 小红书：[谁是专家](https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25)
 - X (Twitter)：[@dboy_yi2025](https://x.com/dboy_yi2025)
-- 微信公众号：水事专家（二维码见[官网](https://present.mizzlelover.xyz)）
+- 微信公众号：谁是专家（二维码见[官网](https://present.mizzlelover.xyz)）
 - GitHub：[mizzlelover](https://github.com/mizzlelover)
 
 ## License
 
-[MIT](LICENSE) © 2026 水事专家
+[MIT](LICENSE) © 2026 谁是专家

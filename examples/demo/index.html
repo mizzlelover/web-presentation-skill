@@ -3,137 +3,300 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数据闭环项目 · 高管决策汇报（Demo）</title>
-<link rel="stylesheet" href="../../themes/corporate.css">
-<link rel="stylesheet" href="../../runtime/core/presentation.css">
+<title>HTML 原生智能演示系统 · 产品推介（本演示即系统输出）</title>
 <link rel="stylesheet" href="../../runtime/print/print.css" media="print">
 <style>
-  /* 本示例特有的语义组件样式（生产中应入组件库） */
-  .wp-decision-hero { text-align: center; }
-  .ba-chart { display: flex; gap: 8cqi; align-items: flex-end; height: 34dvh; margin-top: 4cqi; }
-  .ba-bar { flex: 0 0 30%; border-radius: var(--wp-radius) var(--wp-radius) 0 0; display: grid; align-content: start; justify-items: center; padding-top: 12px; font-weight: 700; font-size: clamp(28px, 4cqi, 56px); }
-  .ba-before { background: #4a5568; height: 34%; }
-  .ba-after { background: var(--wp-accent); height: 92%; }
-  .ba-label { text-align: center; color: var(--wp-muted); margin-top: 8px; }
-  .opt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--wp-space); }
-  .opt-card { border: 1px solid color-mix(in srgb, var(--wp-fg) 18%, transparent); border-radius: var(--wp-radius); padding: var(--wp-space); }
-  .opt-card.rec { border-color: var(--wp-accent); }
-  .opt-card h3 { margin-top: 0; }
-  .opt-row { display: flex; justify-content: space-between; border-top: 1px dashed color-mix(in srgb, var(--wp-fg) 14%, transparent); padding: 10px 0; }
-  .gantt { display: grid; gap: 14px; margin-top: 2cqi; }
-  .gantt-row { display: grid; grid-template-columns: 10ch 1fr 6ch; gap: 12px; align-items: center; }
-  .gantt-bar { height: 28px; border-radius: 6px; background: var(--wp-accent); }
-  .decision-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--wp-space); margin-top: 4cqi; }
-  .decision-opt { border: 2px solid color-mix(in srgb, var(--wp-fg) 20%, transparent); border-radius: var(--wp-radius); padding: calc(var(--wp-space)*1.2); text-align: center; font-size: clamp(20px, 2.4cqi, 32px); font-weight: 700; }
+/* ── Demo 主题：aurora（与宣传站同源的深色极光）── */
+:root{
+  --bg:#070912; --fg:#eef1ff; --muted:#8b93b8;
+  --c1:#5b8cff; --c2:#a06bff; --c3:#00e5c0; --c4:#ff6b9d;
+  --grad:linear-gradient(120deg,var(--c1),var(--c2) 45%,var(--c3));
+  --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.10);
+  --radius:18px;
+  --wp-accent:var(--c1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:
+    radial-gradient(55vw 55vw at 12% -8%, rgba(91,140,255,.16), transparent 60%),
+    radial-gradient(45vw 45vw at 88% 8%, rgba(160,107,255,.13), transparent 60%),
+    radial-gradient(40vw 40vw at 75% 95%, rgba(0,229,192,.08), transparent 60%),
+    var(--bg);
+  color:var(--fg);
+  font-family:"PingFang SC","Helvetica Neue",system-ui,sans-serif;
+  overflow:hidden;
+  line-height:1.65;
+}
+/* ── Scene 基础（流式排版 + Container Queries）── */
+.wp-deck{height:100dvh}
+.wp-scene{
+  height:100dvh;display:grid;align-content:center;justify-items:center;
+  gap:clamp(14px,2.4cqi,28px);
+  padding:clamp(24px,5cqi,72px) clamp(28px,7cqi,110px);
+  container-type:inline-size;text-align:center;
+}
+.wp-scene[hidden]{display:none}
+.kicker{font-size:clamp(11px,1.1cqi,14px);letter-spacing:.3em;color:var(--c3);font-weight:700;text-transform:uppercase}
+h1{font-size:clamp(34px,6.2cqi,78px);font-weight:900;line-height:1.14;letter-spacing:-.01em;max-inline-size:22ch}
+h2{font-size:clamp(26px,4.2cqi,54px);font-weight:900;line-height:1.2;max-inline-size:26ch}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:clamp(15px,1.8cqi,22px);max-inline-size:56ch;margin-inline:auto}
+.wp-source{font-size:clamp(10px,1cqi,13px);color:#5c6486}
+.wp-reader,.wp-notes{display:none}
+
+/* 渐进揭示 */
+[data-reveal]{opacity:0;transform:translateY(14px)}
+[data-reveal].wp-revealed{opacity:1;transform:none;transition:opacity .35s ease,transform .35s ease}
+.wp-motion-final{opacity:1!important;transform:none!important}
+
+/* ── 痛点卡（problem）── */
+.pain-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4cqi,26px);width:min(100%,1080px)}
+.pain{border:1px solid var(--line);border-radius:var(--radius);padding:clamp(18px,2.6cqi,30px);background:var(--card);text-align:left}
+.pain .no{font-size:clamp(22px,2.6cqi,34px);font-weight:900;background:linear-gradient(135deg,var(--c4),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pain h3{font-size:clamp(16px,1.9cqi,22px);margin:8px 0 6px}
+.pain p{font-size:clamp(12.5px,1.4cqi,15.5px);color:var(--muted)}
+
+/* ── 流水线（pipeline）── */
+.pipe{display:flex;align-items:stretch;gap:0;width:min(100%,1180px);margin-top:1cqi}
+.pnode{flex:1;position:relative;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:clamp(12px,1.6cqi,20px) clamp(10px,1.4cqi,16px);text-align:left}
+.pnode .step{font-size:clamp(9px,1cqi,11.5px);letter-spacing:.14em;color:var(--c2);font-weight:800}
+.pnode h3{font-size:clamp(13px,1.6cqi,18px);margin:6px 0 4px}
+.pnode p{font-size:clamp(10.5px,1.15cqi,13px);color:var(--muted);line-height:1.5}
+.pnode.gate{border-color:var(--c3);background:linear-gradient(160deg,rgba(0,229,192,.10),var(--card));box-shadow:0 0 30px rgba(0,229,192,.15)}
+.pnode.gate .step{color:var(--c3)}
+.plink{align-self:center;width:clamp(16px,2.2cqi,30px);height:2px;background:var(--grad);flex:none;opacity:.8}
+
+/* ── 对比（contrast）── */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.6cqi,28px);width:min(100%,1080px);text-align:left}
+.cmp .col{border-radius:var(--radius);padding:clamp(18px,2.6cqi,32px);border:1px solid var(--line)}
+.cmp .old{background:rgba(255,107,157,.05)}
+.cmp .new{background:rgba(0,229,192,.06);border-color:rgba(0,229,192,.3)}
+.cmp h3{font-size:clamp(15px,1.8cqi,20px);margin-bottom:12px;display:flex;gap:8px;align-items:center}
+.cmp ul{list-style:none}
+.cmp li{padding:9px 0;border-top:1px dashed var(--line);font-size:clamp(12.5px,1.45cqi,16px);color:var(--muted)}
+.cmp .new li{color:#c9d3f2}
+.cmp li b{color:var(--fg)}
+.x{color:var(--c4)} .v{color:var(--c3)}
+
+/* ── 三模式（modes）── */
+.mode-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4cqi,26px);width:min(100%,1080px)}
+.mode{border:1px solid var(--line);border-radius:var(--radius);padding:clamp(18px,2.4cqi,30px);background:var(--card);text-align:left}
+.mode .ic{font-size:clamp(24px,3cqi,38px)}
+.mode h3{font-size:clamp(16px,1.9cqi,22px);margin:10px 0 6px}
+.mode p{font-size:clamp(12.5px,1.4cqi,15.5px);color:var(--muted)}
+.mode .key{display:inline-block;margin-top:12px;font-family:ui-monospace,monospace;font-size:clamp(11px,1.2cqi,13px);border:1px solid var(--line);border-radius:8px;padding:4px 12px;color:var(--c3);background:rgba(0,229,192,.08)}
+.keys-btn{font:inherit;color:var(--fg);border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 22px;cursor:pointer}
+.keys-btn:hover{border-color:var(--c1)}
+.keys-panel{color:var(--muted);font-size:clamp(12px,1.4cqi,15px);font-family:ui-monospace,monospace}
+
+/* ── 大数字（proof）── */
+.num-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4cqi,56px);width:min(100%,980px)}
+.num .v{font-size:clamp(56px,9cqi,120px);font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.num .l{margin-top:10px;color:var(--muted);font-size:clamp(13px,1.5cqi,17px)}
+
+/* ── CTA ── */
+.cta-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4cqi,26px);width:min(100%,1020px)}
+.cta{border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,2.8cqi,34px);background:var(--card);text-align:left}
+.cta .n{font-size:clamp(12px,1.2cqi,14px);font-weight:800;letter-spacing:.2em;color:var(--c2)}
+.cta h3{font-size:clamp(17px,2cqi,24px);margin:10px 0 6px}
+.cta p{font-size:clamp(12.5px,1.4cqi,15.5px);color:var(--muted)}
+.signature{color:var(--muted);font-size:clamp(12px,1.3cqi,15px)}
+.signature b{color:var(--fg)}
+
+/* ── 附录 ── */
+.appx{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.6cqi,28px);width:min(100%,1080px);text-align:left}
+.appx .col{border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,2.2cqi,26px);background:var(--card)}
+.appx h3{font-size:clamp(14px,1.7cqi,19px);margin-bottom:10px;color:var(--c3)}
+.appx li{list-style:none;padding:6px 0;font-size:clamp(12px,1.35cqi,15px);color:var(--muted);border-top:1px dashed var(--line)}
+.appx li b{color:var(--fg)}
+
+/* ── 控件 ── */
+.wp-search{position:fixed;inset:12% 20% auto;z-index:50;background:#12152a;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 24px 64px rgba(0,0,0,.6)}
+.wp-search input{width:100%;font-size:17px;padding:10px 14px;border-radius:8px;border:1px solid var(--line);background:#0a0d1c;color:#eee}
+.wp-search ul{list-style:none;margin:8px 0 0;padding:0;max-height:40vh;overflow:auto}
+.wp-search li{padding:8px 12px;border-radius:6px;cursor:pointer}
+.wp-search li:hover{background:#1d2138}
+.wp-progress{position:fixed;inset:auto 0 0;height:3px;background:rgba(255,255,255,.08)}
+.wp-progress>i{display:block;height:100%;background:var(--grad);transition:width .35s ease}
+a{color:var(--c1)}
+.dd-link{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:8px 20px;background:var(--card);font-size:clamp(12.5px,1.4cqi,15px);color:var(--fg)}
+.dd-link:hover{border-color:var(--c3);color:var(--c3)}
+
+/* Reader 模式 */
+body.wp-reader-mode{overflow:auto}
+body.wp-reader-mode .wp-deck{height:auto}
+body.wp-reader-mode .wp-scene{height:auto;min-height:52dvh;display:grid!important;border-bottom:1px solid var(--line)}
+body.wp-reader-mode .wp-reader{display:block;max-inline-size:66ch;margin-inline:auto;color:#c9d3f2;font-size:clamp(14px,1.5cqi,17px);text-align:left}
+body.wp-reader-mode .wp-progress{display:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-reveal]{opacity:1;transform:none}
+}
+@media(max-width:760px){
+  .pain-row,.mode-row,.num-row,.cta-row,.cmp,.appx{grid-template-columns:1fr}
+  .pipe{flex-direction:column;gap:10px}.plink{width:2px;height:16px}
+}
 </style>
 </head>
 <body>
 <main class="wp-deck">
 
-  <section class="wp-scene wp-decision-hero" data-scene-id="opening" data-topic="议程" data-claim="今天需要一个决定">
-    <h2>今天需要一个决定：<br>是否追加 3 个月完成数据闭环</h2>
-    <p>15 分钟。问题 → 证据 → 方案 → 建议。</p>
-    <aside class="wp-notes">30 秒说完，直接点题，不寒暄。</aside>
-    <div class="wp-reader"><p>本次汇报的唯一议程是决策：是否追加 3 个月工期与 2 名工程师资源，使项目在 Q2 末形成完整数据闭环。以下按问题—证据—方案—建议展开，全部数据口径见附录。</p></div>
+  <!-- 1 · Opening：立场宣言 -->
+  <section class="wp-scene" data-scene-id="opening" data-topic="开场" data-claim="别再让 AI 直接吐 HTML 幻灯片">
+    <span class="kicker">Web-native Presentation Intelligence</span>
+    <h1>别再让 AI<br><span class="grad-text">直接吐 HTML 幻灯片</span></h1>
+    <p class="sub">HTML 原生智能演示系统：先想清楚<b>为谁讲、讲什么、怎么让人听懂</b>，再谈渲染。</p>
+    <aside class="wp-notes">直接念标题，停顿两秒。"今天这份演示本身，就是这个系统的输出。"</aside>
+    <div class="wp-reader"><p>HTML 原生智能演示系统（Web-native Presentation Intelligence）是一套 AI Skill：给定内容、受众、目标与场景，先推演演示策略与论证架构，经由 Presentation IR，再渲染为可现场运行、可分支深潜的演示应用。它面向所有受够了"一键生成但不能用"的 AI 幻灯片的人。——本页即由该系统生成。</p></div>
   </section>
 
-  <section class="wp-scene" data-scene-id="problem" data-topic="问题定义" data-claim="核心问题不是数据缺失，而是身份映射缺失">
-    <h2 class="wp-assertion">核心问题不是数据缺失，<br>而是身份映射缺失</h2>
-    <p data-reveal>各业务系统数据入库率已达 <strong>87%</strong>——数据其实不缺。</p>
-    <p data-reveal data-motion-intent="focus">断点在系统之间：同一个人/设备，在 ERP、CRM、MES 里是三套不同的身份。</p>
-    <p data-reveal><a data-deep-dive="evidence-appendix">⤵ 查看口径与审计方法</a></p>
-    <aside class="wp-notes">预判异议"上次也是这么说的"：本次结论来自审计抽样而非主观估计，可现场打开附录。</aside>
-    <div class="wp-reader"><p>经排查，各业务系统数据入库率达 87%（ERP/CRM/MES 三系统抽样，2026-08，口径见附录）。闭环失败的原因是同一实体在不同系统中身份标识不一致（身份映射缺失），导致数据无法关联，而非数据本身缺失。</p></div>
-    <p class="wp-source">来源：三系统抽样审计，2026-08，范围：ERP/CRM/MES</p>
+  <!-- 2 · Problem：三个被跳过的环节 -->
+  <section class="wp-scene" data-scene-id="problem" data-topic="问题" data-claim="AI 演示的问题不是不够炫，而是不动脑">
+    <span class="kicker">The Problem</span>
+    <h2>AI 演示的问题不是不够炫，<span class="grad-text">而是不动脑</span></h2>
+    <div class="pain-row">
+      <div class="pain" data-reveal><div class="no">01</div><h3>跳过情境</h3><p>高管汇报和教学培训用同一套规则——"每页最多 6 行"对谁都不成立。</p></div>
+      <div class="pain" data-reveal><div class="no">02</div><h3>跳过受众</h3><p>不回答"为什么这个人要听"，只回答"我有什么内容想讲"。</p></div>
+      <div class="pain" data-reveal><div class="no">03</div><h3>跳过论证</h3><p>断言不举证、逻辑有跳跃、结论超出证据——视觉合格，策略缺席。</p></div>
+    </div>
+    <p class="sub" data-reveal>输入 → HTML 的一步生成，正好跳过了决定成败的三个环节。</p>
+    <aside class="wp-notes">每张卡停一拍：无情境（对谁都一套）、无受众（自说自话）、无论证（断言不举证）。</aside>
+    <div class="wp-reader"><p>当前 AI 演示工具的通病是把"输入材料 → HTML 页面"一步完成，跳过三个决定成败的环节：情境判定（这到底是什么演示）、受众建模（为什么这个人要听）、论证架构（断言有没有证据支撑）。结果是"好看但不动脑"。</p></div>
+    <p class="wp-source">依据：项目需求文档 §0–§2 · 对抗测试设计（evals/benchmark/adversarial.md）</p>
   </section>
 
-  <section class="wp-scene" data-scene-id="evidence" data-topic="试点证据" data-claim="补齐映射后闭环率 31%→92%">
-    <h2 class="wp-assertion">补齐映射后，试点产线闭环率从 31% 升至 92%</h2>
-    <div class="ba-chart" role="img" aria-label="闭环率前后对比：31% 与 92%">
-      <div>
-        <div class="ba-bar ba-before" data-reveal>31%</div>
-        <div class="ba-label">试点前</div>
+  <!-- 3 · Pipeline：六步管线 -->
+  <section class="wp-scene" data-scene-id="pipeline" data-topic="管线" data-claim="策略先行，IR 是唯一耦合点">
+    <span class="kicker">The Pipeline</span>
+    <h2>策略先行：<span class="grad-text">六步管线</span>，IR 是闸门</h2>
+    <div class="pipe">
+      <div class="pnode" data-reveal><div class="step">STEP 0</div><h3>情境判定</h3><p>20 类演示情境，不同情境不同规则</p></div>
+      <div class="plink" data-reveal data-motion-intent="trace"></div>
+      <div class="pnode" data-reveal><div class="step">STEP 1</div><h3>受众建模</h3><p>12 字段：决策权/态度/异议/负荷耐受</p></div>
+      <div class="plink" data-reveal data-motion-intent="trace"></div>
+      <div class="pnode" data-reveal><div class="step">STEP 2</div><h3>论证架构</h3><p>论证树 + 六查：无证据断言、逻辑跳跃…</p></div>
+      <div class="plink" data-reveal data-motion-intent="trace"></div>
+      <div class="pnode" data-reveal><div class="step">STEP 3</div><h3>Scene 规划</h3><p>每幕一个认知任务；负荷曲线有节奏</p></div>
+      <div class="plink" data-reveal data-motion-intent="trace"></div>
+      <div class="pnode gate" data-reveal><div class="step">STEP 4 · 闸门</div><h3>Presentation IR</h3><p>validate_ir.py 强制校验，不过不渲染</p></div>
+      <div class="plink" data-reveal data-motion-intent="trace"></div>
+      <div class="pnode" data-reveal><div class="step">STEP 5</div><h3>渲染 + QA</h3><p>L0–L6 最低充分渲染；18 维评测</p></div>
+    </div>
+    <p class="sub" data-reveal>方法论不依赖任何框架，Runtime 可整体替换——IR 是策略与技术的唯一耦合点。</p>
+    <aside class="wp-notes">强调 IR 是闸门："校验器不过，渲染器不开工。"这是和模板生成器的分水岭。</aside>
+    <div class="wp-reader"><p>强制六步管线：①情境判定（20 类）②受众建模（12 字段）③论证架构（六查：无证据断言/逻辑跳跃/证据错配/论证跳跃/重复主张/过度声称）④Scene 规划（每幕一个认知任务 + 认知负荷曲线）⑤Presentation IR（唯一中间表示，validate_ir.py 强制校验）⑥渲染与 QA（L0–L6 最低充分渲染，18 维评测）。IR 是策略与技术的唯一耦合点。</p></div>
+    <p class="wp-source">工件：workflows/ 九个标准工作流 · scripts/validate_ir.py</p>
+  </section>
+
+  <!-- 4 · Contrast：规则库 vs 证据库 -->
+  <section class="wp-scene" data-scene-id="contrast" data-topic="对比" data-claim="规则库与证据库的分水岭">
+    <span class="kicker">Rules vs Evidence</span>
+    <h2>规则库 <span class="grad-text">vs</span> 证据库</h2>
+    <div class="cmp">
+      <div class="col old">
+        <h3><span class="x">✕</span> 通用规则库</h3>
+        <ul>
+          <li>"每页最多 6 行、每行最多 6 字"</li>
+          <li>"标题必须是问句"</li>
+          <li>"字越少越高级"</li>
+          <li>"动画越少越好"<b>——无条件，无依据</b></li>
+        </ul>
       </div>
-      <div>
-        <div class="ba-bar ba-after" data-reveal data-motion-intent="compare">92%</div>
-        <div class="ba-label">6 周试点后</div>
+      <div class="col new">
+        <h3><span class="v">✓</span> 证据分级知识库</h3>
+        <ul>
+          <li>每条命题带<b>机制 + 证据等级 A–E + 边界条件</b></li>
+          <li>冲突证据显式登记（Tufte × Bateman 之争）</li>
+          <li>用户经验先登记为 <b>Practitioner Hypothesis</b>，验证后升级</li>
+          <li>"字越少越好"只在 Stage Mode 成立，<b>Reader Mode 必须完整</b></li>
+        </ul>
       </div>
     </div>
-    <p data-reveal><button data-interact="expand" data-purpose="按需查看口径，降低主画面负荷">口径说明 ▾</button></p>
-    <div>闭环率 = 业务事件在 24h 内完成跨系统关联的比例。单产线试点，推广需考虑产线差异。</div>
-    <p data-reveal><a data-deep-dive="evidence-appendix">⤵ 证据附录</a></p>
-    <aside class="wp-notes">强调单产线边界，避免 Overclaim；被问推广风险时坦诚展开。</aside>
-    <div class="wp-reader"><p>A 产线 6 周试点（2026-07 至 2026-08）：补齐身份映射后，数据闭环率由 31% 提升至 92%，数据处理人工时下降 64%。试点范围与口径见附录；样本为单产线，推广需考虑产线差异（边界）。</p></div>
-    <p class="wp-source">来源：试点周报，2026-07~08，范围：A 产线</p>
+    <aside class="wp-notes">这里主动接住"规则太多束手束脚"的异议："我们的规则都可以问一句为什么，也都有答案。"</aside>
+    <div class="wp-reader"><p>传统工具内置无条件通用规则；本系统建立证据分级知识库：每条命题登记机制、支持证据、冲突证据与边界条件（A–E 级）；用户的实践经验不直接成为规则，先进入 Practitioner Hypothesis 层，经检验后才升级。冲突证据（如 Tufte vs Bateman 的数据墨水之争）也被显式登记。</p></div>
+    <p class="wp-source">工件：knowledge/ 14 节点 · practitioner_hypotheses/registry.yaml</p>
   </section>
 
-  <section class="wp-scene" data-scene-id="options" data-topic="方案对比" data-claim="同样预算回收期相差 14 个月">
-    <h2>同样的预算，两条路径的回收期相差 14 个月</h2>
-    <div class="opt-grid">
-      <div class="opt-card">
-        <h3>方案 A · 全量重构</h3>
-        <div class="opt-row"><span>周期</span><strong>18 个月</strong></div>
-        <div class="opt-row"><span>回收期</span><strong>26 个月</strong></div>
-        <div class="opt-row"><span>风险</span><strong>高（切换期）</strong></div>
-        <div class="opt-row"><span>长期架构</span><strong>干净</strong></div>
+  <!-- 5 · Modes：三模式一模型 -->
+  <section class="wp-scene" data-scene-id="modes" data-topic="三模式" data-claim="一份内容模型，三种运行模式">
+    <span class="kicker">One Content Model</span>
+    <h2>一份内容模型，<span class="grad-text">三种运行模式</span></h2>
+    <div class="mode-row">
+      <div class="mode" data-reveal><div class="ic">🎤</div><h3>Stage · 讲演</h3><p>渐进揭示、Deep Dive 分支、讲者控制台。屏幕精简，语音承担解释。</p><span class="key">→ / Space 推进</span></div>
+      <div class="mode" data-reveal><div class="ic">📖</div><h3>Reader · 自读</h3><p>纵向滚动、内容自足、hash 深链可分享任意一幕。</p><span class="key">按 R 切换</span></div>
+      <div class="mode" data-reveal><div class="ic">🖨</div><h3>Print · 打印</h3><p>自动分页、冻结动画、展开关键内容、显示引用。</p><span class="key">Cmd/Ctrl + P</span></div>
+    </div>
+    <p data-reveal><button class="keys-btn" data-interact="expand" data-target="#keys-panel" data-purpose="现场按需展开快捷键清单，保持主画面简洁">⌨ 全部快捷键 ▾</button></p>
+    <div class="keys-panel" id="keys-panel">→ 推进 · ← 回退 · / 搜索跳转 · P 讲者台（双屏：笔记+计时+分支） · R 阅读模式 · Esc 深潜返回 · Home/End 首尾</div>
+    <aside class="wp-notes">现场按 R 再按 R 返回，按 P 展示讲者台。"断网也能跑——整目录离线，没有一行 CDN。"</aside>
+    <div class="wp-reader"><p>One Content Model：每个 Scene 同时携带 stage（现场精简）与 reader（自足完整）两层内容。Stage 支持渐进揭示、Deep Dive 分支、讲者控制台；Reader 纵向滚动、hash 深链可分享任意一幕；Print 自动分页、冻结动画、显示引用。运行时零依赖，断网可用。</p></div>
+    <p class="wp-source">实测：无头 Chrome 功能测试通过（导航/深潜/搜索/恢复/打印），2026-09-07</p>
+  </section>
+
+  <!-- 6 · Proof：自我指认的证据 -->
+  <section class="wp-scene" data-scene-id="proof" data-topic="证据" data-claim="你正在看的这份演示就是系统输出">
+    <span class="kicker">Proof</span>
+    <h2>你正在看的这份演示，<span class="grad-text">就是系统的输出物</span></h2>
+    <div class="num-row">
+      <div class="num" data-reveal><div class="v">79</div><div class="l">工程文件（知识/工作流/运行时/评测）</div></div>
+      <div class="num" data-reveal><div class="v">18</div><div class="l">维交付评测（每维有 5 分锚点）</div></div>
+      <div class="num" data-reveal><div class="v">0</div><div class="l">IR 校验错误（validate_ir.py）</div></div>
+    </div>
+    <p data-reveal><a class="dd-link" data-deep-dive="appendix">⤵ 查看知识底座与证据来源</a></p>
+    <aside class="wp-notes">说完数字补一句："包括这份演示本身。"然后视现场质疑决定是否进附录。</aside>
+    <div class="wp-reader"><p>本演示经完整六步管线产出：情境判定为 pitch、受众为 skeptical 的开发者、论证六查通过、IR 经 validate_ir.py 校验 0 error 0 warning、运行时在无头 Chrome 完成功能测试（初始化显隐/渐进揭示/Deep Dive 返回/搜索/状态恢复全通过）。工程规模：79 个文件，含 14 个知识节点、9 个工作流、7 个 Schema、100 个测试案例登记、10 条对抗测试。</p></div>
+    <p class="wp-source">来源：scripts/validate_ir.py 运行记录 · 2026-09-07 · examples/demo</p>
+  </section>
+
+  <!-- 7 · CTA：三个动作 -->
+  <section class="wp-scene" data-scene-id="cta" data-topic="行动" data-claim="Star、安装、扔掉模板思维">
+    <span class="kicker">Next Step</span>
+    <h2>三个动作</h2>
+    <div class="cta-row">
+      <div class="cta"><div class="n">ACTION 01</div><h3>⭐ Star</h3><p>github.com/mizzlelover/web-presentation-skill，关注迭代。</p></div>
+      <div class="cta"><div class="n">ACTION 02</div><h3>📦 安装</h3><p>复制到 skills 目录，一分钟接入 Claude Code / Codex / OpenCode。</p></div>
+      <div class="cta"><div class="n">ACTION 03</div><h3>🧠 换脑</h3><p>下次做演示，先问：这是什么情境？谁在看？要他们做什么决定？</p></div>
+    </div>
+    <p class="signature" data-reveal>Communication before Decoration · 开源 MIT · 作者：<b>谁是专家</b></p>
+    <aside class="wp-notes">收尾金句："Communication before Decoration——先解决传播，再谈好看。"</aside>
+    <div class="wp-reader"><p>下一步：① GitHub Star（mizzlelover/web-presentation-skill）；② 安装到 Claude Code / Codex / OpenCode / Kimi Code（复制到 skills 目录，一分钟完成）；③ 下次接到演示任务时先回答三个问题——这是什么情境？谁在看？要他们做什么决定？MIT 协议开源，作者：谁是专家。</p></div>
+  </section>
+
+  <!-- 8 · Appendix：备查（Deep Dive 目标） -->
+  <section class="wp-scene" data-scene-id="appendix" data-topic="附录" data-claim="知识底座与技术立场">
+    <span class="kicker">Appendix</span>
+    <h2>知识底座与技术立场</h2>
+    <div class="appx">
+      <div class="col">
+        <h3>📚 证据来源（35+，A–E 分级）</h3>
+        <ul>
+          <li><b>Mayer</b> 多媒体学习九原则（A）</li>
+          <li><b>Sweller / Baddeley</b> 认知负荷与工作记忆（A）</li>
+          <li><b>Alley / Garrett</b> Assertion-Evidence 实验系列（A，技术语境）</li>
+          <li><b>Cleveland & McGill</b> 图形感知编码排序（A）</li>
+          <li><b>Petty & Cacioppo</b> 说服双路径 ELM（A）</li>
+          <li><b>Tufte × Bateman</b> 数据墨水之争（冲突证据显式登记）</li>
+          <li><b>Minto / Bitzer / Aristotle</b> 结构与修辞传统</li>
+        </ul>
       </div>
-      <div class="opt-card rec">
-        <h3>方案 B · 映射层补丁</h3>
-        <div class="opt-row"><span>周期</span><strong>3 个月</strong></div>
-        <div class="opt-row"><span>回收期</span><strong>12 个月</strong></div>
-        <div class="opt-row"><span>风险</span><strong>可控（可回滚）</strong></div>
-        <div class="opt-row"><span>技术债</span><strong>可管理</strong></div>
+      <div class="col">
+        <h3>🛠 技术立场</h3>
+        <ul>
+          <li>Reveal.js / Slidev 是 <b>Runtime Reference，不是依赖</b></li>
+          <li>知识层不引用任何框架 API</li>
+          <li>runtime/ 为<b>零依赖原生 JS</b> 参考实现，可整体替换</li>
+          <li>动效优先级：CSS → WAAPI → View Transition → GSAP</li>
+          <li>离线优先：整目录打包，无 CDN 依赖</li>
+          <li>prefers-reduced-motion 全局降级</li>
+        </ul>
       </div>
     </div>
-    <aside class="wp-notes">两栏讲完后停顿 3 秒，让对比自然沉淀。</aside>
-    <div class="wp-reader"><p>两方案财务模型假设一致（折现率 8%，口径见附录）。方案 A 优势在长期架构；方案 B 以可回滚的增量方式在 Q2 末交付闭环。</p></div>
-    <p class="wp-source">来源：财务模型 v3，2026-08，假设：折现率 8%</p>
-  </section>
-
-  <section class="wp-scene wp-decision-hero" data-scene-id="recommendation" data-topic="建议" data-claim="建议批准方案 B">
-    <h2>建议批准方案 B，下周启动</h2>
-    <p class="wp-big-number" data-reveal>3<small style="font-size:.3em"> 个月</small></p>
-    <p data-reveal>2 名工程师 · Q2 末全量闭环 · 双周检查点</p>
-    <p data-reveal><a data-branch="tech-deep">⇢ 技术细节（为什么需要 3 个月）</a></p>
-    <aside class="wp-notes">说完停下来等反应，不要急着补充。</aside>
-    <div class="wp-reader"><p>建议批准方案 B：追加 3 个月工期与 2 名工程师，目标 Q2 末全量数据闭环。风险与缓解：试点为单产线，推广期设双周检查点，未达阈值即触发复盘。</p></div>
-  </section>
-
-  <section class="wp-scene wp-decision-hero" data-scene-id="decision" data-topic="决策" data-claim="请决定">
-    <h2>请决定</h2>
-    <div class="decision-opts">
-      <div class="decision-opt" data-reveal>批准<br><small style="font-weight:400">下周启动方案 B</small></div>
-      <div class="decision-opt" data-reveal>有条件批准<br><small style="font-weight:400">会上明确条件，48h 响应</small></div>
-      <div class="decision-opt" data-reveal>否决<br><small style="font-weight:400">启动收尾与复盘</small></div>
-    </div>
-    <aside class="wp-notes">冷场时复述三个选项，不要替他们选。</aside>
-    <div class="wp-reader"><p>请决策：1) 批准；2) 有条件批准——请明确条件，项目组 48 小时内响应；3) 否决——启动项目收尾与经验复盘。无论何种决定，本页构成会议决策记录。</p></div>
-  </section>
-
-  <section class="wp-scene" data-scene-id="tech-deep" data-topic="技术深潜" data-claim="8 周回填是串行工序">
-    <h2 class="wp-assertion">3 个月中 8 周用于历史数据身份回填——不可压缩的串行工序</h2>
-    <div class="gantt">
-      <div class="gantt-row"><span>映射层开发</span><div class="gantt-bar" style="width:25%"></div><span>3 周</span></div>
-      <div class="gantt-row"><span>历史数据回填</span><div class="gantt-bar" style="width:67%;background:#e0a34a"></div><span>8 周</span></div>
-      <div class="gantt-row"><span>联调验收</span><div class="gantt-bar" style="width:8%;background:#6b7280"></div><span>1 周</span></div>
-    </div>
-    <p>回填须按业务时序逐月进行并校验，加人无法线性压缩。</p>
-    <aside class="wp-notes">只在被问到时进入；讲完点"返回主线"（Esc）。</aside>
-    <div class="wp-reader"><p>工期分解：映射层开发 3 周；历史数据身份回填 8 周——须按业务时序逐月回填并校验，属串行工序，增加人力无法线性压缩；联调与验收 1 周。缓冲已含 1 周。</p></div>
-    <p class="wp-source">来源：项目组排期 v2，2026-08</p>
-  </section>
-
-  <section class="wp-scene" data-scene-id="evidence-appendix" data-topic="附录" data-claim="数据口径与审计方法">
-    <h2>附录：数据口径与审计方法</h2>
-    <ul>
-      <li><strong>抽样</strong>：2026-08 对 ERP/CRM/MES 各抽 500 条主数据记录交叉核验。</li>
-      <li><strong>入库率</strong>：关键字段非空且格式合规的比例。</li>
-      <li><strong>闭环率</strong>：业务事件 24h 内完成跨系统关联的比例。</li>
-      <li><strong>试点数据</strong>：A 产线周报，2026-07-06 至 2026-08-14，共 6 周。</li>
-    </ul>
-    <aside class="wp-notes">备查幕，不要主动展开讲。</aside>
-    <div class="wp-reader"><p>原始审计底稿见内网数据治理空间。本页可在打印版中作为引用页保留。</p></div>
-    <p class="wp-source">来源：数据治理组抽样审计，2026-08</p>
+    <p class="sub">Esc 返回主线 · 来源登记见 knowledge/sources/seed_corpus.yaml</p>
+    <aside class="wp-notes">备查幕，只在被问到"和 Reveal.js 什么关系"或"证据哪来的"时进入；讲完 Esc 返回。</aside>
+    <div class="wp-reader"><p>知识底座：35+ 来源登记，全部标注证据等级 A–E 与边界条件，冲突证据显式登记。技术立场：Reveal.js / Slidev / Spectacle 仅作为 Runtime Reference，知识层不依赖任何框架 API；本仓库 runtime/ 为零依赖原生 JS 参考实现，可整体替换。</p></div>
+    <p class="wp-source">来源：knowledge/sources/seed_corpus.yaml · knowledge/web_capabilities.yaml</p>
   </section>
 
 </main>
