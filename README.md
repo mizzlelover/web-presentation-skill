@@ -92,9 +92,85 @@ assets/           — 站点资源（公众号官方物料等）
 
 详细设计：[ARCHITECTURE.md](ARCHITECTURE.md) · [METHODOLOGY.md](METHODOLOGY.md) · [RUNTIME.md](RUNTIME.md) · [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) · [EVALS.md](EVALS.md) · [FINAL_REPORT.md](FINAL_REPORT.md)
 
-## English Summary
+## English
 
-**Web-native Presentation Intelligence** is an agent skill for building HTML presentation *applications*, not slide files. It enforces a disciplined pipeline — situation analysis → audience modeling → argument architecture → scene planning with per-scene *cognitive jobs* → a validated Presentation IR → rendering on a zero-dependency runtime with Stage / Reader / Print modes, presenter console, semantic motion, branching and deep-dives — all grounded in an evidence-graded knowledge base (cognitive load theory, multimedia learning, assertion–evidence structure, graphical perception, ELM persuasion) with practitioner hypotheses quarantined until validated. It refuses decoration-first requests and universal-rule fallacies ("max 6 lines per slide") with mechanism-level reasoning. Works with Claude Code, Codex, OpenCode and Kimi Code.
+**Wenzhi · Web-native Presentation Intelligence** is an agent skill that builds HTML **presentation applications** — not slide files. It fuses **presentation science** (cognitive science, communication research, presentation studies) with **web presentation engineering**: given complex content, a real audience, a communication goal and a situation, it produces a runnable, branchable, adaptive presentation app with Stage / Reader / Print modes.
+
+> The name 文质 (*wénzhì*) comes from the Analects of Confucius: *"When substance exceeds refinement, one becomes crude; when refinement exceeds substance, one becomes a pedant. Only when substance and refinement are balanced does one become a person of quality."* — 质 (substance) is content, argument and strategy; 文 (refinement) is rendering, visuals and delivery. AI presentations usually fail as "refinement over substance"; Wenzhi secures substance first, then lets refinement serve it.
+
+### What it solves
+
+| Common tools | Wenzhi |
+|---|---|
+| Input → HTML in one shot | Input → **strategy → argument map → scene plan → Presentation IR → render → QA** (one-shot generation is forbidden) |
+| Universal rules ("max 6 lines per slide") | **Evidence-graded rules (A–E) with boundary conditions**: every rule carries mechanism, context, evidence and exceptions |
+| Linear page-flipper | **Presentation Graph**: core path / optional paths / deep dives / evidence appendix / live branching |
+| Show mode only | **One content model, three modes**: Stage (live talk) / Reader (self-reading) / Print |
+| Animation as decoration | **Semantic motion** (REVEAL / FOCUS / CAUSE …), presenter can pause / seek / skip |
+| CDN-dependent, dies offline | **Offline-first**: the whole folder runs anywhere; stability over fancy |
+
+### Quick start
+
+```bash
+# 1. Install into your AI coding environment (Claude Code / Codex / OpenCode / Kimi Code)
+cp -r web-presentation-skill ~/.config/agents/skills/     # user-level
+# or project-level: cp -r web-presentation-skill your-project/.agents/skills/
+
+# 2. Run the complete demo (zero dependencies, opens in any browser)
+open examples/demo/index.html
+#    Keys: →/Space advance · ← back · O overview · M still-frame · / search
+#          P presenter console · R reader mode · ? help · Esc dive-return
+
+# 3. Validate a Presentation IR
+python3 scripts/validate_ir.py examples/demo/presentation.ir.json
+```
+
+### Keyboard map
+
+Every generated deck ships with a full presentation layer — overview grid, still-frame switch, presenter console, reader mode, search and help — with an unobtrusive always-on hint in the corner and a complete `?` panel. Generate a matching key-card for your own deck with `scripts/gen_keys_card.py`.
+
+### The pipeline
+
+```
+Source Material
+  ↓  analyze_source_content      content understanding + evidence tagging
+Presentation Strategy            situation (20 types) → audience model → goal verb
+  ↓  build_argument_map          argument tree + six checks (unsupported claim, logical gap, overclaim…)
+Scene Plan                       one cognitive job per scene · load curve · non-linear graph
+  ↓  build_presentation_ir       single source of truth (enforced by validate_ir.py)
+Rendering                        semantic components + design tokens + L0–L6 minimum-sufficient rendering
+  ↓  review_presentation         18-dimension rubric · visual/runtime QA · real-browser testing
+Presentation App                 offline bundle: Stage + Reader + Print
+```
+
+### Knowledge foundation
+
+- **35+ graded sources**: Mayer (multimedia learning), Sweller (cognitive load), Alley (assertion–evidence), Cleveland & McGill (graphical perception), Petty & Cacioppo (ELM), Minto, Tufte, Duarte — each registered with evidence grade and boundary conditions ([EVIDENCE.md](EVIDENCE.md)).
+- **Knowledge-graph nodes**: every method carries mechanism / supporting evidence / conflicting evidence / boundaries / failure conditions / common misreadings ([knowledge/](knowledge/)).
+- **Practitioner-hypothesis layer**: field experience is quarantined as a hypothesis until validated — it never becomes a rule directly ([registry](knowledge/practitioner_hypotheses/registry.yaml)).
+- **Anti-pattern library**: universal-rule fallacies, decoration-first, technology abuse ([anti_patterns](knowledge/anti_patterns/)).
+- **Adversarial benchmarks**: when asked for "cool animation on every page" or "3D everything", the system answers with mechanism-level reasoning ([adversarial.md](evals/benchmark/adversarial.md)).
+
+### Repository layout
+
+```
+SKILL.md          — skill router (progressive disclosure)
+knowledge/        — presentation knowledge graph + evidence grading + hypotheses + anti-patterns
+schemas/          — YAML schemas: IR / scene / knowledge node / source
+workflows/        — 9 standard workflows
+runtime/          — zero-dependency HTML presentation runtime (browser-tested)
+components/       — semantic components (information structures, not templates)
+themes/           — design-token themes ×5
+visualization/    — ECharts / D3 / SVG / Mermaid selection guides
+evals/            — 18-dimension rubric · 100 test cases · 10 adversarial tests
+scripts/          — validate_ir.py (IR validator) · gen_keys_card.py (keyboard-map card)
+examples/demo/    — complete runnable demo (self-introduction deck, live at /examples/demo/)
+adapters/         — Claude Code / Codex / OpenCode integration
+index.html        — official promo page (GitHub Pages site root)
+assets/           — site assets (WeChat official material, key cards)
+```
+
+Detailed design: [ARCHITECTURE.md](ARCHITECTURE.md) · [METHODOLOGY.md](METHODOLOGY.md) · [RUNTIME.md](RUNTIME.md) · [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) · [EVALS.md](EVALS.md) · [FINAL_REPORT.md](FINAL_REPORT.md)
 
 ## 作者 · Author
 
@@ -102,8 +178,12 @@ assets/           — 站点资源（公众号官方物料等）
 
 - 小红书：[谁是专家](https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25)
 - X (Twitter)：[@dboy_yi2025](https://x.com/dboy_yi2025)
-- 微信公众号：谁是专家（二维码见[官网](https://present.mizzlelover.xyz)）
 - GitHub：[mizzlelover](https://github.com/mizzlelover)
+- 微信公众号「谁是专家」——扫码关注，第一时间获取更新：
+
+<p align="center">
+  <img src="assets/wechat-qrcode.png" alt="微信公众号：谁是专家" width="480">
+</p>
 
 ## License
 
