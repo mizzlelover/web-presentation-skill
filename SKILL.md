@@ -71,6 +71,7 @@ description: Web-native Presentation Intelligence（HTML 原生智能演示系�
   - **场景状态保持**：非线性切出再返回时，该幕保持切出前的揭示进度，不得重置回初始态；
   - **分支返回提示上下文化**：返回提示与返回锚点只在深潜（Deep Dive）进入时显示；线性浏览到达同一幕时不出现。
 - 运行时实现见 `runtime/`（零依赖原生 JS，可直接使用或作为参考）。
+- 交付时可用 `scripts/gen_keys_card.py` 为产物生成「键位速查」SVG 卡片（默认与运行时 `?` 帮助面板的键位一致；`--keys` 自定义键位、`--stops/--bg/--ink/--cap` 等参数适配产物主题，`--print-keys` 导出默认键位 JSON 供修改），嵌入 README 或交付说明，让第一次打开的人一眼上手。
 
 ### 第 6 步：QA 与评测
 
@@ -111,6 +112,6 @@ components/             — 语义组件（HeroStatement/AssertionEvidence/BigNu
 visualization/          — ECharts/D3/SVG/Mermaid 使用指南
 themes/                 — design tokens 主题
 evals/                  — 评测 rubric、100+ 测试案例登记、对抗测试
-scripts/                — validate_ir.py 等工具
+scripts/                — validate_ir.py（IR 校验）、gen_keys_card.py（键位速查卡片生成）等工具
 examples/demo/          — 可运行的完整示例（IR + 生成的 HTML）
 ```
