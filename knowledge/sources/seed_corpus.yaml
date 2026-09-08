@@ -1188,3 +1188,29 @@ sources:
       validated_by: "2026-09-08 全文精读，Table 1 实践清单与 Guo 2014 参与度数逐项核对"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-GUO-2014
+    title: "How Video Production Affects Student Engagement: An Empirical Study of MOOC Videos"
+    authors: [Philip J. Guo, Juho Kim, Rob Rubin]
+    year: 2014
+    source_type: empirical_study
+    doi: "10.1145/2556325.2566239"
+    url: "http://up.csail.mit.edu/other-pubs/las2014-pguo-engagement.pdf"
+    authority: S
+    domain: [video_design, engagement, mooc, presentation_media]
+    notes: >
+      ACM L@S 2014，MIT CSAIL 镜像 PDF 全文已读（10 页）。6.9 百万视频观看会话 / 4 门 edX 课程，
+      当时最大规模的视频参与度实证。七大发现（原文 Table 1 逐项核对）：
+      短视频显著更吸引——中位参与时长上限为 6 分钟；非正式 talking-head（教师坐桌前）
+      比演播室制作更吸引；Khan 式平板手写教程更吸引；高质量课堂录像直接上线不吸引；
+      讲解型与教程型视频的参与模式不同；语速快参与度更高；学生对视频后测评题的尝试率
+      随视频类型不同。
+      参与度代理指标 = 观看时长 + 视频后是否尝试测评题。
+    acquisition:
+      ladder: validated
+      acquired_how: "MIT CSAIL（up.csail.mit.edu）作者机构镜像 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/educational-video.yaml"
+      validated_by: "2026-09-08 全文精读，Table 1 七大发现与参与度定义逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
