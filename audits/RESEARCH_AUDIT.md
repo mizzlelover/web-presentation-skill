@@ -23,8 +23,9 @@
 > |---|---|---|---|
 > | SRC-SWELLER-2019（CLT 20 年修订综述，Ed. Psych. Review，CC-BY） | Springer OA 全文 | abstract/introduction/method/results/discussion/limitations | `knowledge/evidence_packages/cognitive-load.yaml` |
 > | SRC-GARNER-ALLEY-2013（AE vs CP 对照实验，IJEE 29(6)） | Penn State 托管 PDF 全文 | 同上，效应量逐项核对原文 | `knowledge/evidence_packages/assertion-evidence.yaml` |
+> | SRC-REY-2019（分段效应元分析，Ed. Psych. Review 31(2)） | 作者官网自存档 PDF，pdfplumber 全文提取 | 六段全读，含 §5 元分析模板提取 | `knowledge/evidence_packages/segmenting.yaml` |
 >
-> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 39（VALIDATED 2 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 40（VALIDATED 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -44,7 +45,7 @@
 |---|---|---|
 | cognition/working-memory | MEMORY_BASED | — |
 | cognition/cognitive-load | **PARTIALLY_VALIDATED**（2026-09-08：SRC-SWELLER-2019 Springer OA 全文精读，Evidence Package 已建） | — |
-| cognition/multimedia-learning | MEMORY_BASED | — |
+| cognition/multimedia-learning | **PARTIALLY_VALIDATED**（2026-09-08：SRC-REY-2019 分段效应元分析全文精读，d 值逐项核对） | — |
 | cognition/attention-fluency | MEMORY_BASED | — |
 | presentation/assertion-evidence | **PARTIALLY_VALIDATED**（2026-09-08：SRC-GARNER-ALLEY-2013 PDF 全文精读，d=0.81/0.89 等效应量逐项核对，Evidence Package 已建） | Demo 标题系统实测渲染正常 |
 | presentation/headline-system | MEMORY_BASED | 同上 |

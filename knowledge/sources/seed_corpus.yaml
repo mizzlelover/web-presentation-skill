@@ -699,3 +699,37 @@ sources:
       validated_by: "2026-09-08 全文精读，效应量与样本量逐项核对原文表格"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-REY-2019
+    title: "A Meta-analysis of the Segmenting Effect"
+    authors: [Günter Daniel Rey, Maik Beege, Steve Nebel, Maria Wirzberger, Tobias H. Schmitt, Sascha Schneider]
+    year: 2019
+    source_type: meta_analysis
+    doi: "10.1007/s10648-018-9456-4"
+    url: "https://maria-wirzberger.de/wp-content/uploads/2019/01/Rey2019_Article_AMeta-analysisOfTheSegmentingE.pdf"
+    authority: S
+    domain: [multimedia_learning, segmenting, cognitive_load]
+    notes: >
+      分段效应元分析（作者自存档全文，31 页已读）。56 项研究 / 88 组成对比较 / N=7713。
+      保持 d=0.32、迁移 d=0.36、认知负荷降低 d=0.23、学习时间增加 d=-0.92（该指标有发表偏倚，谨慎解释）。
+      系统定速分段同样显著（保持 d=0.42 / 迁移 d=0.35）；学习者定速分段仅迁移显著。
+      调节：高先验知识者在保持上获益更多（与假设方向相反）；重复机会与顺序操纵无调节作用。
+    acquisition:
+      ladder: validated
+      acquired_how: "作者（Wirzberger）官网自存档 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/segmenting.yaml"
+      validated_by: "2026-09-08 全文精读，效应量/样本量/调节分析逐项核对原文 Table 3 与 Discussion"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "多媒体教学切分为（有意义且连贯的）学习者定速片段是否优于连续整体呈现？"
+      sample_scope: "1990–2018 年文献，ERIC/SSCI/PsycINFO/PSYNDEX/Google Scholar；英文；平均被试年龄 19.71 岁，56.4% 女性；主题以自然科学/机械原理为主"
+      number_of_studies: 56
+      experimental_context: "88 组成对比较（保持 68 / 迁移 57 / 负荷 20 / 时间 19）；全部组间设计；材料平均时长约 19 分钟，平均片段长 75.49 秒"
+      main_effect: "分段显著提升保持与迁移、降低总体认知负荷、增加学习时间；系统定速分段四指标全确认，学习者定速分段仅迁移显著"
+      effect_size: "保持 d=0.32 (SE=0.06)；迁移 d=0.36 (SE=0.06)；认知负荷 d=0.23 (SE=0.08)；学习时间 d=-0.92 (SE=0.37，有发表偏倚 τ=0.51, p=.03)；系统定速：保持 d=0.42 / 迁移 d=0.35 / 负荷 d=0.29 / 时间 d=-0.87"
+      heterogeneity: "全部指标 Q 检验高度显著（如保持 Q=2093.94, df=66, p<.001），存在调节变量；随机效应模型"
+      moderators: ["先验知识（高知识者保持获益更多，方向与假设相反）", "重复机会（无调节）", "顺序操纵（无调节）", "定速方式（系统 vs 学习者）"]
+      limitations: "元分析非实验性，三种机制解释（组块化/更多加工时间/个体配速）无法互相排除；先验知识变异受限（仅 1 项真专家研究）；学习时间存在发表偏倚；假定所有研究都按有意义单元切分"
+      presentation_implication: "把演示切分为有意义的幕/段并给予受众（或演讲者）节奏控制权，对理解迁移有中小效应支持；技术内容分段边界应对齐事件自然边界（temporal cueing）；分段本身增加总时长，需预算时间"

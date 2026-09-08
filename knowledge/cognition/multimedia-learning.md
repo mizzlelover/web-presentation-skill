@@ -2,8 +2,17 @@
 
 - knowledge_type: scientific_mechanism
 - evidence_grade: A（多数原则有中高效应量实验支持）
-- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014]
-- last_reviewed: 2026-09
+- rule_status: supported_principle
+- verification: partially_validated   # SRC-REY-2019（分段效应元分析）全文已验证 2026-09-08；Mayer 系手册仍 memory_based
+- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019]
+- last_reviewed: 2026-09-08
+
+## 已验证条目（真实全文）
+
+**Segmenting 分段**（SRC-REY-2019 元分析，56 研究/88 比较/N=7713）：保持 d=0.32、迁移 d=0.36、
+负荷降低 d=0.23；系统定速分段四指标全确认，学习者定速仅迁移显著；高先验知识者在保持上获益更多
+（方向反直觉）；分段增加总时长 d=-0.92（有发表偏倚）。边界：片段须对齐自然事件边界；
+"能重看"不能替代"被分段"。详见 knowledge/evidence_packages/segmenting.yaml。
 
 ## 原则速查（含演示含义与边界）
 
