@@ -1,5 +1,6 @@
 # Evidence Package · Assertion-Evidence Structure（补丁 §6 强制格式）
 # 生成：2026-09-08，基于 SRC-GARNER-ALLEY-2013 全文精读（Penn State 托管 PDF）
+# 更新：2026-09-08，纳入 SRC-AIPPERSBACH-2013（讲者侧实验）与 SRC-GARNER-2009-PSYCH（理论映射+语料观察）全文验证
 id: EP-ASSERTION-EVIDENCE
 domain: assertion_evidence
 mechanism: >
@@ -8,7 +9,7 @@ mechanism: >
   句断言把本幕结论外显化，降低受众自行提炼要点的外在负荷；视觉证据与口播构成
   双通道互补（modality），避免"朗读屏幕上文字"造成的冗余效应；页面词数下降
   （本实验 CP 41.5 词/页 vs AE 21.2 词/页）减少视觉搜索与心智整合成本。
-primary_sources: [SRC-GARNER-ALLEY-2013]
+primary_sources: [SRC-GARNER-ALLEY-2013, SRC-AIPPERSBACH-2013, SRC-GARNER-2009-PSYCH]
 supporting_evidence:
   - "论文式开放回答总分：t(93.43)=3.67, p<.001, Cohen's d=0.81（大效应）"
   - "延迟一周复测：t(93)=4.34, p<.001, d=0.89（效应保持甚至增大）"
@@ -16,8 +17,11 @@ supporting_evidence:
   - "动态因果过程表达（MRI 工作原理的正确因果链）：d=0.60"
   - "误解总数：F=9.84, p<.01, d=0.47；感知心智努力 AE 组更低：d=-0.50"
   - "即时选择题仅在'推理/模拟'高阶题显著：F=11.25, p<.01, η²=.09；事实回忆题无显著差异"
+  - "讲者侧（SRC-AIPPERSBACH-2013）：亲自制作 AE 幻灯片的学生一天后突击测验总分显著更高 t(51)=2.62, p=0.01（12.55/20 vs 10.68/20）；最复杂内容题 F(1,52)=9.92, p<0.01；误解更少（0.93 vs 1.12）"
+  - "语料观察（SRC-GARNER-2009-PSYCH）：2008 ASEE 年会演示中各情境 ≥80% 页面使用短语标题，PowerPoint 默认版式是 topic-subtopic 结构的主要成因"
 conflicting_evidence:
   - "事实性即时回忆无组间差异——AE 的优势集中在理解、迁移、因果推理，不在死记硬背"
+  - "次要信息回忆 CP 组略优（SRC-AIPPERSBACH-2013：0.24 vs 0.19）——bullet 列表装得下更多次要细节，但主过程步骤记忆更差"
   - "SRC-TUFTE-2003 的密度批评与 SRC-BATEMAN-2010 的记忆度证据提示：非技术语境下 AE 未必是最优"
 experimental_context: >
   N=110 工程本科生（AE 组 59 / CP 组 51），内容为 MRI 扫描原理 8 分钟录制演示，
@@ -28,9 +32,12 @@ boundary_conditions:
   - "未验证：营销路演、情感动员、纯叙事、高管简报等场景——这些场景适用性证据不足，禁止宣称 AE 普适"
   - "AE 要求每幕确有可陈述的结论；纯过渡页/目录页不适用"
 effect_strength: >
-  理解类主效应 d=0.81–0.89（大），误解减少 d=0.47（中），心智努力 d=-0.50（中），
-  高阶推理 η²=.09（中）。单一研究 N=110，需 SRC-ALLEY-2006-AE / SRC-GARRETT-2016
-  等复现研究验证后方可升级置信度（当前均 memory_based，待真实获取）。
+  受众侧理解类主效应 d=0.81–0.89（大，SRC-GARNER-ALLEY-2013，N=110）；
+  讲者侧理解总分 p=0.01、最复杂内容题 p<0.01（SRC-AIPPERSBACH-2013，N≈53）——
+  受众侧与讲者侧两个独立实验方向一致。误解减少 d=0.47（中），心智努力 d=-0.50（中），
+  高阶推理 η²=.09（中）。理论机制与多媒体学习原则的映射见 SRC-GARNER-2009-PSYCH
+  （理论性来源，非独立实验证据）。SRC-ALLEY-2006-AE / SRC-GARRETT-2016
+  等复现研究仍 memory_based，待真实获取后方可升级 high。
 common_misinterpretation:
   - "'AE = 把标题写长'——断言必须是可证伪的结论句，不是话题标签加长版"
   - "'AE 禁止文字'——是禁止自足文字与口播重复，不是禁止文字本身"
@@ -38,7 +45,8 @@ common_misinterpretation:
 presentation_application: >
   技术/科研/数据/咨询演示默认评估 AE 适用性：每幕标题写成结论句（"华东市场增长已停滞
   两个季度"而非"市场分析"）；证据必须可视化且可挂 evidence_scene 深潜页；
-  词数预算参考：本实验 AE 均 21.2 词/页（非军规，仅锚点）；与 Question Headline 构成
+  词数预算参考：本实验 AE 均 21.2 词/页（非军规，仅锚点）；句标题排版细则（不超过两行、
+  左对齐、约 28pt）来自 SRC-GARNER-2009-PSYCH 的设计建议；与 Question Headline 构成
   序列（无问题意识时先问后答），非对立。
-confidence: medium   # 单一实验全文验证；复现文献尚未真实获取，按补丁禁止虚标 high
+confidence: medium   # 受众侧+讲者侧两个实验 + 一个理论映射全文验证；样本均为工程学生，按补丁禁止虚标 high
 last_reviewed: 2026-09-08

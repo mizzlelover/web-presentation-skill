@@ -29,8 +29,10 @@
 > | SRC-TRYPKE-2023（冗余效应两类系统综述，Frontiers Psych. 14） | Frontiers 官方 OA PDF，pdfplumber 全文提取 | 六段全读，四场景/调节因素逐项核对 | `knowledge/evidence_packages/redundancy.yaml` |
 > | SRC-COWAN-2010（工作记忆容量综述，Curr. Dir. Psychol. Sci. 19(1)） | PMC 开放全文 | 六段全读 | `knowledge/evidence_packages/working-memory.yaml` |
 > | SRC-PETTY-1984（ELM 来源因素，ACR 11:668-672） | Petty 官网自存档扫描件，pypdfium2 渲染逐页视觉精读 | 六页全读（摘要/框架/三组实验/结论） | `knowledge/evidence_packages/persuasion-elm.yaml` |
+> | SRC-AIPPERSBACH-2013（AE 幻灯片制作影响讲者理解，ASEE #5691） | Penn State writing.engr.psu.edu 官方 PDF，pdfplumber 全文提取 | 六段全读，t(51)=2.62 / F(1,52)=9.92 / Table 1 逐项核对 | 并入 `assertion-evidence.yaml` |
+> | SRC-GARNER-2009-PSYCH（AE 的认知心理学视角，Tech. Comm. 56(4):331-345） | Penn State 官方 PDF，断点续传 + pdfplumber 全文提取 | 全文 15 页，语料观察数据与设计细则逐项核对 | 并入 `assertion-evidence.yaml` |
 >
-> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 47（VALIDATED 8 / FOUND 39；abstract_only：SRC-SCHNEIDER-2018、SRC-SCHROEDER-2018）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system 升级为 `partially_validated`。登记总数 37 → 49（VALIDATED 10 / FOUND 39；abstract_only：SRC-SCHNEIDER-2018、SRC-SCHROEDER-2018）。
 
 ## 1. 来源重新分类（§67）
 
@@ -53,7 +55,7 @@
 | cognition/multimedia-learning | **PARTIALLY_VALIDATED**（2026-09-08：SRC-REY-2019 分段效应 + SRC-TRYPKE-2023 冗余效应系统综述全文精读） | — |
 | cognition/attention-fluency | MEMORY_BASED | — |
 | presentation/assertion-evidence | **PARTIALLY_VALIDATED**（2026-09-08：SRC-GARNER-ALLEY-2013 PDF 全文精读，d=0.81/0.89 等效应量逐项核对，Evidence Package 已建） | Demo 标题系统实测渲染正常 |
-| presentation/headline-system | MEMORY_BASED | 同上 |
+| presentation/headline-system | **PARTIALLY_VALIDATED**（2026-09-08：SRC-AIPPERSBACH-2013 讲者侧实验 + SRC-GARNER-2009-PSYCH 理论映射/语料观察全文精读） | 同上 |
 | presentation/information-density | MEMORY_BASED | 三模式密度分离已在 Demo 实现 |
 | presentation/audience-modeling | MEMORY_BASED | — |
 | presentation/situation-taxonomy | MEMORY_BASED | — |
@@ -73,7 +75,7 @@
 |---|---|---|
 | 禁止 Input→HTML 一步到位，必须走 IR 管线 | SUPPORTED PRINCIPLE | 工程必要性 + 实践一致性，但无对照实验 |
 | Speaker Notes 必须是三层中最详细 | PRACTITIONER HEURISTIC | 实践框架，无直接实验 |
-| 标题由 Cognitive Job 决定类型 | CONTEXTUAL HEURISTIC | Alley 系主张，原文未读 |
+| 标题由 Cognitive Job 决定类型 | SUPPORTED PRINCIPLE | 受众侧+讲者侧实验全文验证（d=0.81 / p=0.01），边界限工程/教学语境 |
 | "每页最多 6 行"作为通用规则 | CONTESTED（已列反模式） | 边界条件明确缺失 |
 | 语义动效必须可 pause/seek/skip | PRACTITIONER HEURISTIC + 工程可验证 | 运行时已实现并实测 |
 
@@ -81,13 +83,13 @@
 
 | Domain | Target | Found | Acquired | Full Read | Annotated | Validated | Distilled |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Multimedia Learning | 4+ | 2 | 0 | 0 | 0 | 0 | 0 |
-| Cognitive Load | 4+ | 2 | 0 | 0 | 0 | 0 | 0 |
-| Assertion-Evidence | 3+ | 3 | 0 | 0 | 0 | 0 | 0 |
+| Multimedia Learning | 4+ | 4 | 4 | 2 | 2 | 2 | 2 |
+| Cognitive Load | 4+ | 2 | 2 | 2 | 2 | 2 | 2 |
+| Assertion-Evidence | 3+ | 6 | 3 | 3 | 3 | 3 | 3 |
 | Audience | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
-| Persuasion | 4+ | 6 | 0 | 0 | 0 | 0 | 0 |
+| Persuasion | 4+ | 6 | 1 | 1 | 1 | 1 | 1 |
 | Narrative | 3+ | 3 | 0 | 0 | 0 | 0 | 0 |
-| Information Visualization | 6+ | 9 | 0 | 0 | 0 | 0 | 0 |
+| Information Visualization | 6+ | 9 | 2 | 2 | 2 | 2 | 2 |
 | Public Speaking | 3+ | 2 | 0 | 0 | 0 | 0 | 0 |
 | Document / Reader Mode | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
 

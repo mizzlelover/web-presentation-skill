@@ -3,9 +3,9 @@
 - knowledge_type: presentation_principle
 - evidence_grade: A（技术/科研演示语境）；其他语境 B–C
 - rule_status: supported_principle   # 单一大效应实验全文验证 + 复现文献待真实获取
-- verification: partially_validated   # SRC-GARNER-ALLEY-2013 全文已验证（2026-09-08）；SRC-ALLEY-2006-AE / SRC-GARRETT-2016 仍 memory_based
+- verification: partially_validated   # SRC-GARNER-ALLEY-2013 / SRC-AIPPERSBACH-2013 / SRC-GARNER-2009-PSYCH 全文已验证（2026-09-08）；SRC-ALLEY-2006-AE / SRC-GARRETT-2016 仍 memory_based
 - evidence_package: knowledge/evidence_packages/assertion-evidence.yaml
-- source_ids: [SRC-GARNER-ALLEY-2013, SRC-ALLEY-2003, SRC-ALLEY-2006-AE, SRC-GARRETT-2016]
+- source_ids: [SRC-GARNER-ALLEY-2013, SRC-AIPPERSBACH-2013, SRC-GARNER-2009-PSYCH, SRC-ALLEY-2003, SRC-ALLEY-2006-AE, SRC-GARRETT-2016]
 - last_reviewed: 2026-09-08
 
 ## 结构
@@ -28,6 +28,10 @@ Visual Evidence（图/数据/照片/示意图，而非项目符号列表）
 - 技术/科研/数据/咨询演示默认评估 Assertion-Evidence 是否适用。
 - assertion 必须是可证伪的陈述句，不是话题标签（"市场分析" ❌ → "华东市场增长已停滞两个季度" ✓）。
 - 证据必须可挂 evidence_scene（现场被质疑时跳转）。
+
+## 讲者侧与成因证据（2026-09-08 全文验证补入）
+- 讲者侧：亲自制作 AE 幻灯片的学生对内容理解更深（突击测验总分 t(51)=2.62, p=0.01；最复杂题 F(1,52)=9.92, p<0.01；误解 0.93 vs 1.12），代价是次要细节回忆略低（SRC-AIPPERSBACH-2013）——AE 同时是演讲者的备课理解工具。
+- 成因：≥80% 演示页面沿用 PowerPoint 默认短语标题（SRC-GARNER-2009-PSYCH 语料观察）；该文给出设计细则：句标题 ≤ 两行、左对齐、约 28pt，正文以视觉证据为主。
 
 ## Related nodes
 KN-PRES-002、KN-COMM-003、KN-VIS-001

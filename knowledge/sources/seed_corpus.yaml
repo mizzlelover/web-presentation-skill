@@ -912,3 +912,60 @@ sources:
       validated_by: "2026-09-08 六页逐页视觉精读，各实验条件×结果交叉核对"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-AIPPERSBACH-2013
+    title: "How Slide Design Affects a Student Presenter's Understanding of the Content"
+    authors: [Shannon Marie Aippersbach, Michael Alley, Joanna K. Garner]
+    year: 2013
+    source_type: experiment
+    doi: null
+    url: "https://writing.engr.psu.edu/asee_5691.pdf"
+    authority: A
+    domain: [assertion, sentence_headline, presenter_comprehension]
+    notes: >
+      ASEE 2013 年会论文（Paper #5691，11 页全文已读）。讲者侧证据：
+      两组工程本科生（每组 >50 人，剔除混合结构约 10% 后 N≈53）阅读同一篇 MRI 原理文章，
+      分别被要求按 AE 结构或自选结构（实际多为短语标题+项目符号）制作 5 页幻灯片，
+      一天后突击论文式测验（双盲评分，22 个步骤/细节量规）。
+      总分：t(51)=2.62, p=0.01，AE 组 12.55/20 vs CP 组 10.68/20；
+      最复杂的第三题（梯度磁场）独立显著：F(1,52)=9.92, p<0.01（2.96/5 vs 1.97/5）；
+      误解更少（0.93 vs 1.12）。
+      反向发现：次要信息回忆 CP 组略高（0.24 vs 0.19）——项目符号列表装得下更多次要细节，
+      但主过程步骤记忆反而更差。
+    acquisition:
+      ladder: validated
+      acquired_how: "Penn State writing.engr.psu.edu 官方托管 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/assertion-evidence.yaml"
+      validated_by: "2026-09-08 全文精读，t/F 统计量、Table 1 各分项得分逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-GARNER-2009-PSYCH
+    title: "Common Use of PowerPoint versus the Assertion-Evidence Structure: A Cognitive Psychology Perspective"
+    authors: [Joanna K. Garner, Michael Alley, Allen F. Gaudelli, Sarah E. Zappe]
+    year: 2009
+    source_type: theory_review
+    doi: null
+    url: "https://www.writing.engr.psu.edu/ae_psychology.pdf"
+    authority: A
+    domain: [assertion, sentence_headline, multimedia_learning, slide_defaults]
+    notes: >
+      Technical Communication 56(4):331-345，15 页全文已读。理论论证 + 语料观察：
+      (1) 语料观察——分析 2008 ASEE 年会演示（3 场大会报告、31 场最佳论文提名、
+      选择性分会），PowerPoint 默认版式强烈影响标题结构：各情境下 ≥80% 的页面采用短语标题；
+      默认文本框导致短语标题与项目符号列表的 topic-subtopic 结构。
+      (2) 理论映射——AE 结构（句断言标题+视觉证据）与多媒体学习原则对齐：
+      coherence（删除非必要信息）、signaling（句标题外显要点）、modality/双通道
+      （Paivio 双重编码：视觉证据+口播）、redundancy（避免屏幕文字与口播逐字重复）、
+      segmenting、personalization；指出常见做法（短语标题+ bullet 列表照读）违反这些原则。
+      (3) 设计细则——句标题不超过两行、左对齐、约 28pt；正文以视觉证据为主。
+      非随机实验，机制论证依赖引用文献，属理论性来源。
+    acquisition:
+      ladder: validated
+      acquired_how: "Penn State writing.engr.psu.edu 官方托管 PDF，curl 断点续传下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/assertion-evidence.yaml"
+      validated_by: "2026-09-08 全文精读，语料观察数据与设计细则逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
