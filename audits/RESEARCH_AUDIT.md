@@ -36,9 +36,10 @@
 > | SRC-HEER-2010（众包图形感知，CHI 2010，186 名 MTurk 被试） | 斯坦福 vis.stanford.edu 官方 PDF，pdfplumber 全文提取 | 六段全读，四组实验统计量逐项核对 | 并入 `graphical-perception.yaml`（置信度升级 high） |
 > | SRC-DEKONING-2009（注意线索三功能综述，Ed. Psych. Review 21:113-140） | Springer 开放获取全文（CC-BY-NC）FetchURL 精读 | 六段全读，三功能框架/各实证研究结论/调节变量逐项核对 | `knowledge/evidence_packages/attention-cueing.yaml` |
 > | SRC-XIE-2016-CN（多媒体学习线索效应元分析，心理学报 48(5)） | 心理学报官网开放 PDF，pdfplumber 全文提取 | 六段全读，四组 g 值与调节分析逐项核对 | 并入 `attention-cueing.yaml`（置信度升级 high） |
+> | SRC-VANLAER-2014（叙事传输扩展模型元分析，JCR 40(5)） | City Research Online 机构库接受版 PDF，pdfplumber 全文提取 | 六段全读，132 效应量 ρ/z/p 与 file drawer 逐项核对 | `knowledge/evidence_packages/narrative-transportation.yaml` |
 >
 > 新增 abstract_only：SRC-GINNS-2006（空间/时间临近元分析，Elsevier 付费墙，仅 ERIC 摘要，禁止推断效应量）。
-> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 54（VALIDATED 14 / abstract_only 3 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 55（VALIDATED 15 / abstract_only 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -67,7 +68,8 @@
 | presentation/situation-taxonomy | MEMORY_BASED | — |
 | presentation/qa-adaptation | MEMORY_BASED | 深潜/返回机制实测通过 |
 | communication/persuasion-elm | **PARTIALLY_VALIDATED**（2026-09-08：SRC-PETTY-1984 作者官网扫描件六页精读） | — |
-| communication/argumentation · narrative · question-framing | MEMORY_BASED | — |
+| communication/narrative | **PARTIALLY_VALIDATED**（2026-09-08：SRC-VANLAER-2014 元分析全文精读） | — |
+| communication/argumentation · question-framing | MEMORY_BASED | — |
 | visualization/chart-selection | **PARTIALLY_VALIDATED**（2026-09-08：SRC-CLEVELAND-1986 全文精读，排序/样本/边界逐项核对） | — |
 | visualization/visual-perception | **PARTIALLY_VALIDATED**（2026-09-08：SRC-FRANCONERI-2021 全文精读） | — |
 | motion/semantic-motion | MEMORY_BASED | WAAPI 动效控制实测通过 |
@@ -94,7 +96,7 @@
 | Assertion-Evidence | 3+ | 6 | 3 | 3 | 3 | 3 | 3 |
 | Audience | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
 | Persuasion | 4+ | 6 | 1 | 1 | 1 | 1 | 1 |
-| Narrative | 3+ | 3 | 0 | 0 | 0 | 0 | 0 |
+| Narrative | 3+ | 4 | 1 | 1 | 1 | 1 | 1 |
 | Information Visualization | 6+ | 10 | 3 | 3 | 3 | 3 | 3 |
 | Public Speaking | 3+ | 2 | 0 | 0 | 0 | 0 | 0 |
 | Document / Reader Mode | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |

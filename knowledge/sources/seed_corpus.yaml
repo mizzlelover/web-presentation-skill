@@ -1120,3 +1120,42 @@ sources:
       moderators: ["材料动态性（静态>动态，保持与迁移一致）", "知识类型（陈述性>程序性）", "学科属性（理工科>文科，仅保持）", "线索类型（迁移：时空>物理；眼动：物理>时空）"]
       limitations: "作者自陈需进一步考察其他边界条件；动态材料中线索凸显性被运动元素抵消"
       presentation_implication: "中文证据与 Schneider 2018 互证：信号线索中小效应稳健；Stage Mode（动态呈现）中线索必须与运动元素竞争注意——渐进揭示顺序即线索时序；Reader Mode（静态）线索收益更大，标题/高亮/编号应充分使用"
+  - source_id: SRC-VANLAER-2014
+    title: "The Extended Transportation-Imagery Model: A Meta-Analysis of the Antecedents and Consequences of Consumers' Narrative Transportation"
+    authors: [Tom van Laer, Ko de Ruyter, Luca M. Visconti, Martin Wetzels]
+    year: 2014
+    source_type: meta_analysis
+    doi: "10.1086/673383"
+    url: "https://openaccess.city.ac.uk/id/eprint/6755/1/SSRN-id2033192.pdf"
+    authority: S
+    domain: [narrative, transportation, persuasion, storytelling]
+    notes: >
+      Journal of Consumer Research 40(5):797-817，City Research Online 机构库接受版全文已读（78 页）。
+      132 个效应量 / 76 篇已发表与未发表文献。
+      叙事者侧前因：可识别角色 ρ=.20、可想象情节 ρ=.29、逼真性 ρ=.27（均 p<.001）。
+      接收者侧前因：熟悉度 ρ=.21、注意 ρ=.29、可传输性 transportability ρ=.30、
+      教育 ρ=.10、性别（女）ρ=.15；年龄不显著（ρ=.00）。
+      后果：情感反应 ρ=.57（大）、态度 ρ=.44（中）、意向 ρ=.31（中）、信念 ρ=.26、
+      叙事思维 ρ=.20、批判性思维 ρ=-.20（降低反驳，p<.01）。
+      发表偏倚稳健（file drawer N 80–6627）；方法学调节：非 Green & Brock 传输量表的研究
+      效应量虚高（ρ=.56 vs .34），提示跨操作化不可直接推广。
+    acquisition:
+      ladder: validated
+      acquired_how: "City Research Online 机构库接受版 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/narrative-transportation.yaml"
+      validated_by: "2026-09-08 全文精读，Table 2 各 ρ/z/p 与发表偏倚分析逐项核对"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "叙事传输（narrative transportation）的前因（叙事者侧/接收者侧）与后果（情感/认知/信念/态度/意向）各是什么量级？"
+      sample_scope: "跨营销/心理学/传播学/消费者研究/文学研究；76 篇已发表与未发表文献，132 个效应量"
+      number_of_studies: 76
+      experimental_context: "消费者叙事情境为主；逆方差加权相关 + 信度校正（ρ）；Q 统计检验异质性"
+      main_effect: "传输对情感反应大效应、态度/意向中效应、批判性思维负效应（降低反驳）；前因均为中小效应，年龄无效应"
+      effect_size: "情感 ρ=.57；态度 ρ=.44；意向 ρ=.31；信念 ρ=.26；叙事思维 ρ=.20；批判思维 ρ=-.20；可想象情节 ρ=.29；可传输性 ρ=.30"
+      heterogeneity: "Q 检验显著；测量量表为显著方法学调节变量"
+      moderators: ["测量量表（Green & Brock 传输量表 ρ=.34 更保守 vs 其他量表 ρ=.56 虚高）"]
+      limitations: "43% 原始研究未报告年龄；传输量表外操作化的效应量可能含共同方法偏差；元分析相关性非因果结构模型验证"
+      presentation_implication: "叙事的真实杠杆是'传输'而非'有故事'：可识别角色+可想象情节+逼真性是讲者可控的三旋钮；受众熟悉度与注意决定传输上限——叙事型演示前先评估受众对题材熟悉度；传输降低批判性思维，决策型场景慎用强叙事以免被质疑'回避论证'"
