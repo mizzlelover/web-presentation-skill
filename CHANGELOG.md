@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] — 2026-09-08
+
+应用《真实研究与技术验证强制补丁》，建立双轨证据制：
+
+- **诚实降级**：37 条来源与 14 个知识节点全部重标 MEMORY_BASED（原 full_text 标记构成虚标，已纠正）；GSAP/ECharts/D3/Mermaid/Three.js/View Transition/Live Data 降级为 documentation_only，移入 `experimental/` 孵化区，未实测前禁止进入 Renderer Planner
+- **五份审计基线**（`audits/`）：RESEARCH_AUDIT（含 §11 覆盖表）、RUNTIME_AUDIT、CORPUS_COVERAGE（真实中文基准语料 0/10）、CAPABILITY_VERIFICATION（§48 全字段登记）、GAP_REPORT（P0–P4 补齐计划），另立 MOTION_CAPABILITY_MATRIX 与 TRACEABILITY_MATRIX
+- **当日真实验证**：打印到 PDF 10 页 16:9 实测；1366×768 / 1920×1080 投影截图无溢出；`--force-prefers-reduced-motion` 内容完整；全工程零外部 URL（离线门禁通过）；控制台 0 错误；runtime 64 KB / demo 56 KB
+- **Schema 升级**：source.yaml 增加获取阶梯（PLANNED→…→DISTILLED）+ abstract_only 禁推断条款 + meta 分析提取模板 + practitioner_framework 分层；capability.yaml 落地 §48 运行时能力登记；knowledge_node.yaml 增加 rule_status 六级与 verification 字段
+- **SKILL.md** 新增「真实证据双轨制」强制条款；项目状态更正为「工程管线可用、研究证据待补」，不宣称 COMPLETE
+
 ## [0.2.2] — 2026-09-07
 
 - 键位卡生成器沉淀为 Skill 标准工具 `scripts/gen_keys_card.py`：零依赖纯标准库，默认输出与运行时 `?` 帮助一致的 10 键三组卡片；支持 `--keys` 自定义键位 JSON（`--print-keys` 导出默认版）、`--title/--brand/--site/--footer` 文案定制、`--bg/--ink/--ink2/--ink3/--cap/--cap-line/--stops` 全套主题参数（亮/暗主题均已截图验证）

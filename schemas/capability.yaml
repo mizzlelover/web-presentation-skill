@@ -1,14 +1,27 @@
-# Web Capability Registry Schema — Web 能力登记（§77）
-capability: str          # 如 View Transition API
+# Runtime Capability Registry Schema — 运行时能力登记（补丁 §13/§48）
+# 只有 status ≥ tested 的能力允许进入正式 Renderer Planner；其余停留在 experimental/。
+capability_id: str      # 如 CAP-GSAP
+name: str
+technology: str         # CSS / Web Animations API / ECharts / Three.js ...
 purpose: str
-technology: str          # CSS / Web Animations API / ECharts / Three.js ...
+status: enum            # discovered | documented | prototyped | tested | benchmarked | accepted | rejected
+verification: enum      # tested | prototyped_only | documentation_only | unverified（补丁 §67）
+tested_browsers: [str]  # 实测过的浏览器（空 = 未实测）；禁止照抄文档标 browser_verified
+tested_devices: [str]
+performance_cost: enum  # low | medium | high | unknown
+accessibility: str      # 无障碍注意事项（prefers-reduced-motion 行为必填）
+offline_support: enum   # yes | no | needs_bundling
+presentation_use_cases: [str]
+avoid_when: [str]
+fallback: str           # 降级方案（必填）
+demo_path: str | null   # 最小可运行 demo 路径（补丁 §14：不得只写 README）
+test_results: str       # 可复核的验证记录（方法 + 结果 + 日期）
+last_verified: date     # 或 never
+
+# 旧字段保留兼容（browser_support 文档性描述，仅供参考，不构成验证证据）:
 browser_support:
-  chromium: str          # 版本或 no
+  chromium: str
   safari: str
   firefox: str
-performance_cost: enum   # low | medium | high
-accessibility: str       # 无障碍注意事项
-fallback: str            # 降级方案
 recommended_use: [str]
-avoid_when: [str]
 last_updated: date

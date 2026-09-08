@@ -13,6 +13,17 @@ evidence:
   meta_analysis: [str]
   replication: [str]
 evidence_grade: enum           # A Strong | B Moderate | C Emerging | D Practitioner Heuristic | E Weak/Contested
+# ── 补丁 §10：规则状态（强制，禁止全部写成确定性军规）──
+rule_status: enum              # strong_principle | supported_principle | contextual_heuristic | practitioner_heuristic | contested | insufficient_evidence
+# ── 补丁 §67：验证状态（禁止虚标）──
+verification: enum             # validated | partially_validated | memory_based | unverified
+# ── 补丁 §6：核心领域节点必须形成 Evidence Package（下列字段齐备才算）──
+evidence_package:
+  primary_sources: [str]       # 必须为 ladder≥validated 的 source_id
+  experimental_context: str
+  effect_strength: str         # 含效应量或"未知"，禁止凭摘要推断
+  presentation_application: str
+  confidence: enum             # high | medium | low
 applicable_contexts: [str]     # 适用情境（对应 situation taxonomy）
 boundary_conditions: [str]     # 边界条件，必填
 failure_conditions: [str]      # 何时失效

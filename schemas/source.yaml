@@ -1,13 +1,40 @@
-# Source Registry Schema — 来源登记（§75）
-# 每个 seed corpus 来源一条记录。authority: S/A/B/C（S=meta-analysis/系统综述，A=原始实验，B=权威专著/手册，C=专业实践资料）
+# Source Registry Schema — 来源登记（§75 + 补丁 §3/§4/§5）
+# 每个 seed corpus 来源一条记录。
+# authority: S=meta-analysis/系统综述  A=原始实验  B=权威专著/手册  C=专业实践资料
 source_id: str          # 唯一 ID，如 SRC-MAYER-2001
 title: str
 authors: [str]
 year: int
-source_type: enum       # meta_analysis | systematic_review | experiment | review | handbook | book | course | talk | professional
+source_type: enum       # meta_analysis | systematic_review | replication | experiment | review | handbook | book | course | talk | professional
 doi: str | null
 url: str | null
 authority: enum         # S | A | B | C
-access_status: enum     # full_text | abstract | summary | secondary | not_accessed
 domain: [str]           # 对应 knowledge/ 一级领域
 notes: str
+
+# ── 补丁 §3：获取阶梯（强制）──
+# 禁止把 FOUND 当 RESEARCHED。只有 VALIDATED 及以上才能作为 Knowledge Node 核心证据。
+acquisition:
+  ladder: enum          # planned | found | acquired | read | annotated | validated | distilled
+  acquired_how: str | null    # 原文获取方式（文件路径/URL/图书馆），ladder≥acquired 必填
+  read_sections: [str] | null # 补丁 §4：abstract/introduction/method/results/discussion/limitations
+  access_level: enum | null   # full_text | abstract_only | summary | secondary —— abstract_only 禁止推断实验条件/效应量/边界
+  annotated_at: str | null    # 标注文件位置
+  validated_by: str | null    # 验证记录（谁/何时/如何核验）
+  verification: enum    # validated | partially_validated | memory_based | unverified（补丁 §67）
+
+# ── 补丁 §5：meta-analysis / systematic review 优先，至少提取以下字段 ──
+meta_extraction:                # 仅 source_type ∈ meta_analysis/systematic_review/replication 时必填
+  research_question: str
+  sample_scope: str
+  number_of_studies: int
+  experimental_context: str
+  main_effect: str
+  effect_size: str
+  heterogeneity: str
+  moderators: [str]
+  limitations: str
+  presentation_implication: str
+
+# ── 补丁 §8：实践派框架分层 ──
+knowledge_type: enum    # scientific | practitioner_framework —— 实践派作者默认 practitioner_framework

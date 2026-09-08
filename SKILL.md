@@ -26,6 +26,16 @@ description: Web-native Presentation Intelligence（HTML 原生智能演示系�
 - **对抗性请求要识别**：用户要求"每页都加炫酷动画""所有数据做 3D""所有标题改问句"时，先判断是否损害传播，并向用户说明理由（见 evals/benchmark/adversarial.md）。
 - **技术 ≠ 方法论**：Web 库只回答"怎么实现"，不回答"为什么应该这么设计"。知识层不得依赖任何框架 API。
 
+## 真实证据双轨制（强制补丁，不可绕过）
+
+- **Found ≠ Researched**：找到书名/论文标题不等于研究。来源必须走获取阶梯 `PLANNED → FOUND → ACQUIRED → READ → ANNOTATED → VALIDATED → DISTILLED`；只有 **VALIDATED** 以上可作 Knowledge Node 核心证据。只读到摘要时标 `access_level: abstract_only`，禁止推断实验条件、效应量、泛化性与边界条件。
+- **Library Exists ≠ Capability Verified**：库文档说支持，不等于演示系统能稳定做。Web 能力必须走 `DISCOVERED → DOCUMENTED → PROTOTYPED → TESTED → BENCHMARKED → ACCEPTED`；只有 **TESTED** 以上可进入正式 Renderer Planner，未验证技术一律停留 `experimental/`。
+- **两条证据链在 Presentation IR 汇合**：Track A（为什么这样设计）+ Track B（能否稳定实现）缺一不可。
+- **禁止 Book-summary Research**：知识单位是 Mechanism Node（多书+多论文+实验+综述+实践汇聚），不是一本书的摘要。实践派方法（Reynolds/Duarte/Weissman/Minto/Tufte/Abela）标 `practitioner_framework`，不自动等于科学证据。
+- **规则分级（§10）**：STRONG / SUPPORTED / CONTEXTUAL / PRACTITIONER / CONTESTED / INSUFFICIENT——禁止全写成确定性军规。
+- **补齐顺序（§68）**：P0 核心理论实读 → P1 核心 Runtime 实跑 → P2 真实中文基准语料 → P3 跨浏览器/离线/打印 → P4 高级技术。P0/P1 未清前不新增特效。
+- **审计基线**：`audits/`（RESEARCH_AUDIT / RUNTIME_AUDIT / CORPUS_COVERAGE / CAPABILITY_VERIFICATION / GAP_REPORT / MOTION_CAPABILITY_MATRIX / TRACEABILITY_MATRIX），每次声明能力或规则前先看当前状态，禁止虚标。
+
 ## 工作流程（按顺序执行）
 
 ### 第 0 步：Situation First — 判定演示类型
@@ -113,5 +123,7 @@ visualization/          — ECharts/D3/SVG/Mermaid 使用指南
 themes/                 — design tokens 主题
 evals/                  — 评测 rubric、100+ 测试案例登记、对抗测试
 scripts/                — validate_ir.py（IR 校验）、gen_keys_card.py（键位速查卡片生成）等工具
+audits/                 — 双轨证据审计基线（研究/运行时/语料/能力/差距/动效矩阵/可追溯矩阵）
+experimental/           — 未验证高级技术孵化区（禁止进入 Production Runtime）
 examples/demo/          — 可运行的完整示例（IR + 生成的 HTML）
 ```
