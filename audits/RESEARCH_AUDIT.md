@@ -33,8 +33,10 @@
 > | SRC-GARNER-2009-PSYCH（AE 的认知心理学视角，Tech. Comm. 56(4):331-345） | Penn State 官方 PDF，断点续传 + pdfplumber 全文提取 | 全文 15 页，语料观察数据与设计细则逐项核对 | 并入 `assertion-evidence.yaml` |
 > | SRC-LIU-2022-TEMPORAL（时间临近效应的幻灯片新应用，ETR&D） | PMC 开放全文（PMC8800848）HTML 精读 | 六段全读，三组对照 d=.51/.67/2.73 逐项核对 | `knowledge/evidence_packages/temporal-contiguity.yaml` |
 >
+> | SRC-HEER-2010（众包图形感知，CHI 2010，186 名 MTurk 被试） | 斯坦福 vis.stanford.edu 官方 PDF，pdfplumber 全文提取 | 六段全读，四组实验统计量逐项核对 | 并入 `graphical-perception.yaml`（置信度升级 high） |
+>
 > 新增 abstract_only：SRC-GINNS-2006（空间/时间临近元分析，Elsevier 付费墙，仅 ERIC 摘要，禁止推断效应量）。
-> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning 升级为 `partially_validated`。登记总数 37 → 51（VALIDATED 11 / abstract_only 3 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection 升级为 `partially_validated`。登记总数 37 → 52（VALIDATED 12 / abstract_only 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -91,7 +93,7 @@
 | Audience | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
 | Persuasion | 4+ | 6 | 1 | 1 | 1 | 1 | 1 |
 | Narrative | 3+ | 3 | 0 | 0 | 0 | 0 | 0 |
-| Information Visualization | 6+ | 9 | 2 | 2 | 2 | 2 | 2 |
+| Information Visualization | 6+ | 10 | 3 | 3 | 3 | 3 | 3 |
 | Public Speaking | 3+ | 2 | 0 | 0 | 0 | 0 | 0 |
 | Document / Reader Mode | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
 

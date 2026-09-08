@@ -3,15 +3,20 @@
 - knowledge_type: presentation_principle
 - evidence_grade: B
 - rule_status: supported_principle
-- verification: partially_validated   # SRC-CLEVELAND-1986 全文已验证（2026-09-08）；SRC-CLEVELAND-1984 JASA 原文付费墙未取得
+- verification: partially_validated   # SRC-CLEVELAND-1986 + SRC-HEER-2010 全文已验证（2026-09-08）；SRC-CLEVELAND-1984 JASA 原文付费墙未取得
 - evidence_package: knowledge/evidence_packages/graphical-perception.yaml
-- source_ids: [SRC-CLEVELAND-1986, SRC-CLEVELAND-1984, SRC-FEW-2004, SRC-ABELA-2008, SRC-WARE-2012]
+- source_ids: [SRC-CLEVELAND-1986, SRC-HEER-2010, SRC-CLEVELAND-1984, SRC-FEW-2004, SRC-ABELA-2008, SRC-WARE-2012]
 - last_reviewed: 2026-09-08
 
 ## 已验证条目（真实全文）
 **图形感知精度排序**（SRC-CLEVELAND-1986，N=127，每人 210 次判断）：位置 > 长度 > 角度≈斜率 > 面积；
 被比较对象间距增大误差上升；技术训练不影响精度。边界：斜率结论仅限远离 0°/90°；孤立几何刺激，
 真实图表需结合任务类型。应用：关键数值比较用共同尺度位置编码；比较系列邻近放置；3D 图表禁止承载结论。
+
+**众包复现与图表设计参数**（SRC-HEER-2010，186 名 MTurk 被试，四组实验）：
+位置/长度/角度排序在真实网络人群与真实显示条件下稳健复现；正方形面积比较精度最差
+（squarified treemap 感知上非最优）；网格线 alpha=0.2 默认值获独立确认；图表高度 40px 误差
+显著升高、80px 后平台期；网格线间距 ≥8px。证据包置信度已升级 high。
 
 ## Core claim
 禁止"因为有数据所以画图"。先定 Cognitive Job，再选图形。

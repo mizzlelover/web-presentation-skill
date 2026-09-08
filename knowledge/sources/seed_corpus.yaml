@@ -1018,3 +1018,33 @@ sources:
       validated_by: "2026-09-08 全文精读，F/t/d 统计量与 Table 2 均值逐项核对原文"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-HEER-2010
+    title: "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design"
+    authors: [Jeffrey Heer, Michael Bostock]
+    year: 2010
+    source_type: experiment
+    doi: "10.1145/1753326.1753357"
+    url: "http://vis.stanford.edu/files/2010-MTurk-CHI.pdf"
+    authority: S
+    domain: [graphical_perception, visualization, crowdsourcing, chart_design]
+    notes: >
+      CHI 2010 论文（斯坦福 vis.stanford.edu 官方 PDF 全文已读，186 名 MTurk 被试）。
+      实验 1A：众包复现 Cleveland & McGill 比例判断（位置/长度/角度），结果与实验室研究吻合；
+      理论预测"角度劣于长度"未获支持（与 C&M 原结论一致）。
+      实验 1B：矩形面积判断（treemap/树图场景，108 trials × N=24）——平均精度与圆形面积相当；
+      纵横比 1:1（正方形）判断最差（p<0.05，两种显示条件下稳健），提示 squarified treemap
+      的"尽量接近正方形"策略在感知上并非最优；treemap 中其他元素不干扰判断。
+      实验 2：网格线透明度复现 Stone & Bartram——确认 alpha=0.2 为"安全"默认值；
+      数据密度影响显著 (F(3,2413)=3.49, p=0.015)，背景亮度不显著；屏幕分辨率/色深/操作系统
+      （gamma 1.8 vs 2.2）对选择有弱但显著影响。
+      实验 3：图表尺寸与网格线密度——40px 高度误差显著更高（p<0.001），超过 80px 后
+      精度进入平台期（0-100 刻度）；加网格线提升精度；网格线间距至少 8px。
+    acquisition:
+      ladder: validated
+      acquired_how: "斯坦福 vis.stanford.edu 官方托管 PDF（HTTP），curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/graphical-perception.yaml"
+      validated_by: "2026-09-08 全文精读，四组实验设计/统计量/结论逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
