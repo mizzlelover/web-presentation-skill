@@ -3,8 +3,8 @@
 - knowledge_type: scientific_mechanism
 - evidence_grade: A（多数原则有中高效应量实验支持）
 - rule_status: supported_principle
-- verification: partially_validated   # SRC-REY-2019（分段效应元分析）全文已验证 2026-09-08；Mayer 系手册仍 memory_based
-- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019, SRC-TRYPKE-2023]
+- verification: partially_validated   # SRC-REY-2019（分段元分析）+ SRC-LIU-2022-TEMPORAL（时间临近实验）全文已验证 2026-09-08；Mayer 系手册与 SRC-GINNS-2006 仍 memory_based/abstract_only
+- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019, SRC-TRYPKE-2023, SRC-LIU-2022-TEMPORAL, SRC-GINNS-2006]
 - last_reviewed: 2026-09-08
 
 ## 已验证条目（真实全文）
@@ -19,6 +19,12 @@
 机制=补偿口播瞬时性+信号作用）。"slide 上不能有文字"是误读。Reader Mode（无语音通道）不适用冗余原则。
 详见 knowledge/evidence_packages/redundancy.yaml。
 
+**Temporal Contiguity 时间临近**（SRC-LIU-2022-TEMPORAL 实验，N=96 中文材料）：
+效应是否触发取决于并发粒度——关键点随口播逐条揭示（CPK）显著优于整体并发（CPW，后测 d=.67）
+与先讲后出图（SP，d=.51；学习效率 d=2.73）；CPW vs SP 后测无差异——"同时出现"不够，
+必须"逐条同步"。直接支持 Skill 渐进揭示规范与"禁止整页一次出齐再逐条讲"。
+详见 knowledge/evidence_packages/temporal-contiguity.yaml。
+
 ## 原则速查（含演示含义与边界）
 
 | 原则 | 含义 | 演示含义 | 边界 |
@@ -27,7 +33,7 @@
 | Signaling 信号 | 标明结构（标题/高亮/编号） | 论证路标、进度指示、关键项高亮 | 过度高亮=没有高亮 |
 | Redundancy 冗余 | 讲解+屏幕全文=超载 | Stage Mode 屏幕勿整段文字让讲者照读 | 无讲者的 Reader Mode 不受此限 |
 | Spatial Contiguity 空间邻近 | 相关图与文靠近 | 标注贴着图表元素放，勿用图例-图表分离 | — |
-| Temporal Contiguity 时间同步 | 图与解说同时出现 | 动效揭示要与讲者节奏同步，可 seek | — |
+| Temporal Contiguity 时间同步 | 图与解说同时出现 | 动效揭示要与讲者节奏同步（逐条粒度，非整页粒度），可 seek | 整体并发不触发效应；须关键点级同步（已验证 d=.67） |
 | Segmenting 分段 | 学习者控制分段节奏 | 渐进揭示、Deep Dive 按需展开 | 材料简单/受众专家时收益小 |
 | Modality 通道 | 图+语音优于图+文字 | Stage Mode 让语音承担解释，屏幕承担视觉 | Reader Mode 无语音通道，必须文字完整 |
 | Pretraining 预训练 | 先教核心概念再进复杂内容 | 复杂架构前先一幕"概念地图" | — |

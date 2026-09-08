@@ -31,8 +31,10 @@
 > | SRC-PETTY-1984（ELM 来源因素，ACR 11:668-672） | Petty 官网自存档扫描件，pypdfium2 渲染逐页视觉精读 | 六页全读（摘要/框架/三组实验/结论） | `knowledge/evidence_packages/persuasion-elm.yaml` |
 > | SRC-AIPPERSBACH-2013（AE 幻灯片制作影响讲者理解，ASEE #5691） | Penn State writing.engr.psu.edu 官方 PDF，pdfplumber 全文提取 | 六段全读，t(51)=2.62 / F(1,52)=9.92 / Table 1 逐项核对 | 并入 `assertion-evidence.yaml` |
 > | SRC-GARNER-2009-PSYCH（AE 的认知心理学视角，Tech. Comm. 56(4):331-345） | Penn State 官方 PDF，断点续传 + pdfplumber 全文提取 | 全文 15 页，语料观察数据与设计细则逐项核对 | 并入 `assertion-evidence.yaml` |
+> | SRC-LIU-2022-TEMPORAL（时间临近效应的幻灯片新应用，ETR&D） | PMC 开放全文（PMC8800848）HTML 精读 | 六段全读，三组对照 d=.51/.67/2.73 逐项核对 | `knowledge/evidence_packages/temporal-contiguity.yaml` |
 >
-> 对应知识节点 cognitive-load / assertion-evidence / headline-system 升级为 `partially_validated`。登记总数 37 → 49（VALIDATED 10 / FOUND 39；abstract_only：SRC-SCHNEIDER-2018、SRC-SCHROEDER-2018）。
+> 新增 abstract_only：SRC-GINNS-2006（空间/时间临近元分析，Elsevier 付费墙，仅 ERIC 摘要，禁止推断效应量）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning 升级为 `partially_validated`。登记总数 37 → 51（VALIDATED 11 / abstract_only 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -83,7 +85,7 @@
 
 | Domain | Target | Found | Acquired | Full Read | Annotated | Validated | Distilled |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Multimedia Learning | 4+ | 4 | 4 | 2 | 2 | 2 | 2 |
+| Multimedia Learning | 4+ | 7 | 7 | 3 | 3 | 3 | 3 |
 | Cognitive Load | 4+ | 2 | 2 | 2 | 2 | 2 | 2 |
 | Assertion-Evidence | 3+ | 6 | 3 | 3 | 3 | 3 | 3 |
 | Audience | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |

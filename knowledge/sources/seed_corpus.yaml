@@ -969,3 +969,52 @@ sources:
       validated_by: "2026-09-08 全文精读，语料观察数据与设计细则逐项核对原文"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-GINNS-2006
+    title: "Integrating Information: A Meta-Analysis of the Spatial Contiguity and Temporal Contiguity Effects"
+    authors: [Paul Ginns]
+    year: 2006
+    source_type: meta_analysis
+    doi: "10.1016/j.learninstruc.2006.10.001"
+    url: "https://eric.ed.gov/?id=EJ747512"
+    authority: A
+    domain: [multimedia_learning, contiguity, cognitive_load]
+    notes: >
+      空间/时间临近效应元分析（Learning and Instruction 16(6):511-525）。Elsevier 付费墙，
+      仅取得 ERIC 官方摘要：50 项独立研究；减少空间或时间分离的教学收益主假设获支持，
+      材料复杂度为显著调节变量——复杂材料中提升临近性可带来大幅学习收益。
+      按补丁 Schema，abstract_only 禁止推断具体效应量数值与实验条件细节，待全文获取后升级。
+    acquisition:
+      ladder: read
+      acquired_how: "ERIC 官方记录页摘要（EJ747512）"
+      read_sections: [abstract]
+      access_level: abstract_only
+      validated_by: null
+      verification: abstract_only
+    knowledge_type: scientific
+  - source_id: SRC-LIU-2022-TEMPORAL
+    title: "A New Application of the Temporal Contiguity Effect in Designing Narrated Slideshows"
+    authors: [Tzu-Chien Liu, Yi-Chun Lin, Fred Paas]
+    year: 2022
+    source_type: experiment
+    doi: "10.1007/s11423-021-10063-w"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8800848/"
+    authority: S
+    domain: [multimedia_learning, temporal_contiguity, slideshow_design, progressive_reveal]
+    notes: >
+      ETR&D 期刊实验（PMC 开放全文已读）。N=99（有效 96，台湾本科生，中文"正念"材料，
+      27 页幻灯片其中 10 页为处理页）。三条件对照：
+      CPK 关键点随口播逐条揭示 vs CPW 视觉整体一次性呈现（均与口播并发）vs SP 先口播后出图。
+      后测：F(2,93)=3.42, p=.037, ηp²=.07；CPK>SP d=.51（p=.03）；CPK>CPW d=.67（p=.01）；
+      CPW vs SP 不显著。学习效率：F(2,93)=61.37, p<.001, ηp²=.57；CPK>SP d=2.73；
+      CPW>SP d=1.87；CPK>CPW d=.68。认知负荷三组无差异（测量方法局限：27 页中仅 10 页处理，
+      整体评分稀释）。核心结论：时间临近效应在幻灯片中是否出现，取决于"并发的方式"——
+      只有关键点随口播逐条揭示（CPK）才触发效应，整体并发（CPW）不触发。
+    acquisition:
+      ladder: validated
+      acquired_how: "PMC 开放全文（PMC8800848）HTML 全文精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/temporal-contiguity.yaml"
+      validated_by: "2026-09-08 全文精读，F/t/d 统计量与 Table 2 均值逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
