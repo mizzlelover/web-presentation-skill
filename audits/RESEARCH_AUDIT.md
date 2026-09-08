@@ -39,9 +39,10 @@
 > | SRC-VANLAER-2014（叙事传输扩展模型元分析，JCR 40(5)） | City Research Online 机构库接受版 PDF，pdfplumber 全文提取 | 六段全读，132 效应量 ρ/z/p 与 file drawer 逐项核对 | `knowledge/evidence_packages/narrative-transportation.yaml` |
 > | SRC-BRAME-2016（教学视频有效性综述，CBE-LSE 15(4)） | PMC 开放全文 FetchURL 精读 | 六段全读，Table 1 与参与度数据逐项核对 | `knowledge/evidence_packages/educational-video.yaml` |
 > | SRC-GUO-2014（MOOC 视频参与度实证，ACM L@S，6.9M 会话） | MIT CSAIL 机构镜像 PDF，pdfplumber 全文提取 | 六段全读，Table 1 七大发现逐项核对 | 并入 `educational-video.yaml`（置信度升级 high） |
+> | SRC-SUNDARARAJAN-2020（诱惑性细节元分析，Ed. Psych. Review 32(3)） | Springer 官方 content/pdf 直链，pdfplumber 全文提取 | 六段全读，总体 g=-0.33 与 Table 4-6 调节逐项核对 | `knowledge/evidence_packages/coherence-seductive-details.yaml` |
 >
 > 新增 abstract_only：SRC-GINNS-2006（空间/时间临近元分析，Elsevier 付费墙，仅 ERIC 摘要，禁止推断效应量）。
-> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 57（VALIDATED 17 / abstract_only 3 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 58（VALIDATED 18 / abstract_only 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -101,7 +102,7 @@
 | Narrative | 3+ | 4 | 1 | 1 | 1 | 1 | 1 |
 | Information Visualization | 6+ | 10 | 3 | 3 | 3 | 3 | 3 |
 | Public Speaking / Media | 3+ | 4 | 2 | 2 | 2 | 2 | 2 |
-| Document / Reader Mode | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
+| Document / Reader Mode | 3+ | 2 | 1 | 1 | 1 | 1 | 1 |
 
 **优先级提示（§5）**：Multimedia Learning / Cognitive Load / Assertion-Evidence 三域应最先补齐，且优先取得 meta-analysis / systematic review 全文（Mayer Handbook、Sweller 综述、Garrett/Alley 实验组），按 §4 至少读取 Abstract→Limitations 六段并按 §6 生成 Evidence Package。
 

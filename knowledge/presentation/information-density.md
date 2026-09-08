@@ -2,8 +2,18 @@
 
 - knowledge_type: presentation_principle
 - evidence_grade: B
-- source_ids: [SRC-TUFTE-2003, SRC-DOUMONT-2005, SRC-MAYER-2001, SRC-REYNOLDS-2008]
-- last_reviewed: 2026-09
+- rule_status: supported_principle
+- verification: partially_validated   # SRC-SUNDARARAJAN-2020（诱惑细节元分析）全文已验证 2026-09-08；Tufte/Doumont/Reynolds 仍 practitioner/memory_based
+- evidence_package: knowledge/evidence_packages/coherence-seductive-details.yaml
+- source_ids: [SRC-TUFTE-2003, SRC-DOUMONT-2005, SRC-MAYER-2001, SRC-REYNOLDS-2008, SRC-SUNDARARAJAN-2020]
+- last_reviewed: 2026-09-08
+
+## 已验证条目（真实全文）
+**一致性/诱惑细节**（SRC-SUNDARARAJAN-2020 元分析，58 文/68 效应量/N=7521）：
+有趣但无关的细节损害学习 g=-0.33；纸质材料 -0.61、可回退媒介 -0.70、无先验经验受众 -0.52、
+**中文材料 -0.75（最大）**；数学/统计内容反向 +0.42（学科例外）。
+含义：Reader Mode（静态+可回退+自读）是损害叠加形态，装饰纪律必须最严；
+密度审查的核心不是"数量"而是"无关性"——每幕元素须服务本幕 Cognitive Job。
 
 ## Core claim
 信息密度是策略变量，不是美德或罪恶。由七个因素共同决定：

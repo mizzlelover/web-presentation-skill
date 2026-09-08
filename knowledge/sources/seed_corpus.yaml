@@ -1214,3 +1214,43 @@ sources:
       validated_by: "2026-09-08 全文精读，Table 1 七大发现与参与度定义逐项核对原文"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-SUNDARARAJAN-2020
+    title: "Keep It Coherent: A Meta-Analysis of the Seductive Details Effect"
+    authors: [NarayanKripa Sundararajan, Olusola Adesope]
+    year: 2020
+    source_type: meta_analysis
+    doi: "10.1007/s10648-020-09522-4"
+    url: "https://link.springer.com/content/pdf/10.1007/s10648-020-09522-4.pdf"
+    authority: S
+    domain: [multimedia_learning, coherence, seductive_details, information_density]
+    notes: >
+      Educational Psychology Review 32:707-734，Springer 官方 PDF 全文已读（28 页）。
+      58 篇文献 / 68 个效应量 / N=7521。总体效应 g=-0.33（随机效应模型，95%CI [-0.48,-0.18]）。
+      分结局：回忆 g=-0.37（k=19）；回忆+迁移混合 g=-0.41（k=43）；纯迁移不显著。
+      关键调节（逐项核对 Table 4-6）：
+      纸质材料 g=-0.61 vs 数字材料 g=-0.27（显著调节）；
+      静态诱惑细节 g=-0.43 vs 动态诱惑细节不显著（与瞬时性解释一致）；
+      允许回退/回读 g=-0.70（中到大）；无先验经验者 g=-0.52 vs 有经验者 g=-0.24（大 vs 小）；
+      语言调节：英语 -0.38 / 韩语 -0.52 / 中文材料 -0.75（大效应）；
+      **反向例外：数学与统计材料中诱惑细节呈显著正效应 g=+0.42**；
+      开放式回忆题测得的效应最大（g=-0.54）。
+    acquisition:
+      ladder: validated
+      acquired_how: "Springer 官方 content/pdf 直链（作者授权页提取），curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/coherence-seductive-details.yaml"
+      validated_by: "2026-09-08 全文精读，总体效应与 Table 4-6 调节分析逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "有趣但无关的诱惑性细节（seductive details）是否损害学习？效应受哪些因素调节？"
+      sample_scope: "58 篇文献 68 个效应量，N=7521；跨语种（英/韩/中）、跨媒介（纸质/数字）、跨学科"
+      number_of_studies: 58
+      experimental_context: "随机效应元分析；回忆/迁移/混合结局；调节变量覆盖细节特征/材料设计/方法学三类"
+      main_effect: "诱惑细节显著损害学习 g=-0.33（中）；回忆 g=-0.37；纯迁移不显著"
+      effect_size: "总体 g=-0.33 [-0.48,-0.18]；纸质 -0.61 vs 数字 -0.27；回退允许 -0.70；无先验经验 -0.52；中文材料 -0.75；数学/统计 +0.42（反向）"
+      heterogeneity: "Q=629.27, df=67, p<0.01，I²=89.35——高异质性，调节分析必要"
+      moderators: ["媒介（纸质>数字）", "静态/动态（静态有害、动态不显著）", "回退可能性", "先验知识（无经验者受害更深）", "语言（中文材料效应最大）", "学科（数学/统计反向为正）", "结局测量方式"]
+      limitations: "高异质性（I²=89%）；部分调节类别研究数少（k=2）；动态细节的瞬时性解释仍需研究；作者提示协变量混杂无法完全排除"
+      presentation_implication: "Coherence/weeding 有元分析级支持：删去有趣但无关的元素。演示场景含义——Reader Mode（可回退的静态文档）是诱惑细节损害最大的形态（-0.61/-0.70 叠加）；中文材料效应最大（-0.75），中文演示的'装饰纪律'比英文更关键；无先验知识的受众受害最深；数学推导类内容中'有趣离题'未见损害甚至有益"
