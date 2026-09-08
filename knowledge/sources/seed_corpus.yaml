@@ -757,3 +757,53 @@ sources:
       validated_by: "2026-09-08 全文精读，排序/样本/边界条件逐项核对原文"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-FRANCONERI-2021
+    title: "The Science of Visual Data Communication: What Works"
+    authors: [Steven L. Franconeri, Lace M. Padilla, Priti Shah, Jeffrey M. Zacks, Jessica Hullman]
+    year: 2021
+    source_type: review
+    doi: "10.1177/15291006211051956"
+    url: "https://gwern.net/doc/design/visualization/2021-franconeri.pdf"
+    authority: S
+    domain: [data_visualization, visual_perception, attention, uncertainty]
+    notes: >
+      PSPI 权威综述（22(3):110-161，52 页，© The Authors 2021 开放版全文已读）。核心结论：
+      视觉系统可在转瞬之间提取整体统计量（均值/极值），但子集间比较是串行的、每秒仅数次——
+      因此必须用分组线索/注释/高亮把比较收窄到支撑结论的那一个；现场演示中靠语言与手势引导注意。
+      幻觉与误读清单：Y 轴截断夸大差异；圆/方块须映射面积而非直径；折线斜率增大扭曲差异知觉；
+      连续数值映射彩虹色相夸大跨界差异；色盲可达性红配蓝优于红配绿。
+      不确定性：对非专业受众避免误差线（被误读为数据范围），改用离散结果样例（HOP/分位点图）。
+      风险沟通：用绝对率不用相对率、频率（3/10）不用百分比（30%）、同分母图标阵列；
+      拟人图标提升低图表素养者的风险记忆。受众定制：图表素养/ numeracy / 领域知识 / 工作记忆容量。
+    acquisition:
+      ladder: validated
+      acquired_how: "gwern.net 托管的作者开放版 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, results, discussion]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/dataviz-communication.yaml"
+      validated_by: "2026-09-08 精读摘要/知觉精确性/知觉效率/可理解性/不确定性/风险沟通章节与文末 Summary of Key Guidelines"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-SCHNEIDER-2018
+    title: "A Meta-analysis of How Signaling Affects Learning with Media"
+    authors: [Sascha Schneider, Maik Beege, Steve Nebel, Günter Daniel Rey]
+    year: 2018
+    source_type: meta_analysis
+    doi: "10.1016/j.edurev.2017.11.001"
+    url: "https://doi.org/10.1016/j.edurev.2017.11.001"
+    authority: S
+    domain: [signaling, multimedia_learning]
+    notes: >
+      信号效应元分析（Elsevier 付费墙，仅取得摘要+权威二手转述，按补丁禁止推断实验条件与边界）。
+      摘要自报：103 项研究、N=12,201；保持 g=0.53（中）、迁移 g=0.33（小）。
+      二手转述（TUM Clearing House，未核实原文）：认知负荷 g=0.25、动机 g=0.13，先验知识调节——
+      这些数值标记 UNVERIFIED，不得作为规则依据。
+    acquisition:
+      ladder: found
+      acquired_how: "摘要（出版方页面）+ TUM Clearing House 二手转述；全文付费墙未取得"
+      read_sections: [abstract]
+      access_level: abstract_only
+      annotated_at: null
+      validated_by: null
+      verification: unverified
+    knowledge_type: scientific

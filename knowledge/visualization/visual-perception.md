@@ -2,8 +2,16 @@
 
 - knowledge_type: scientific_mechanism
 - evidence_grade: A（Gestalt/前注意加工）/ B（设计应用）
-- source_ids: [SRC-GESTALT-WERTHEIMER, SRC-WARE-2012, SRC-WILLIAMS-1994, SRC-BERNARD-2002]
-- last_reviewed: 2026-09
+- rule_status: supported_principle
+- verification: partially_validated   # SRC-FRANCONERI-2021 全文已验证（2026-09-08）；Gestalt/Ware 仍 memory_based
+- source_ids: [SRC-FRANCONERI-2021, SRC-GESTALT-WERTHEIMER, SRC-WARE-2012, SRC-WILLIAMS-1994, SRC-BERNARD-2002]
+- last_reviewed: 2026-09-08
+
+## 已验证条目（真实全文）
+**整体统计快、子集比较慢**（SRC-FRANCONERI-2021）：视觉系统转瞬提取均值/极值等整体统计量，
+但子集间比较是串行的（每次数百毫秒、每秒仅数次）——必须用分组线索/注释/高亮把受众要做的比较
+收窄到支撑结论的那一个；现场演示用语言与手势引导注意。连续数值禁止彩虹色阶（夸大色相边界差异）；
+色盲可达性红蓝配。详见 knowledge/evidence_packages/dataviz-communication.yaml。
 
 ## 机制
 - 前注意加工（preattentive processing）：颜色、大小、方向、运动差异在 ~200ms 内被平行捕获——这是视觉层级的感知基础。
