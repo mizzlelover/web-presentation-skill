@@ -2,8 +2,17 @@
 
 - knowledge_type: scientific_mechanism
 - evidence_grade: A
-- source_ids: [SRC-PETTY-1986]
-- last_reviewed: 2026-09
+- rule_status: supported_principle
+- verification: partially_validated   # SRC-PETTY-1984 作者官网原文逐页精读（2026-09-08）；SRC-PETTY-1986 专著仍 memory_based
+- evidence_package: knowledge/evidence_packages/persuasion-elm.yaml
+- source_ids: [SRC-PETTY-1984, SRC-PETTY-1986]
+- last_reviewed: 2026-09-08
+
+## 已验证条目（真实全文）
+**涉入度 × 论证质量 × 来源线索的三方交互**（SRC-PETTY-1984）：高涉入→仅论证质量起作用；
+低涉入→来源专业度/名人有效不论论证强弱；中等涉入→来源线索决定"要不要认真想"
+（吸引性来源增强强论证、削弱弱论证的同意度）；极高涉入下来源本身可成为论证。
+"权威背书总是加分"是误读：弱论证配专家反而更差（Heesacker et al. 1983）。
 
 ## Core claim
 说服沿两条路径：中心路径（受众有动机+有能力时，论证质量决定态度）与外周路径（动机/能力不足时，线索如权威、流畅性、情感决定态度）。

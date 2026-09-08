@@ -883,3 +883,32 @@ sources:
       validated_by: "2026-09-08 全文精读，含结论与推荐读物，关键实验参数逐项核对"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-PETTY-1984
+    title: "Source Factors and the Elaboration Likelihood Model of Persuasion"
+    authors: [Richard E. Petty, John T. Cacioppo]
+    year: 1984
+    source_type: experiment
+    doi: null
+    url: "https://richardepetty.com/wp-content/uploads/2019/01/1984-acrsource-pettycacioppo.pdf"
+    authority: A
+    domain: [persuasion, audience, source_credibility]
+    notes: >
+      ELM 来源因素实证综述（Advances in Consumer Research 11:668-672，作者官网扫描件 6 页，
+      逐页视觉精读）。核心实验证据：
+      Petty, Cacioppo & Goldman 1981——高个人相关时论证质量大幅影响态度、来源专业度作为简单线索
+      无效；低相关时来源专业度无论论证强弱都提升说服。
+      Petty, Cacioppo & Schumann 1983——名人 vs 普通市民广告 × 论证强度：低涉入时名人更有效，
+      高涉入时仅论证强度影响态度。
+      中等/模糊涉入（Puckett et al. 1983；Heesacker et al. 1983）——来源线索被用来决定
+      "要不要认真想"：吸引性来源增强对强论证的同意、降低对弱论证的同意（偏向加工）。
+      极高涉入下来源本身可成为论证（如美容产品的吸引性来源=视觉证词）。
+      Hovland & Weiss 1951 重析：可信度效应在低个人相关主题上强、高相关主题上弱。
+    acquisition:
+      ladder: validated
+      acquired_how: "Petty 个人官网自存档扫描 PDF，pypdfium2 渲染逐页视觉精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/persuasion-elm.yaml"
+      validated_by: "2026-09-08 六页逐页视觉精读，各实验条件×结果交叉核对"
+      verification: validated
+    knowledge_type: scientific

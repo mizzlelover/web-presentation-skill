@@ -28,8 +28,9 @@
 > | SRC-FRANCONERI-2021（可视化沟通科学综述，PSPI 22(3)） | gwern.net 作者开放版 PDF，pdfplumber 全文提取 | 摘要/精确性/效率/可理解性/不确定性/风险沟通/Summary | `knowledge/evidence_packages/dataviz-communication.yaml` |
 > | SRC-TRYPKE-2023（冗余效应两类系统综述，Frontiers Psych. 14） | Frontiers 官方 OA PDF，pdfplumber 全文提取 | 六段全读，四场景/调节因素逐项核对 | `knowledge/evidence_packages/redundancy.yaml` |
 > | SRC-COWAN-2010（工作记忆容量综述，Curr. Dir. Psychol. Sci. 19(1)） | PMC 开放全文 | 六段全读 | `knowledge/evidence_packages/working-memory.yaml` |
+> | SRC-PETTY-1984（ELM 来源因素，ACR 11:668-672） | Petty 官网自存档扫描件，pypdfium2 渲染逐页视觉精读 | 六页全读（摘要/框架/三组实验/结论） | `knowledge/evidence_packages/persuasion-elm.yaml` |
 >
-> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 46（VALIDATED 7 / FOUND 39；abstract_only：SRC-SCHNEIDER-2018、SRC-SCHROEDER-2018）。
+> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 47（VALIDATED 8 / FOUND 39；abstract_only：SRC-SCHNEIDER-2018、SRC-SCHROEDER-2018）。
 
 ## 1. 来源重新分类（§67）
 
@@ -57,7 +58,8 @@
 | presentation/audience-modeling | MEMORY_BASED | — |
 | presentation/situation-taxonomy | MEMORY_BASED | — |
 | presentation/qa-adaptation | MEMORY_BASED | 深潜/返回机制实测通过 |
-| communication/argumentation · narrative · persuasion-elm · question-framing | MEMORY_BASED | — |
+| communication/persuasion-elm | **PARTIALLY_VALIDATED**（2026-09-08：SRC-PETTY-1984 作者官网扫描件六页精读） | — |
+| communication/argumentation · narrative · question-framing | MEMORY_BASED | — |
 | visualization/chart-selection | **PARTIALLY_VALIDATED**（2026-09-08：SRC-CLEVELAND-1986 全文精读，排序/样本/边界逐项核对） | — |
 | visualization/visual-perception | **PARTIALLY_VALIDATED**（2026-09-08：SRC-FRANCONERI-2021 全文精读） | — |
 | motion/semantic-motion | MEMORY_BASED | WAAPI 动效控制实测通过 |
