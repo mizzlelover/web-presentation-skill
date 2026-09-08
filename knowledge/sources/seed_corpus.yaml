@@ -1159,3 +1159,32 @@ sources:
       moderators: ["测量量表（Green & Brock 传输量表 ρ=.34 更保守 vs 其他量表 ρ=.56 虚高）"]
       limitations: "43% 原始研究未报告年龄；传输量表外操作化的效应量可能含共同方法偏差；元分析相关性非因果结构模型验证"
       presentation_implication: "叙事的真实杠杆是'传输'而非'有故事'：可识别角色+可想象情节+逼真性是讲者可控的三旋钮；受众熟悉度与注意决定传输上限——叙事型演示前先评估受众对题材熟悉度；传输降低批判性思维，决策型场景慎用强叙事以免被质疑'回避论证'"
+  - source_id: SRC-BRAME-2016
+    title: "Effective Educational Videos: Principles and Guidelines for Maximizing Student Learning from Video Content"
+    authors: [Cynthia J. Brame]
+    year: 2016
+    source_type: review
+    doi: "10.1187/cbe.16-03-0089"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5132380/"
+    authority: A
+    domain: [multimedia_learning, video_design, engagement, segmenting]
+    notes: >
+      CBE—Life Sciences Education 15(4)，PMC 开放全文已读。综述教学视频设计三要素
+      （认知负荷/参与度/主动学习）并给出实践表（Table 1）：
+      四实践——signaling（屏幕关键词/颜色对比/箭头）、segmenting（≤6 分钟短视频/章节/点击前进）、
+      weeding（删除音乐/复杂背景/无关信息，且"何为无关"随学习者专业度变化）、
+      modality（视听双通道互补，talking head 浪费视觉通道）。
+      参与度实证（引 Guo et al. 2014，edX 690 万观看会话）：<6 分钟视频中位观看比例近 100%，
+      9-12 分钟约 50%，12-40 分钟约 20%；任何长度视频的中位参与时长上限约 6 分钟。
+      语速 185-254 词/分钟与参与度正相关；对话式语言（personalization）大效应（引 Mayer 2008）。
+      主动学习：插值提问降低走神并提升成绩（Szpunar et al. 2013）；可控制交互视频优于
+      不可控（Zhang et al. 2006）；引导性问题提升成绩（Lawson et al. 2006）。
+    acquisition:
+      ladder: validated
+      acquired_how: "PMC 开放全文（PMC5132380）FetchURL 全文精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/educational-video.yaml"
+      validated_by: "2026-09-08 全文精读，Table 1 实践清单与 Guo 2014 参与度数逐项核对"
+      verification: validated
+    knowledge_type: scientific

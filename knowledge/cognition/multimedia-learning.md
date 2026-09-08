@@ -4,7 +4,7 @@
 - evidence_grade: A（多数原则有中高效应量实验支持）
 - rule_status: supported_principle
 - verification: partially_validated   # SRC-REY-2019（分段元分析）+ SRC-LIU-2022-TEMPORAL（时间临近实验）全文已验证 2026-09-08；Mayer 系手册与 SRC-GINNS-2006 仍 memory_based/abstract_only
-- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019, SRC-TRYPKE-2023, SRC-LIU-2022-TEMPORAL, SRC-GINNS-2006]
+- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019, SRC-TRYPKE-2023, SRC-LIU-2022-TEMPORAL, SRC-GINNS-2006, SRC-BRAME-2016]
 - last_reviewed: 2026-09-08
 
 ## 已验证条目（真实全文）
@@ -24,6 +24,12 @@
 与先讲后出图（SP，d=.51；学习效率 d=2.73）；CPW vs SP 后测无差异——"同时出现"不够，
 必须"逐条同步"。直接支持 Skill 渐进揭示规范与"禁止整页一次出齐再逐条讲"。
 详见 knowledge/evidence_packages/temporal-contiguity.yaml。
+
+**教学媒介参与度**（SRC-BRAME-2016 综述，PMC 全文；核心数据为转引）：
+MOOC 690 万会话显示参与度断崖——<6 分钟视频近 100% 看完，9-12 分钟约 50%，12-40 分钟约 20%；
+插值提问降走神提成绩；可控交互优于线性播放。演示含义：短幕多节优于长幕、
+Deep Dive 是插值提问的演示版、总览页给受众控制权。
+详见 knowledge/evidence_packages/educational-video.yaml。
 
 ## 原则速查（含演示含义与边界）
 

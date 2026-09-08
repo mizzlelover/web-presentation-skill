@@ -1,0 +1,41 @@
+# Evidence Package · Educational Video / Media Engagement（补丁 §6 强制格式）
+# 生成：2026-09-08，基于 SRC-BRAME-2016 全文精读（PMC 开放全文）
+id: EP-EDUCATIONAL-VIDEO
+domain: media_engagement
+mechanism: >
+  录播媒介（视频/自读文档）没有讲者实时调节，认知负荷管理与注意维持全部依赖设计：
+  signaling 降外在负荷、segmenting 管理内在负荷、weeding 删无关信息、modality 双通道互补；
+  参与度随媒介时长快速衰减（非线性断崖）；主动学习元素（插值提问/控制权/引导问题）
+  把被动观看转为自我监控学习。
+primary_sources: [SRC-BRAME-2016]
+secondary_evidence_note: >
+  Guo et al. 2014 参与度数据（690 万 edX 会话）经 Brame 综述转引核对，
+  原始论文（ACM L@S 2014）未直接获取——按补丁标准此数据标 secondary，不升级 validated。
+supporting_evidence:
+  - "参与度断崖（Guo 2014 转引）：<6 分钟视频中位观看近 100%；9-12 分钟约 50%；12-40 分钟约 20%；任意长度中位参与时长上限约 6 分钟"
+  - "语速 185-254 词/分钟范围与参与度正相关（Guo 2014 转引）"
+  - "插值提问：测试成绩显著提升、走神减少、笔记增加、测验焦虑降低（Szpunar et al. 2013 转引）"
+  - "可控交互视频优于线性视频（Zhang et al. 2006 转引）；引导性问题提升成绩（Lawson et al. 2006 转引）"
+  - "weeding 的动态边界：对新手的必要信息对专家是干扰——'何为无关'随受众专业度变化"
+conflicting_evidence:
+  - "Brame 为叙述性综述非系统综述/元分析，无聚合效应量；各实证结论均为转引"
+  - "Risko et al. 2012：1 小时讲座视频中走神随时间上升、保持下降——'长视频'并非绝对无效，是注意维持成本递增"
+experimental_context: >
+  综述情境：高等教育教学视频（翻转课堂/混合/在线课程），生物学教学为重点；
+  转引证据来自 MOOC 大样本行为数据（690 万会话）与实验室对照实验两类。
+boundary_conditions:
+  - "6 分钟规律来自 MOOC 自主观看场景；现场演示（讲者在场）不受此限，但 Reader Mode/自读文档的章节粒度可借鉴"
+  - "对话式语言与快语速适用于教学/内部场景；政务/正式文书场景慎用（与 personalization 边界一致）"
+  - "参与度 ≠ 学习成效：MacHardy & Pardos 2015 显示部分视频对成绩贡献甚微"
+effect_strength: "参与度断崖为大尺度的行为规律（百万级会话）；学习效应为中小效应的转引证据，无聚合效应量"
+common_misinterpretation:
+  - "'6 分钟是视频军规'——它是 MOOC 自主观看的参与度中位数规律，不是学习效果阈值"
+  - "'talking head 亲切所以好'——纯头像浪费视觉通道，双通道互补才有效"
+  - "'删掉所有装饰'——weeding 的边界随受众专业度移动，专家可能需要新手不需要的信息"
+presentation_application: >
+  Reader Mode/自读文档设计借鉴：章节粒度对标"6 分钟注意力单元"（短幕多节优于长幕）；
+  Stage Mode 的 Deep Dive 页 = 插值提问的演示版（受众主动选择深入=主动学习元素）；
+  总览页（O 键）= 交互控制权（对应 Zhang 2006 可控性收益）；
+  语速/节奏提示写入 Speaker Notes；weeding 按受众专业度校准每幕元素。
+confidence: medium   # 全文验证的叙述性综述；核心实证为转引，Guo 2014 原始论文待真实获取后升级
+last_reviewed: 2026-09-08
