@@ -4,7 +4,7 @@
 - evidence_grade: A（多数原则有中高效应量实验支持）
 - rule_status: supported_principle
 - verification: partially_validated   # SRC-REY-2019（分段效应元分析）全文已验证 2026-09-08；Mayer 系手册仍 memory_based
-- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019]
+- source_ids: [SRC-MAYER-2001, SRC-MAYER-HANDBOOK-2014, SRC-REY-2019, SRC-TRYPKE-2023]
 - last_reviewed: 2026-09-08
 
 ## 已验证条目（真实全文）
@@ -13,6 +13,11 @@
 负荷降低 d=0.23；系统定速分段四指标全确认，学习者定速仅迁移显著；高先验知识者在保持上获益更多
 （方向反直觉）；分段增加总时长 d=-0.92（有发表偏倚）。边界：片段须对齐自然事件边界；
 "能重看"不能替代"被分段"。详见 knowledge/evidence_packages/segmenting.yaml。
+
+**Redundancy 冗余**（SRC-TRYPKE-2023 系统综述，54 文/63 研究）：冗余分内容冗余与通道冗余两类。
+可视化+讲解+逐字屏幕文字损害保持与迁移；但口播+关键词/短语文字常为正面（低知识/复杂材料/年长者受益，
+机制=补偿口播瞬时性+信号作用）。"slide 上不能有文字"是误读。Reader Mode（无语音通道）不适用冗余原则。
+详见 knowledge/evidence_packages/redundancy.yaml。
 
 ## 原则速查（含演示含义与边界）
 

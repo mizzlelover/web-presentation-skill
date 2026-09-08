@@ -807,3 +807,31 @@ sources:
       validated_by: null
       verification: unverified
     knowledge_type: scientific
+  - source_id: SRC-TRYPKE-2023
+    title: "Two Types of Redundancy in Multimedia Learning: A Literature Review"
+    authors: [Maren Trypke, Franziska Stebner, Joachim Wirth, Jan L. Plass]
+    year: 2023
+    source_type: systematic_review
+    doi: "10.3389/fpsyg.2023.1148035"
+    url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1148035/pdf"
+    authority: S
+    domain: [redundancy, multimedia_learning, cognitive_load]
+    notes: >
+      冗余效应系统综述（Frontiers in Psychology 开放获取，28 页已读）：54 篇文章 / 63 项研究（1991–2021）。
+      提出两类冗余：内容冗余（信息重复/无关）与工作记忆通道冗余（多源竞争同一通道）。
+      四种场景结论：(1) 可视化+讲解：内容冗余损害高先验知识者（expertise reversal），新手受益；
+      (2) 可视化+文字：内容+通道双冗余多为负面，但文字起信号/空间整合作用时可转正；
+      (3) 讲解+文字（言语冗余）：常为正面，调节因素=低先验知识、低重叠度（关键词优于全文）、
+      高复杂度、学习者定速、年长者（工作记忆补偿）；
+      (4) 可视化+讲解+全文文字：逐字重复损害学习（Mayer et al. 2001; Leahy et al. 2003），
+      关键词/摘要式文字无损害（Mayer & Johnson 2008）。
+      引 Adesope & Nesbit 2012 元分析：口播+文字优于纯口播仅限低知识/系统定速/无图材料。
+    acquisition:
+      ladder: validated
+      acquired_how: "Frontiers 官方 OA PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/redundancy.yaml"
+      validated_by: "2026-09-08 全文精读，四场景研究分布（Table 2-8）与调节因素逐项核对"
+      verification: validated
+    knowledge_type: scientific

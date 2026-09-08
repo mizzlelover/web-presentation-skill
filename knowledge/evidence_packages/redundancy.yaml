@@ -1,0 +1,42 @@
+# Evidence Package · Redundancy Effect（补丁 §6 强制格式）
+# 生成：2026-09-08，基于 SRC-TRYPKE-2023 全文精读（28 页，Frontiers OA）+ SRC-SWELLER-2019 佐证
+id: EP-REDUNDANCY
+domain: redundancy
+mechanism: >
+  两类冗余必须分开（Trypke et al. 2023 的核心贡献）：
+  (1) 内容冗余——多源提供重复或无关信息，受众须耗费工作记忆资源去判定"这是重复的/无关的"；
+  (2) 通道冗余——多源竞争同一工作记忆通道（屏幕文字与图表争视觉通道；屏幕文字与口播形成
+  双重言语流）。经典"冗余效应"的负面结果多发生在两类冗余叠加时（图表+重复文字、
+  口播+逐字屏幕文字）。对口播+短文字的正面结果机制：文字补偿了口播的瞬时性（transient
+  information），关键词起信号作用引导注意。
+primary_sources: [SRC-TRYPKE-2023]
+supporting_evidence:
+  - "可视化+讲解（4 研究）：内容冗余对高先验知识者有害、对新手无害或有益（Kalyuga et al. 2000；Leslie et al. 2012）——expertise reversal"
+  - "可视化+文字（11 研究）：双冗余多为负面（Bobis et al. 1993；Chandler & Sweller 1991 exp.4/5；Torcasio & Sweller 2010）；文字起信号作用或空间整合时可转正（McCrudden et al. 2014）"
+  - "讲解+文字（7 研究）：常为正面，调节=低先验知识、低重叠度（关键词优于全文）、高复杂度、学习者定速、年长者（Fenesi et al. 2015：年轻组无差异，年长组受益）"
+  - "可视化+讲解+文字（44 研究）：逐字全文重复损害保持与迁移（Mayer et al. 2001 exp.2；Leahy et al. 2003）；摘要式文字与逐字重复差异不显著（即摘要式不造成伤害）"
+  - "Adesope & Nesbit 2012 元分析（57 研究，经 SRC-TRYPKE-2023 转述核对）：口播+文字优于纯口播仅见于低知识/系统定速/无图材料；关键词摘录式文字贡献了大部分优势"
+conflicting_evidence:
+  - "场景 3 结果高度异质：Kalyuga et al. 2004 与 Diao & Sweller 2007 报负面，后续五项报正面——'讲解配文字'不是单向军规"
+  - "Torcasio & Sweller 2010 exp.3：无关插图+文字 vs 纯文字无显著差异——低复杂度材料下冗余未必超载"
+experimental_context: >
+  54 篇文章 63 项实验（1991–2021），多媒体教学材料，以自然科学/技术主题为主，
+  组间随机分配，后测为保持/迁移测试；检索 Web of Science/Google Scholar/ERIC/ScienceDirect/PsycInfo，
+  22.2% 研究双编码者一致性 86–100%。
+boundary_conditions:
+  - "'屏幕不放文字'的流行误读不成立：口播+关键词/短语文字对低知识受众、复杂材料、年长者有益"
+  - "冗余的损害取决于材料复杂度（元素交互性高时冗余才致命）与受众先备知识"
+  - "学习者定速下冗余负面效应减弱——读者模式（自主节奏）与舞台模式结论不同"
+  - "证据几乎全来自教学情境；对营销/叙事演示的外推需谨慎"
+effect_strength: "综述未汇总统一效应量；场景 4 中逐字重复的负面效应在多项独立实验中方向一致（含大效应经典实验）；场景 3 方向不一致（异质）"
+common_misinterpretation:
+  - "❌'Redundancy 原则 = slide 上不能有文字'——原文边界是'逐字重复口播的完整文本'；关键词、断言句标题、空间整合的标注不在其列"
+  - "❌'所有重复都有害'——内容重复对新手可能有益，关键词重复起信号作用"
+  - "❌ 混淆冗余与 split-attention：split-attention 是两源缺一不可却空间分离；冗余是至少一源自足且重复"
+presentation_application: >
+  Stage Mode：禁止把口播稿逐字搬上屏；但屏幕保留关键词/断言句不仅无害还有益（信号+补偿瞬时性），
+  对低知识受众、复杂内容、年长受众尤其如此。Reader Mode（无语音通道）：文字完整是必需的，
+  冗余原则不适用。图表标注必须空间整合进图表（空间邻近+信号可克服通道冗余）。
+  对专家受众删减解释性文字——他们眼中的'帮助'即冗余。
+confidence: high
+last_reviewed: 2026-09-08
