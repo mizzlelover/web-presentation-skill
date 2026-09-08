@@ -34,9 +34,10 @@
 > | SRC-LIU-2022-TEMPORAL（时间临近效应的幻灯片新应用，ETR&D） | PMC 开放全文（PMC8800848）HTML 精读 | 六段全读，三组对照 d=.51/.67/2.73 逐项核对 | `knowledge/evidence_packages/temporal-contiguity.yaml` |
 >
 > | SRC-HEER-2010（众包图形感知，CHI 2010，186 名 MTurk 被试） | 斯坦福 vis.stanford.edu 官方 PDF，pdfplumber 全文提取 | 六段全读，四组实验统计量逐项核对 | 并入 `graphical-perception.yaml`（置信度升级 high） |
+> | SRC-DEKONING-2009（注意线索三功能综述，Ed. Psych. Review 21:113-140） | Springer 开放获取全文（CC-BY-NC）FetchURL 精读 | 六段全读，三功能框架/各实证研究结论/调节变量逐项核对 | `knowledge/evidence_packages/attention-cueing.yaml` |
 >
 > 新增 abstract_only：SRC-GINNS-2006（空间/时间临近元分析，Elsevier 付费墙，仅 ERIC 摘要，禁止推断效应量）。
-> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection 升级为 `partially_validated`。登记总数 37 → 52（VALIDATED 12 / abstract_only 3 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 53（VALIDATED 13 / abstract_only 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -57,7 +58,7 @@
 | cognition/working-memory | **PARTIALLY_VALIDATED**（2026-09-08：SRC-COWAN-2010 PMC 全文精读，3–5 组块上限及边界条件核对） | — |
 | cognition/cognitive-load | **PARTIALLY_VALIDATED**（2026-09-08：SRC-SWELLER-2019 Springer OA 全文精读，Evidence Package 已建） | — |
 | cognition/multimedia-learning | **PARTIALLY_VALIDATED**（2026-09-08：SRC-REY-2019 分段效应 + SRC-TRYPKE-2023 冗余效应系统综述全文精读） | — |
-| cognition/attention-fluency | MEMORY_BASED | — |
+| cognition/attention-fluency | **PARTIALLY_VALIDATED**（2026-09-08：SRC-DEKONING-2009 Springer OA 全文精读，三功能框架逐项核对） | — |
 | presentation/assertion-evidence | **PARTIALLY_VALIDATED**（2026-09-08：SRC-GARNER-ALLEY-2013 PDF 全文精读，d=0.81/0.89 等效应量逐项核对，Evidence Package 已建） | Demo 标题系统实测渲染正常 |
 | presentation/headline-system | **PARTIALLY_VALIDATED**（2026-09-08：SRC-AIPPERSBACH-2013 讲者侧实验 + SRC-GARNER-2009-PSYCH 理论映射/语料观察全文精读） | 同上 |
 | presentation/information-density | MEMORY_BASED | 三模式密度分离已在 Demo 实现 |

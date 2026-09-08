@@ -1048,3 +1048,36 @@ sources:
       validated_by: "2026-09-08 全文精读，四组实验设计/统计量/结论逐项核对原文"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-DEKONING-2009
+    title: "Towards a Framework for Attention Cueing in Instructional Animations: Guidelines for Research and Design"
+    authors: [Björn B. de Koning, Huib K. Tabbers, Remy M. J. P. Rikers, Fred Paas]
+    year: 2009
+    source_type: systematic_review
+    doi: "10.1007/s10648-009-9098-7"
+    url: "https://link.springer.com/article/10.1007/s10648-009-9098-7"
+    authority: S
+    domain: [attention, cueing, signaling, animation, cognitive_load]
+    notes: >
+      Educational Psychology Review 21:113-140，Springer 开放获取（CC-BY-NC）全文已读。
+      提出线索三功能框架（基于 Mayer CTML）：(1) selection 选择——引导注意至关键位置；
+      (2) organization 组织——强调材料结构；(3) integration 整合——外显元素间关系
+      （单一表征内 + 跨表征）。
+      知觉基础：独特颜色、亮度对比、运动起始/突变（onset transients）自下而上自动捕获注意
+      （dynamic default hypothesis: Franconeri & Simons 2003）；但纯运动本身不吸引注意，
+      只有使对象从背景中分离的运动才捕获。
+      认知机制：线索减少视觉搜索，降低外在负荷，释放工作记忆资源用于图式建构。
+      动画中的实证结论：线索可促进动画中信息的选择并有时改善学习；但组织性与关系性
+      线索证据不一致（迁移改善不稳定）；复杂度是调节变量——材料不够复杂时视觉线索无效
+      （Mautone & Mayer 2001：语言线索强效应、视觉线索无效，因动画结构简单）；
+      Jeung et al. 1997：只有复杂到"没有线索就无法理解"的可视化才从线索中受益。
+      设计准则：动画线索须为动态媒介专门设计，不能照搬静态文本/插图的有效线索
+      （箭头对快速小变化精度不足；变色线索不提供新信息但需被识别为"线索"）。
+    acquisition:
+      ladder: validated
+      acquired_how: "Springer 开放获取全文页（CC-BY-NC）FetchURL 全文精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/attention-cueing.yaml"
+      validated_by: "2026-09-08 全文精读，三功能框架/各实证研究结论/边界条件逐项核对"
+      verification: validated
+    knowledge_type: scientific

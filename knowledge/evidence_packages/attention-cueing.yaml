@@ -1,0 +1,51 @@
+# Evidence Package · Attention Cueing 注意线索（补丁 §6 强制格式）
+# 生成：2026-09-08，基于 SRC-DEKONING-2009 全文精读（Springer CC-BY-NC 开放全文）
+id: EP-ATTENTION-CUEING
+domain: attention_cueing
+mechanism: >
+  注意是稀缺资源：独特颜色/亮度对比/运动起始与突变自下而上自动捕获注意
+  （dynamic default hypothesis），目标驱动的自上而下注意需动机维持。
+  线索（cueing/signaling）= 操纵材料的视觉空间特征以引导注意，不增加新内容。
+  三功能框架（基于 Mayer CTML 的选择/组织/整合三过程）：
+  selection——把注意引到关键元素（减少视觉搜索，降外在负荷）；
+  organization——外显材料结构（更新主题结构表征）；
+  integration——外显元素内/元素间关系（因果链、跨表征对应）。
+  机制链：线索减少定位相关信息的外在负荷 → 释放 WM 资源 → 用于图式建构。
+primary_sources: [SRC-DEKONING-2009]
+supporting_evidence:
+  - "文本/插图研究一致显示：被强调内容的回忆提升，未强调内容不受影响或受抑制（Cashen & Leicht 1970 等六项）"
+  - "线索降低认知资源占用：Britton et al. 1982 次任务反应时证据；Loman & Mayer 1983 保持与迁移改善"
+  - "颜色编码线索连接文本与插图降低负荷并提升成绩（Kalyuga et al. 1999）"
+  - "动画中：语言线索（语调强调）对迁移强效应（Mautone & Mayer 2001）；颜色+语言线索改善即时理解与延迟保持（Boucheix & Guignard 2005）"
+  - "知觉捕获规律：独特颜色、亮度对比、运动起始/突变有效；纯运动不吸引注意，只有使对象从背景分离的运动才捕获（Hillstrom & Yantis 1994）"
+conflicting_evidence:
+  - "视觉线索在简单动画中无效（Mautone & Mayer 2001：箭头/图标/变色均未改善学习——动画结构已足够清晰）"
+  - "迁移改善不一致：Jamet et al. 2008、Tabbers et al. 2004 关系性线索未改善迁移"
+  - "组织性/关系性线索的证据多为文本研究，静态可视化与动画中证据稀少且不稳"
+  - "线索本身需要被识别为'线索'而非内容——变色等操纵可能被误读为内容的一部分"
+experimental_context: >
+  理论综述（非元分析，无聚合效应量）：整合视觉注意研究（视觉搜索/捕获范式）、
+  文本加工研究、插图/图解研究与动画学习研究四类文献，按三功能框架归类。
+  动画实证部分覆盖约 10 项对照实验（Mautone & Mayer 2001、Boucheix & Guignard 2005、
+  Huk et al. 2003、De Koning et al. 2007 等）。
+boundary_conditions:
+  - "复杂度调节：材料必须复杂到'无线索则难以理解'时线索才稳定有效（Jeung et al. 1997）"
+  - "静态媒介有效线索不能照搬进动态媒介：箭头对快速小变化精度不足"
+  - "动画的瞬时性使线索的'何时出现'与'出现在哪'同等重要"
+  - "学习者控制播放节奏时线索收益更大（Boucheix & Guignard 2005）"
+effect_strength: >
+  综述无聚合效应量。方向性结论：selection 功能证据最稳（回忆/选择改善一致），
+  organization/integration 功能证据混合；复杂度是关键调节变量。置信度标 medium-high。
+common_misinterpretation:
+  - "'高亮=注意力管理'——只有在材料复杂、受众不知看哪时才有效；简单材料上高亮是多余装饰"
+  - "'动画里加个箭头就行'——动态媒介需要专门设计的线索（如亮度脉动/逐条揭示），照搬静态箭头常失败"
+  - "'线索越多越好'——多处同时强对比=注意竞争，削弱所有线索"
+presentation_application: >
+  直接支撑 Skill 的 FOCUS 动效规范与'每幕一处最强视觉权重'规则：
+  渐进揭示（enter 动效）= selection 线索，与时间临近的 CPK 证据互证（SRC-LIU-2022-TEMPORAL）；
+  章节路标/进度指示 = organization 线索；图表标注与口播的对应 = integration 线索。
+  设计准则：用亮度/颜色对比做线索而非新增装饰元素；一处一幕；复杂材料优先上线索，
+  简单材料不要堆线索；Reader Mode（静态文档）的线索设计可借鉴文本研究（标题/高亮/编号），
+  Stage Mode（动态呈现）必须用动态线索。
+confidence: medium   # 高质量理论综述全文验证；非元分析无聚合效应量；动画实证证据混合
+last_reviewed: 2026-09-08
