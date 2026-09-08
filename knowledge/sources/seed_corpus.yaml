@@ -835,3 +835,51 @@ sources:
       validated_by: "2026-09-08 全文精读，四场景研究分布（Table 2-8）与调节因素逐项核对"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-SCHROEDER-2018
+    title: "Spatial Contiguity and Spatial Split-Attention Effects in Multimedia Learning Environments: A Meta-Analysis"
+    authors: [Noah L. Schroeder, Ada T. Cenkci]
+    year: 2018
+    source_type: meta_analysis
+    doi: "10.1007/s10648-018-9435-9"
+    url: "https://eric.ed.gov/?id=EJ1186641"
+    authority: S
+    domain: [spatial_contiguity, split_attention, multimedia_learning]
+    notes: >
+      空间临近/空间分散注意元分析（付费墙，仅摘要级）。摘要自报：随机效应模型 58 个独立比较
+      （n=2426），整合设计总体效应 g=0.63（p<.001）；调节分析显示整合设计在多种干预与情境
+      调节变量下均有益。边界与具体调节方向未经全文核实，禁止细化引用。
+    acquisition:
+      ladder: found
+      acquired_how: "ERIC 收录页摘要；Springer 正文付费墙未取得"
+      read_sections: [abstract]
+      access_level: abstract_only
+      annotated_at: null
+      validated_by: null
+      verification: unverified
+    knowledge_type: scientific
+  - source_id: SRC-COWAN-2010
+    title: "The Magical Mystery Four: How Is Working Memory Capacity Limited, and Why?"
+    authors: [Nelson Cowan]
+    year: 2010
+    source_type: review
+    doi: "10.1177/0963721409359277"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2864034/"
+    authority: S
+    domain: [working_memory, cognitive_load]
+    notes: >
+      工作记忆容量综述（PMC 全文已读）。核心：中央存储容量上限为 3–5 个有意义组块（青年成人），
+      而非 Miller 的 7±2——后者依赖复述与组块化策略。观察该上限的边界条件：抑制复述/分组、
+      掩蔽感觉记忆（Saults & Cowan 2007：消除感觉记忆后跨视听通道总容量约 4 项；
+      感觉记忆完整时双通道优于单通道）。Chen & Cowan：无论单字还是学习过的词对，均约 3 组块。
+      发展：7 岁儿童约 1.5 项，成人约 3 项；注意聚焦能力随年龄稳定，存储容量随年龄增长。
+      个体差异：存储容量与注意控制（排除无关项）均有独立贡献。成因未明：容量作为弱点
+      （神经激活循环/干扰）vs 容量作为优势（搜索效率、组块关联、规则学习）两派。
+    acquisition:
+      ladder: validated
+      acquired_how: "PMC 全文（Curr. Dir. Psychol. Sci. 19(1):51-57）"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/working-memory.yaml"
+      validated_by: "2026-09-08 全文精读，含结论与推荐读物，关键实验参数逐项核对"
+      verification: validated
+    knowledge_type: scientific

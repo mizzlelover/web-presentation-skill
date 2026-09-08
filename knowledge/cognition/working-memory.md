@@ -2,8 +2,17 @@
 
 - knowledge_type: scientific_mechanism
 - evidence_grade: A
-- source_ids: [SRC-BADDELEY-1992, SRC-SWELLER-1988, SRC-MILLER-1956]
-- last_reviewed: 2026-09
+- rule_status: strong_principle
+- verification: partially_validated   # SRC-COWAN-2010 全文已验证（2026-09-08）；Baddeley/Miller 仍 memory_based
+- evidence_package: knowledge/evidence_packages/working-memory.yaml
+- source_ids: [SRC-COWAN-2010, SRC-BADDELEY-1992, SRC-SWELLER-1988, SRC-MILLER-1956]
+- last_reviewed: 2026-09-08
+
+## 已验证条目（真实全文）
+**中央容量上限 3–5 组块**（SRC-COWAN-2010）：抑制复述/分组并掩蔽感觉记忆后，青年成人中央存储
+恒定为约 3–5 个有意义组块（非 Miller 7±2）；7 岁儿童约 1.5 项；组块大小取决于先备知识。
+感觉记忆完整时双通道优于单通道，但中央容量不随通道翻倍。应用：每幕受众须同时保持的活跃概念
+预算 ≤3–5 组块；Stage Mode（不可回看）比 Reader Mode 更受约束。
 
 ## Definition
 工作记忆是同时保持与加工信息的系统，容量与持续时间都有限（新信息约 2–4 个组块可被同时操作，远小于 Miller 7±2 的存储估计）。
