@@ -24,8 +24,9 @@
 > | SRC-SWELLER-2019（CLT 20 年修订综述，Ed. Psych. Review，CC-BY） | Springer OA 全文 | abstract/introduction/method/results/discussion/limitations | `knowledge/evidence_packages/cognitive-load.yaml` |
 > | SRC-GARNER-ALLEY-2013（AE vs CP 对照实验，IJEE 29(6)） | Penn State 托管 PDF 全文 | 同上，效应量逐项核对原文 | `knowledge/evidence_packages/assertion-evidence.yaml` |
 > | SRC-REY-2019（分段效应元分析，Ed. Psych. Review 31(2)） | 作者官网自存档 PDF，pdfplumber 全文提取 | 六段全读，含 §5 元分析模板提取 | `knowledge/evidence_packages/segmenting.yaml` |
+> | SRC-CLEVELAND-1986（图形感知实验，IJMMS 25:491-500） | VT 托管 PDF，pdfplumber 全文提取 | 六段全读，N=127/排序/边界核对 | `knowledge/evidence_packages/graphical-perception.yaml` |
 >
-> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 40（VALIDATED 3 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 41（VALIDATED 4 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 
@@ -54,7 +55,8 @@
 | presentation/situation-taxonomy | MEMORY_BASED | — |
 | presentation/qa-adaptation | MEMORY_BASED | 深潜/返回机制实测通过 |
 | communication/argumentation · narrative · persuasion-elm · question-framing | MEMORY_BASED | — |
-| visualization/chart-selection · visual-perception | MEMORY_BASED | — |
+| visualization/chart-selection | **PARTIALLY_VALIDATED**（2026-09-08：SRC-CLEVELAND-1986 全文精读，排序/样本/边界逐项核对） | — |
+| visualization/visual-perception | MEMORY_BASED | — |
 | motion/semantic-motion | MEMORY_BASED | WAAPI 动效控制实测通过 |
 | interaction/interaction-patterns | MEMORY_BASED | 总览/静帧/分支实测通过 |
 

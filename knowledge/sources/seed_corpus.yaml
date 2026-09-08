@@ -503,7 +503,7 @@ sources:
       verification: memory_based
     knowledge_type: scientific
     domain: [visual_perception, data_visualization]
-    notes: 图形感知排序实验：位置/长度编码最准确，面积/体积最差——图表选择的实验基础。
+    notes: 图形感知排序实验：位置/长度编码最准确，面积/体积最差。注意：JASA 原文付费墙未取得（保持 found/memory_based）；可验证链为其配套实验 SRC-CLEVELAND-1986（已全文验证）与复现研究（待获取）。
 
   # ── Visual Design ──
   - source_id: SRC-GESTALT-WERTHEIMER
@@ -733,3 +733,27 @@ sources:
       moderators: ["先验知识（高知识者保持获益更多，方向与假设相反）", "重复机会（无调节）", "顺序操纵（无调节）", "定速方式（系统 vs 学习者）"]
       limitations: "元分析非实验性，三种机制解释（组块化/更多加工时间/个体配速）无法互相排除；先验知识变异受限（仅 1 项真专家研究）；学习时间存在发表偏倚；假定所有研究都按有意义单元切分"
       presentation_implication: "把演示切分为有意义的幕/段并给予受众（或演讲者）节奏控制权，对理解迁移有中小效应支持；技术内容分段边界应对齐事件自然边界（temporal cueing）；分段本身增加总时长，需预算时间"
+  - source_id: SRC-CLEVELAND-1986
+    title: "An Experiment in Graphical Perception"
+    authors: [William S. Cleveland, Robert McGill]
+    year: 1986
+    source_type: experiment
+    doi: "10.1016/S0020-7373(86)80019-0"
+    url: "http://snoid.sv.vt.edu/~npolys/projects/safas/science.pdf"
+    authority: A
+    domain: [visual_perception, data_visualization]
+    notes: >
+      1984 JASA 论文的配套实验报告（Int. J. Man-Machine Studies 25:491-500），全文已读（10 页）。
+      N=127（24 高中生 / 60 大学生 / 43 技术训练专业人员），每人 210 次判断（7 类判断 × 2 标准大小 × 15 真值）。
+      精确度排序：两类位置判断最准 > 长度 > 角度与斜率 > 面积最末；被判断对象间距离增大则误差上升；
+      技术训练程度不影响精确度（三组误差分布相似）。边界：斜率判断结论仅对远离 0°/90° 的线段成立；
+      角度判断避开了 90°/180° 特殊角；刺激为孤立几何图形而非真实图表。
+    acquisition:
+      ladder: validated
+      acquired_how: "VT 站点托管 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/graphical-perception.yaml"
+      validated_by: "2026-09-08 全文精读，排序/样本/边界条件逐项核对原文"
+      verification: validated
+    knowledge_type: scientific

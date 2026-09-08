@@ -2,8 +2,16 @@
 
 - knowledge_type: presentation_principle
 - evidence_grade: B
-- source_ids: [SRC-CLEVELAND-1984, SRC-FEW-2004, SRC-ABELA-2008, SRC-WARE-2012]
-- last_reviewed: 2026-09
+- rule_status: supported_principle
+- verification: partially_validated   # SRC-CLEVELAND-1986 全文已验证（2026-09-08）；SRC-CLEVELAND-1984 JASA 原文付费墙未取得
+- evidence_package: knowledge/evidence_packages/graphical-perception.yaml
+- source_ids: [SRC-CLEVELAND-1986, SRC-CLEVELAND-1984, SRC-FEW-2004, SRC-ABELA-2008, SRC-WARE-2012]
+- last_reviewed: 2026-09-08
+
+## 已验证条目（真实全文）
+**图形感知精度排序**（SRC-CLEVELAND-1986，N=127，每人 210 次判断）：位置 > 长度 > 角度≈斜率 > 面积；
+被比较对象间距增大误差上升；技术训练不影响精度。边界：斜率结论仅限远离 0°/90°；孤立几何刺激，
+真实图表需结合任务类型。应用：关键数值比较用共同尺度位置编码；比较系列邻近放置；3D 图表禁止承载结论。
 
 ## Core claim
 禁止"因为有数据所以画图"。先定 Cognitive Job，再选图形。
