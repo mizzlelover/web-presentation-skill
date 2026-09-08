@@ -1,0 +1,42 @@
+# Evidence Package · Cognitive Load Theory（补丁 §6 强制格式）
+# 生成：2026-09-08，基于 SRC-SWELLER-2019 全文精读（Open Access, CC-BY）
+id: EP-COG-LOAD
+domain: cognitive_load
+mechanism: >
+  人类认知架构中，工作记忆在处理新信息时容量与时长严格受限（"narrow limits of change" 原则），
+  而长时记忆以图式存储、不受此限。学习 = 图式建构与自动化。教学设计唯一能调控的是
+  外在负荷（extraneous load，由呈现方式造成）；内在负荷（intrinsic load）由材料元素交互性
+  ×学习者已有知识共同决定，不可由设计直接降低（只能通过 pretraining/分段改变学习顺序）。
+  2019 修订要点：germane load 不再是独立加进总负荷的第三类负荷，而是把可用工作记忆资源
+  从外在活动"再分配"到内在活动的过程——即减少外在负荷本身就是在为图式建构腾资源。
+primary_sources: [SRC-SWELLER-2019]
+supporting_evidence:
+  - "Split-attention effect：空间/时间上分离的互释信息强制学习者进行心智整合，产生外在负荷（Tarmizi & Sweller 1988；时间维度 Mayer & Anderson 1991/1992）"
+  - "Redundancy effect：同一信息以两种自足形式重复呈现（如文字朗读+同样文字上屏）反而损害学习（Chandler & Sweller 1991）"
+  - "Modality effect：视听双通道利用可扩展有效工作记忆（Mousavi et al. 1995；Ginns 2005 元分析确认）"
+  - "Variability effect：低内在负荷时增加练习变异有益（Paas & van Merriënboer 1994）"
+  - "Expertise reversal：对新手有效的指导对高专长者变成冗余，效果减弱甚至反转（Kalyuga 等，见 SRC-SWELLER-2019 综述）"
+conflicting_evidence:
+  - "Sala & Gobet 2017：通用认知技能（如'批判性思维训练'）无远迁移证据——边界：CLT 支持的是领域特定图式建构，不支持'演示能提升通用思维能力'类宣称"
+experimental_context: >
+  绝大多数原始实验为课堂教学/实验室教学情境，材料为数学、工程、生物血流图等技术内容，
+  时长数分钟到数课时；被试多为学生。直接外推到商务演示需谨慎，但工作记忆限制是
+  人类通用架构约束，方向性结论（减少外在负荷、避免注意分散、避免冗余）适用于演示。
+boundary_conditions:
+  - "专家受众：内在负荷低，过度简化/拆解已整合信息反而有害（expertise reversal）"
+  - "低内在负荷材料：增加变异与必要的 germane 加工有益——'越低负荷越好'是误读"
+  - "modality effect 前提是视觉与听觉信息互释且缺一不可；若文字自足，朗读它即成冗余"
+effect_strength: >
+  各效应有数十年重复实验支持；综述未给出统一汇总效应量（原文按效应分述，引用 Ginns 2005
+  等元分析确认 modality 等效应稳健）。强度评级：强（机制层面），具体效应量见各专项元分析。
+common_misinterpretation:
+  - "'每页不超过 7 条'式的数字军规——Miller 7±2 与演示设计无直接关系"
+  - "'germane load 越多越好'——2019 修订后它只是资源再分配，不是可独立增加的负荷"
+  - "'动画/多媒体一定增加负荷'——取决于是否服务于认知目标（冗余才有害）"
+presentation_application: >
+  演示设计能改变的只有外在负荷：每幕删除不服务于本幕 Cognitive Job 的元素；
+  图表与其文字解释必须空间临近（split-attention）；口播内容不要再以完整文字上屏
+  （redundancy）；口播+视觉证据的双通道组合是被支持的（modality）；
+  对专家受众允许更高信息密度；全场负荷曲线禁止连续 HIGH 无缓冲。
+confidence: high
+last_reviewed: 2026-09-08

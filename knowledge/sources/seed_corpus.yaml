@@ -1,6 +1,7 @@
 # Seed Corpus Registry — 种子语料来源登记（§12/§75）
 # authority: S=meta-analysis/系统综述  A=原始实验  B=权威专著/手册  C=专业实践资料
-# access_status 记录我们实际掌握的程度；notes 记录该来源最常被引用的核心命题。
+# acquisition 按补丁 §3 记录获取阶梯；2026-09-08 起旧条目诚实降级为 found/memory_based，
+# 仅 acquisition.ladder >= validated 的来源可作为 Knowledge Node 核心证据。
 sources:
 
   # ── Cognitive Science ──
@@ -10,7 +11,15 @@ sources:
     year: 1988
     source_type: experiment
     authority: A
-    access_status: secondary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [cognitive_load, working_memory]
     notes: 认知负荷理论奠基：工作记忆容量有限，教学设计须管理内在/外在/相关负荷。
   - source_id: SRC-BADDELEY-1992
@@ -19,7 +28,15 @@ sources:
     year: 1992
     source_type: review
     authority: S
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [working_memory]
     notes: 工作记忆多成分模型：中央执行、语音环路、视空画板（后加情景缓冲器）。
   - source_id: SRC-MILLER-1956
@@ -28,7 +45,15 @@ sources:
     year: 1956
     source_type: review
     authority: A
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [working_memory]
     notes: 短期记忆容量约 7±2 组块；注意：常被误用为"每页 7 条要点"——这是误读（见 anti_patterns）。
   - source_id: SRC-KAHNEMAN-2011
@@ -37,7 +62,15 @@ sources:
     year: 2011
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [attention, persuasion, processing_fluency]
     notes: 双系统理论；认知流畅性影响信任与判断。
   - source_id: SRC-MAYER-2001
@@ -46,7 +79,15 @@ sources:
     year: 2001
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [multimedia_learning, cognitive_load]
     notes: 多媒体学习九大原则（Coherence/Signaling/Redundancy/Contiguity/Segmenting/Modality/Pretraining/Personalization）的实验基础。
   - source_id: SRC-MAYER-HANDBOOK-2014
@@ -55,7 +96,15 @@ sources:
     year: 2014
     source_type: handbook
     authority: S
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [multimedia_learning]
     notes: 各原则效应量与边界条件的汇总；优先于单篇实验引用。
 
@@ -66,7 +115,15 @@ sources:
     year: 2003
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [assertion, evidence, scientific_presentation]
     notes: Assertion-Evidence 结构倡导者：句断言标题 + 视觉证据取代短语标题+项目符号。
   - source_id: SRC-ALLEY-2006-AE
@@ -75,7 +132,15 @@ sources:
     year: 2006
     source_type: experiment
     authority: A
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [assertion, evidence]
     notes: 技术/科研演示中 assertion-evidence 结构提升理解与回忆的实验证据；边界：主要验证于工程/科研受众。
   - source_id: SRC-GARRETT-2016
@@ -84,7 +149,15 @@ sources:
     year: 2016
     source_type: experiment
     authority: A
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [assertion, slide_comprehension]
     notes: 句标题（sentence headline）vs 短语标题的理解差异研究。
   - source_id: SRC-DUARTE-2008
@@ -93,7 +166,15 @@ sources:
     year: 2008
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [presentation_design, visual_hierarchy]
     notes: 实践方法论：视觉化思维；属 D 级实践启发，命题需验证。
   - source_id: SRC-DUARTE-2010
@@ -102,16 +183,32 @@ sources:
     year: 2010
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [narrative, storytelling]
-    notes: "What is / What could be" 对比节奏与 S.T.A.R. 时刻；实践框架。
+    notes: "'What is / What could be' 对比节奏与 S.T.A.R. 时刻；实践框架。"
   - source_id: SRC-REYNOLDS-2008
     title: "Presentation Zen"
     authors: [Garr Reynolds]
     year: 2008
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [presentation_design, information_density]
     notes: 极简主义实践；注意其语境是 Stage Mode 讲演，不必然适用 Reader/技术文档。
   - source_id: SRC-ATKINSON-2005
@@ -120,7 +217,15 @@ sources:
     year: 2005
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [narrative, slide_structure]
     notes: 用叙事结构组织演示；与 Mayer 冗余原则的对话：BBP 主张屏幕不放完整句（有争议）。
   - source_id: SRC-ABELA-2008
@@ -129,7 +234,15 @@ sources:
     year: 2008
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [presentation_design, data_visualization]
     notes: Extreme Presentation 方法：按"比较/关系"选择图表的 Chart Chooser。
   - source_id: SRC-WEISSMAN-2003
@@ -138,7 +251,15 @@ sources:
     year: 2003
     source_type: book
     authority: C
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [persuasion, delivery]
     notes: IPO 路演实践；WIIFY（What's In It For You）受众中心原则。
   - source_id: SRC-TUFTE-2003
@@ -147,7 +268,15 @@ sources:
     year: 2003
     source_type: review
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [information_density, data_visualization]
     notes: 著名批评：PPT 降低信息密度与论证质量；注意这是论战性文章（polemic），非实验研究——其"低密度=低质"命题与 NASA 报告研究相关但与 Stage Mode 证据存在张力。
   - source_id: SRC-DOUMONT-2005
@@ -156,7 +285,15 @@ sources:
     year: 2005
     source_type: review
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [information_density, technical_presentation]
     notes: 对 Tufte 的平衡回应：问题在误用而非工具；技术沟通需要自足 slide。
 
@@ -167,7 +304,15 @@ sources:
     year: -350
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [persuasion, trust, emotion]
     notes: Ethos / Pathos / Logos 三诉求框架。
   - source_id: SRC-CIALDINI-1984
@@ -176,7 +321,15 @@ sources:
     year: 1984
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [persuasion]
     notes: 六（七）大说服原则；部分原则（如社会认同）有实验支持，实践泛化需注意语境。
   - source_id: SRC-PETTY-1986
@@ -185,7 +338,15 @@ sources:
     year: 1986
     source_type: review
     authority: A
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [persuasion]
     notes: ELM：中心路径 vs 外周路径；受众动机/能力决定信息应更论证密集还是线索密集。
   - source_id: SRC-MINTO-1987
@@ -194,7 +355,15 @@ sources:
     year: 1987
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [argumentation, slide_structure]
     notes: 金字塔原理与 SCQA；咨询业标准实践，属 D 级，适用边界：决策型/咨询型演示。
   - source_id: SRC-BITZER-1968
@@ -203,7 +372,15 @@ sources:
     year: 1968
     source_type: review
     authority: A
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [persuasion, situation]
     notes: 修辞情境论：exigence/audience/constraints——Situation First 的理论根源之一。
 
@@ -214,7 +391,15 @@ sources:
     year: 1983
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [data_visualization]
     notes: data-ink ratio、chartjunk；注意：极简数据墨水比在"记忆度"研究（Bateman 2010）中存在冲突证据。
   - source_id: SRC-BATEMAN-2010
@@ -223,7 +408,15 @@ sources:
     year: 2010
     source_type: experiment
     authority: A
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [data_visualization, memory]
     notes: 冲突证据：适度视觉修饰不损害理解且提升长期记忆——对 Tufte 极简主义的重要边界。
   - source_id: SRC-FEW-2004
@@ -232,7 +425,15 @@ sources:
     year: 2004
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [data_visualization]
     notes: 商业图表选择实践体系；基于感知研究。
   - source_id: SRC-KNAFLIC-2015
@@ -241,7 +442,15 @@ sources:
     year: 2015
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [data_visualization, storytelling]
     notes: 数据叙事实践：declutter/focus attention/tell story。
   - source_id: SRC-CAIRO-2016
@@ -250,7 +459,15 @@ sources:
     year: 2016
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [data_visualization, trust]
     notes: 可视化的真实性与不确定性表达。
   - source_id: SRC-WARE-2012
@@ -259,7 +476,15 @@ sources:
     year: 2012
     source_type: book
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [visual_perception, data_visualization]
     notes: 视觉感知与编码效率（位置>长度>角度>面积>颜色饱和度）的感知科学基础。
   - source_id: SRC-CLEVELAND-1984
@@ -268,7 +493,15 @@ sources:
     year: 1984
     source_type: experiment
     authority: A
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [visual_perception, data_visualization]
     notes: 图形感知排序实验：位置/长度编码最准确，面积/体积最差——图表选择的实验基础。
 
@@ -279,7 +512,15 @@ sources:
     year: 1923
     source_type: review
     authority: A
-    access_status: secondary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [visual_perception, visual_hierarchy]
     notes: 接近/相似/连续/闭合/共同命运——分组与层级的感知基础。
   - source_id: SRC-WILLIAMS-1994
@@ -288,7 +529,15 @@ sources:
     year: 1994
     source_type: book
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [visual_hierarchy, typography]
     notes: CRAP（对比/重复/对齐/接近）四原则；入门实践，与 Gestalt 机制一致。
   - source_id: SRC-BERNARD-2002
@@ -297,7 +546,15 @@ sources:
     year: 2002
     source_type: experiment
     authority: A
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [typography, readability]
     notes: 屏幕字号/行宽/行距对阅读速度与偏好的影响研究系列。
 
@@ -308,7 +565,15 @@ sources:
     year: 2014
     source_type: book
     authority: B
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [delivery, qa]
     notes: 受众中心演讲学教材；Q&A 管理与现场适应。
   - source_id: SRC-GALLO-2010
@@ -317,7 +582,15 @@ sources:
     year: 2010
     source_type: book
     authority: C
-    access_status: summary
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [delivery, storytelling]
     notes: 发布会式演示的实践拆解；D 级实践启发。
 
@@ -328,7 +601,15 @@ sources:
     year: 2024
     source_type: professional
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [web_rendering]
     notes: HTML 幻灯片框架；Runtime Reference 之一。
   - source_id: SRC-SLIDEV
@@ -337,7 +618,15 @@ sources:
     year: 2024
     source_type: professional
     authority: C
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
     domain: [web_rendering]
     notes: Markdown 驱动的演示框架；Runtime Reference。
   - source_id: SRC-WEBANIM-W3C
@@ -346,6 +635,67 @@ sources:
     year: 2023
     source_type: professional
     authority: B
-    access_status: full_text
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
     domain: [motion, web_rendering]
     notes: 原生动画控制（play/pause/reverse/seek）标准。
+
+  # ── 补丁执行后真实获取并验证的来源（2026-09-08）──
+  - source_id: SRC-SWELLER-2019
+    title: "Cognitive Architecture and Instructional Design: 20 Years Later"
+    authors: [John Sweller, Jeroen J. G. van Merriënboer, Fred Paas]
+    year: 2019
+    source_type: review
+    doi: "10.1007/s10648-019-09465-5"
+    url: "https://link.springer.com/article/10.1007/s10648-019-09465-5"
+    authority: S
+    domain: [cognitive_load, working_memory, instructional_design]
+    notes: >
+      CLT 20 年官方修订综述（开放获取 CC-BY，全文已读）。关键修订：germane load 不再计入总负荷，
+      而是把工作记忆资源从外在活动再分配到内在活动；内在负荷=元素交互性×学习者已有知识。
+      系统综述七大效应：goal-free / worked example（高专长者效果减弱，expertise reversal 前提）/
+      completion / split-attention（Tarmizi & Sweller 1988，含时间维度 Mayer & Anderson 1992）/
+      redundancy（Chandler & Sweller 1991）/ modality（Mousavi 1995；Ginns 2005 元分析）/
+      variability（Paas & van Merriënboer 1994：低负荷时增加变异有益）。
+      理论基础升级为进化教育心理学五大生物学首要原则。引 Sala & Gobet 2017：通用认知技能不可教。
+    acquisition:
+      ladder: validated
+      acquired_how: "FetchURL 读取 Springer 开放获取全文（CC-BY）"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/cognitive-load.yaml"
+      validated_by: "2026-09-08 全文精读，效应与机制逐条核对原文表述"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-GARNER-ALLEY-2013
+    title: "How the Design of Presentation Slides Affects Audience Comprehension"
+    authors: [Joanna K. Garner, Michael Alley]
+    year: 2013
+    source_type: experiment
+    doi: null
+    url: "http://writing.engr.psu.edu/ae_comprehension.pdf"
+    authority: A
+    domain: [assertion, evidence, slide_comprehension]
+    notes: >
+      AE vs 传统短语标题+项目符号（CP）对照实验，全文已读。N=110 工程本科生（AE 59 / CP 51），
+      MRI 扫描原理 8 分钟演示，CP 均 41.5 词/页 vs AE 21.2 词/页，旁白相同 1000 词。
+      论文总分 t(93.43)=3.67, p<.001, d=0.81；延迟一周测试 t(93)=4.34, d=0.89；
+      动态因果表达 d=0.60；误解总数 d=0.47；感知心智努力 AE 更低（d=-0.50）；
+      即时选择题仅高阶推理/模拟题显著（F=11.25, p<.01, η²=.09），事实回忆无差异。
+      边界：工程/技术内容、教学情境、大学生样本；未验证营销/叙事/高管场景。
+    acquisition:
+      ladder: validated
+      acquired_how: "FetchURL 读取 Penn State 托管 PDF 全文"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/assertion-evidence.yaml"
+      validated_by: "2026-09-08 全文精读，效应量与样本量逐项核对原文表格"
+      verification: validated
+    knowledge_type: scientific

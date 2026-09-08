@@ -17,6 +17,15 @@
 
 **因此：原 `access_status: full_text`（28 条）的写法构成虚标，现全部降级纠正。** 这些条目的"内容摘要"多数与学界共识一致、方向可用，但按补丁标准只能记为 **MEMORY_BASED**，不得继续作为高置信规则的直接依据。
 
+> **2026-09-08 整改执行更新**：seed_corpus.yaml 已实际迁移至补丁 §3 acquisition 阶梯 Schema（旧 `access_status` 字段已删除，37 条旧来源全部落为 `ladder: found / verification: memory_based`）。同日真实获取并全文精读 2 篇开放原文，升级为 **VALIDATED**：
+>
+> | 新来源 | 获取方式 | 已读章节 | 入库产物 |
+> |---|---|---|---|
+> | SRC-SWELLER-2019（CLT 20 年修订综述，Ed. Psych. Review，CC-BY） | Springer OA 全文 | abstract/introduction/method/results/discussion/limitations | `knowledge/evidence_packages/cognitive-load.yaml` |
+> | SRC-GARNER-ALLEY-2013（AE vs CP 对照实验，IJEE 29(6)） | Penn State 托管 PDF 全文 | 同上，效应量逐项核对原文 | `knowledge/evidence_packages/assertion-evidence.yaml` |
+>
+> 对应知识节点 cognitive-load / assertion-evidence 升级为 `partially_validated`。登记总数 37 → 39（VALIDATED 2 / FOUND 37）。
+
 ## 1. 来源重新分类（§67）
 
 37 条来源统一重新标记为 `verification: MEMORY_BASED`，阶梯状态 `FOUND`。纠正映射：
@@ -34,10 +43,10 @@
 | 节点 | 科学证据状态 | 工程侧验证 |
 |---|---|---|
 | cognition/working-memory | MEMORY_BASED | — |
-| cognition/cognitive-load | MEMORY_BASED | — |
+| cognition/cognitive-load | **PARTIALLY_VALIDATED**（2026-09-08：SRC-SWELLER-2019 Springer OA 全文精读，Evidence Package 已建） | — |
 | cognition/multimedia-learning | MEMORY_BASED | — |
 | cognition/attention-fluency | MEMORY_BASED | — |
-| presentation/assertion-evidence | MEMORY_BASED | Demo 标题系统实测渲染正常 |
+| presentation/assertion-evidence | **PARTIALLY_VALIDATED**（2026-09-08：SRC-GARNER-ALLEY-2013 PDF 全文精读，d=0.81/0.89 等效应量逐项核对，Evidence Package 已建） | Demo 标题系统实测渲染正常 |
 | presentation/headline-system | MEMORY_BASED | 同上 |
 | presentation/information-density | MEMORY_BASED | 三模式密度分离已在 Demo 实现 |
 | presentation/audience-modeling | MEMORY_BASED | — |
