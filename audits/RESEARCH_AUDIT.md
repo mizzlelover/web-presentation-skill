@@ -97,7 +97,7 @@
 | Multimedia Learning | 4+ | 7 | 7 | 3 | 3 | 3 | 3 |
 | Cognitive Load | 4+ | 2 | 2 | 2 | 2 | 2 | 2 |
 | Assertion-Evidence | 3+ | 6 | 3 | 3 | 3 | 3 | 3 |
-| Audience | 3+ | 1 | 0 | 0 | 0 | 0 | 0 |
+| Audience | 3+ | 1 | 1（跨链复用 SRC-PETTY-1984） | 1 | 1 | 1 | 1 |
 | Persuasion | 4+ | 6 | 1 | 1 | 1 | 1 | 1 |
 | Narrative | 3+ | 4 | 1 | 1 | 1 | 1 | 1 |
 | Information Visualization | 6+ | 10 | 3 | 3 | 3 | 3 | 3 |
