@@ -35,9 +35,10 @@
 >
 > | SRC-HEER-2010（众包图形感知，CHI 2010，186 名 MTurk 被试） | 斯坦福 vis.stanford.edu 官方 PDF，pdfplumber 全文提取 | 六段全读，四组实验统计量逐项核对 | 并入 `graphical-perception.yaml`（置信度升级 high） |
 > | SRC-DEKONING-2009（注意线索三功能综述，Ed. Psych. Review 21:113-140） | Springer 开放获取全文（CC-BY-NC）FetchURL 精读 | 六段全读，三功能框架/各实证研究结论/调节变量逐项核对 | `knowledge/evidence_packages/attention-cueing.yaml` |
+> | SRC-XIE-2016-CN（多媒体学习线索效应元分析，心理学报 48(5)） | 心理学报官网开放 PDF，pdfplumber 全文提取 | 六段全读，四组 g 值与调节分析逐项核对 | 并入 `attention-cueing.yaml`（置信度升级 high） |
 >
 > 新增 abstract_only：SRC-GINNS-2006（空间/时间临近元分析，Elsevier 付费墙，仅 ERIC 摘要，禁止推断效应量）。
-> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 53（VALIDATED 13 / abstract_only 3 / FOUND 37）。
+> 对应知识节点 cognitive-load / assertion-evidence / headline-system / multimedia-learning / chart-selection / attention-fluency 升级为 `partially_validated`。登记总数 37 → 54（VALIDATED 14 / abstract_only 3 / FOUND 37）。
 
 ## 1. 来源重新分类（§67）
 

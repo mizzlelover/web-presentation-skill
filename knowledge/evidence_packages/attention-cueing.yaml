@@ -1,5 +1,6 @@
 # Evidence Package · Attention Cueing 注意线索（补丁 §6 强制格式）
 # 生成：2026-09-08，基于 SRC-DEKONING-2009 全文精读（Springer CC-BY-NC 开放全文）
+# 更新：2026-09-08，纳入 SRC-XIE-2016-CN（中文线索元分析 43 篇）全文验证——效应量互证 + 动态性调节
 id: EP-ATTENTION-CUEING
 domain: attention_cueing
 mechanism: >
@@ -11,13 +12,15 @@ mechanism: >
   organization——外显材料结构（更新主题结构表征）；
   integration——外显元素内/元素间关系（因果链、跨表征对应）。
   机制链：线索减少定位相关信息的外在负荷 → 释放 WM 资源 → 用于图式建构。
-primary_sources: [SRC-DEKONING-2009]
+primary_sources: [SRC-DEKONING-2009, SRC-XIE-2016-CN]
 supporting_evidence:
   - "文本/插图研究一致显示：被强调内容的回忆提升，未强调内容不受影响或受抑制（Cashen & Leicht 1970 等六项）"
   - "线索降低认知资源占用：Britton et al. 1982 次任务反应时证据；Loman & Mayer 1983 保持与迁移改善"
   - "颜色编码线索连接文本与插图降低负荷并提升成绩（Kalyuga et al. 1999）"
   - "动画中：语言线索（语调强调）对迁移强效应（Mautone & Mayer 2001）；颜色+语言线索改善即时理解与延迟保持（Boucheix & Guignard 2005）"
   - "知觉捕获规律：独特颜色、亮度对比、运动起始/突变有效；纯运动不吸引注意，只有使对象从背景分离的运动才捕获（Hillstrom & Yantis 1994）"
+  - "中文元分析互证（SRC-XIE-2016-CN，43 篇）：保持 g=0.53 / 迁移 g=0.36 / 注视时间 g=0.50 / 注视次数 g=0.70——与 Schneider et al. 2018（g=0.53/0.33）独立收敛"
+  - "调节效应（中文元分析）：静态材料>动态材料（保持与迁移一致）；陈述性>程序性知识；时空线索迁移效应>物理线索，但物理线索更吸引注视"
 conflicting_evidence:
   - "视觉线索在简单动画中无效（Mautone & Mayer 2001：箭头/图标/变色均未改善学习——动画结构已足够清晰）"
   - "迁移改善不一致：Jamet et al. 2008、Tabbers et al. 2004 关系性线索未改善迁移"
@@ -33,6 +36,7 @@ boundary_conditions:
   - "静态媒介有效线索不能照搬进动态媒介：箭头对快速小变化精度不足"
   - "动画的瞬时性使线索的'何时出现'与'出现在哪'同等重要"
   - "学习者控制播放节奏时线索收益更大（Boucheix & Guignard 2005）"
+  - "动态材料中线索凸显性被元素运动抵消（中文元分析调节效应 + de Koning 理论解释互证）——Stage Mode 的线索必须与动效竞争注意"
 effect_strength: >
   综述无聚合效应量。方向性结论：selection 功能证据最稳（回忆/选择改善一致），
   organization/integration 功能证据混合；复杂度是关键调节变量。置信度标 medium-high。
@@ -47,5 +51,5 @@ presentation_application: >
   设计准则：用亮度/颜色对比做线索而非新增装饰元素；一处一幕；复杂材料优先上线索，
   简单材料不要堆线索；Reader Mode（静态文档）的线索设计可借鉴文本研究（标题/高亮/编号），
   Stage Mode（动态呈现）必须用动态线索。
-confidence: medium   # 高质量理论综述全文验证；非元分析无聚合效应量；动画实证证据混合
+confidence: high   # 理论综述 + 中文元分析（43 篇/3910 人）全文双重验证，效应量与 Schneider 2018 摘要级数据独立收敛
 last_reviewed: 2026-09-08

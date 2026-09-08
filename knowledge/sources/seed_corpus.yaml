@@ -1081,3 +1081,42 @@ sources:
       validated_by: "2026-09-08 全文精读，三功能框架/各实证研究结论/边界条件逐项核对"
       verification: validated
     knowledge_type: scientific
+  - source_id: SRC-XIE-2016-CN
+    title: "多媒体学习中线索效应的元分析（A Meta-Analysis of Cueing Effects in Multimedia Learning）"
+    authors: [谢和平, 王福兴, 周宗奎, 吴鹏]
+    year: 2016
+    source_type: meta_analysis
+    doi: "10.3724/SP.J.1041.2016.00540"
+    url: "https://journal.psych.ac.cn/xlxb/CN/article/downloadArticleFile.do?attachType=PDF&id=3368"
+    authority: S
+    domain: [attention, cueing, signaling, multimedia_learning]
+    notes: >
+      心理学报 48(5):540-555，中文开放全文已读。43 篇文献；
+      保持 44 个独立效应量（3910 人）g=0.53、迁移 41 个（3906 人）g=0.36、
+      线索区注视时间 14 个（938 人）g=0.50、注视次数 11 个（816 人）g=0.70。
+      与 Schneider et al. 2018（保持 g=0.53 / 迁移 g=0.33）独立互证。
+      调节效应：保持上 静态材料>动态、陈述性知识>程序性、理工科>文科；
+      迁移上 时空线索>物理线索、静态>动态、陈述性>程序性；
+      眼动上 物理线索的注视时间/次数高于时空线索。
+      机制解释：动态材料中元素运动本身具有强注意引导作用，与线索产生注意资源竞争，
+      线索凸显性被运动抵消——与 de Koning et al. 2009"动态媒介需专门设计线索"结论互证。
+    acquisition:
+      ladder: validated
+      acquired_how: "心理学报官网开放 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/attention-cueing.yaml"
+      validated_by: "2026-09-08 全文精读，四组效应量与调节分析逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "多媒体环境中线索能否引导注意并促进学习效果？其边界条件是什么？"
+      sample_scope: "严格标准筛选后 43 篇文献；保持 3910 人 / 迁移 3906 人 / 注视时间 938 人 / 注视次数 816 人"
+      number_of_studies: 43
+      experimental_context: "保持 44 个、迁移 41 个、注视时间 14 个、注视次数 11 个独立效应量；含眼动追踪研究"
+      main_effect: "线索显著提升保持（g=0.53）与迁移（g=0.36），并增加线索区注视时间（g=0.50）与注视次数（g=0.70）"
+      effect_size: "保持 g=0.53；迁移 g=0.36；注视时间 g=0.50；注视次数 g=0.70"
+      heterogeneity: "存在显著调节：线索类型（时空/物理）、材料动态性、知识类型、学科属性"
+      moderators: ["材料动态性（静态>动态，保持与迁移一致）", "知识类型（陈述性>程序性）", "学科属性（理工科>文科，仅保持）", "线索类型（迁移：时空>物理；眼动：物理>时空）"]
+      limitations: "作者自陈需进一步考察其他边界条件；动态材料中线索凸显性被运动元素抵消"
+      presentation_implication: "中文证据与 Schneider 2018 互证：信号线索中小效应稳健；Stage Mode（动态呈现）中线索必须与运动元素竞争注意——渐进揭示顺序即线索时序；Reader Mode（静态）线索收益更大，标题/高亮/编号应充分使用"

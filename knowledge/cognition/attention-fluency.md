@@ -5,7 +5,7 @@
 - rule_status: supported_principle
 - verification: partially_validated   # SRC-DEKONING-2009（注意线索三功能综述）全文已验证 2026-09-08；SRC-KAHNEMAN-2011 / SRC-BERNARD-2002 仍 memory_based
 - evidence_package: knowledge/evidence_packages/attention-cueing.yaml
-- source_ids: [SRC-KAHNEMAN-2011, SRC-BERNARD-2002, SRC-DEKONING-2009]
+- source_ids: [SRC-KAHNEMAN-2011, SRC-BERNARD-2002, SRC-DEKONING-2009, SRC-XIE-2016-CN]
 - last_reviewed: 2026-09-08
 
 ## 已验证条目（真实全文）
@@ -15,6 +15,11 @@ selection 证据最稳（被强调内容回忆一致提升、视觉搜索负荷�
 **复杂度是关键调节变量**——材料复杂到"无线索难理解"时线索才稳定有效，简单材料上视觉线索无效；
 动态媒介线索须专门设计，不能照搬静态文本的箭头/高亮。
 知觉捕获规律：独特颜色、亮度对比、运动起始/突变自动捕获注意；纯运动不吸引注意。
+
+**中文元分析互证**（SRC-XIE-2016-CN，43 篇/3910 人，心理学报 OA 全文）：保持 g=0.53、
+迁移 g=0.36、注视时间 g=0.50、注视次数 g=0.70——与 Schneider et al. 2018 独立收敛。
+关键调节：**静态材料线索效应 > 动态材料**（运动元素与线索竞争注意）；陈述性知识 > 程序性知识。
+含义：Reader Mode（静态）标题/高亮/编号收益确定；Stage Mode（动态）线索须与动效协调时序。
 
 ## Core claims
 1. 注意是稀缺且被竞争的资源：新异刺激（运动、对比、变化）自下而上捕获注意；目标驱动的自上而下的注意需要动机维持。
