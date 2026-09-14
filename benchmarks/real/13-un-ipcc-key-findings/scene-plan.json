@@ -1,0 +1,132 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "IPCC 关键结论速读 · 气候科学给出的::判断题::",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "气候科学早已给出结论，::剩下的是执行题::",
+   "chart": null,
+   "source_refs": [
+    "人类活动使大气层、海洋和陆地变暖，在大气层、海洋、冰冻圈和生物圈中产生广泛而迅速的变化。"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "facts",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "事实层：::+1.1°C::、CO2 达工业化前::148%::",
+   "chart": null,
+   "source_refs": [
+    "现在地球的温度比1800年代高出约1.1°C。",
+    "2019年，温室气体浓度达到新高。二氧化碳水平是工业化前水平的148%。",
+    "按照目前的二氧化碳排放趋势，到本世纪末，气温可能上升多达4.4°C。"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "pathway",
+   "arg_ref": "C2",
+   "cognitive_job": "compare",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "路径的数学：::每年 -7.6%::，<br>现实是化石燃料::+2%::",
+   "chart": null,
+   "source_refs": [
+    "从2020年到2030年，排放量必须每年下降7.6%才能将气温升幅控制在1.5°C以内，每年下降2.7%才能将气温升幅控制在2°C以内。",
+    "若遵循1.5°C温控目标所规定的减排途径，全世界将需要在2020年至2030年间每年将化石燃料的生产量减少约6%。然而目前各国计划和预测每年平均增产2%，这将使2030年的产量达到1.5°C温控目标所要求产量的两倍多。"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "adapt",
+   "arg_ref": "C3",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "适应的经济账：::1.8 万亿::投入，::7.1 万亿::收益",
+   "chart": null,
+   "source_refs": [
+    "全球范围内，对早期预警系统、气候适应性基础设施、改良旱地农业、全球红树林保护和具有韧性的水资源进行1.8万亿美元的投资，可因规避成本及社会环境效益产生7.1万亿美元的收益。",
+    "早期预警系统的普及可以带来高达10倍于初始成本的收益。",
+    "如果不采取适应措施，每年至少有一个月缺乏足够用水的人数将从现在的36亿飙升至2050年的50亿以上。"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "economy",
+   "arg_ref": "C4",
+   "cognitive_job": "compare",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "转型的就业账：::2 400 万::新增 <br>vs ::600 万::损失",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "就业岗位（万个，2030 年）",
+    "categories": [
+     "绿色转型新增",
+     "不转型损失"
+    ],
+    "series": [
+     {
+      "name": "就业岗位变化",
+      "data": [
+       2400,
+       600
+      ]
+     }
+    ],
+    "caption": "口径：全球就业岗位变化（万个）；新增与损失均为 2030 年估计；来源：联合国气候行动页「就业」节（国际劳工组织）"
+   },
+   "source_refs": [
+    "绿色转型包括转向可再生能源、制造电动汽车和建造节能建筑，到2030年将创造2400万个就业岗位，远远超过不进行绿色转型可能会损失的600万个就业岗位。",
+    "相比于一切照旧，到2030年，转向绿色经济可以带来26万亿美元的直接经济收益。这可以创造6 500多万个新的低碳就业岗位。"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "energy",
+   "arg_ref": "C5",
+   "cognitive_job": "explain",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "能源侧已经动起来了：::260 吉瓦::创纪录",
+   "chart": null,
+   "source_refs": [
+    "尽管发生了2019冠状病毒病大流行，但2020年全球新增可再生能源容量达到了260吉瓦，创历史新高，比之前的记录高出近50%。"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "takeaway",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "科学给的是::判断题::，<br>留给决策的是::执行题::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 8,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

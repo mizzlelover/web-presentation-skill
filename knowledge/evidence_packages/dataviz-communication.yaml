@@ -1,0 +1,40 @@
+# Evidence Package · Visual Data Communication（补丁 §6 强制格式）
+# 生成：2026-09-08，基于 SRC-FRANCONERI-2021 作者开放版全文精读（52 页）
+id: EP-DATAVIZ-COMMUNICATION
+domain: data_visualization_cognition
+mechanism: >
+  视觉系统对"整体统计量"（均值、极值、分布形态）的提取是平行前注意的，转瞬完成；
+  但对子集数值的逐个比较是串行控制加工，每次比较需数百毫秒，受众每秒只能完成寥寥数次
+  （Franconeri et al. 2012）。因此有效图表设计的本质 = 把受众必须做的串行比较次数压到最少，
+  并用分组线索/注释/高亮/语言把注意引导到支撑结论的那一次比较上。
+primary_sources: [SRC-FRANCONERI-2021]
+supporting_evidence:
+  - "整体统计提取快（<一次眨眼），子集比较慢（每秒仅 handful）——综述内多项实验证据（Michal & Franconeri 2017; Franconeri et al. 2012; Logan & Compton 1998）"
+  - "幻觉/误读清单：Y 轴截断夸大差异（Correll et al. 2020）；圆/方块须按面积而非直径编码；折线斜率越大差异知觉越扭曲；连续数值映射彩虹色相夸大跨界差异；色盲可达性红蓝配优于红绿配"
+  - "不确定性：对非专业受众误差线被误读为数据范围，离散结果样例（HOP / quantile dotplots）更优（Hullman et al. 2015, 2017; Fernandes et al. 2018）"
+  - "风险沟通：绝对率优于相对率；频率（3/10）优于百分比（30%）；同分母图标阵列；拟人图标（ restroom icons 等）提升低图表素养者的风险感知-实际风险一致性与记忆（Zikmund-Fisher et al. 2014）"
+  - "图表素养（graph literacy）/ numeracy / 领域知识 / 工作记忆容量是理解度的关键调节变量"
+conflicting_evidence:
+  - "极简 data-ink 主张与记忆度/偏好研究存在张力（Inbar et al. 2007; Hill et al. 2017 对极简主义的态度研究；SRC-BATEMAN-2010 待真实获取）"
+experimental_context: >
+  叙述性综述，整合视觉认知心理物理实验、众包读图实验（Heer & Bostock 2010 等）、
+  健康风险沟通实验（Zikmund-Fisher 系列）与不确定性可视化实验；目标受众覆盖学生、
+  同事与公众；明确面向"沟通型"（而非分析型）可视化。
+boundary_conditions:
+  - "指南面向沟通场景（向他人传达已知结论），不直接等同于探索性分析场景的最佳实践"
+  - "'整体统计快、子集比较慢'基于简单实验室刺激与读图任务；高度训练的专业受众在惯例图表上的速度可更快"
+  - "风险沟通结论主要来自医疗健康语境样本"
+  - "低图表素养受众的收益最大；高素养受众受格式影响较小"
+effect_strength: "综述未给出统一效应量；各指南背后的单项实验多为中大效应（如图标阵列对低素养者）。强度评级：机制层面强，具体指南逐条见引文"
+common_misinterpretation:
+  - "'图表自己会说话'——受众每秒只能做少数几次串行比较，不用注释/高亮收窄比较集=让受众自己猜结论"
+  - "'误差线是通用的不确定性表达'——对非专业受众会被误读为最小/最大值"
+  - "'彩虹色阶信息量高'——色相边界制造虚假的类别差异"
+presentation_application: >
+  每幕图表必须有一次"被设计好的比较"：用高亮/注释/直接标注把注意收窄到支撑本幕断言的
+  那一次比较（与 assertion-evidence 结构直接咬合）；现场演示用语言与手势同步引导；
+  连续数值用顺序型单色相色阶，禁止彩虹色阶；圆/气泡按面积编码；Y 轴截断须显式声明且
+  仅用于有充分理由的场景；面向非专业受众的不确定性用离散样例而非误差线；
+  涉风险/概率信息用频率与同分母图标阵列。
+confidence: high
+last_reviewed: 2026-09-08

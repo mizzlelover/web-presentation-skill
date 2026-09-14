@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "title": "贵州茅台 2024 年年度报告（前 45 页）",
+  "publisher": "巨潮资讯网/公司公告",
+  "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+  "date": "2025-04-03"
+ },
+ "situation": "Business Analysis Briefing / 经营分析方法学习（经营分析类）",
+ "situation_rationale": "材料是真实上市公司年报（经营分析类典型材料），用途是以它为范例演示经营分析的读法：增长、渠道、现金流、分红四步。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "经营分析学习者与集团财务人员",
+  "expertise": "intermediate",
+  "prior_knowledge": "懂基本财务指标",
+  "decision_power": "none",
+  "attitude": "neutral",
+  "motivation": "学习年报的结构化读法",
+  "concerns": [
+   "增长构成",
+   "渠道结构",
+   "现金流与利润的关系"
+  ],
+  "objections": [
+   "大公司数据没有参考性"
+  ],
+  "time_budget": "10 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "structured-findings",
+  "likely_questions": [
+   "现金流为何大增",
+   "直销与批发的毛利差"
+  ]
+ },
+ "central_thesis": "茅台 2024 年报的看点不是 15.71% 的增速，而是三张报表的联动：收入 +15.71% 的同时经营现金流 +38.85%（回款质量）、毛利率 95.33%/89.42% 的双渠道结构（直销提占比 vs 批发提增速）、346.71 亿分红有现金流背书——经营分析要读报表间的勾稽。",
+ "key_messages": [
+  "收入 1,708.99 亿（+15.71%）、归母净利 862.28 亿（+15.38%）——增长稳健",
+  "经营现金流 924.64 亿（+38.85%），增速远超收入——回款质量高",
+  "双渠道：直销 748.43 亿（毛利率 95.33%）vs 批发代理 957.69 亿（89.42%）——直销提毛利、批发提增速",
+  "分红 346.71 亿（每 10 股 276.24 元）——分红能力来自经营现金流"
+ ],
+ "supporting_structure": "总量 → 盈利质量 → 渠道结构 → 现金流 → 分红 → 方法论小结",
+ "duration_minutes": 10,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；占比类推导数字（如直销占比 43.8%）须标注推导；不构成投资建议",
+ "anti_goals": [
+  "不做投资建议",
+  "不引用附表级数据",
+  "不预测股价"
+ ]
+}

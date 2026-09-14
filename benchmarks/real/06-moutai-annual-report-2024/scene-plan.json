@@ -1,0 +1,186 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "贵州茅台 2024 年报解读 · 增长、渠道与现金分红",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "这份年报的看点不是 15.71%，<br>而是::三张报表的联动::",
+   "chart": null,
+   "source_refs": [
+    "营业收入 170,899,152,276.34 147,693,604,994.14 15.71",
+    "经营活动产生的现金流量净额 92,463,692,168.43 66,593,247,721.09 38.85"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "total",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "总量：营收 ::1,708.99 亿::，连续三年上台阶",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "亿元",
+    "categories": [
+     "2022",
+     "2023",
+     "2024"
+    ],
+    "series": [
+     {
+      "name": "营业收入",
+      "data": [
+       1241.0,
+       1476.94,
+       1708.99
+      ]
+     }
+    ],
+    "caption": "口径：营业收入（亿元，由年报原值 124,099,843,771.99 / 147,693,604,994.14 / 170,899,152,276.34 元换算为亿元）；来源：年报第二节"
+   },
+   "source_refs": [
+    "营业收入 170,899,152,276.34 147,693,604,994.14 15.71",
+    "归属于上市公司股东的净利润 86,228,146,421.62 74,734,071,550.75 15.38"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "quality",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "盈利质量：ROE ::36.02%::（+1.83pp），EPS 68.64 元",
+   "chart": null,
+   "source_refs": [
+    "基本每股收益（元／股）68.64",
+    "加权平均净资产收益率（%）36.02 34.19 增加1.83个百分点"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "channel",
+   "arg_ref": "C3",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "双渠道：直销 ::748.43 亿::（毛利率 95.33%）vs 批发 ::957.69 亿::（89.42%）",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "亿元",
+    "categories": [
+     "直销",
+     "批发代理"
+    ],
+    "series": [
+     {
+      "name": "营业收入",
+      "data": [
+       748.43,
+       957.69
+      ]
+     }
+    ],
+    "caption": "口径：渠道营业收入（直销 74,843,327,030.79 元 / 批发代理 95,768,511,021.23 元，换算为亿元）；毛利率分别为 95.33% / 89.42%；来源：年报第三节渠道表"
+   },
+   "source_refs": [
+    "直销 74,843,327,030.79 3,493,952,839.59 95.33 11.32",
+    "批发代理 95,768,511,021.23 10,136,042,973.30 89.42 19.73"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "cashflow",
+   "arg_ref": "C2",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "现金流：经营净额 ::924.64 亿::，增速 38.85% 远超收入",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "亿元",
+    "categories": [
+     "Q1",
+     "Q2",
+     "Q3",
+     "Q4"
+    ],
+    "series": [
+     {
+      "name": "经营现金流净额（分季度）",
+      "data": [
+       91.87,
+       274.34,
+       78.0,
+       480.42
+      ]
+     }
+    ],
+    "caption": "口径：分季度经营活动现金流量净额（由 9,187,422,415.09 / 27,434,411,397.54 / 7,799,552,404.82 / 48,042,305,950.98 元换算为亿元）；来源：年报第二节分季度数据"
+   },
+   "source_refs": [
+    "经营活动产生的现金流量净额 92,463,692,168.43 66,593,247,721.09 38.85"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "dividend",
+   "arg_ref": "C4",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "分红：每 10 股 ::276.24 元::，合计 346.71 亿——有现金流背书",
+   "chart": null,
+   "source_refs": [
+    "向全体股东每10股派发现金红利276.24元（含税）",
+    "以此计算合计派发现金红利34,671,299,522.40元（含税）"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "method",
+   "arg_ref": "C5",
+   "cognitive_job": "summarize",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "方法小结：读年报的四步——::增速 → 现金流 → 结构 → 分红::",
+   "chart": null,
+   "source_refs": [
+    "营业收入 170,899,152,276.34 147,693,604,994.14 15.71"
+   ]
+  },
+  {
+   "order": 8,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "好年报的标准：::三张报表互相作证::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 9,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

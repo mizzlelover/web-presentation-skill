@@ -1,0 +1,1256 @@
+# Seed Corpus Registry — 种子语料来源登记（§12/§75）
+# authority: S=meta-analysis/系统综述  A=原始实验  B=权威专著/手册  C=专业实践资料
+# acquisition 按补丁 §3 记录获取阶梯；2026-09-08 起旧条目诚实降级为 found/memory_based，
+# 仅 acquisition.ladder >= validated 的来源可作为 Knowledge Node 核心证据。
+sources:
+
+  # ── Cognitive Science ──
+  - source_id: SRC-SWELLER-1988
+    title: "Cognitive load during problem solving: Effects on learning"
+    authors: [John Sweller]
+    year: 1988
+    source_type: experiment
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [cognitive_load, working_memory]
+    notes: 认知负荷理论奠基：工作记忆容量有限，教学设计须管理内在/外在/相关负荷。
+  - source_id: SRC-BADDELEY-1992
+    title: "Working Memory"
+    authors: [Alan Baddeley]
+    year: 1992
+    source_type: review
+    authority: S
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [working_memory]
+    notes: 工作记忆多成分模型：中央执行、语音环路、视空画板（后加情景缓冲器）。
+  - source_id: SRC-MILLER-1956
+    title: "The Magical Number Seven, Plus or Minus Two"
+    authors: [George A. Miller]
+    year: 1956
+    source_type: review
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [working_memory]
+    notes: 短期记忆容量约 7±2 组块；注意：常被误用为"每页 7 条要点"——这是误读（见 anti_patterns）。
+  - source_id: SRC-KAHNEMAN-2011
+    title: "Thinking, Fast and Slow"
+    authors: [Daniel Kahneman]
+    year: 2011
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [attention, persuasion, processing_fluency]
+    notes: 双系统理论；认知流畅性影响信任与判断。
+  - source_id: SRC-MAYER-2001
+    title: "Multimedia Learning"
+    authors: [Richard E. Mayer]
+    year: 2001
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [multimedia_learning, cognitive_load]
+    notes: 多媒体学习九大原则（Coherence/Signaling/Redundancy/Contiguity/Segmenting/Modality/Pretraining/Personalization）的实验基础。
+  - source_id: SRC-MAYER-HANDBOOK-2014
+    title: "The Cambridge Handbook of Multimedia Learning (2nd ed.)"
+    authors: [Richard E. Mayer (ed.)]
+    year: 2014
+    source_type: handbook
+    authority: S
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [multimedia_learning]
+    notes: 各原则效应量与边界条件的汇总；优先于单篇实验引用。
+
+  # ── Presentation Research ──
+  - source_id: SRC-ALLEY-2003
+    title: "The Craft of Scientific Presentations"
+    authors: [Michael Alley]
+    year: 2003
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [assertion, evidence, scientific_presentation]
+    notes: Assertion-Evidence 结构倡导者：句断言标题 + 视觉证据取代短语标题+项目符号。
+  - source_id: SRC-ALLEY-2006-AE
+    title: "Rethinking the Design of Presentation Slides: The Assertion-Evidence Structure (experimental studies)"
+    authors: [Michael Alley et al.]
+    year: 2006
+    source_type: experiment
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [assertion, evidence]
+    notes: 技术/科研演示中 assertion-evidence 结构提升理解与回忆的实验证据；边界：主要验证于工程/科研受众。
+  - source_id: SRC-GARRETT-2016
+    title: "The assertion-evidence model of presentations (replication & comprehension studies)"
+    authors: [Garrett, Alley et al.]
+    year: 2016
+    source_type: experiment
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [assertion, slide_comprehension]
+    notes: 句标题（sentence headline）vs 短语标题的理解差异研究。
+  - source_id: SRC-DUARTE-2008
+    title: "slide:ology"
+    authors: [Nancy Duarte]
+    year: 2008
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [presentation_design, visual_hierarchy]
+    notes: 实践方法论：视觉化思维；属 D 级实践启发，命题需验证。
+  - source_id: SRC-DUARTE-2010
+    title: "Resonate"
+    authors: [Nancy Duarte]
+    year: 2010
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [narrative, storytelling]
+    notes: "'What is / What could be' 对比节奏与 S.T.A.R. 时刻；实践框架。"
+  - source_id: SRC-REYNOLDS-2008
+    title: "Presentation Zen"
+    authors: [Garr Reynolds]
+    year: 2008
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [presentation_design, information_density]
+    notes: 极简主义实践；注意其语境是 Stage Mode 讲演，不必然适用 Reader/技术文档。
+  - source_id: SRC-ATKINSON-2005
+    title: "Beyond Bullet Points"
+    authors: [Cliff Atkinson]
+    year: 2005
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [narrative, slide_structure]
+    notes: 用叙事结构组织演示；与 Mayer 冗余原则的对话：BBP 主张屏幕不放完整句（有争议）。
+  - source_id: SRC-ABELA-2008
+    title: "Advanced Presentations by Design"
+    authors: [Andrew Abela]
+    year: 2008
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [presentation_design, data_visualization]
+    notes: Extreme Presentation 方法：按"比较/关系"选择图表的 Chart Chooser。
+  - source_id: SRC-WEISSMAN-2003
+    title: "Presenting to Win"
+    authors: [Jerry Weissman]
+    year: 2003
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [persuasion, delivery]
+    notes: IPO 路演实践；WIIFY（What's In It For You）受众中心原则。
+  - source_id: SRC-TUFTE-2003
+    title: "The Cognitive Style of PowerPoint"
+    authors: [Edward R. Tufte]
+    year: 2003
+    source_type: review
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [information_density, data_visualization]
+    notes: 著名批评：PPT 降低信息密度与论证质量；注意这是论战性文章（polemic），非实验研究——其"低密度=低质"命题与 NASA 报告研究相关但与 Stage Mode 证据存在张力。
+  - source_id: SRC-DOUMONT-2005
+    title: "The Cognitive Style of PowerPoint: Slides Are Not All Evil (response & NASA analysis)"
+    authors: [Jean-luc Doumont]
+    year: 2005
+    source_type: review
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [information_density, technical_presentation]
+    notes: 对 Tufte 的平衡回应：问题在误用而非工具；技术沟通需要自足 slide。
+
+  # ── Communication / Persuasion ──
+  - source_id: SRC-ARISTOTLE-RHETORIC
+    title: "Rhetoric"
+    authors: [Aristotle]
+    year: -350
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [persuasion, trust, emotion]
+    notes: Ethos / Pathos / Logos 三诉求框架。
+  - source_id: SRC-CIALDINI-1984
+    title: "Influence"
+    authors: [Robert Cialdini]
+    year: 1984
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [persuasion]
+    notes: 六（七）大说服原则；部分原则（如社会认同）有实验支持，实践泛化需注意语境。
+  - source_id: SRC-PETTY-1986
+    title: "The Elaboration Likelihood Model of Persuasion"
+    authors: [Richard Petty, John Cacioppo]
+    year: 1986
+    source_type: review
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [persuasion]
+    notes: ELM：中心路径 vs 外周路径；受众动机/能力决定信息应更论证密集还是线索密集。
+  - source_id: SRC-MINTO-1987
+    title: "The Minto Pyramid Principle"
+    authors: [Barbara Minto]
+    year: 1987
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [argumentation, slide_structure]
+    notes: 金字塔原理与 SCQA；咨询业标准实践，属 D 级，适用边界：决策型/咨询型演示。
+  - source_id: SRC-BITZER-1968
+    title: "The Rhetorical Situation"
+    authors: [Lloyd Bitzer]
+    year: 1968
+    source_type: review
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [persuasion, situation]
+    notes: 修辞情境论：exigence/audience/constraints——Situation First 的理论根源之一。
+
+  # ── Data Visualization ──
+  - source_id: SRC-TUFTE-1983
+    title: "The Visual Display of Quantitative Information"
+    authors: [Edward R. Tufte]
+    year: 1983
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [data_visualization]
+    notes: data-ink ratio、chartjunk；注意：极简数据墨水比在"记忆度"研究（Bateman 2010）中存在冲突证据。
+  - source_id: SRC-BATEMAN-2010
+    title: "Useful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts"
+    authors: [Scott Bateman et al.]
+    year: 2010
+    source_type: experiment
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [data_visualization, memory]
+    notes: 冲突证据：适度视觉修饰不损害理解且提升长期记忆——对 Tufte 极简主义的重要边界。
+  - source_id: SRC-FEW-2004
+    title: "Show Me the Numbers"
+    authors: [Stephen Few]
+    year: 2004
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [data_visualization]
+    notes: 商业图表选择实践体系；基于感知研究。
+  - source_id: SRC-KNAFLIC-2015
+    title: "Storytelling with Data"
+    authors: [Cole Nussbaumer Knaflic]
+    year: 2015
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [data_visualization, storytelling]
+    notes: 数据叙事实践：declutter/focus attention/tell story。
+  - source_id: SRC-CAIRO-2016
+    title: "The Truthful Art"
+    authors: [Alberto Cairo]
+    year: 2016
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [data_visualization, trust]
+    notes: 可视化的真实性与不确定性表达。
+  - source_id: SRC-WARE-2012
+    title: "Information Visualization: Perception for Design (3rd ed.)"
+    authors: [Colin Ware]
+    year: 2012
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [visual_perception, data_visualization]
+    notes: 视觉感知与编码效率（位置>长度>角度>面积>颜色饱和度）的感知科学基础。
+  - source_id: SRC-CLEVELAND-1984
+    title: "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods"
+    authors: [William Cleveland, Robert McGill]
+    year: 1984
+    source_type: experiment
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [visual_perception, data_visualization]
+    notes: 图形感知排序实验：位置/长度编码最准确，面积/体积最差。注意：JASA 原文付费墙未取得（保持 found/memory_based）；可验证链为其配套实验 SRC-CLEVELAND-1986（已全文验证）与复现研究（待获取）。
+
+  # ── Visual Design ──
+  - source_id: SRC-GESTALT-WERTHEIMER
+    title: "Gestalt principles of perceptual organization (tradition)"
+    authors: [Wertheimer, Koffka, Köhler]
+    year: 1923
+    source_type: review
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [visual_perception, visual_hierarchy]
+    notes: 接近/相似/连续/闭合/共同命运——分组与层级的感知基础。
+  - source_id: SRC-WILLIAMS-1994
+    title: "The Non-Designer's Design Book"
+    authors: [Robin Williams]
+    year: 1994
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [visual_hierarchy, typography]
+    notes: CRAP（对比/重复/对齐/接近）四原则；入门实践，与 Gestalt 机制一致。
+  - source_id: SRC-BERNARD-2002
+    title: "Optimal web typography (readability studies)"
+    authors: [Michael Bernard et al.]
+    year: 2002
+    source_type: experiment
+    authority: A
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [typography, readability]
+    notes: 屏幕字号/行宽/行距对阅读速度与偏好的影响研究系列。
+
+  # ── Public Speaking / Delivery ──
+  - source_id: SRC-LUCAS-SPEAKING
+    title: "The Art of Public Speaking"
+    authors: [Stephen Lucas]
+    year: 2014
+    source_type: book
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [delivery, qa]
+    notes: 受众中心演讲学教材；Q&A 管理与现场适应。
+  - source_id: SRC-GALLO-2010
+    title: "The Presentation Secrets of Steve Jobs"
+    authors: [Carmine Gallo]
+    year: 2010
+    source_type: book
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [delivery, storytelling]
+    notes: 发布会式演示的实践拆解；D 级实践启发。
+
+  # ── Web / Runtime（技术参考，不属于方法论证据）──
+  - source_id: SRC-REVEALJS
+    title: "Reveal.js documentation"
+    authors: [Hakim El Hattab]
+    year: 2024
+    source_type: professional
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [web_rendering]
+    notes: HTML 幻灯片框架；Runtime Reference 之一。
+  - source_id: SRC-SLIDEV
+    title: "Slidev documentation"
+    authors: [Anthony Fu]
+    year: 2024
+    source_type: professional
+    authority: C
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: practitioner_framework
+    domain: [web_rendering]
+    notes: Markdown 驱动的演示框架；Runtime Reference。
+  - source_id: SRC-WEBANIM-W3C
+    title: "Web Animations API (W3C)"
+    authors: [W3C]
+    year: 2023
+    source_type: professional
+    authority: B
+    acquisition:
+      ladder: found
+      acquired_how: null
+      read_sections: null
+      access_level: null
+      annotated_at: null
+      validated_by: null
+      verification: memory_based
+    knowledge_type: scientific
+    domain: [motion, web_rendering]
+    notes: 原生动画控制（play/pause/reverse/seek）标准。
+
+  # ── 补丁执行后真实获取并验证的来源（2026-09-08）──
+  - source_id: SRC-SWELLER-2019
+    title: "Cognitive Architecture and Instructional Design: 20 Years Later"
+    authors: [John Sweller, Jeroen J. G. van Merriënboer, Fred Paas]
+    year: 2019
+    source_type: review
+    doi: "10.1007/s10648-019-09465-5"
+    url: "https://link.springer.com/article/10.1007/s10648-019-09465-5"
+    authority: S
+    domain: [cognitive_load, working_memory, instructional_design]
+    notes: >
+      CLT 20 年官方修订综述（开放获取 CC-BY，全文已读）。关键修订：germane load 不再计入总负荷，
+      而是把工作记忆资源从外在活动再分配到内在活动；内在负荷=元素交互性×学习者已有知识。
+      系统综述七大效应：goal-free / worked example（高专长者效果减弱，expertise reversal 前提）/
+      completion / split-attention（Tarmizi & Sweller 1988，含时间维度 Mayer & Anderson 1992）/
+      redundancy（Chandler & Sweller 1991）/ modality（Mousavi 1995；Ginns 2005 元分析）/
+      variability（Paas & van Merriënboer 1994：低负荷时增加变异有益）。
+      理论基础升级为进化教育心理学五大生物学首要原则。引 Sala & Gobet 2017：通用认知技能不可教。
+    acquisition:
+      ladder: validated
+      acquired_how: "FetchURL 读取 Springer 开放获取全文（CC-BY）"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/cognitive-load.yaml"
+      validated_by: "2026-09-08 全文精读，效应与机制逐条核对原文表述"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-GARNER-ALLEY-2013
+    title: "How the Design of Presentation Slides Affects Audience Comprehension"
+    authors: [Joanna K. Garner, Michael Alley]
+    year: 2013
+    source_type: experiment
+    doi: null
+    url: "http://writing.engr.psu.edu/ae_comprehension.pdf"
+    authority: A
+    domain: [assertion, evidence, slide_comprehension]
+    notes: >
+      AE vs 传统短语标题+项目符号（CP）对照实验，全文已读。N=110 工程本科生（AE 59 / CP 51），
+      MRI 扫描原理 8 分钟演示，CP 均 41.5 词/页 vs AE 21.2 词/页，旁白相同 1000 词。
+      论文总分 t(93.43)=3.67, p<.001, d=0.81；延迟一周测试 t(93)=4.34, d=0.89；
+      动态因果表达 d=0.60；误解总数 d=0.47；感知心智努力 AE 更低（d=-0.50）；
+      即时选择题仅高阶推理/模拟题显著（F=11.25, p<.01, η²=.09），事实回忆无差异。
+      边界：工程/技术内容、教学情境、大学生样本；未验证营销/叙事/高管场景。
+    acquisition:
+      ladder: validated
+      acquired_how: "FetchURL 读取 Penn State 托管 PDF 全文"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/assertion-evidence.yaml"
+      validated_by: "2026-09-08 全文精读，效应量与样本量逐项核对原文表格"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-REY-2019
+    title: "A Meta-analysis of the Segmenting Effect"
+    authors: [Günter Daniel Rey, Maik Beege, Steve Nebel, Maria Wirzberger, Tobias H. Schmitt, Sascha Schneider]
+    year: 2019
+    source_type: meta_analysis
+    doi: "10.1007/s10648-018-9456-4"
+    url: "https://maria-wirzberger.de/wp-content/uploads/2019/01/Rey2019_Article_AMeta-analysisOfTheSegmentingE.pdf"
+    authority: S
+    domain: [multimedia_learning, segmenting, cognitive_load]
+    notes: >
+      分段效应元分析（作者自存档全文，31 页已读）。56 项研究 / 88 组成对比较 / N=7713。
+      保持 d=0.32、迁移 d=0.36、认知负荷降低 d=0.23、学习时间增加 d=-0.92（该指标有发表偏倚，谨慎解释）。
+      系统定速分段同样显著（保持 d=0.42 / 迁移 d=0.35）；学习者定速分段仅迁移显著。
+      调节：高先验知识者在保持上获益更多（与假设方向相反）；重复机会与顺序操纵无调节作用。
+    acquisition:
+      ladder: validated
+      acquired_how: "作者（Wirzberger）官网自存档 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/segmenting.yaml"
+      validated_by: "2026-09-08 全文精读，效应量/样本量/调节分析逐项核对原文 Table 3 与 Discussion"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "多媒体教学切分为（有意义且连贯的）学习者定速片段是否优于连续整体呈现？"
+      sample_scope: "1990–2018 年文献，ERIC/SSCI/PsycINFO/PSYNDEX/Google Scholar；英文；平均被试年龄 19.71 岁，56.4% 女性；主题以自然科学/机械原理为主"
+      number_of_studies: 56
+      experimental_context: "88 组成对比较（保持 68 / 迁移 57 / 负荷 20 / 时间 19）；全部组间设计；材料平均时长约 19 分钟，平均片段长 75.49 秒"
+      main_effect: "分段显著提升保持与迁移、降低总体认知负荷、增加学习时间；系统定速分段四指标全确认，学习者定速分段仅迁移显著"
+      effect_size: "保持 d=0.32 (SE=0.06)；迁移 d=0.36 (SE=0.06)；认知负荷 d=0.23 (SE=0.08)；学习时间 d=-0.92 (SE=0.37，有发表偏倚 τ=0.51, p=.03)；系统定速：保持 d=0.42 / 迁移 d=0.35 / 负荷 d=0.29 / 时间 d=-0.87"
+      heterogeneity: "全部指标 Q 检验高度显著（如保持 Q=2093.94, df=66, p<.001），存在调节变量；随机效应模型"
+      moderators: ["先验知识（高知识者保持获益更多，方向与假设相反）", "重复机会（无调节）", "顺序操纵（无调节）", "定速方式（系统 vs 学习者）"]
+      limitations: "元分析非实验性，三种机制解释（组块化/更多加工时间/个体配速）无法互相排除；先验知识变异受限（仅 1 项真专家研究）；学习时间存在发表偏倚；假定所有研究都按有意义单元切分"
+      presentation_implication: "把演示切分为有意义的幕/段并给予受众（或演讲者）节奏控制权，对理解迁移有中小效应支持；技术内容分段边界应对齐事件自然边界（temporal cueing）；分段本身增加总时长，需预算时间"
+  - source_id: SRC-CLEVELAND-1986
+    title: "An Experiment in Graphical Perception"
+    authors: [William S. Cleveland, Robert McGill]
+    year: 1986
+    source_type: experiment
+    doi: "10.1016/S0020-7373(86)80019-0"
+    url: "http://snoid.sv.vt.edu/~npolys/projects/safas/science.pdf"
+    authority: A
+    domain: [visual_perception, data_visualization]
+    notes: >
+      1984 JASA 论文的配套实验报告（Int. J. Man-Machine Studies 25:491-500），全文已读（10 页）。
+      N=127（24 高中生 / 60 大学生 / 43 技术训练专业人员），每人 210 次判断（7 类判断 × 2 标准大小 × 15 真值）。
+      精确度排序：两类位置判断最准 > 长度 > 角度与斜率 > 面积最末；被判断对象间距离增大则误差上升；
+      技术训练程度不影响精确度（三组误差分布相似）。边界：斜率判断结论仅对远离 0°/90° 的线段成立；
+      角度判断避开了 90°/180° 特殊角；刺激为孤立几何图形而非真实图表。
+    acquisition:
+      ladder: validated
+      acquired_how: "VT 站点托管 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/graphical-perception.yaml"
+      validated_by: "2026-09-08 全文精读，排序/样本/边界条件逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-FRANCONERI-2021
+    title: "The Science of Visual Data Communication: What Works"
+    authors: [Steven L. Franconeri, Lace M. Padilla, Priti Shah, Jeffrey M. Zacks, Jessica Hullman]
+    year: 2021
+    source_type: review
+    doi: "10.1177/15291006211051956"
+    url: "https://gwern.net/doc/design/visualization/2021-franconeri.pdf"
+    authority: S
+    domain: [data_visualization, visual_perception, attention, uncertainty]
+    notes: >
+      PSPI 权威综述（22(3):110-161，52 页，© The Authors 2021 开放版全文已读）。核心结论：
+      视觉系统可在转瞬之间提取整体统计量（均值/极值），但子集间比较是串行的、每秒仅数次——
+      因此必须用分组线索/注释/高亮把比较收窄到支撑结论的那一个；现场演示中靠语言与手势引导注意。
+      幻觉与误读清单：Y 轴截断夸大差异；圆/方块须映射面积而非直径；折线斜率增大扭曲差异知觉；
+      连续数值映射彩虹色相夸大跨界差异；色盲可达性红配蓝优于红配绿。
+      不确定性：对非专业受众避免误差线（被误读为数据范围），改用离散结果样例（HOP/分位点图）。
+      风险沟通：用绝对率不用相对率、频率（3/10）不用百分比（30%）、同分母图标阵列；
+      拟人图标提升低图表素养者的风险记忆。受众定制：图表素养/ numeracy / 领域知识 / 工作记忆容量。
+    acquisition:
+      ladder: validated
+      acquired_how: "gwern.net 托管的作者开放版 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, results, discussion]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/dataviz-communication.yaml"
+      validated_by: "2026-09-08 精读摘要/知觉精确性/知觉效率/可理解性/不确定性/风险沟通章节与文末 Summary of Key Guidelines"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-SCHNEIDER-2018
+    title: "A Meta-analysis of How Signaling Affects Learning with Media"
+    authors: [Sascha Schneider, Maik Beege, Steve Nebel, Günter Daniel Rey]
+    year: 2018
+    source_type: meta_analysis
+    doi: "10.1016/j.edurev.2017.11.001"
+    url: "https://doi.org/10.1016/j.edurev.2017.11.001"
+    authority: S
+    domain: [signaling, multimedia_learning]
+    notes: >
+      信号效应元分析（Elsevier 付费墙，仅取得摘要+权威二手转述，按补丁禁止推断实验条件与边界）。
+      摘要自报：103 项研究、N=12,201；保持 g=0.53（中）、迁移 g=0.33（小）。
+      二手转述（TUM Clearing House，未核实原文）：认知负荷 g=0.25、动机 g=0.13，先验知识调节——
+      这些数值标记 UNVERIFIED，不得作为规则依据。
+    acquisition:
+      ladder: found
+      acquired_how: "摘要（出版方页面）+ TUM Clearing House 二手转述；全文付费墙未取得"
+      read_sections: [abstract]
+      access_level: abstract_only
+      annotated_at: null
+      validated_by: null
+      verification: unverified
+    knowledge_type: scientific
+  - source_id: SRC-TRYPKE-2023
+    title: "Two Types of Redundancy in Multimedia Learning: A Literature Review"
+    authors: [Maren Trypke, Franziska Stebner, Joachim Wirth, Jan L. Plass]
+    year: 2023
+    source_type: systematic_review
+    doi: "10.3389/fpsyg.2023.1148035"
+    url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1148035/pdf"
+    authority: S
+    domain: [redundancy, multimedia_learning, cognitive_load]
+    notes: >
+      冗余效应系统综述（Frontiers in Psychology 开放获取，28 页已读）：54 篇文章 / 63 项研究（1991–2021）。
+      提出两类冗余：内容冗余（信息重复/无关）与工作记忆通道冗余（多源竞争同一通道）。
+      四种场景结论：(1) 可视化+讲解：内容冗余损害高先验知识者（expertise reversal），新手受益；
+      (2) 可视化+文字：内容+通道双冗余多为负面，但文字起信号/空间整合作用时可转正；
+      (3) 讲解+文字（言语冗余）：常为正面，调节因素=低先验知识、低重叠度（关键词优于全文）、
+      高复杂度、学习者定速、年长者（工作记忆补偿）；
+      (4) 可视化+讲解+全文文字：逐字重复损害学习（Mayer et al. 2001; Leahy et al. 2003），
+      关键词/摘要式文字无损害（Mayer & Johnson 2008）。
+      引 Adesope & Nesbit 2012 元分析：口播+文字优于纯口播仅限低知识/系统定速/无图材料。
+    acquisition:
+      ladder: validated
+      acquired_how: "Frontiers 官方 OA PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/redundancy.yaml"
+      validated_by: "2026-09-08 全文精读，四场景研究分布（Table 2-8）与调节因素逐项核对"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-SCHROEDER-2018
+    title: "Spatial Contiguity and Spatial Split-Attention Effects in Multimedia Learning Environments: A Meta-Analysis"
+    authors: [Noah L. Schroeder, Ada T. Cenkci]
+    year: 2018
+    source_type: meta_analysis
+    doi: "10.1007/s10648-018-9435-9"
+    url: "https://eric.ed.gov/?id=EJ1186641"
+    authority: S
+    domain: [spatial_contiguity, split_attention, multimedia_learning]
+    notes: >
+      空间临近/空间分散注意元分析（付费墙，仅摘要级）。摘要自报：随机效应模型 58 个独立比较
+      （n=2426），整合设计总体效应 g=0.63（p<.001）；调节分析显示整合设计在多种干预与情境
+      调节变量下均有益。边界与具体调节方向未经全文核实，禁止细化引用。
+    acquisition:
+      ladder: found
+      acquired_how: "ERIC 收录页摘要；Springer 正文付费墙未取得"
+      read_sections: [abstract]
+      access_level: abstract_only
+      annotated_at: null
+      validated_by: null
+      verification: unverified
+    knowledge_type: scientific
+  - source_id: SRC-COWAN-2010
+    title: "The Magical Mystery Four: How Is Working Memory Capacity Limited, and Why?"
+    authors: [Nelson Cowan]
+    year: 2010
+    source_type: review
+    doi: "10.1177/0963721409359277"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2864034/"
+    authority: S
+    domain: [working_memory, cognitive_load]
+    notes: >
+      工作记忆容量综述（PMC 全文已读）。核心：中央存储容量上限为 3–5 个有意义组块（青年成人），
+      而非 Miller 的 7±2——后者依赖复述与组块化策略。观察该上限的边界条件：抑制复述/分组、
+      掩蔽感觉记忆（Saults & Cowan 2007：消除感觉记忆后跨视听通道总容量约 4 项；
+      感觉记忆完整时双通道优于单通道）。Chen & Cowan：无论单字还是学习过的词对，均约 3 组块。
+      发展：7 岁儿童约 1.5 项，成人约 3 项；注意聚焦能力随年龄稳定，存储容量随年龄增长。
+      个体差异：存储容量与注意控制（排除无关项）均有独立贡献。成因未明：容量作为弱点
+      （神经激活循环/干扰）vs 容量作为优势（搜索效率、组块关联、规则学习）两派。
+    acquisition:
+      ladder: validated
+      acquired_how: "PMC 全文（Curr. Dir. Psychol. Sci. 19(1):51-57）"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/working-memory.yaml"
+      validated_by: "2026-09-08 全文精读，含结论与推荐读物，关键实验参数逐项核对"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-PETTY-1984
+    title: "Source Factors and the Elaboration Likelihood Model of Persuasion"
+    authors: [Richard E. Petty, John T. Cacioppo]
+    year: 1984
+    source_type: experiment
+    doi: null
+    url: "https://richardepetty.com/wp-content/uploads/2019/01/1984-acrsource-pettycacioppo.pdf"
+    authority: A
+    domain: [persuasion, audience, source_credibility]
+    notes: >
+      ELM 来源因素实证综述（Advances in Consumer Research 11:668-672，作者官网扫描件 6 页，
+      逐页视觉精读）。核心实验证据：
+      Petty, Cacioppo & Goldman 1981——高个人相关时论证质量大幅影响态度、来源专业度作为简单线索
+      无效；低相关时来源专业度无论论证强弱都提升说服。
+      Petty, Cacioppo & Schumann 1983——名人 vs 普通市民广告 × 论证强度：低涉入时名人更有效，
+      高涉入时仅论证强度影响态度。
+      中等/模糊涉入（Puckett et al. 1983；Heesacker et al. 1984）——来源线索被用来决定
+      "要不要认真想"：吸引性来源增强对强论证的同意、降低对弱论证的同意（偏向加工）。
+      极高涉入下来源本身可成为论证（如美容产品的吸引性来源=视觉证词）。
+      Hovland & Weiss 1951 重析：可信度效应在低个人相关主题上强、高相关主题上弱。
+    acquisition:
+      ladder: validated
+      acquired_how: "Petty 个人官网自存档扫描 PDF，pypdfium2 渲染逐页视觉精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/persuasion-elm.yaml"
+      validated_by: "2026-09-08 六页逐页视觉精读，各实验条件×结果交叉核对"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-AIPPERSBACH-2013
+    title: "How Slide Design Affects a Student Presenter's Understanding of the Content"
+    authors: [Shannon Marie Aippersbach, Michael Alley, Joanna K. Garner]
+    year: 2013
+    source_type: experiment
+    doi: null
+    url: "https://writing.engr.psu.edu/asee_5691.pdf"
+    authority: A
+    domain: [assertion, sentence_headline, presenter_comprehension]
+    notes: >
+      ASEE 2013 年会论文（Paper #5691，11 页全文已读）。讲者侧证据：
+      两组工程本科生（每组 >50 人，剔除混合结构约 10% 后 N≈53）阅读同一篇 MRI 原理文章，
+      分别被要求按 AE 结构或自选结构（实际多为短语标题+项目符号）制作 5 页幻灯片，
+      一天后突击论文式测验（双盲评分，22 个步骤/细节量规）。
+      总分：t(51)=2.62, p=0.01，AE 组 12.55/20 vs CP 组 10.68/20；
+      最复杂的第三题（梯度磁场）独立显著：F(1,52)=9.92, p<0.01（2.96/5 vs 1.97/5）；
+      误解更少（0.93 vs 1.12）。
+      反向发现：次要信息回忆 CP 组略高（0.24 vs 0.19）——项目符号列表装得下更多次要细节，
+      但主过程步骤记忆反而更差。
+    acquisition:
+      ladder: validated
+      acquired_how: "Penn State writing.engr.psu.edu 官方托管 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/assertion-evidence.yaml"
+      validated_by: "2026-09-08 全文精读，t/F 统计量、Table 1 各分项得分逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-GARNER-2009-PSYCH
+    title: "Common Use of PowerPoint versus the Assertion-Evidence Structure: A Cognitive Psychology Perspective"
+    authors: [Joanna K. Garner, Michael Alley, Allen F. Gaudelli, Sarah E. Zappe]
+    year: 2009
+    source_type: theory_review
+    doi: null
+    url: "https://www.writing.engr.psu.edu/ae_psychology.pdf"
+    authority: A
+    domain: [assertion, sentence_headline, multimedia_learning, slide_defaults]
+    notes: >
+      Technical Communication 56(4):331-345，15 页全文已读。理论论证 + 语料观察：
+      (1) 语料观察——分析 2008 ASEE 年会演示（3 场大会报告、31 场最佳论文提名、
+      选择性分会），PowerPoint 默认版式强烈影响标题结构：各情境下 ≥80% 的页面采用短语标题；
+      默认文本框导致短语标题与项目符号列表的 topic-subtopic 结构。
+      (2) 理论映射——AE 结构（句断言标题+视觉证据）与多媒体学习原则对齐：
+      coherence（删除非必要信息）、signaling（句标题外显要点）、modality/双通道
+      （Paivio 双重编码：视觉证据+口播）、redundancy（避免屏幕文字与口播逐字重复）、
+      segmenting、personalization；指出常见做法（短语标题+ bullet 列表照读）违反这些原则。
+      (3) 设计细则——句标题不超过两行、左对齐、约 28pt；正文以视觉证据为主。
+      非随机实验，机制论证依赖引用文献，属理论性来源。
+    acquisition:
+      ladder: validated
+      acquired_how: "Penn State writing.engr.psu.edu 官方托管 PDF，curl 断点续传下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/assertion-evidence.yaml"
+      validated_by: "2026-09-08 全文精读，语料观察数据与设计细则逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-GINNS-2006
+    title: "Integrating Information: A Meta-Analysis of the Spatial Contiguity and Temporal Contiguity Effects"
+    authors: [Paul Ginns]
+    year: 2006
+    source_type: meta_analysis
+    doi: "10.1016/j.learninstruc.2006.10.001"
+    url: "https://eric.ed.gov/?id=EJ747512"
+    authority: A
+    domain: [multimedia_learning, contiguity, cognitive_load]
+    notes: >
+      空间/时间临近效应元分析（Learning and Instruction 16(6):511-525）。Elsevier 付费墙，
+      仅取得 ERIC 官方摘要：50 项独立研究；减少空间或时间分离的教学收益主假设获支持，
+      材料复杂度为显著调节变量——复杂材料中提升临近性可带来大幅学习收益。
+      按补丁 Schema，abstract_only 禁止推断具体效应量数值与实验条件细节，待全文获取后升级。
+    acquisition:
+      ladder: read
+      acquired_how: "ERIC 官方记录页摘要（EJ747512）"
+      read_sections: [abstract]
+      access_level: abstract_only
+      validated_by: null
+      verification: abstract_only
+    knowledge_type: scientific
+  - source_id: SRC-LIU-2022-TEMPORAL
+    title: "A New Application of the Temporal Contiguity Effect in Designing Narrated Slideshows"
+    authors: [Tzu-Chien Liu, Yi-Chun Lin, Fred Paas]
+    year: 2022
+    source_type: experiment
+    doi: "10.1007/s11423-021-10063-w"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8800848/"
+    authority: S
+    domain: [multimedia_learning, temporal_contiguity, slideshow_design, progressive_reveal]
+    notes: >
+      ETR&D 期刊实验（PMC 开放全文已读）。N=99（有效 96，台湾本科生，中文"正念"材料，
+      27 页幻灯片其中 10 页为处理页）。三条件对照：
+      CPK 关键点随口播逐条揭示 vs CPW 视觉整体一次性呈现（均与口播并发）vs SP 先口播后出图。
+      后测：F(2,93)=3.42, p=.037, ηp²=.07；CPK>SP d=.51（p=.03）；CPK>CPW d=.67（p=.01）；
+      CPW vs SP 不显著。学习效率：F(2,93)=61.37, p<.001, ηp²=.57；CPK>SP d=2.73；
+      CPW>SP d=1.87；CPK>CPW d=.68。认知负荷三组无差异（测量方法局限：27 页中仅 10 页处理，
+      整体评分稀释）。核心结论：时间临近效应在幻灯片中是否出现，取决于"并发的方式"——
+      只有关键点随口播逐条揭示（CPK）才触发效应，整体并发（CPW）不触发。
+    acquisition:
+      ladder: validated
+      acquired_how: "PMC 开放全文（PMC8800848）HTML 全文精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/temporal-contiguity.yaml"
+      validated_by: "2026-09-08 全文精读，F/t/d 统计量与 Table 2 均值逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-HEER-2010
+    title: "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design"
+    authors: [Jeffrey Heer, Michael Bostock]
+    year: 2010
+    source_type: experiment
+    doi: "10.1145/1753326.1753357"
+    url: "http://vis.stanford.edu/files/2010-MTurk-CHI.pdf"
+    authority: S
+    domain: [graphical_perception, visualization, crowdsourcing, chart_design]
+    notes: >
+      CHI 2010 论文（斯坦福 vis.stanford.edu 官方 PDF 全文已读，186 名 MTurk 被试）。
+      实验 1A：众包复现 Cleveland & McGill 比例判断（位置/长度/角度），结果与实验室研究吻合；
+      理论预测"角度劣于长度"未获支持（与 C&M 原结论一致）。
+      实验 1B：矩形面积判断（treemap/树图场景，108 trials × N=24）——平均精度与圆形面积相当；
+      纵横比 1:1（正方形）判断最差（p<0.05，两种显示条件下稳健），提示 squarified treemap
+      的"尽量接近正方形"策略在感知上并非最优；treemap 中其他元素不干扰判断。
+      实验 2：网格线透明度复现 Stone & Bartram——确认 alpha=0.2 为"安全"默认值；
+      数据密度影响显著 (F(3,2413)=3.49, p=0.015)，背景亮度不显著；屏幕分辨率/色深/操作系统
+      （gamma 1.8 vs 2.2）对选择有弱但显著影响。
+      实验 3：图表尺寸与网格线密度——40px 高度误差显著更高（p<0.001），超过 80px 后
+      精度进入平台期（0-100 刻度）；加网格线提升精度；网格线间距至少 8px。
+    acquisition:
+      ladder: validated
+      acquired_how: "斯坦福 vis.stanford.edu 官方托管 PDF（HTTP），curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/graphical-perception.yaml"
+      validated_by: "2026-09-08 全文精读，四组实验设计/统计量/结论逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-DEKONING-2009
+    title: "Towards a Framework for Attention Cueing in Instructional Animations: Guidelines for Research and Design"
+    authors: [Björn B. de Koning, Huib K. Tabbers, Remy M. J. P. Rikers, Fred Paas]
+    year: 2009
+    source_type: systematic_review
+    doi: "10.1007/s10648-009-9098-7"
+    url: "https://link.springer.com/article/10.1007/s10648-009-9098-7"
+    authority: S
+    domain: [attention, cueing, signaling, animation, cognitive_load]
+    notes: >
+      Educational Psychology Review 21:113-140，Springer 开放获取（CC-BY-NC）全文已读。
+      提出线索三功能框架（基于 Mayer CTML）：(1) selection 选择——引导注意至关键位置；
+      (2) organization 组织——强调材料结构；(3) integration 整合——外显元素间关系
+      （单一表征内 + 跨表征）。
+      知觉基础：独特颜色、亮度对比、运动起始/突变（onset transients）自下而上自动捕获注意
+      （dynamic default hypothesis: Franconeri & Simons 2003）；但纯运动本身不吸引注意，
+      只有使对象从背景中分离的运动才捕获。
+      认知机制：线索减少视觉搜索，降低外在负荷，释放工作记忆资源用于图式建构。
+      动画中的实证结论：线索可促进动画中信息的选择并有时改善学习；但组织性与关系性
+      线索证据不一致（迁移改善不稳定）；复杂度是调节变量——材料不够复杂时视觉线索无效
+      （Mautone & Mayer 2001：语言线索强效应、视觉线索无效，因动画结构简单）；
+      Jeung et al. 1997：只有复杂到"没有线索就无法理解"的可视化才从线索中受益。
+      设计准则：动画线索须为动态媒介专门设计，不能照搬静态文本/插图的有效线索
+      （箭头对快速小变化精度不足；变色线索不提供新信息但需被识别为"线索"）。
+    acquisition:
+      ladder: validated
+      acquired_how: "Springer 开放获取全文页（CC-BY-NC）FetchURL 全文精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/attention-cueing.yaml"
+      validated_by: "2026-09-08 全文精读，三功能框架/各实证研究结论/边界条件逐项核对"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-XIE-2016-CN
+    title: "多媒体学习中线索效应的元分析（A Meta-Analysis of Cueing Effects in Multimedia Learning）"
+    authors: [谢和平, 王福兴, 周宗奎, 吴鹏]
+    year: 2016
+    source_type: meta_analysis
+    doi: "10.3724/SP.J.1041.2016.00540"
+    url: "https://journal.psych.ac.cn/xlxb/CN/article/downloadArticleFile.do?attachType=PDF&id=3368"
+    authority: S
+    domain: [attention, cueing, signaling, multimedia_learning]
+    notes: >
+      心理学报 48(5):540-555，中文开放全文已读。43 篇文献；
+      保持 44 个独立效应量（3910 人）g=0.53、迁移 41 个（3906 人）g=0.36、
+      线索区注视时间 14 个（938 人）g=0.50、注视次数 11 个（816 人）g=0.70。
+      与 Schneider et al. 2018（保持 g=0.53 / 迁移 g=0.33）独立互证。
+      调节效应：保持上 静态材料>动态、陈述性知识>程序性、理工科>文科；
+      迁移上 时空线索>物理线索、静态>动态、陈述性>程序性；
+      眼动上 物理线索的注视时间/次数高于时空线索。
+      机制解释：动态材料中元素运动本身具有强注意引导作用，与线索产生注意资源竞争，
+      线索凸显性被运动抵消——与 de Koning et al. 2009"动态媒介需专门设计线索"结论互证。
+    acquisition:
+      ladder: validated
+      acquired_how: "心理学报官网开放 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/attention-cueing.yaml"
+      validated_by: "2026-09-08 全文精读，四组效应量与调节分析逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "多媒体环境中线索能否引导注意并促进学习效果？其边界条件是什么？"
+      sample_scope: "严格标准筛选后 43 篇文献；保持 3910 人 / 迁移 3906 人 / 注视时间 938 人 / 注视次数 816 人"
+      number_of_studies: 43
+      experimental_context: "保持 44 个、迁移 41 个、注视时间 14 个、注视次数 11 个独立效应量；含眼动追踪研究"
+      main_effect: "线索显著提升保持（g=0.53）与迁移（g=0.36），并增加线索区注视时间（g=0.50）与注视次数（g=0.70）"
+      effect_size: "保持 g=0.53；迁移 g=0.36；注视时间 g=0.50；注视次数 g=0.70"
+      heterogeneity: "存在显著调节：线索类型（时空/物理）、材料动态性、知识类型、学科属性"
+      moderators: ["材料动态性（静态>动态，保持与迁移一致）", "知识类型（陈述性>程序性）", "学科属性（理工科>文科，仅保持）", "线索类型（迁移：时空>物理；眼动：物理>时空）"]
+      limitations: "作者自陈需进一步考察其他边界条件；动态材料中线索凸显性被运动元素抵消"
+      presentation_implication: "中文证据与 Schneider 2018 互证：信号线索中小效应稳健；Stage Mode（动态呈现）中线索必须与运动元素竞争注意——渐进揭示顺序即线索时序；Reader Mode（静态）线索收益更大，标题/高亮/编号应充分使用"
+  - source_id: SRC-VANLAER-2014
+    title: "The Extended Transportation-Imagery Model: A Meta-Analysis of the Antecedents and Consequences of Consumers' Narrative Transportation"
+    authors: [Tom van Laer, Ko de Ruyter, Luca M. Visconti, Martin Wetzels]
+    year: 2014
+    source_type: meta_analysis
+    doi: "10.1086/673383"
+    url: "https://openaccess.city.ac.uk/id/eprint/6755/1/SSRN-id2033192.pdf"
+    authority: S
+    domain: [narrative, transportation, persuasion, storytelling]
+    notes: >
+      Journal of Consumer Research 40(5):797-817，City Research Online 机构库接受版全文已读（78 页）。
+      132 个效应量 / 76 篇已发表与未发表文献。
+      叙事者侧前因：可识别角色 ρ=.20、可想象情节 ρ=.29、逼真性 ρ=.27（均 p<.001）。
+      接收者侧前因：熟悉度 ρ=.21、注意 ρ=.29、可传输性 transportability ρ=.30、
+      教育 ρ=.10、性别（女）ρ=.15；年龄不显著（ρ=.00）。
+      后果：情感反应 ρ=.57（大）、态度 ρ=.44（中）、意向 ρ=.31（中）、信念 ρ=.26、
+      叙事思维 ρ=.20、批判性思维 ρ=-.20（降低反驳，p<.01）。
+      发表偏倚稳健（file drawer N 80–6627）；方法学调节：非 Green & Brock 传输量表的研究
+      效应量虚高（ρ=.56 vs .34），提示跨操作化不可直接推广。
+    acquisition:
+      ladder: validated
+      acquired_how: "City Research Online 机构库接受版 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/narrative-transportation.yaml"
+      validated_by: "2026-09-08 全文精读，Table 2 各 ρ/z/p 与发表偏倚分析逐项核对"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "叙事传输（narrative transportation）的前因（叙事者侧/接收者侧）与后果（情感/认知/信念/态度/意向）各是什么量级？"
+      sample_scope: "跨营销/心理学/传播学/消费者研究/文学研究；76 篇已发表与未发表文献，132 个效应量"
+      number_of_studies: 76
+      experimental_context: "消费者叙事情境为主；逆方差加权相关 + 信度校正（ρ）；Q 统计检验异质性"
+      main_effect: "传输对情感反应大效应、态度/意向中效应、批判性思维负效应（降低反驳）；前因均为中小效应，年龄无效应"
+      effect_size: "情感 ρ=.57；态度 ρ=.44；意向 ρ=.31；信念 ρ=.26；叙事思维 ρ=.20；批判思维 ρ=-.20；可想象情节 ρ=.29；可传输性 ρ=.30"
+      heterogeneity: "Q 检验显著；测量量表为显著方法学调节变量"
+      moderators: ["测量量表（Green & Brock 传输量表 ρ=.34 更保守 vs 其他量表 ρ=.56 虚高）"]
+      limitations: "43% 原始研究未报告年龄；传输量表外操作化的效应量可能含共同方法偏差；元分析相关性非因果结构模型验证"
+      presentation_implication: "叙事的真实杠杆是'传输'而非'有故事'：可识别角色+可想象情节+逼真性是讲者可控的三旋钮；受众熟悉度与注意决定传输上限——叙事型演示前先评估受众对题材熟悉度；传输降低批判性思维，决策型场景慎用强叙事以免被质疑'回避论证'"
+  - source_id: SRC-BRAME-2016
+    title: "Effective Educational Videos: Principles and Guidelines for Maximizing Student Learning from Video Content"
+    authors: [Cynthia J. Brame]
+    year: 2016
+    source_type: review
+    doi: "10.1187/cbe.16-03-0089"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5132380/"
+    authority: A
+    domain: [multimedia_learning, video_design, engagement, segmenting]
+    notes: >
+      CBE—Life Sciences Education 15(4)，PMC 开放全文已读。综述教学视频设计三要素
+      （认知负荷/参与度/主动学习）并给出实践表（Table 1）：
+      四实践——signaling（屏幕关键词/颜色对比/箭头）、segmenting（≤6 分钟短视频/章节/点击前进）、
+      weeding（删除音乐/复杂背景/无关信息，且"何为无关"随学习者专业度变化）、
+      modality（视听双通道互补，talking head 浪费视觉通道）。
+      参与度实证（引 Guo et al. 2014，edX 690 万观看会话）：<6 分钟视频中位观看比例近 100%，
+      9-12 分钟约 50%，12-40 分钟约 20%；任何长度视频的中位参与时长上限约 6 分钟。
+      语速 185-254 词/分钟与参与度正相关；对话式语言（personalization）大效应（引 Mayer 2008）。
+      主动学习：插值提问降低走神并提升成绩（Szpunar et al. 2013）；可控制交互视频优于
+      不可控（Zhang et al. 2006）；引导性问题提升成绩（Lawson et al. 2006）。
+    acquisition:
+      ladder: validated
+      acquired_how: "PMC 开放全文（PMC5132380）FetchURL 全文精读"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/educational-video.yaml"
+      validated_by: "2026-09-08 全文精读，Table 1 实践清单与 Guo 2014 参与度数逐项核对"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-GUO-2014
+    title: "How Video Production Affects Student Engagement: An Empirical Study of MOOC Videos"
+    authors: [Philip J. Guo, Juho Kim, Rob Rubin]
+    year: 2014
+    source_type: empirical_study
+    doi: "10.1145/2556325.2566239"
+    url: "http://up.csail.mit.edu/other-pubs/las2014-pguo-engagement.pdf"
+    authority: S
+    domain: [video_design, engagement, mooc, presentation_media]
+    notes: >
+      ACM L@S 2014，MIT CSAIL 镜像 PDF 全文已读（10 页）。6.9 百万视频观看会话 / 4 门 edX 课程，
+      当时最大规模的视频参与度实证。七大发现（原文 Table 1 逐项核对）：
+      短视频显著更吸引——中位参与时长上限为 6 分钟；非正式 talking-head（教师坐桌前）
+      比演播室制作更吸引；Khan 式平板手写教程更吸引；高质量课堂录像直接上线不吸引；
+      讲解型与教程型视频的参与模式不同；语速快参与度更高；学生对视频后测评题的尝试率
+      随视频类型不同。
+      参与度代理指标 = 观看时长 + 视频后是否尝试测评题。
+    acquisition:
+      ladder: validated
+      acquired_how: "MIT CSAIL（up.csail.mit.edu）作者机构镜像 PDF，curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/educational-video.yaml"
+      validated_by: "2026-09-08 全文精读，Table 1 七大发现与参与度定义逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+  - source_id: SRC-SUNDARARAJAN-2020
+    title: "Keep It Coherent: A Meta-Analysis of the Seductive Details Effect"
+    authors: [NarayanKripa Sundararajan, Olusola Adesope]
+    year: 2020
+    source_type: meta_analysis
+    doi: "10.1007/s10648-020-09522-4"
+    url: "https://link.springer.com/content/pdf/10.1007/s10648-020-09522-4.pdf"
+    authority: S
+    domain: [multimedia_learning, coherence, seductive_details, information_density]
+    notes: >
+      Educational Psychology Review 32:707-734，Springer 官方 PDF 全文已读（28 页）。
+      58 篇文献 / 68 个效应量 / N=7521。总体效应 g=-0.33（随机效应模型，95%CI [-0.48,-0.18]）。
+      分结局：回忆 g=-0.37（k=19）；回忆+迁移混合 g=-0.41（k=43）；纯迁移不显著。
+      关键调节（逐项核对 Table 4-6）：
+      纸质材料 g=-0.61 vs 数字材料 g=-0.27（显著调节）；
+      静态诱惑细节 g=-0.43 vs 动态诱惑细节不显著（与瞬时性解释一致）；
+      允许回退/回读 g=-0.70（中到大）；无先验经验者 g=-0.52 vs 有经验者 g=-0.24（大 vs 小）；
+      语言调节：英语 -0.38 / 韩语 -0.52 / 中文材料 -0.75（大效应）；
+      **反向例外：数学与统计材料中诱惑细节呈显著正效应 g=+0.42**；
+      开放式回忆题测得的效应最大（g=-0.54）。
+    acquisition:
+      ladder: validated
+      acquired_how: "Springer 官方 content/pdf 直链（作者授权页提取），curl 下载 + pdfplumber 全文提取"
+      read_sections: [abstract, introduction, method, results, discussion, limitations]
+      access_level: full_text
+      annotated_at: "knowledge/evidence_packages/coherence-seductive-details.yaml"
+      validated_by: "2026-09-08 全文精读，总体效应与 Table 4-6 调节分析逐项核对原文"
+      verification: validated
+    knowledge_type: scientific
+    meta_extraction:
+      research_question: "有趣但无关的诱惑性细节（seductive details）是否损害学习？效应受哪些因素调节？"
+      sample_scope: "58 篇文献 68 个效应量，N=7521；跨语种（英/韩/中）、跨媒介（纸质/数字）、跨学科"
+      number_of_studies: 58
+      experimental_context: "随机效应元分析；回忆/迁移/混合结局；调节变量覆盖细节特征/材料设计/方法学三类"
+      main_effect: "诱惑细节显著损害学习 g=-0.33（中）；回忆 g=-0.37；纯迁移不显著"
+      effect_size: "总体 g=-0.33 [-0.48,-0.18]；纸质 -0.61 vs 数字 -0.27；回退允许 -0.70；无先验经验 -0.52；中文材料 -0.75；数学/统计 +0.42（反向）"
+      heterogeneity: "Q=629.27, df=67, p<0.01，I²=89.35——高异质性，调节分析必要"
+      moderators: ["媒介（纸质>数字）", "静态/动态（静态有害、动态不显著）", "回退可能性", "先验知识（无经验者受害更深）", "语言（中文材料效应最大）", "学科（数学/统计反向为正）", "结局测量方式"]
+      limitations: "高异质性（I²=89%）；部分调节类别研究数少（k=2）；动态细节的瞬时性解释仍需研究；作者提示协变量混杂无法完全排除"
+      presentation_implication: "Coherence/weeding 有元分析级支持：删去有趣但无关的元素。演示场景含义——Reader Mode（可回退的静态文档）是诱惑细节损害最大的形态（-0.61/-0.70 叠加）；中文材料效应最大（-0.75），中文演示的'装饰纪律'比英文更关键；无先验知识的受众受害最深；数学推导类内容中'有趣离题'未见损害甚至有益"

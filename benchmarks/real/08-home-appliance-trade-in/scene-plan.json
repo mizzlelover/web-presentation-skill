@@ -1,0 +1,108 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "家电以旧换新通知解读 · 补贴结构、流程与合规红线",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "这份通知是门店的::作战地图::——<br>补贴、流程、红线一次讲清",
+   "chart": null,
+   "source_refs": [
+    "对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "subsidy",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "补贴结构：8 类家电 ::15%::，<br>1 级能效再 ::+5%::",
+   "chart": null,
+   "source_refs": [
+    "二、明确补贴品种和补贴标准\n各地要统筹使用中央与地方资金，对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴，补贴标准为产品最终销售价格的15%，对购买1级及以上能效或水效的产品，额外再给予产品最终销售价格5%的补贴。"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "process",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "流程：::支付立减::或实名代金券——优惠直达消费者",
+   "chart": null,
+   "source_refs": [
+    "三、优化补贴方式和审核流程\n鼓励地方采用支付立减、发放个人实名代金券等不同方式，尽快让真金白银的优惠直达消费者，提升消费者享受补贴体验和获得感。"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "redline",
+   "arg_ref": "C3",
+   "cognitive_job": "challenge",
+   "load": "medium",
+   "headline_type": "contrast",
+   "headline": "合规红线：::大数据盯得见::虚假交易与骗补",
+   "chart": null,
+   "source_refs": [
+    "要通过大数据等数字化手段，严防虚假交易、跨地区重复购买、大量囤货、骗补套补等行为。"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "environment",
+   "arg_ref": "C4",
+   "cognitive_job": "explain",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "市场环境：线上线下一视同仁，<br>::不同注册地企业::均可参与",
+   "chart": null,
+   "source_refs": [
+    "五、营造良好市场环境\n各地要统筹处理好“交旧”和“换新”的关系，一视同仁支持线上、线下渠道，不同所有制、不同注册地企业参与家电以旧换新。"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "implication",
+   "arg_ref": "C5",
+   "cognitive_job": "answer",
+   "load": "medium",
+   "headline_type": "decision",
+   "headline": "销售团队参考：<br>::主推 1 级能效 · 话术讲清上限 · 全员学红线::",
+   "chart": null,
+   "source_refs": [
+    "二、明确补贴品种和补贴标准\n各地要统筹使用中央与地方资金，对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴，补贴标准为产品最终销售价格的15%，对购买1级及以上能效或水效的产品，额外再给予产品最终销售价格5%的补贴。"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "把政策讲清楚，::就是最好的销售话术::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 8,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "title": "国家数据基础设施建设指引（2024年12月）",
+  "publisher": "国家发展改革委、国家数据局、工业和信息化部",
+  "url": "https://zfsg.gd.gov.cn/xxfb/sjyw/content/post_4656622.html",
+  "date": "2024-12"
+ },
+ "situation": "Technical Architecture Briefing / 集团信息中心与数字化团队（技术架构类）",
+ "situation_rationale": "材料是首个国家数据基础设施顶层文件（概念/架构/时间表），用途是让技术团队理解架构与时间表，并识别集团的接入位置——属于技术架构解读。",
+ "communication_goal": [
+  "inform",
+  "explain",
+  "align"
+ ],
+ "audience": {
+  "role": "集团信息中心与数字化团队",
+  "expertise": "domain-expert",
+  "prior_knowledge": "熟悉集团系统架构",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "判断集团在数据基础设施格局中的接入位置",
+  "concerns": [
+   "时间表",
+   "技术选型",
+   "安全要求",
+   "集团接入点"
+  ],
+  "objections": [
+   "又是概念文件"
+  ],
+  "time_budget": "12 分钟",
+  "cognitive_load_tolerance": "high",
+  "expected_detail": "technical",
+  "likely_questions": [
+   "三个统一的落地标准是什么",
+   "可信数据空间怎么接"
+  ]
+ },
+ "central_thesis": "这是国内数据基础设施的第一个顶层文件：以「三大统一」为底座、八大能力为主体、三阶段为时间表；对集团而言，接入点是数据目录与身份体系先行，可信数据空间是行业协作的候选形态。",
+ "key_messages": [
+  "三阶段时间表：2024-2026 试点试验 → 2027-2028 规模化流通 → 2029 主体结构基本建成",
+  "八大能力：采集、汇聚、传输、加工、流通、利用、运营、安全",
+  "三大统一：统一目录标识、统一身份登记、统一接口要求（全国数据「一本账」）",
+  "六类技术设施：可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台"
+ ],
+ "supporting_structure": "概念 → 时间表 → 八大能力 → 三大统一 → 六类设施 → 集团接入参考",
+ "duration_minutes": 12,
+ "ethical_constraints": "全部表述必须能在 source-material.md 找到原文；架构图为报告自述结构的转译；集团接入参考为推导内容须声明",
+ "anti_goals": [
+  "不做技术路线预测",
+  "不添加指引外的数字"
+ ]
+}

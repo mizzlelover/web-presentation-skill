@@ -1,0 +1,15 @@
+# Practitioner Hypothesis Schema — 实践经验假设层（§15）
+# 禁止实践经验直接进入 Scientific Core；必须先登记在此，经证据检验后升级。
+id: str                  # PH-<NNN>
+claim: str               # 经验命题原文，如"一页最好回答一个问题"
+source:
+  practitioner: str      # 来源（可匿名）
+observed_context: str    # 观察到的情境
+observed_effect: str     # 观察到的效果
+possible_mechanism: str  # 可能机制假设
+supporting_evidence: [str]   # source_id
+conflicting_evidence: [str]
+boundary_conditions: [str]
+status: enum             # validated | contextual | unverified | contradicted
+promoted_to: str | null  # 若升级，指向 knowledge node id
+last_reviewed: date

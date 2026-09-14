@@ -1,0 +1,644 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-cnnic-report-55th",
+  "title": "第55次互联网络报告解读 · 从接入到应用：数字社会的四个切面",
+  "situation": "Research Briefing / 集团经营分析会（研究报告类）",
+  "communication_goal": [
+   "inform",
+   "explain"
+  ],
+  "audience": {
+   "role": "集团经营分析人员",
+   "expertise": "domain-expert",
+   "prior_knowledge": "了解集团业务",
+   "decision_power": "influencer",
+   "attitude": "neutral",
+   "motivation": "校准集团数字渠道优先级",
+   "concerns": [
+    "网民是否见顶",
+    "生成式AI渗透率",
+    "渠道优先级"
+   ],
+   "objections": [
+    "报告太厚读不完"
+   ],
+   "time_budget": "10 分钟",
+   "cognitive_load_tolerance": "medium",
+   "expected_detail": "summary",
+   "likely_questions": [
+    "生成式AI用户为何只有 17.7%",
+    "哪些渠道该加码"
+   ]
+  },
+  "central_thesis": "11.08 亿网民意味着接入接近见顶——报告的重心已从『接入』转向『应用深度』：物的连接（26.42 亿）超过人的连接，生成式 AI 完成『听说（23.5%）→使用（17.7%）』的第一轮渗透；对集团而言，支付与购物是基本盘、生成式 AI 是新增量、微短剧是内容渠道。",
+  "duration_minutes": 10,
+  "modes": [
+   "stage",
+   "reader",
+   "print"
+  ],
+  "brand": {
+   "theme": "editorial",
+   "constraints": "研究报告解读：分母口径必须标注；集团参考为推导内容须声明"
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "scale",
+    "infra",
+    "consume",
+    "genai",
+    "insight",
+    "implication",
+    "close"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "生成式AI用户为何只有17.7%",
+     "answer_scene": "genai"
+    }
+   ],
+   "objection_handling": []
+  },
+  "constraints": "真实世界语料（CNNIC 官方 PDF 75 页）；全部数字可溯源"
+ },
+ "theme": {
+  "name": "editorial",
+  "css": "themes/editorial.css",
+  "tokens": {
+   "--wp-accent": "#8a5a2b",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#22201c",
+   "--wp-muted": "#6d645b",
+   "--wp-radius": "4px",
+   "--wp-surface": "#ffffff"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "assertio",
+   "claim": "11.08 亿之后，互联网研究重心从接入转向应用深度",
+   "headline": {
+    "type": "assertion",
+    "text": "11.08 亿之后，互联网研究重心从::接入::转向::应用深度::",
+    "rationale": "orient 任务匹配 assertion 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读（研究报告）",
+   "content": {
+    "stage": "规模见顶不是坏消息——它意味着竞争的战场换了：从抢用户到抢深度。",
+    "reader": "规模见顶不是坏消息——它意味着竞争的战场换了：从抢用户到抢深度。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [
+    "reveal"
+   ],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "规模见顶不是坏消息——它意味着竞争的战场换了：从抢用户到抢深度。",
+   "reader_content": "规模见顶不是坏消息——它意味着竞争的战场换了：从抢用户到抢深度。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [],
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民"
+   ]
+  },
+  {
+   "id": "scale",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertio",
+   "claim": "网民 11.08 亿、普及率 78.6%——接入接近见顶",
+   "headline": {
+    "type": "assertion",
+    "text": "网民 ::11.08 亿::、普及率 ::78.6%::——接入接近见顶",
+    "rationale": "quantify 任务匹配 assertion 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "农村 3.13 亿（28.2%）说明仍有渗透空间，但增量边际递减。",
+    "reader": "农村 3.13 亿（28.2%）说明仍有渗透空间，但增量边际递减。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "农村 3.13 亿（28.2%）说明仍有渗透空间，但增量边际递减。",
+   "reader_content": "农村 3.13 亿（28.2%）说明仍有渗透空间，但增量边际递减。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "11.08 亿",
+       "label": "网民规模"
+      },
+      {
+       "value": "78.6%",
+       "label": "互联网普及率",
+       "accent": true
+      },
+      {
+       "value": "3.13 亿",
+       "label": "农村网民（28.2%）"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民",
+    "我国农村网民规模达3.13亿人，占网民整体的28.2%"
+   ]
+  },
+  {
+   "id": "infra",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertio",
+   "claim": "底座：26.42 亿蜂窝物联网连接——「物」已是「人」的 2.4 倍",
+   "headline": {
+    "type": "assertion",
+    "text": "底座：::26.42 亿::蜂窝物联网连接——「物」已是「人」的 2.4 倍",
+    "rationale": "quantify 任务匹配 assertion 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "5G 基站 419.1 万个（净增 81.5 万）、千兆宽带 2.09 亿户；连接的重心正从人移向物。",
+    "reader": "5G 基站 419.1 万个（净增 81.5 万）、千兆宽带 2.09 亿户；连接的重心正从人移向物。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "5G 基站 419.1 万个（净增 81.5 万）、千兆宽带 2.09 亿户；连接的重心正从人移向物。",
+   "reader_content": "5G 基站 419.1 万个（净增 81.5 万）、千兆宽带 2.09 亿户；连接的重心正从人移向物。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "亿",
+     "categories": [
+      "蜂窝物联网终端",
+      "网民"
+     ],
+     "series": [
+      {
+       "name": "连接数（亿）",
+       "data": [
+        26.42,
+        11.08
+       ]
+      }
+     ],
+     "caption": "口径：蜂窝物联网终端用户数 vs 网民规模；来源：报告「基础资源」"
+    }
+   ],
+   "source_refs": [
+    "三家基础电信企业发展蜂窝物联网终端用户26.42 亿户",
+    "已累计建成 5G基站 419.1 万个"
+   ]
+  },
+  {
+   "id": "consume",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertio",
+   "claim": "消费应用是基本盘：网购 87.9%、支付 10.29 亿",
+   "headline": {
+    "type": "assertion",
+    "text": "消费应用是基本盘：网购 ::87.9%::、支付 ::10.29 亿::",
+    "rationale": "quantify 任务匹配 assertion 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "网购渗透已达网民的 87.9%；支付用户 10.29 亿（超过网民数，含非网民使用）。",
+    "reader": "网购渗透已达网民的 87.9%；支付用户 10.29 亿（超过网民数，含非网民使用）。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "网购渗透已达网民的 87.9%；支付用户 10.29 亿（超过网民数，含非网民使用）。",
+   "reader_content": "网购渗透已达网民的 87.9%；支付用户 10.29 亿（超过网民数，含非网民使用）。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "占网民 %",
+     "categories": [
+      "网络购物",
+      "在线旅行预订",
+      "微短剧使用"
+     ],
+     "series": [
+      {
+       "name": "占网民整体 %",
+       "data": [
+        87.9,
+        49.5,
+        59.7
+       ]
+      }
+     ],
+     "caption": "口径：各类应用用户占网民整体比例；网络支付 10.29 亿人；来源：报告「数字消费」「文旅」"
+    }
+   ],
+   "source_refs": [
+    "增长 5947 万人，占网民整体的 87.9%",
+    "网络支付用户规模达10.29亿人"
+   ]
+  },
+  {
+   "id": "genai",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertio",
+   "claim": "新变量：生成式 AI 完成「听说 23.5% → 使用 17.7%」第一轮渗透",
+   "headline": {
+    "type": "assertion",
+    "text": "新变量：生成式 AI 完成::「听说 23.5% → 使用 17.7%」::第一轮渗透",
+    "rationale": "quantify 任务匹配 assertion 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "用途集中：答题 77.6%、办公助手 45.5%——工具属性先于娱乐属性。",
+    "reader": "用途集中：答题 77.6%、办公助手 45.5%——工具属性先于娱乐属性。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "用途集中：答题 77.6%、办公助手 45.5%——工具属性先于娱乐属性。",
+   "reader_content": "用途集中：答题 77.6%、办公助手 45.5%——工具属性先于娱乐属性。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "占整体人口 %",
+     "categories": [
+      "听说过",
+      "使用过"
+     ],
+     "series": [
+      {
+       "name": "生成式 AI",
+       "data": [
+        23.5,
+        17.7
+       ]
+      }
+     ],
+     "caption": "口径：占整体人口（非网民整体）；听说过 3.31 亿、使用过 2.49 亿；来源：报告「生成式人工智能」"
+    }
+   ],
+   "source_refs": [
+    "我国有 3.31亿人表示自己听说过生成式人工智能产品",
+    "我国生成式人工智能产品的用户规模达 2.49 亿人",
+    "利用生成式人工智能产品回答问题的用户最为广泛，使用率达77.6%"
+   ]
+  },
+  {
+   "id": "insight",
+   "role": "argument",
+   "cognitive_job": "summarize",
+   "topic": "assertio",
+   "claim": "三个判断：接入见顶、物超人、生成式 AI 从认知到使用",
+   "headline": {
+    "type": "assertion",
+    "text": "三个判断：接入见顶、::物超人::、生成式 AI 从认知到使用",
+    "rationale": "summarize 任务匹配 assertion 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "三个判断对应三个动作方向：深度运营、物联场景、AI 工具化。",
+    "reader": "三个判断对应三个动作方向：深度运营、物联场景、AI 工具化。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L1",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "三个判断对应三个动作方向：深度运营、物联场景、AI 工具化。",
+   "reader_content": "三个判断对应三个动作方向：深度运营、物联场景、AI 工具化。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [],
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民",
+    "我国生成式人工智能产品的用户规模达 2.49 亿人，占整体人口的17.7%"
+   ]
+  },
+  {
+   "id": "implication",
+   "role": "recommendation",
+   "cognitive_job": "answer",
+   "topic": "decision",
+   "claim": "集团参考：基本盘不动 · AI 做增量 · 微短剧试渠道",
+   "headline": {
+    "type": "decision",
+    "text": "集团参考：::基本盘不动 · AI 做增量 · 微短剧试渠道::",
+    "rationale": "answer 任务匹配 decision 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "支付/购物是基本盘；生成式 AI 以办公助手形态先落地内部；微短剧（59.7%）作为内容渠道试点。",
+    "reader": "支付/购物是基本盘；生成式 AI 以办公助手形态先落地内部；微短剧（59.7%）作为内容渠道试点。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "支付/购物是基本盘；生成式 AI 以办公助手形态先落地内部；微短剧（59.7%）作为内容渠道试点。",
+   "reader_content": "支付/购物是基本盘；生成式 AI 以办公助手形态先落地内部；微短剧（59.7%）作为内容渠道试点。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [],
+   "source_refs": [
+    "微短剧用户规模达 6.62亿人，占网民整体的 59.7%"
+   ]
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "narrativ",
+   "claim": "战场从接入转向应用深度",
+   "headline": {
+    "type": "narrative",
+    "text": "战场从::接入::转向::应用深度::",
+    "rationale": "summarize 任务匹配 narrative 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "一句收束：接入见顶之后，深度即战场。",
+    "reader": "一句收束：接入见顶之后，深度即战场。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "一句收束：接入见顶之后，深度即战场。",
+   "reader_content": "一句收束：接入见顶之后，深度即战场。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [],
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民"
+   ]
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "topic",
+   "claim": "附录：来源、口径与诚实声明",
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "prove 任务匹配 topic 型标题；数字均可溯源至 source-material.md"
+   },
+   "kicker": "第55次互联网络报告解读",
+   "content": {
+    "stage": "唯一来源为 CNNIC 官方 PDF（75 页）；分母有「网民整体」与「整体人口」两种，引用处均已标注；集团参考为推导内容。",
+    "reader": "唯一来源为 CNNIC 官方 PDF（75 页）；分母有「网民整体」与「整体人口」两种，引用处均已标注；集团参考为推导内容。（Reader 版含完整口径与分母说明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "cnnic-55",
+     "source": "CNNIC 第55次报告",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L0",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "唯一来源为 CNNIC 官方 PDF（75 页）；分母有「网民整体」与「整体人口」两种，引用处均已标注；集团参考为推导内容。",
+   "reader_content": "唯一来源为 CNNIC 官方 PDF（75 页）；分母有「网民整体」与「整体人口」两种，引用处均已标注；集团参考为推导内容。（分母口径：「占网民整体」与「占整体人口」不同，见各图 caption。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：CNNIC 第55次《中国互联网络发展状况统计报告》",
+   "blocks": [],
+   "source_refs": []
+  }
+ ]
+}

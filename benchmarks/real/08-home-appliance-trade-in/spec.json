@@ -1,0 +1,348 @@
+{
+ "dest": "benchmarks/real/08-home-appliance-trade-in",
+ "id": "real-home-appliance-trade-in",
+ "title": "家电以旧换新通知解读 · 补贴结构、流程与合规红线",
+ "kicker": "家电以旧换新通知解读",
+ "type_label": "销售",
+ "source": {
+  "file": "source-material.md",
+  "ref": "trade-in",
+  "title": "商务部等4部门办公厅《关于进一步做好家电以旧换新工作的通知》",
+  "publisher": "商务部等4部门办公厅",
+  "url": "https://www.mofcom.gov.cn/zcfb/zc/art/2024/art_02840ccdc6c54810b5e37715ec81a145.html",
+  "date": "2024"
+ },
+ "situation": "Sales Enablement Briefing / 渠道与门店运营团队（销售类）",
+ "situation_rationale": "材料是四部门销售政策通知（补贴结构+流程+合规），用途是给渠道与门店团队可执行的售卖与合规指引。",
+ "communication_goal": [
+  "inform",
+  "explain",
+  "align"
+ ],
+ "audience": {
+  "role": "集团家电渠道与门店运营团队",
+  "expertise": "intermediate",
+  "prior_knowledge": "熟悉门店销售流程",
+  "decision_power": "none",
+  "attitude": "supportive",
+  "motivation": "用足补贴政策且不踩合规红线",
+  "concerns": [
+   "补贴怎么算",
+   "流程怎么走",
+   "哪些行为会被大数据识别"
+  ],
+  "objections": [
+   "流程复杂"
+  ],
+  "time_budget": "8 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "step-by-step",
+  "likely_questions": [
+   "1级能效多补多少",
+   "哪些行为算骗补"
+  ]
+ },
+ "central_thesis": "这份通知是门店的作战地图：8 类家电、15% 基础补贴、1 级能效再 +5%、每件封顶 2000 元——同时划了一条大数据红线：虚假交易、跨区重复、囤货骗补会被识别。",
+ "key_messages": [
+  "8 类家电、15% 基础补贴、1 级能效额外 +5%",
+  "每类 1 件、每件不超 2000 元",
+  "支付立减或实名代金券，优惠直达消费者",
+  "大数据严防虚假交易、跨区重复、囤货骗补"
+ ],
+ "supporting_structure": "补贴结构 → 流程与体验 → 合规红线 → 市场环境 → 执行时限",
+ "duration_minutes": 8,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；销售团队参考为推导内容须声明",
+ "anti_goals": [
+  "不教任何规避监管的方法"
+ ],
+ "overclaim": "已登记：补贴资金为中央与地方统筹，具体品种各地自定；本简报为政策解读非营销话术",
+ "evidence_mismatch": "无",
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "补贴结构：8 类家电、15% 基础补贴、1 级能效额外 +5%、每类 1 件每件 ≤2000 元",
+   "type": "fact",
+   "evidence": [
+    "二、明确补贴品种和补贴标准\n各地要统筹使用中央与地方资金，对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴，补贴标准为产品最终销售价格的15%，对购买1级及以上能效或水效的产品，额外再给予产品最终销售价格5%的补贴。"
+   ],
+   "counter": "具体品种由各地自定",
+   "supports": [
+    "THESIS"
+   ]
+  },
+  {
+   "id": "C2",
+   "claim": "补贴方式：支付立减或个人实名代金券，简化审核、减轻企业垫资",
+   "type": "fact",
+   "evidence": [
+    "三、优化补贴方式和审核流程\n鼓励地方采用支付立减、发放个人实名代金券等不同方式，尽快让真金白银的优惠直达消费者，提升消费者享受补贴体验和获得感。"
+   ],
+   "counter": "方式由各地选择，门店需按当地方案执行",
+   "supports": [
+    "THESIS"
+   ]
+  },
+  {
+   "id": "C3",
+   "claim": "合规红线：大数据严防虚假交易、跨地区重复购买、大量囤货、骗补套补",
+   "type": "fact",
+   "evidence": [
+    "要通过大数据等数字化手段，严防虚假交易、跨地区重复购买、大量囤货、骗补套补等行为。"
+   ],
+   "counter": "无",
+   "supports": [
+    "THESIS"
+   ]
+  },
+  {
+   "id": "C4",
+   "claim": "市场环境：线上线下一视同仁，不同所有制、不同注册地企业均可参与",
+   "type": "fact",
+   "evidence": [
+    "五、营造良好市场环境\n各地要统筹处理好“交旧”和“换新”的关系，一视同仁支持线上、线下渠道，不同所有制、不同注册地企业参与家电以旧换新。"
+   ],
+   "counter": "无",
+   "supports": [
+    "THESIS",
+    "C5"
+   ]
+  },
+  {
+   "id": "C5",
+   "claim": "销售团队参考（推导）：主推 1 级能效机型（多 5%）、话术明确每类 1 件与 2000 元上限、全员培训骗补识别",
+   "type": "interpretation",
+   "evidence": [
+    "二、明确补贴品种和补贴标准\n各地要统筹使用中央与地方资金，对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴，补贴标准为产品最终销售价格的15%，对购买1级及以上能效或水效的产品，额外再给予产品最终销售价格5%的补贴。",
+    "每位消费者每类产品可补贴1件，每件补贴不超过2000元。"
+   ],
+   "counter": "推导内容须声明",
+   "supports": [
+    "THESIS"
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "job": "orient",
+   "load": "low",
+   "htype": "assertion",
+   "headline": "这份通知是门店的::作战地图::——<br>补贴、流程、红线一次讲清",
+   "rationale": "orient 开场给框架",
+   "arg_ref": "THESIS",
+   "stage": "8 类家电、15% 基础补贴、1 级能效 +5%、每件封顶 2000 元，外加一条大数据红线。",
+   "reader": "本简报基于商务部等4部门办公厅《关于进一步做好家电以旧换新工作的通知》，面向渠道与门店团队：补贴结构、流程方式、合规红线、市场环境、执行时限。",
+   "source_refs": [
+    "对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴"
+   ],
+   "blocks": []
+  },
+  {
+   "id": "subsidy",
+   "role": "evidence",
+   "job": "quantify",
+   "load": "medium",
+   "htype": "assertion",
+   "headline": "补贴结构：8 类家电 ::15%::，<br>1 级能效再 ::+5%::",
+   "rationale": "quantify 用数字锚点；「封顶 2000 元」由步骤幕承载，避免标题孤行",
+   "arg_ref": "C1",
+   "stage": "2 级及以上能效/水效补 15%；1 级及以上再 +5%；每位每类 1 件、每件 ≤2000 元。",
+   "reader": "补贴结构（原文）：8 类家电（冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机）；2 级及以上能效或水效补最终售价 15%；1 级及以上额外 +5%；每位消费者每类 1 件、每件不超过 2000 元；具体品种各地自定。",
+   "source_refs": [
+    "二、明确补贴品种和补贴标准\n各地要统筹使用中央与地方资金，对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴，补贴标准为产品最终销售价格的15%，对购买1级及以上能效或水效的产品，额外再给予产品最终销售价格5%的补贴。"
+   ],
+   "blocks": [
+    {
+     "type": "steps",
+     "items": [
+      {
+       "k": "基础",
+       "title": "15% 补贴",
+       "text": "2 级及以上能效/水效的 8 类家电。"
+      },
+      {
+       "k": "加码",
+       "title": "再 +5%",
+       "text": "购买 1 级及以上能效/水效产品。",
+       "gate": true
+      },
+      {
+       "k": "上限",
+       "title": "每件 ≤2000 元",
+       "text": "每位消费者每类产品可补贴 1 件。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "process",
+   "role": "evidence",
+   "job": "explain",
+   "load": "medium",
+   "htype": "assertion",
+   "headline": "流程：::支付立减::或实名代金券——优惠直达消费者",
+   "rationale": "explain 流程",
+   "arg_ref": "C2",
+   "stage": "支付立减/实名代金券；简化审核、提高审批效率、减轻企业垫资。",
+   "reader": "流程：鼓励支付立减或发放个人实名代金券，优惠直达消费者；简化补贴审核流程，防控风险前提下提高审批效率，减轻参与企业垫资压力。",
+   "source_refs": [
+    "三、优化补贴方式和审核流程\n鼓励地方采用支付立减、发放个人实名代金券等不同方式，尽快让真金白银的优惠直达消费者，提升消费者享受补贴体验和获得感。"
+   ],
+   "blocks": []
+  },
+  {
+   "id": "redline",
+   "role": "argument",
+   "job": "challenge",
+   "load": "medium",
+   "htype": "contrast",
+   "headline": "合规红线：::大数据盯得见::虚假交易与骗补",
+   "rationale": "challenge 任务用对比式标题呈现红线",
+   "arg_ref": "C3",
+   "stage": "大数据严防四类行为：虚假交易、跨地区重复购买、大量囤货、骗补套补。",
+   "reader": "合规红线：各地通过大数据等数字化手段掌握家电交旧、购新、拆解全流程信息，严防虚假交易、跨地区重复购买、大量囤货、骗补套补等行为。门店与导购不得参与或诱导任何上述行为。",
+   "source_refs": [
+    "要通过大数据等数字化手段，严防虚假交易、跨地区重复购买、大量囤货、骗补套补等行为。"
+   ],
+   "blocks": []
+  },
+  {
+   "id": "environment",
+   "role": "evidence",
+   "job": "explain",
+   "load": "low",
+   "htype": "assertion",
+   "headline": "市场环境：线上线下一视同仁，<br>::不同注册地企业::均可参与",
+   "rationale": "环境条款事实陈述",
+   "arg_ref": "C4",
+   "stage": "一视同仁支持线上线下、不同所有制与注册地企业参与。",
+   "reader": "统筹处理「交旧」与「换新」关系，一视同仁支持线上、线下渠道，不同所有制、不同注册地企业参与家电以旧换新。",
+   "source_refs": [
+    "五、营造良好市场环境\n各地要统筹处理好“交旧”和“换新”的关系，一视同仁支持线上、线下渠道，不同所有制、不同注册地企业参与家电以旧换新。"
+   ],
+   "blocks": []
+  },
+  {
+   "id": "implication",
+   "role": "recommendation",
+   "job": "answer",
+   "load": "medium",
+   "htype": "decision",
+   "headline": "销售团队参考：<br>::主推 1 级能效 · 话术讲清上限 · 全员学红线::",
+   "rationale": "answer 任务给三条可执行项",
+   "arg_ref": "C5",
+   "stage": "推导参考：主推 1 级能效机型（+5%）、话术讲清每类 1 件与 2000 元上限、全员培训合规红线。",
+   "reader": "销售团队参考（推导内容，非通知原文）：①主推 1 级及以上能效机型（额外 +5%）；②话术明确每位每类 1 件、每件上限 2000 元；③全员学习合规红线（大数据识别四类行为）。",
+   "source_refs": [
+    "二、明确补贴品种和补贴标准\n各地要统筹使用中央与地方资金，对个人消费者购买2级及以上能效或水效标准的冰箱、洗衣机、电视、空调、电脑、热水器、家用灶具、吸油烟机8类家电产品给予以旧换新补贴，补贴标准为产品最终销售价格的15%，对购买1级及以上能效或水效的产品，额外再给予产品最终销售价格5%的补贴。"
+   ],
+   "blocks": [
+    {
+     "type": "actions",
+     "items": [
+      {
+       "k": "动作 一",
+       "title": "主推 1 级能效",
+       "text": "额外 +5% 补贴。"
+      },
+      {
+       "k": "动作 二",
+       "title": "话术讲清上限",
+       "text": "每位每类 1 件、每件 ≤2000 元。"
+      },
+      {
+       "k": "动作 三",
+       "title": "全员合规培训",
+       "text": "识别并远离四类违规行为。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "job": "summarize",
+   "load": "low",
+   "htype": "narrative",
+   "headline": "把政策讲清楚，::就是最好的销售话术::",
+   "rationale": "叙事式收束",
+   "arg_ref": "THESIS",
+   "stage": "把政策讲清楚，就是最好的销售话术。",
+   "reader": "核心判断：把补贴结构、流程与红线讲清楚，既促成交也保合规。",
+   "source_refs": [],
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "把政策讲清楚，<br>::就是最好的销售话术::。",
+     "cite": "家电以旧换新解读 · 收束"
+    }
+   ]
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "job": "prove",
+   "load": "low",
+   "htype": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "rationale": "附录备查",
+   "arg_ref": null,
+   "stage": "来源、口径与诚实声明。",
+   "reader": "附录：唯一来源为商务部等4部门办公厅通知原文；具体品种与补贴方式由各地自定，以当地方案为准；销售团队参考为推导内容。",
+   "source_refs": [],
+   "blocks": [
+    {
+     "type": "evidence",
+     "items": [
+      {
+       "title": "唯一来源",
+       "source": "商务部等4部门办公厅通知（mofcom.gov.cn）",
+       "grade": "官方"
+      },
+      {
+       "title": "口径说明",
+       "source": "具体品种/方式由各地自定",
+       "grade": "口径"
+      },
+      {
+       "title": "性质声明",
+       "source": "销售团队参考为推导内容",
+       "grade": "声明"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "theme": {
+  "name": "corporate",
+  "css": "themes/corporate.css",
+  "tokens": {
+   "--wp-accent": "#c2410c",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#1a1a1a",
+   "--wp-muted": "#5f6b80",
+   "--wp-radius": "10px",
+   "--wp-surface": "#fdf6f0"
+  }
+ },
+ "constraints": "销售政策解读：分母与上限必须原文标注；销售团队参考为推导内容须声明",
+ "scope": "全国",
+ "qa_preparation": {
+  "likely_questions": [
+   {
+    "question": "1级能效多补多少",
+    "answer_scene": "subsidy"
+   }
+  ],
+  "objection_handling": [
+   {
+    "objection": "流程复杂",
+    "response_scene": "process"
+   }
+  ]
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "skills-china",
+  "title": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+  "publisher": "人力资源社会保障部",
+  "url": "https://www.gov.cn/zhengce/zhengceku/2021-07/06/content_5622619.htm",
+  "date": "2021-06-30"
+ },
+ "situation": "Training Briefing / 集团人力与培训团队（教育培训类）",
+ "situation_rationale": "材料是国家级技能人才行动方案（教育培训类典型文件），用途是让 HR 与培训团队读懂可考核目标与集团可参与的政策窗口。",
+ "communication_goal": [
+  "inform",
+  "explain",
+  "align"
+ ],
+ "audience": {
+  "role": "集团人力与培训团队",
+  "expertise": "intermediate",
+  "prior_knowledge": "了解集团培训体系",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "找出集团可参与的政策窗口与合规要求",
+  "concerns": [
+   "硬指标",
+   "企业可参与什么",
+   "激励政策"
+  ],
+  "objections": [
+   "方案太宏观"
+  ],
+  "time_budget": "10 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "summary",
+  "likely_questions": [
+   "企业自主认定怎么操作",
+   "学徒制补贴怎么拿"
+  ]
+ },
+ "central_thesis": "「技能中国行动」不是口号，而是可考核的规模目标——十四五新增技能人才 4000 万人以上、技能人才占就业 30%；对企业，最大的两个窗口是企业自主技能等级认定与新型学徒制「双师联合培养」。",
+ "key_messages": [
+  "目标可考核：新增技能人才 4000 万+、占就业 30%、东部高技能 35%",
+  "四大行动 20 条：技能提升/强企/激励/合作",
+  "企业窗口：自主认定（可打破学历资历直接认定）+ 新型学徒制（双师联合）",
+  "激励衔接：薪酬分配指引、岗位绩效工资制"
+ ],
+ "supporting_structure": "目标 → 四大行动 → 企业窗口 → 集团参考",
+ "duration_minutes": 10,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；集团参考为推导内容须声明",
+ "anti_goals": [
+  "不做政策预测",
+  "不添加方案外数字"
+ ]
+}

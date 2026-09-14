@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>实验 · D3 定制数据叙事（补丁 §18）</title>
+<style>
+  :root{ --bg:#fff; --fg:#111; --muted:#666; --line:#e3e3e3; --accent:#2f6df6; --warn:#c2410c }
+  *{box-sizing:border-box}
+  body{margin:0;padding:28px;background:var(--bg);color:var(--fg);font:14px/1.7 system-ui,"PingFang SC",sans-serif}
+  h1{font-size:20px;margin:0 0 6px}
+  p.lead{color:var(--muted);margin:0 0 18px;max-width:70ch}
+  .card{border:1px solid var(--line);border-radius:12px;padding:16px}
+  .metric{font-size:12px;color:var(--muted);margin-top:10px;font-variant-numeric:tabular-nums}
+  svg{width:100%;height:auto;display:block}
+  .lbl{font-size:12px;fill:#555}
+  .anno{font-size:12px;fill:#c2410c}
+</style>
+</head>
+<body>
+<h1>实验 · D3 定制数据叙事（补丁 §18）</h1>
+<p class="lead">
+  题目：<b>同一条业务线三年间「获客成本」与「复购率」的联合轨迹</b>——需要两个不同量纲指标在同一轨迹上随时间联动、逐点直接标注、并标出策略切换点。
+  ECharts 可做双轴折线，但「同一条轨迹 + 逐点年份直接标注 + 分段着色 + 注释带」属于定制叙事，用 D3 明显更自然。
+</p>
+
+<div class="card">
+  <svg id="chart" viewBox="0 0 720 380" role="img" aria-label="获客成本与复购率的联合轨迹"></svg>
+  <div class="metric" id="metric">渲染中…</div>
+</div>
+
+<script src="../vendor/d3.min.js"></script>
+<script>
+window.D3_BENCH = {};
+(function () {
+  if (typeof d3 === "undefined") { document.getElementById("metric").textContent = "d3 未加载"; return; }
+  var t0 = performance.now();
+
+  // 逐年数据：年份 / 获客成本（元）/ 复购率（%）
+  var data = [
+    { y: 2022, cac: 118, rep: 16.0 },
+    { y: 2023, cac: 146, rep: 18.5 },
+    { y: 2024, cac: 171, rep: 24.0 },
+    { y: 2025, cac: 205, rep: 31.0 },
+    { y: 2026, cac: 236, rep: 34.5 }
+  ];
+  var W = 720, H = 380, M = { top: 34, right: 96, bottom: 54, left: 68 };
+  var svg = d3.select("#chart");
+  svg.selectAll("*").remove();
+
+  var x = d3.scaleLinear().domain([100, 260]).range([M.left, W - M.right]);
+  var y = d3.scaleLinear().domain([12, 40]).range([H - M.bottom, M.top]);
+
+  // 注释带：2023→2024 为策略切换期
+  svg.append("rect")
+    .attr("x", x(146)).attr("width", x(171) - x(146))
+    .attr("y", M.top - 16).attr("height", H - M.bottom - M.top + 16)
+    .attr("fill", "#c2410c").attr("opacity", .07);
+  svg.append("text").attr("class", "anno").attr("x", x(146) + 4).attr("y", M.top - 20)
+    .text("策略切换期");
+
+  // 坐标轴
+  svg.append("g").attr("transform", "translate(0," + (H - M.bottom) + ")")
+    .call(d3.axisBottom(x).ticks(6).tickFormat(function (d) { return d; }))
+    .call(function (g) { g.select(".domain").attr("stroke", "#ddd"); g.selectAll("text").attr("class", "lbl"); });
+  svg.append("g").attr("transform", "translate(" + M.left + ",0)")
+    .call(d3.axisLeft(y).ticks(5))
+    .call(function (g) { g.select(".domain").attr("stroke", "#ddd"); g.selectAll("text").attr("class", "lbl"); });
+  svg.append("text").attr("class", "lbl").attr("x", x(180)).attr("y", H - 18).text("获客成本（元）→");
+  svg.append("text").attr("class", "lbl").attr("transform", "rotate(-90)")
+    .attr("x", -H / 2).attr("y", 16).attr("text-anchor", "middle").text("复购率（%）");
+
+  // 轨迹：一条路径 + 分段着色（切换前灰、切换后强调色）
+  var line = d3.line().x(function (d) { return x(d.cac); }).y(function (d) { return y(d.rep); }).curve(d3.curveMonotoneX);
+  svg.append("path").datum(data.slice(0, 3)).attr("d", line).attr("fill", "none").attr("stroke", "#94a3b8").attr("stroke-width", 2.5);
+  svg.append("path").datum(data.slice(2)).attr("d", line).attr("fill", "none").attr("stroke", "#2f6df6").attr("stroke-width", 3);
+
+  // 逐点标注（直接标签，无需图例）
+  var g = svg.selectAll("g.pt").data(data).enter().append("g").attr("class", "pt")
+    .attr("transform", function (d) { return "translate(" + x(d.cac) + "," + y(d.rep) + ")"; });
+  g.append("circle").attr("r", 5).attr("fill", "#fff").attr("stroke", function (d, i) { return i >= 2 ? "#2f6df6" : "#94a3b8"; }).attr("stroke-width", 2.5);
+  g.append("text").attr("class", "lbl").attr("dx", 9).attr("dy", 4)
+    .text(function (d) { return d.y + " · " + d.cac + "元 / " + d.rep + "%"; });
+
+  // 起点与终点强化
+  svg.append("text").attr("class", "lbl").attr("x", x(118) - 62).attr("y", y(16) + 26).text("起点：高投放低复购");
+  svg.append("text").attr("class", "lbl").attr("x", x(236) - 118).attr("y", y(34.5) - 18).text("终点：成本更高但复购翻倍");
+
+  var ms = Math.round(performance.now() - t0);
+  window.D3_BENCH.renderMs = ms;
+  window.D3_BENCH.paths = svg.selectAll("path").size();
+  document.getElementById("metric").textContent =
+    "D3 渲染 " + ms + "ms · 路径 " + svg.selectAll("path").size() + " 条 · 逐点直接标注 · 分段着色 · 注释带（库体积约 280KB）";
+})();
+</script>
+</body>
+</html>

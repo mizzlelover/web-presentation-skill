@@ -1,0 +1,83 @@
+# Practitioner Hypothesis Registry — 实践经验假设层（§15）
+# 规则：实践经验一律先登记在此（status: unverified/contextual），
+# 经 supporting/conflicting evidence 检验后 validated 并可升级为 knowledge node。
+# 禁止任何 hypothesis 直接进入 Scientific Core。
+
+hypotheses:
+  - id: PH-001
+    claim: 一页最好回答一个问题
+    source: { practitioner: 用户提供（项目管理实践） }
+    observed_context: 内部项目汇报
+    observed_effect: 受众跟得上、Q&A 更聚焦
+    possible_mechanism: 单 Cognitive Job 降低并行加工需求（KN-COG-001）
+    supporting_evidence: [SRC-MAYER-2001（Segmenting/Coherence）]
+    conflicting_evidence: [SRC-TUFTE-2003（高密度技术文档语境）]
+    boundary_conditions: [Stage Mode 更适用, Reader Mode 可更高密度, 技术评审允许多问题一幕但需分组]
+    status: contextual
+    promoted_to: null
+    last_reviewed: 2026-09
+
+  - id: PH-002
+    claim: 标题写成设问句会更吸引注意
+    source: { practitioner: 用户提供 }
+    observed_context: 对内宣讲
+    observed_effect: 开场注意力提升
+    possible_mechanism: 信息缺口/好奇效应（KN-COMM-004）
+    supporting_evidence: []
+    conflicting_evidence: [SRC-ALLEY-2006-AE（技术演示中断言标题优于短语/设问）]
+    boundary_conditions: [受众无先备问题意识时适用, 决策场景应用 Decision/Assertion 标题]
+    status: contextual
+    promoted_to: KN-PRES-002
+    last_reviewed: 2026-09
+
+  - id: PH-003
+    claim: PPT 不要写太多字
+    source: { practitioner: 用户提供 }
+    observed_context: 舞台讲演
+    observed_effect: 受众听讲而非读屏
+    possible_mechanism: Redundancy/Modality 原则（KN-COG-003）
+    supporting_evidence: [SRC-MAYER-2001]
+    conflicting_evidence: [SRC-TUFTE-2003, SRC-DOUMONT-2005（自足文档语境需完整文字）]
+    boundary_conditions: [仅 Stage Mode, Reader/Print 必须完整]
+    status: contextual
+    promoted_to: KN-PRES-003
+    last_reviewed: 2026-09
+
+  - id: PH-004
+    claim: 现场要根据领导反应跳页
+    source: { practitioner: 用户提供 }
+    observed_context: 高管汇报
+    observed_effect: 避免时间耗尽前没讲到决策点
+    possible_mechanism: 决策场景的中心路径压缩（KN-COMM-001）+ 运行时适应（KN-PRES-006）
+    supporting_evidence: []
+    conflicting_evidence: []
+    boundary_conditions: [需要预先设计 Presentation Graph 与 Presenter View, 否则跳页=慌乱]
+    status: validated
+    promoted_to: KN-PRES-006
+    last_reviewed: 2026-09
+
+  - id: PH-005
+    claim: 故事有助于引入
+    source: { practitioner: 用户提供 }
+    observed_context: 提案开场
+    observed_effect: 受众代入感增强
+    possible_mechanism: 叙事的因果组织降低关联成本（KN-COMM-002）
+    supporting_evidence: [SRC-DUARTE-2010（实践）]
+    conflicting_evidence: []
+    boundary_conditions: [Persuasion/Vision 适用, Audit/技术参考不适用]
+    status: contextual
+    promoted_to: KN-COMM-002
+    last_reviewed: 2026-09
+
+  - id: PH-006
+    claim: 演示稿与打印稿应该不同
+    source: { practitioner: 用户提供 }
+    observed_context: 咨询交付
+    observed_effect: 现场清晰、留存可查
+    possible_mechanism: Modality 冗余 + 阅读自足性（KN-PRES-003）
+    supporting_evidence: [SRC-MAYER-2001, SRC-DOUMONT-2005]
+    conflicting_evidence: []
+    boundary_conditions: []
+    status: validated
+    promoted_to: KN-PRES-003
+    last_reviewed: 2026-09

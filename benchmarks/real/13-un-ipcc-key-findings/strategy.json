@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "un-climate-key-findings",
+  "title": "联合国气候变化 · 主要结论（IPCC 物理科学 / 温度上升 / 适应性 / 融资 / 经济 / 就业 / 能源各节）",
+  "publisher": "联合国（联合国气候行动）",
+  "url": "https://www.un.org/zh/climatechange/science/key-findings",
+  "date": "2025"
+ },
+ "situation": "Science Communication Briefing / 集团可持续发展（ESG）团队（科学传播类）",
+ "situation_rationale": "材料是联合国气候行动网站的 IPCC 关键结论中文页（科学结论的决策者摘要形态），用途是给 ESG 团队一份「科学结论 → 适应/融资/经济数据」的速读底稿。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "集团可持续发展（ESG）团队",
+  "expertise": "domain-expert",
+  "prior_knowledge": "熟悉碳与气候议程常识，未系统读过 IPCC 结论页",
+  "decision_power": "influencer",
+  "attitude": "supportive",
+  "motivation": "把气候科学的既定结论转译为可沟通的内部语言",
+  "concerns": [
+   "温控路径的量化要求",
+   "适应经济学",
+   "绿色转型的就业账"
+  ],
+  "objections": [
+   "这些结论是不是已经过时"
+  ],
+  "time_budget": "8 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "structured-findings",
+  "likely_questions": [
+   "数据出处是 IPCC 还是其他机构"
+  ]
+ },
+ "central_thesis": "联合国气候行动页把 IPCC 科学整理成决策语言：变暖已是事实（+1.1°C、CO2 达工业化前 148%）；1.5°C 路径要求 2020–2030 每年减排 7.6%（现状是化石燃料年增产 2%）；但适应与转型的经济账是正的——1.8 万亿适应投资换 7.1 万亿收益、绿色经济 26 万亿收益与 2 400 万就业净增量。",
+ "key_messages": [
+  "事实层：比 1800 年代高约 1.1°C；CO2 浓度为工业化前 148%；照旧趋势本世纪末可升至 4.4°C",
+  "路径层：1.5°C 需要年减排 7.6%（2°C 为 2.7%）；差距 2.9–3.2 亿吨级（原文 290-320 亿吨 CO2 当量）",
+  "适应层：1.8 万亿美元投资产生 7.1 万亿收益；缺水人口 36 亿 → 2050 年 50 亿以上",
+  "经济层：绿色经济 26 万亿美元直接收益；2 400 万新增就业 vs 600 万损失",
+  "能源层：2020 年新增可再生能源 260 吉瓦创纪录（高出此前近 50%）"
+ ],
+ "supporting_structure": "四层速读：事实 → 路径 → 适应 → 转型经济账（每层以页面原文数字为锚）",
+ "duration_minutes": 8,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；页面特性为要点重复呈现两次与混合来源标注（IPCC/WMO/世界银行等），引文逐字保留；「判断题」式收束为推导内容须声明",
+ "anti_goals": [
+  "不评估各国减排政策成效",
+  "不做气候预测"
+ ]
+}

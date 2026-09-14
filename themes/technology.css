@@ -1,0 +1,12 @@
+/* Theme: Technology — 技术/发布场景（深色、荧光强调、等宽数据字体） */
+:root {
+  --wp-bg: #05070d;
+  --wp-fg: #e8f0ff;
+  --wp-accent: #00e5c0;
+  --wp-muted: #7c8db0;
+  --wp-font-display: "SF Mono", "JetBrains Mono", ui-monospace, monospace;
+  --wp-font-body: system-ui, "PingFang SC", sans-serif;
+  --wp-space: clamp(16px, 3vw, 52px);
+  --wp-radius: 14px;
+  --wp-motion-duration: 500ms;
+}

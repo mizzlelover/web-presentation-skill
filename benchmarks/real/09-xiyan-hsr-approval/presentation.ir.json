@@ -1,0 +1,648 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-xiyan-hsr-approval",
+  "title": "西十高铁可研批复解读 · 一份批复的四要素",
+  "situation": "Project Review Briefing / 项目管理与投资团队（项目方案类）",
+  "communication_goal": [
+   "inform",
+   "explain"
+  ],
+  "audience": {
+   "role": "集团项目管理与投资团队",
+   "expertise": "domain-expert",
+   "prior_knowledge": "熟悉项目投资流程",
+   "decision_power": "influencer",
+   "attitude": "neutral",
+   "motivation": "学习批复文件的结构化读法",
+   "concerns": [
+    "批复的四要素",
+    "资金结构",
+    "工期安排"
+   ],
+   "objections": [
+    "批复太短没什么可读"
+   ],
+   "time_budget": "6 分钟",
+   "cognitive_load_tolerance": "medium",
+   "expected_detail": "structured-findings",
+   "likely_questions": [
+    "资本金结构怎么看"
+   ]
+  },
+  "central_thesis": "一份批复虽短，四要素齐全：必要性（完善路网/区域战略）、内容与标准（256.7 公里/350 km/h）、投资与资金（476.8 亿/资本金 50%/三方出资）、建设安排（4.5 年）——这正是所有项目方案的通用骨架。",
+  "duration_minutes": 6,
+  "modes": {
+   "stage": true,
+   "reader": {
+    "enabled": true,
+    "deep_links": true
+   },
+   "print": {
+    "enabled": true,
+    "expand_critical": true,
+    "show_citations": true
+   }
+  },
+  "brand": {
+   "theme": "government",
+   "constraints": "项目批复解读：薄材料不注水；通用读法为推导内容须声明"
+  },
+  "theme": {
+   "name": "government",
+   "css": "themes/government.css",
+   "tokens": {
+    "--wp-accent": "#1f4e79",
+    "--wp-bg": "#ffffff",
+    "--wp-fg": "#101418",
+    "--wp-muted": "#6b7280",
+    "--wp-radius": "6px",
+    "--wp-surface": "#fbfcfd"
+   }
+  },
+  "runtime": {
+   "navigation": {
+    "keyboard": true,
+    "search": true,
+    "jump": true
+   },
+   "presenter_view": {
+    "notes": true,
+    "timer": true,
+    "next_scene": true
+   },
+   "motion": {
+    "respect_reduced_motion": true,
+    "controllable": true
+   },
+   "offline": true,
+   "performance_budget": {
+    "first_load_kb": 1400,
+    "max_image_kb": 200,
+    "target_fps": 60
+   }
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "necessity",
+    "standard",
+    "investment",
+    "arrangement",
+    "implication",
+    "close"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "资本金结构怎么看",
+     "answer_scene": "investment"
+    }
+   ],
+   "objection_handling": [
+    {
+     "objection": "批复太短没什么可读",
+     "response_scene": "implication"
+    }
+   ]
+  },
+  "constraints": "项目批复解读：薄材料不注水；通用读法为推导内容须声明"
+ },
+ "theme": {
+  "name": "government",
+  "css": "themes/government.css",
+  "tokens": {
+   "--wp-accent": "#1f4e79",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#101418",
+   "--wp-muted": "#6b7280",
+   "--wp-radius": "6px",
+   "--wp-surface": "#fbfcfd"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "一份批复只有一页半，但四",
+   "claim": "一份批复只有一页半，但四要素一个不少",
+   "headline": {
+    "type": "assertion",
+    "text": "一份批复只有一页半，但::四要素::一个不少",
+    "rationale": "orient 直给读法框架"
+   },
+   "kicker": "西十高铁可研批复解读（项目方案）",
+   "content": {
+    "stage": "批复四要素：必要性、内容与标准、投资与资金、建设安排。",
+    "reader": "本简报基于国家发改委《关于新建西安至十堰高速铁路可行性研究报告的批复》（发改基础〔2020〕595号，原样抓取）。批复很短（约 1,700 字），但四要素齐全：必要性、内容与标准、投资与资金、建设安排。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "本简报基于国家发改委《关于新建西安至十堰高速铁路可行性研究报告的批复》（发改基础〔2020〕595号，原样抓取）。批复很短（约 1,700 字），但四要素齐全：必要性、内容与标准、投资与资金、建设安排。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "本简报基于国家发改委《关于新建西安至十堰高速铁路可行性研究报告的批复》（发改基础〔2020〕595号，原样抓取）。批复很短（约 1,700 字），但四要素齐全：必要性、内容与标准、投资与资金、建设安排。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [],
+   "source_refs": []
+  },
+  {
+   "id": "necessity",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "要素一 · 必要性",
+   "claim": "完善路网 + 区域战略",
+   "headline": {
+    "type": "topic",
+    "text": "要素一 · 必要性：完善路网 + ::区域战略::",
+    "rationale": "主题式标题列要素"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "完善高铁路网；加强关中城市群与长江中游城市群联系；推动秦巴山区脱贫与乡村振兴；支撑一带一路、长江经济带、西部大开发。",
+    "reader": "必要性表述（原文）：进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建「一带一路」、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "必要性表述（原文）：进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建「一带一路」、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "必要性表述（原文）：进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建「一带一路」、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [],
+   "source_refs": [
+    "经研究，现批复如下：\n\n  一、为进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建“一带一路”、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展，同意新建西安至十堰高速铁路（项目代码：2018-000052-53-01-000601）。"
+   ]
+  },
+  {
+   "id": "standard",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "要素二 · 内容与标准",
+   "claim": "256.7 公里、<br>350 km/h、3000 万人/",
+   "headline": {
+    "type": "assertion",
+    "text": "要素二 · 内容与标准：::256.7 公里::、<br>350 km/h、::3000 万人/年::",
+    "rationale": "quantify 数字锚点"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "正线 256.7 公里、7 站（新建 6）；350 km/h 双线；CTCS-3 列控；远景单向输送 3000 万人/年。",
+    "reader": "主要建设内容与技术标准：起自西安东站，经蓝田、商洛西、山阳、漫川关、郧西站，接入既有十堰东站；正线全长 256.7 公里，全线设 7 站（新建 6 个）；铁路等级高速铁路、双线、设计速度 350 公里/小时、最小曲线半径一般 7000 米、最大坡度一般 20‰、电力牵引、到发线有效长 650 米、CTCS-3 级列控、调度集中；规划远景年输送能力单向 3000 万人/年。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "主要建设内容与技术标准：起自西安东站，经蓝田、商洛西、山阳、漫川关、郧西站，接入既有十堰东站；正线全长 256.7 公里，全线设 7 站（新建 6 个）；铁路等级高速铁路、双线、设计速度 350 公里/小时、最小曲线半径一般 7000 米、最大坡度一般 20‰、电力牵引、到发线有效长 650 米、CTCS-3 级列控、调度集中；规划远景年输送能力单向 3000 万人/年。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "主要建设内容与技术标准：起自西安东站，经蓝田、商洛西、山阳、漫川关、郧西站，接入既有十堰东站；正线全长 256.7 公里，全线设 7 站（新建 6 个）；铁路等级高速铁路、双线、设计速度 350 公里/小时、最小曲线半径一般 7000 米、最大坡度一般 20‰、电力牵引、到发线有效长 650 米、CTCS-3 级列控、调度集中；规划远景年输送能力单向 3000 万人/年。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "256.7",
+       "label": "正线全长（公里）",
+       "accent": true
+      },
+      {
+       "value": "350",
+       "label": "设计速度（km/h）"
+      },
+      {
+       "value": "3000 万",
+       "label": "远景单向输送（人/年）"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "新建西安至十堰高速铁路起自西安枢纽西安东站，经蓝田、商洛西、山阳、漫川关、郧西站，接入既有十堰东站，正线全长256.7公里，全线设7个车站，其中新建车站6个。",
+    "设计速度：350公里/小时。",
+    "规划远景年输送能力：单向3000万人/年。"
+   ]
+  },
+  {
+   "id": "investment",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "要素三 · 投资与资金",
+   "claim": "476.8 亿，<br>资本金 50% 三方出资",
+   "headline": {
+    "type": "assertion",
+    "text": "要素三 · 投资与资金：::476.8 亿::，<br>资本金 50% 三方出资",
+    "rationale": "quantify 资金结构"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "总投资 476.8 亿（工程 452.1 + 动车组 24.7）；资本金 238.4 亿：国铁 103.8、湖北 35.6、陕西 99.0；其余国内银行贷款。",
+    "reader": "投资与资金：项目总投资 476.8 亿元，其中工程投资 452.1 亿元、动车组购置费 24.7 亿元。项目资本金占总投资的 50%，为 238.4 亿元：国铁集团出资 103.8 亿元（企业自筹）；湖北省出资 35.6 亿元（含征地拆迁 4.2 亿元）；陕西省出资 99.0 亿元（含征地拆迁 26.5 亿元）。资本金以外使用国内银行贷款。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "layout_intent": null,
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "投资与资金：项目总投资 476.8 亿元，其中工程投资 452.1 亿元、动车组购置费 24.7 亿元。项目资本金占总投资的 50%，为 238.4 亿元：国铁集团出资 103.8 亿元（企业自筹）；湖北省出资 35.6 亿元（含征地拆迁 4.2 亿元）；陕西省出资 99.0 亿元（含征地拆迁 26.5 亿元）。资本金以外使用国内银行贷款。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "投资与资金：项目总投资 476.8 亿元，其中工程投资 452.1 亿元、动车组购置费 24.7 亿元。项目资本金占总投资的 50%，为 238.4 亿元：国铁集团出资 103.8 亿元（企业自筹）；湖北省出资 35.6 亿元（含征地拆迁 4.2 亿元）；陕西省出资 99.0 亿元（含征地拆迁 26.5 亿元）。资本金以外使用国内银行贷款。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": "图表见 caption",
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "亿元",
+     "categories": [
+      "国铁集团",
+      "陕西省",
+      "湖北省"
+     ],
+     "series": [
+      {
+       "name": "资本金出资",
+       "data": [
+        103.8,
+        99.0,
+        35.6
+       ]
+      }
+     ],
+     "caption": "口径：项目资本金出资（三方合计 238.4 亿元，占总投资 50%）；来源：批复「三、投资估算、资金来源」"
+    }
+   ],
+   "source_refs": [
+    "三、投资估算、资金来源及建设安排\n  项目总投资476.8亿元，其中工程投资452.1亿元，动车组购置费24.7亿元。",
+    "项目资本金占总投资的50%，为238.4亿元：其中中国国家铁路集团有限公司出资103.8亿元，由企业自筹解决（中央预算内投资另行研究确定）；"
+   ]
+  },
+  {
+   "id": "arrangement",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "要素四 · 建设安排",
+   "claim": "工期 4.5 年，<br>两段两种治理结构",
+   "headline": {
+    "type": "assertion",
+    "text": "要素四 · 建设安排：工期 ::4.5 年::，<br>两段两种治理结构",
+    "rationale": "explain 建设安排"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "工期 4.5 年；陕西段与西延铁路组建新公司，湖北段纳入汉十城际公司管理。",
+    "reader": "建设安排：建设工期 4.5 年；项目陕西段和西安至延安铁路项目组建新公司，湖北段纳入湖北汉十城际铁路有限责任公司管理。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "建设安排：建设工期 4.5 年；项目陕西段和西安至延安铁路项目组建新公司，湖北段纳入湖北汉十城际铁路有限责任公司管理。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "建设安排：建设工期 4.5 年；项目陕西段和西安至延安铁路项目组建新公司，湖北段纳入湖北汉十城际铁路有限责任公司管理。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [],
+   "source_refs": [
+    "建设工期4.5年",
+    "本项目陕西段和西安至延安铁路项目组建新公司，湖北段纳入湖北汉十城际铁路有限责任公司管理。"
+   ]
+  },
+  {
+   "id": "implication",
+   "role": "argument",
+   "cognitive_job": "summarize",
+   "topic": "通用读法",
+   "claim": "批复四要素模板——<br>必要性/标准/资金/安排",
+   "headline": {
+    "type": "assertion",
+    "text": "通用读法：批复四要素模板——<br>::必要性/标准/资金/安排::",
+    "rationale": "summarize 提炼模板"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "任何可研批复都可以用这四要素读：必要性、内容与标准、投资与资金、建设安排。",
+    "reader": "通用读法（推导）：可研批复的四要素模板——必要性（战略与网路）、内容与标准（线路/等级/速度/能力）、投资与资金（总投资/资本金/出资方）、建设安排（工期/治理结构）。用这四要素可以快速读任何一份批复。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "通用读法（推导）：可研批复的四要素模板——必要性（战略与网路）、内容与标准（线路/等级/速度/能力）、投资与资金（总投资/资本金/出资方）、建设安排（工期/治理结构）。用这四要素可以快速读任何一份批复。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "通用读法（推导）：可研批复的四要素模板——必要性（战略与网路）、内容与标准（线路/等级/速度/能力）、投资与资金（总投资/资本金/出资方）、建设安排（工期/治理结构）。用这四要素可以快速读任何一份批复。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [],
+   "source_refs": [
+    "经研究，现批复如下：\n\n  一、为进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建“一带一路”、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展，同意新建西安至十堰高速铁路（项目代码：2018-000052-53-01-000601）。",
+    "三、投资估算、资金来源及建设安排\n  项目总投资476.8亿元，其中工程投资452.1亿元，动车组购置费24.7亿元。"
+   ]
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "批复虽短，骨架齐全",
+   "claim": "批复虽短，骨架齐全",
+   "headline": {
+    "type": "narrative",
+    "text": "批复虽短，::骨架齐全::",
+    "rationale": "叙事式收束"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "批复虽短，骨架齐全。",
+    "reader": "核心判断：批复虽短，四要素骨架齐全——薄材料也有标准读法。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "核心判断：批复虽短，四要素骨架齐全——薄材料也有标准读法。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "核心判断：批复虽短，四要素骨架齐全——薄材料也有标准读法。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "批复虽短，<br>::骨架齐全::。",
+     "cite": "西十高铁批复解读 · 收束"
+    }
+   ],
+   "source_refs": []
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "附录",
+   "claim": "来源、口径与诚实声明",
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "附录备查"
+   },
+   "kicker": "西十高铁可研批复解读",
+   "content": {
+    "stage": "来源、口径与诚实声明。",
+    "reader": "附录：唯一来源为国家发改委批复原文（委信息公开平台）；材料薄（1,693 字）是事实，本简报不注水；通用读法为推导内容。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "xiyan-hsr",
+     "source": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+     "unit": null,
+     "time": "2020-04",
+     "scope": "陕西/湖北"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "附录：唯一来源为国家发改委批复原文（委信息公开平台）；材料薄（1,693 字）是事实，本简报不注水；通用读法为推导内容。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "附录：唯一来源为国家发改委批复原文（委信息公开平台）；材料薄（1,693 字）是事实，本简报不注水；通用读法为推导内容。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+   "blocks": [
+    {
+     "type": "evidence",
+     "items": [
+      {
+       "title": "唯一来源",
+       "source": "发改基础〔2020〕595号（委信息公开平台）",
+       "grade": "官方"
+      },
+      {
+       "title": "诚实声明",
+       "source": "材料薄（1,693 字），不注水",
+       "grade": "声明"
+      },
+      {
+       "title": "性质声明",
+       "source": "通用读法为推导内容",
+       "grade": "声明"
+      }
+     ]
+    }
+   ],
+   "source_refs": []
+  }
+ ]
+}

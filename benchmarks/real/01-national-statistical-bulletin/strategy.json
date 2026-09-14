@@ -1,0 +1,37 @@
+{
+  "schema": "strategy.v1",
+  "source_material": {
+    "file": "source-material.md",
+    "title": "中华人民共和国2024年国民经济和社会发展统计公报",
+    "publisher": "国家统计局",
+    "url": "https://www.stats.gov.cn/sj/zxfb/202502/t20250228_1958817.html",
+    "date": "2025-02-28"
+  },
+  "situation": "Data Presentation / 内部经营分析会",
+  "situation_rationale": "材料是官方统计公报（数据密集、口径繁多），用途是让经营层从公共数据中读出对本集团经营的结构性参考——属于数据分析简报，不是决策请示也不是培训。",
+  "communication_goal": ["inform", "explain"],
+  "audience": {
+    "role": "集团经营分析人员与分管领导",
+    "expertise": "domain-expert（熟悉经营口径，非统计学专业）",
+    "prior_knowledge": "了解集团业务板块，未通读公报",
+    "decision_power": "influencer",
+    "attitude": "neutral（对宏观数据有经验性疲劳）",
+    "motivation": "从公共数据中找出与集团经营相关的结构性信号",
+    "concerns": ["数字是否可靠", "哪些是趋势哪些是波动", "与我何干"],
+    "time_budget": "12 分钟",
+    "cognitive_load_tolerance": "medium",
+    "expected_detail": "summary-with-data",
+    "likely_questions": ["利润为什么降", "人口负增长意味着什么", "这些和我有什么关系"]
+  },
+  "central_thesis": "2024 年 5.0% 的增长，总量平稳只是表象——动能、能源、需求三个结构同时在换挡；而利润率与人口是两道反向约束。对经营而言，机会在顺着新动能，风险在旧收缩与价格下行。",
+  "key_messages": [
+    "增长的成色在结构：装备制造与高技术制造业占比持续抬升（34.6% / 16.3%）",
+    "新产品与清洁能源是两条最快的增长线（VR +59.4%、充电桩 +58.7%、太阳能装机 +45.2%）",
+    "量增利薄：规上工业利润 -3.3%、营收利润率 5.39%，价格是主要挤压项（PPI -2.2%）",
+    "人口与地产是两道长周期约束（自然增长率 -0.99‰、房地产业增加值 -1.8%）"
+  ],
+  "supporting_structure": "三个结构信号（动能/能源/需求）→ 两道约束（利润/人口地产）→ 三条经营含义",
+  "duration_minutes": 12,
+  "ethical_constraints": "全部数字必须能在 source-material.md 中找到原文；公报的官方定性表述只做背景，不做加工；利空数据（利润、人口、房地产）不回避",
+  "anti_goals": ["不做政策解读", "不做预测", "不与未核实的第三方数据混用"]
+}

@@ -1,0 +1,140 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "《国家数据基础设施建设指引》解读 · 一张架构图与三张时间表",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "这是数据基础设施的::第一个顶层文件::——把「数据」当基础设施来规划",
+   "chart": null,
+   "source_refs": [
+    "这是国内关于国家数据基础设施建设的首个文件"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "concept",
+   "arg_ref": "C1",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "概念：提供八大服务的新型基础设施，是::有机整体::",
+   "chart": null,
+   "source_refs": [
+    "面向社会提供数据采集、汇聚、传输、加工、流通、利用、运营、安全服务的一类新型基础设施，是集成硬件、软件、模型算法、标准规范、机制设计等在内的有机整体"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "timeline",
+   "arg_ref": "C2",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "三阶段时间表：试点 → 规模化流通 → ::主体结构基本建成::",
+   "chart": null,
+   "source_refs": [
+    "2024—2026年，利用2—3年左右时间，围绕重要行业领域和典型应用场景，开展数据基础设施技术路线试点试验",
+    "2027—2028年，建成支撑数据规模化流通、互联互通的数据基础设施",
+    "到2029年，基本建成国家数据基础设施主体结构"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "capabilities",
+   "arg_ref": "C3",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "能力结构：::八大能力::覆盖数据全生命周期",
+   "chart": null,
+   "source_refs": [
+    "国家数据基础设施具有数据采集、汇聚、传输、加工、流通、利用、运营、安全八大能力"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "unified",
+   "arg_ref": "C4",
+   "cognitive_job": "explain",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "底座是「三大统一」：全国数据::一本账::",
+   "chart": null,
+   "source_refs": [
+    "按照统一目录标识、统一身份登记、统一接口要求，建设数据流通利用设施底座",
+    "建立覆盖政府、行业、企业等主体及国家、省、市、县等层级的全国一体化的分布式数据目录，形成全国数据“一本账”"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "facilities",
+   "arg_ref": "C5",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "六类流通利用技术设施：::可信数据空间::领衔",
+   "chart": null,
+   "source_refs": [
+    "包括可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台等技术设施"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "functions",
+   "arg_ref": "THESIS",
+   "cognitive_job": "explain",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "四大总体功能：::可信流通 · 算力供给 · 高速传输 · 安全可靠::",
+   "chart": null,
+   "source_refs": [
+    "推动安全防护由静态保护向动态保护、由边界安全向内生安全",
+    "面向“东数西算”等场景中对异属异构异地算力的调度需求"
+   ]
+  },
+  {
+   "order": 8,
+   "id": "implication",
+   "arg_ref": "C6",
+   "cognitive_job": "answer",
+   "load": "medium",
+   "headline_type": "decision",
+   "headline": "集团的接入参考：::目录身份先行 · 数据空间候选 · 算力盯枢纽 · 安全转动态::",
+   "chart": null,
+   "source_refs": [
+    "建立全国一体化的分布式数字身份体系",
+    "支持建设企业可信数据空间、行业可信数据空间、城市可信数据空间",
+    "促进各类新增算力向国家枢纽节点集聚"
+   ]
+  },
+  {
+   "order": 9,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "数据有了::基础设施::，就有了可建设的秩序",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 10,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "who-whs-2025",
+  "title": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+  "publisher": "世界卫生组织（WHO）",
+  "url": "https://www.who.int/zh/news/item/15-05-2025-who-warns-of-slowing-global-health-gains-in-new-statistics-report",
+  "date": "2025-05-15"
+ },
+ "situation": "Research Briefing / 集团国际化业务与公共事务团队（研究报告类）",
+ "situation_rationale": "材料是 WHO 年度旗舰统计报告的官方中文新闻稿（数据密集型国际组织发布），用途是向需要跟踪全球卫生与可持续发展议程的团队解读报告的关键信号。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "集团国际化业务与公共事务团队",
+  "expertise": "mixed（业务 + 政策研究）",
+  "prior_knowledge": "了解可持续发展议程常识，未读过 WHO 原报告",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "从全球卫生数据中识别与本集团海外业务和 ESG 议程相关的信号",
+  "concerns": [
+   "进展放缓的具体证据",
+   "区域人力缺口",
+   "哪些指标在改善"
+  ],
+  "objections": [
+   "新闻稿是不是只讲坏消息"
+  ],
+  "time_budget": "8 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "structured-findings",
+  "likely_questions": [
+   "三个十亿目标的口径是什么"
+  ]
+ },
+ "central_thesis": "WHO 年度体检给出减速判断：预期寿命两年下降 1.8 岁是十年进展的逆转；三个十亿目标一项超额、两项滞后；若不调向，2024–2030 将失去避免 70 万孕产妇与 800 万儿童死亡的机会——而 1110 万卫生人力缺口（70% 集中于非洲与东地中海）是硬约束。",
+ "key_messages": [
+  "逆转：2019–2021 全球预期寿命降 1.8 岁，健康预期寿命再减 6 周",
+  "分化：更健康人口 +14 亿超额达标；服务覆盖 +4.31 亿、应急保护 +6.37 亿双双滞后",
+  "代价：不调向将失去避免 70 万孕产妇与 800 万 5 岁以下儿童死亡的机会",
+  "硬约束：到 2030 年短缺 1 110 万卫生工作者，近 70% 集中在非洲与东地中海区域",
+  "并非全是坏消息：酒精消费 5.7 升降至 5.0 升、烟草使用减少、空气质量改善"
+ ],
+ "supporting_structure": "信号链：减速判断 → 三十亿目标成绩单 → 历史动能与停滞 → 不作为的代价 → 人力硬约束 → 仍存的亮点 → 行动含义",
+ "duration_minutes": 8,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文（UN 式空格分节如「1 110万」逐字保留）；对业务含义的推断须与报告事实区分",
+ "anti_goals": [
+  "不做全球卫生政策建议",
+  "不把新闻稿数据外推为集团决策依据"
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "“技能中国行动”实施方案解读 · 一个可考核的人才目标",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "「技能中国」不是口号，是::可考核的规模目标::",
+   "chart": null,
+   "source_refs": [
+    "“十四五”期间，新增技能人才4000万人以上，技能人才占就业人员比例达到30%，东部省份高技能人才占技能人才比例达到35%，中西部省份高技能人才占技能人才比例在现有基础上提高2-3个百分点。"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "target",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "目标：新增 ::4000 万::技能人才，<br>占就业 ::30%::",
+   "chart": null,
+   "source_refs": [
+    "“十四五”期间，新增技能人才4000万人以上，技能人才占就业人员比例达到30%，东部省份高技能人才占技能人才比例达到35%，中西部省份高技能人才占技能人才比例在现有基础上提高2-3个百分点。"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "actions",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "四大行动 ::20 条::：<br>提升 · 强企 · 激励 · 合作",
+   "chart": null,
+   "source_refs": [
+    "实施“技能提升”行动",
+    "实施“技能强企”行动",
+    "实施“技能激励”行动",
+    "实施“技能合作”行动"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "window1",
+   "arg_ref": "C3",
+   "cognitive_job": "explain",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "企业窗口①：::自主认定::——<br>一线职工可直接认定为技师",
+   "chart": null,
+   "source_refs": [
+    "打破学历、资历、年龄、身份、比例等限制，对掌握高超技能、业绩突出的企业一线职工，可按规定直接认定为高级工、技师、高级技师。"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "window2",
+   "arg_ref": "C4",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "企业窗口②：新型学徒制<br>::「招工即招生、入企即入校」::",
+   "chart": null,
+   "source_refs": [
+    "全面推行“招工即招生、入企即入校、企校双师联合培养”为主要内容的中国特色企业新型学徒制"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "implication",
+   "arg_ref": "C5",
+   "cognitive_job": "answer",
+   "load": "medium",
+   "headline_type": "decision",
+   "headline": "集团参考：<br>::申报认定 · 学徒试点 · 薪酬衔接 · 校企合作::",
+   "chart": null,
+   "source_refs": [
+    "遴选建设300所左右优质技工院校和500个左右优质专业，开展100个左右技工教育（联盟）集团建设试点工作。",
+    "引导企业建立健全体现技能价值激励导向的薪酬分配制度"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "目标可考核，::窗口可申报::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 8,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

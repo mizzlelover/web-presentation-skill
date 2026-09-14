@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "title": "国务院关于印发“十四五”数字经济发展规划的通知（国发〔2021〕29号）",
+  "publisher": "国务院",
+  "url": "https://www.gov.cn/zhengce/content/2022-01/12/content_5667817.htm",
+  "date": "2022-01-12"
+ },
+ "situation": "Strategy Briefing / 集团战略与经营分析会",
+ "situation_rationale": "材料是国家级战略规划（目标+任务结构），用途是把规划指标转译为集团的战略位置判断——属于战略解读简报。",
+ "communication_goal": [
+  "inform",
+  "explain",
+  "align"
+ ],
+ "audience": {
+  "role": "集团战略与经营分析人员",
+  "expertise": "domain-expert",
+  "prior_knowledge": "了解集团业务，未通读规划全文",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "从规划中找集团的业务位置与合规边界",
+  "concerns": [
+   "硬指标有哪些",
+   "重心在哪",
+   "集团的位置"
+  ],
+  "objections": [
+   "规划离执行太远"
+  ],
+  "time_budget": "10 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "summary",
+  "likely_questions": [
+   "7.8→10 意味着什么",
+   "数据要素怎么落地"
+  ]
+ },
+ "central_thesis": "这份规划把数字经济的增长写成了可考核的时间表：核心产业增加值占 GDP 比重从 7.8% 到 10%；而底座（网络）已全球领先，重心转向数据要素与融合应用——集团的位置在『用数据要素、上融合赛道、守治理边界』。",
+ "key_messages": [
+  "目标时间表：7.8%（2020）→ 10%（2025），约 2.2 个百分点的结构性增量",
+  "底座已全球领先（光纤 >94%、移动宽带 108%、IPv6 4.6 亿），规划重心从建网转向用数",
+  "数据要素被定位为「核心引擎」，乘数作用是官方表述",
+  "治理与发展并重：数字经济治理体系完善本身是 2025 目标之一"
+ ],
+ "supporting_structure": "目标时间表 → 现状底座 → 三大任务重心（数据要素/基础设施/融合与治理）→ 集团四个位置",
+ "duration_minutes": 10,
+ "ethical_constraints": "全部数字与表述必须能在 source-material.md 找到原文；规划目标值与现状值严格区分；『集团位置』为推导内容须声明",
+ "anti_goals": [
+  "不做政策预测",
+  "不添加规划外的数字"
+ ]
+}

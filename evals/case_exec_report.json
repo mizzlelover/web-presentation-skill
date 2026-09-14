@@ -1,0 +1,2316 @@
+{
+  "generated_at": "2026-09-13T03:00:43.444Z",
+  "duration_ms": 47765,
+  "total": 100,
+  "passed": 100,
+  "failed": 0,
+  "execution_mode": "mapped_deck_focus_eval",
+  "honesty_note": "每条案例的 focus 维度在映射 Deck 的真实浏览器运行上独立断言；案例 brief 场景由同类真实材料 Deck 承载。为每条案例全新生成 Deck 属 LLM 行为测试，仍列 V1.0（见 CASE_MAPPING.md §三）。",
+  "results": [
+    {
+      "id": "EX-01",
+      "cat": "executive",
+      "brief": "数据闭环项目追加投资决裁",
+      "deck": "corpus/01-executive-portal-decision",
+      "focus": [
+        "goal_clarity",
+        "scene_purpose",
+        "presenter_usability"
+      ],
+      "checks": {
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=25字 scenes=18"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=18 roles=opening/problem/argument/recommendation/evidence/transition/decision/summary/deep_dive/branch/appendix"
+        },
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=18/18 键盘导航OK"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:56.297Z"
+    },
+    {
+      "id": "EX-02",
+      "cat": "executive",
+      "brief": "季度经营回顾 + 下半年资源重分配",
+      "deck": "derived/01-audience-ceo",
+      "focus": [
+        "information_density",
+        "data_visualization"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "data_visualization": {
+          "ok": true,
+          "detail": "canvas=1 painted=1"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:56.847Z"
+    },
+    {
+      "id": "EX-03",
+      "cat": "executive",
+      "brief": "并购标的尽调结论汇报",
+      "deck": "derived/04-duration-5min",
+      "focus": [
+        "evidence_quality",
+        "argument_quality"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=5 图表caption=1"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=12字/断言式≥10字=4/5"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:57.317Z"
+    },
+    {
+      "id": "EX-04",
+      "cat": "executive",
+      "brief": "组织变革方案沟通（怀疑型受众）",
+      "deck": "derived/05-duration-15min",
+      "focus": [
+        "audience_fit",
+        "narrative_coherence"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团决策会参会人员"
+        },
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:57.843Z"
+    },
+    {
+      "id": "EX-05",
+      "cat": "executive",
+      "brief": "危机事件董事会紧急通报",
+      "deck": "real/10-government-work-report-2025",
+      "focus": [
+        "goal_clarity",
+        "runtime_stability"
+      ],
+      "checks": {
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=19字 scenes=8"
+        },
+        "runtime_stability": {
+          "ok": true,
+          "detail": "traverse=true consoleErr=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:58.318Z"
+    },
+    {
+      "id": "EX-06",
+      "cat": "executive",
+      "brief": "年度预算申请（多部门竞争）",
+      "deck": "corpus/01-executive-portal-decision",
+      "focus": [
+        "argument_quality",
+        "evidence_quality"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=16字/断言式≥10字=17/18"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=18 图表caption=2"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:58.810Z"
+    },
+    {
+      "id": "EX-07",
+      "cat": "executive",
+      "brief": "新业务线立项决策（三方案权衡）",
+      "deck": "derived/01-audience-ceo",
+      "focus": [
+        "argument_quality",
+        "scene_purpose"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=15字/断言式≥10字=4/6"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=6 roles=opening/argument/evidence/decision/summary"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:59.291Z"
+    },
+    {
+      "id": "EX-08",
+      "cat": "executive",
+      "brief": "海外扩张风险评估",
+      "deck": "derived/04-duration-5min",
+      "focus": [
+        "evidence_quality",
+        "information_density"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=5 图表caption=1"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T02:59:59.806Z"
+    },
+    {
+      "id": "EX-09",
+      "cat": "executive",
+      "brief": "数字化转型中期复盘（坏消息为主）",
+      "deck": "derived/05-duration-15min",
+      "focus": [
+        "narrative_coherence",
+        "goal_clarity"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        },
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=14字 scenes=10"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:00.307Z"
+    },
+    {
+      "id": "EX-10",
+      "cat": "executive",
+      "brief": "供应链中断应急预案决策",
+      "deck": "real/10-government-work-report-2025",
+      "focus": [
+        "presenter_usability",
+        "runtime_stability"
+      ],
+      "checks": {
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=8/8 键盘导航OK"
+        },
+        "runtime_stability": {
+          "ok": true,
+          "detail": "traverse=true consoleErr=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:00.794Z"
+    },
+    {
+      "id": "EX-11",
+      "cat": "executive",
+      "brief": "AI 战略投资机会评审",
+      "deck": "corpus/01-executive-portal-decision",
+      "focus": [
+        "audience_fit",
+        "argument_quality"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团分管领导、财务与信息化职能负责人"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=16字/断言式≥10字=17/18"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:01.275Z"
+    },
+    {
+      "id": "EX-12",
+      "cat": "executive",
+      "brief": "5 分钟电梯版季度汇报",
+      "deck": "derived/01-audience-ceo",
+      "focus": [
+        "information_density",
+        "cognitive_load"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=10 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:01.803Z"
+    },
+    {
+      "id": "EX-13",
+      "cat": "executive",
+      "brief": "双受众（董事会+外部董事）混合汇报",
+      "deck": "derived/04-duration-5min",
+      "focus": [
+        "audience_fit",
+        "reader_usability"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=已在会前读过材料的决策者"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=5 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:02.278Z"
+    },
+    {
+      "id": "EX-14",
+      "cat": "executive",
+      "brief": "项目下马建议（不受欢迎的结论）",
+      "deck": "derived/05-duration-15min",
+      "focus": [
+        "argument_quality",
+        "narrative_coherence"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=15字/断言式≥10字=9/10"
+        },
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:02.792Z"
+    },
+    {
+      "id": "EX-15",
+      "cat": "executive",
+      "brief": "年度战略解码大会开场报告",
+      "deck": "real/10-government-work-report-2025",
+      "focus": [
+        "narrative_coherence",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历8幕=true"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:03.282Z"
+    },
+    {
+      "id": "GV-01",
+      "cat": "government",
+      "brief": "智慧城市阶段性成果汇报",
+      "deck": "corpus/02-government-waterfront",
+      "focus": [
+        "evidence_quality",
+        "information_density"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=15 图表caption=1"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:03.802Z"
+    },
+    {
+      "id": "GV-02",
+      "cat": "government",
+      "brief": "防汛应急预案桌面推演",
+      "deck": "real/02-central-audit-report-2024",
+      "focus": [
+        "runtime_stability",
+        "presenter_usability"
+      ],
+      "checks": {
+        "runtime_stability": {
+          "ok": true,
+          "detail": "traverse=true consoleErr=0"
+        },
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=13/13 键盘导航OK"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:04.311Z"
+    },
+    {
+      "id": "GV-03",
+      "cat": "government",
+      "brief": "民生工程人大专题询问答复",
+      "deck": "real/03-digital-economy-plan-14th",
+      "focus": [
+        "evidence_quality",
+        "argument_quality"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=23字/断言式≥10字=10/10"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:04.784Z"
+    },
+    {
+      "id": "GV-04",
+      "cat": "government",
+      "brief": "环保督察整改情况报告",
+      "deck": "real/10-government-work-report-2025",
+      "focus": [
+        "data_visualization",
+        "evidence_quality"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=8 图表caption=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:05.273Z"
+    },
+    {
+      "id": "GV-05",
+      "cat": "government",
+      "brief": "十四五规划中期评估",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "information_density",
+        "reader_usability"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=8 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:05.793Z"
+    },
+    {
+      "id": "GV-06",
+      "cat": "government",
+      "brief": "招商引资政策宣讲（企业受众）",
+      "deck": "corpus/02-government-waterfront",
+      "focus": [
+        "audience_fit",
+        "goal_clarity"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=市建设主管部门、发改与财政评审人员、属地街道代表"
+        },
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=24字 scenes=15"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:06.269Z"
+    },
+    {
+      "id": "GV-07",
+      "cat": "government",
+      "brief": "政府工作报告配套图解演示",
+      "deck": "real/02-central-audit-report-2024",
+      "focus": [
+        "visual_hierarchy",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "visual_hierarchy": {
+          "ok": true,
+          "detail": "层级幕=13/13 overflow=0"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:06.809Z"
+    },
+    {
+      "id": "GV-08",
+      "cat": "government",
+      "brief": "基层治理数字化平台上线汇报",
+      "deck": "real/03-digital-economy-plan-14th",
+      "focus": [
+        "cognitive_load",
+        "interaction_utility"
+      ],
+      "checks": {
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=12 overflow=0 stepwise=true"
+        },
+        "interaction_utility": {
+          "ok": true,
+          "detail": "搜索命中=1 键盘=可用"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:07.315Z"
+    },
+    {
+      "id": "GV-09",
+      "cat": "government",
+      "brief": "突发公共事件新闻发布",
+      "deck": "real/10-government-work-report-2025",
+      "focus": [
+        "goal_clarity",
+        "runtime_stability"
+      ],
+      "checks": {
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=19字 scenes=8"
+        },
+        "runtime_stability": {
+          "ok": true,
+          "detail": "traverse=true consoleErr=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:07.790Z"
+    },
+    {
+      "id": "GV-10",
+      "cat": "government",
+      "brief": "对口帮扶成果展陈讲解",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "narrative_coherence",
+        "motion_utility"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历8幕=true"
+        },
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=7 (reveal,focus)"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:08.299Z"
+    },
+    {
+      "id": "PR-01",
+      "cat": "project_report",
+      "brief": "软件迭代月度进展（含延期风险）",
+      "deck": "corpus/08-project-progress-review",
+      "focus": [
+        "goal_clarity",
+        "scene_purpose"
+      ],
+      "checks": {
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=17字 scenes=9"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=9 roles=opening/evidence/argument/decision/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:08.775Z"
+    },
+    {
+      "id": "PR-02",
+      "cat": "project_report",
+      "brief": "工程项目里程碑评审",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "evidence_quality",
+        "visual_hierarchy"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=8 图表caption=1"
+        },
+        "visual_hierarchy": {
+          "ok": true,
+          "detail": "层级幕=8/8 overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:09.288Z"
+    },
+    {
+      "id": "PR-03",
+      "cat": "project_report",
+      "brief": "跨部门项目冲突升级汇报",
+      "deck": "corpus/08-project-progress-review",
+      "focus": [
+        "argument_quality",
+        "audience_fit"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=16字/断言式≥10字=9/9"
+        },
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=项目指导委员会（分管领导 + 信息中心 + 业务方代表）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:09.764Z"
+    },
+    {
+      "id": "PR-04",
+      "cat": "project_report",
+      "brief": "项目复盘（成功）",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "narrative_coherence",
+        "scene_purpose"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历8幕=true"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=8 roles=opening/argument/evidence/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:10.274Z"
+    },
+    {
+      "id": "PR-05",
+      "cat": "project_report",
+      "brief": "项目复盘（失败，根因分析）",
+      "deck": "corpus/08-project-progress-review",
+      "focus": [
+        "argument_quality",
+        "evidence_quality"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=16字/断言式≥10字=9/9"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=1"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:10.750Z"
+    },
+    {
+      "id": "PR-06",
+      "cat": "project_report",
+      "brief": "研发管线组合评审",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "data_visualization",
+        "information_density"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:11.266Z"
+    },
+    {
+      "id": "PR-07",
+      "cat": "project_report",
+      "brief": "客户交付验收汇报",
+      "deck": "corpus/08-project-progress-review",
+      "focus": [
+        "evidence_quality",
+        "presenter_usability"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=1"
+        },
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=9/9 键盘导航OK"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:11.746Z"
+    },
+    {
+      "id": "PR-08",
+      "cat": "project_report",
+      "brief": "敏捷季度规划（PI Planning）",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "cognitive_load",
+        "interaction_utility"
+      ],
+      "checks": {
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=7 overflow=0 stepwise=true"
+        },
+        "interaction_utility": {
+          "ok": true,
+          "detail": "搜索命中=2 键盘=可用"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:12.263Z"
+    },
+    {
+      "id": "PR-09",
+      "cat": "project_report",
+      "brief": "OKR 季度述职",
+      "deck": "corpus/08-project-progress-review",
+      "focus": [
+        "goal_clarity",
+        "data_visualization"
+      ],
+      "checks": {
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=17字 scenes=9"
+        },
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:12.736Z"
+    },
+    {
+      "id": "PR-10",
+      "cat": "project_report",
+      "brief": "外包供应商绩效季度评审",
+      "deck": "real/09-xiyan-hsr-approval",
+      "focus": [
+        "data_visualization",
+        "argument_quality"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=23字/断言式≥10字=7/8"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:13.227Z"
+    },
+    {
+      "id": "SA-01",
+      "cat": "sales",
+      "brief": "SaaS 产品对制造业客户首访",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "audience_fit",
+        "narrative_coherence"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=目标企业市场部负责人与内容运营负责人"
+        },
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:13.746Z"
+    },
+    {
+      "id": "SA-02",
+      "cat": "sales",
+      "brief": "招投标现场讲标（有评分表）",
+      "deck": "real/08-home-appliance-trade-in",
+      "focus": [
+        "goal_clarity",
+        "presenter_usability"
+      ],
+      "checks": {
+        "goal_clarity": {
+          "ok": true,
+          "detail": "headline=26字 scenes=8"
+        },
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=8/8 键盘导航OK"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:14.234Z"
+    },
+    {
+      "id": "SA-03",
+      "cat": "sales",
+      "brief": "续约谈判（客户有流失信号）",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "argument_quality",
+        "evidence_quality"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=14字/断言式≥10字=9/10"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:14.721Z"
+    },
+    {
+      "id": "SA-04",
+      "cat": "sales",
+      "brief": "渠道伙伴招募宣讲",
+      "deck": "real/08-home-appliance-trade-in",
+      "focus": [
+        "narrative_coherence",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历8幕=true"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:15.211Z"
+    },
+    {
+      "id": "SA-05",
+      "cat": "sales",
+      "brief": "解决方案 POC 结果汇报",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "evidence_quality",
+        "data_visualization"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        },
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:15.682Z"
+    },
+    {
+      "id": "SA-06",
+      "cat": "sales",
+      "brief": "高价咨询方案提案（对比低价竞品）",
+      "deck": "real/08-home-appliance-trade-in",
+      "focus": [
+        "argument_quality",
+        "audience_fit"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=22字/断言式≥10字=8/8"
+        },
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团家电渠道与门店运营团队"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:16.163Z"
+    },
+    {
+      "id": "SA-07",
+      "cat": "sales",
+      "brief": "展会展位 3 分钟演示",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "cognitive_load",
+        "motion_utility"
+      ],
+      "checks": {
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=13 overflow=0 stepwise=true"
+        },
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=13 (focus,reveal)"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:16.687Z"
+    },
+    {
+      "id": "SA-08",
+      "cat": "sales",
+      "brief": "客户高层回访（关系维护型）",
+      "deck": "real/08-home-appliance-trade-in",
+      "focus": [
+        "audience_fit",
+        "narrative_coherence"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团家电渠道与门店运营团队"
+        },
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历8幕=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:17.165Z"
+    },
+    {
+      "id": "SA-09",
+      "cat": "sales",
+      "brief": "异议处理专场（价格/安全/集成）",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "presenter_usability",
+        "evidence_quality"
+      ],
+      "checks": {
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=10/10 键盘导航OK"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:17.653Z"
+    },
+    {
+      "id": "SA-10",
+      "cat": "sales",
+      "brief": "产品涨价沟通",
+      "deck": "real/08-home-appliance-trade-in",
+      "focus": [
+        "argument_quality",
+        "narrative_coherence"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=22字/断言式≥10字=8/8"
+        },
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历8幕=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:18.143Z"
+    },
+    {
+      "id": "PI-01",
+      "cat": "pitch",
+      "brief": "种子轮融资 BP 路演",
+      "deck": "derived/03-audience-frontline",
+      "focus": [
+        "narrative_coherence",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历5幕=true"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:18.640Z"
+    },
+    {
+      "id": "PI-02",
+      "cat": "pitch",
+      "brief": "A 轮投资人尽调问答",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "evidence_quality",
+        "presenter_usability"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        },
+        "presenter_usability": {
+          "ok": true,
+          "detail": "notes=10/10 键盘导航OK"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:19.120Z"
+    },
+    {
+      "id": "PI-03",
+      "cat": "pitch",
+      "brief": "创业大赛 5 分钟路演",
+      "deck": "derived/03-audience-frontline",
+      "focus": [
+        "cognitive_load",
+        "scene_purpose"
+      ],
+      "checks": {
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=29 overflow=0 stepwise=true"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=5 roles=opening/argument/transition/evidence/summary"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:19.617Z"
+    },
+    {
+      "id": "PI-04",
+      "cat": "pitch",
+      "brief": "内部创新项目立项 pitch",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "argument_quality",
+        "audience_fit"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=14字/断言式≥10字=9/10"
+        },
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=目标企业市场部负责人与内容运营负责人"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:20.100Z"
+    },
+    {
+      "id": "PI-05",
+      "cat": "pitch",
+      "brief": "硬科技项目产业资本对接",
+      "deck": "derived/03-audience-frontline",
+      "focus": [
+        "information_density",
+        "evidence_quality"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=5 图表caption=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:20.592Z"
+    },
+    {
+      "id": "PI-06",
+      "cat": "pitch",
+      "brief": "产品发布会 keynote",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "motion_utility",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=13 (focus,reveal)"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:21.104Z"
+    },
+    {
+      "id": "PI-07",
+      "cat": "pitch",
+      "brief": "黑客松项目展示",
+      "deck": "derived/03-audience-frontline",
+      "focus": [
+        "scene_purpose",
+        "runtime_stability"
+      ],
+      "checks": {
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=5 roles=opening/argument/transition/evidence/summary"
+        },
+        "runtime_stability": {
+          "ok": true,
+          "detail": "traverse=true consoleErr=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:21.581Z"
+    },
+    {
+      "id": "PI-08",
+      "cat": "pitch",
+      "brief": "政府引导基金申报答辩",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "evidence_quality",
+        "argument_quality"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=14字/断言式≥10字=9/10"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:22.066Z"
+    },
+    {
+      "id": "PI-09",
+      "cat": "pitch",
+      "brief": "并购方管理层陈述",
+      "deck": "derived/03-audience-frontline",
+      "focus": [
+        "audience_fit",
+        "narrative_coherence"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=场馆售票、活动运营、客服等一线同事"
+        },
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历5幕=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:22.555Z"
+    },
+    {
+      "id": "PI-10",
+      "cat": "pitch",
+      "brief": "开源项目基金会路演",
+      "deck": "corpus/06-sales-content-service",
+      "focus": [
+        "narrative_coherence",
+        "reader_usability"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=10 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:23.069Z"
+    },
+    {
+      "id": "TE-01",
+      "cat": "teaching",
+      "brief": "新员工入职培训（公司流程）",
+      "deck": "corpus/05-training-safety-induction",
+      "focus": [
+        "cognitive_load",
+        "scene_purpose"
+      ],
+      "checks": {
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=22 overflow=0 stepwise=true"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=9 roles=opening/transition/argument/case/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:23.563Z"
+    },
+    {
+      "id": "TE-02",
+      "cat": "teaching",
+      "brief": "高校《数据结构》一课时",
+      "deck": "real/07-skills-china-action",
+      "focus": [
+        "cognitive_load",
+        "motion_utility"
+      ],
+      "checks": {
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=14 overflow=0 stepwise=true"
+        },
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=14 (reveal,focus)"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:24.057Z"
+    },
+    {
+      "id": "TE-03",
+      "cat": "teaching",
+      "brief": "销售话术训练营",
+      "deck": "corpus/05-training-safety-induction",
+      "focus": [
+        "interaction_utility",
+        "audience_fit"
+      ],
+      "checks": {
+        "interaction_utility": {
+          "ok": true,
+          "detail": "搜索命中=1 键盘=可用"
+        },
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=入职 1 个月内的新员工（一线作业岗）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:24.531Z"
+    },
+    {
+      "id": "TE-04",
+      "cat": "teaching",
+      "brief": "安全操作规程培训（考核导向）",
+      "deck": "real/07-skills-china-action",
+      "focus": [
+        "information_density",
+        "reader_usability"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=8 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:25.024Z"
+    },
+    {
+      "id": "TE-05",
+      "cat": "teaching",
+      "brief": "管理层财务扫盲课",
+      "deck": "corpus/05-training-safety-induction",
+      "focus": [
+        "audience_fit",
+        "data_visualization"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=入职 1 个月内的新员工（一线作业岗）"
+        },
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:25.501Z"
+    },
+    {
+      "id": "TE-06",
+      "cat": "teaching",
+      "brief": "在线课程录屏版（无现场讲者）",
+      "deck": "real/07-skills-china-action",
+      "focus": [
+        "reader_usability",
+        "information_density"
+      ],
+      "checks": {
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=8 reader入口=true"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:25.998Z"
+    },
+    {
+      "id": "TE-07",
+      "cat": "teaching",
+      "brief": "工作坊：设计思维入门（含练习环节）",
+      "deck": "corpus/05-training-safety-induction",
+      "focus": [
+        "interaction_utility",
+        "cognitive_load"
+      ],
+      "checks": {
+        "interaction_utility": {
+          "ok": true,
+          "detail": "搜索命中=1 键盘=可用"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=22 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:26.486Z"
+    },
+    {
+      "id": "TE-08",
+      "cat": "teaching",
+      "brief": "研究生文献研讨课",
+      "deck": "real/07-skills-china-action",
+      "focus": [
+        "evidence_quality",
+        "argument_quality"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=8 图表caption=0"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=22字/断言式≥10字=8/8"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:26.962Z"
+    },
+    {
+      "id": "TE-09",
+      "cat": "teaching",
+      "brief": "客户成功团队产品认证培训",
+      "deck": "corpus/05-training-safety-induction",
+      "focus": [
+        "scene_purpose",
+        "reader_usability"
+      ],
+      "checks": {
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=9 roles=opening/transition/argument/case/summary/appendix"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=9 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:27.441Z"
+    },
+    {
+      "id": "TE-10",
+      "cat": "teaching",
+      "brief": "混合受众（新手+熟手）工具培训",
+      "deck": "real/07-skills-china-action",
+      "focus": [
+        "audience_fit",
+        "cognitive_load"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团人力与培训团队"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=14 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:27.942Z"
+    },
+    {
+      "id": "TC-01",
+      "cat": "technical",
+      "brief": "微服务架构评审（ADR 答辩）",
+      "deck": "corpus/03-tech-data-platform",
+      "focus": [
+        "argument_quality",
+        "evidence_quality"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=16字/断言式≥10字=12/12"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=12 图表caption=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:28.421Z"
+    },
+    {
+      "id": "TC-02",
+      "cat": "technical",
+      "brief": "性能优化成果技术分享",
+      "deck": "derived/02-audience-technical",
+      "focus": [
+        "data_visualization",
+        "information_density"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:28.919Z"
+    },
+    {
+      "id": "TC-03",
+      "cat": "technical",
+      "brief": "算法论文复现报告",
+      "deck": "real/05-national-data-infra-guide",
+      "focus": [
+        "evidence_quality",
+        "scene_purpose"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=0"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=10 roles=opening/argument/evidence/recommendation/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:29.395Z"
+    },
+    {
+      "id": "TC-04",
+      "cat": "technical",
+      "brief": "事故复盘（postmortem）",
+      "deck": "corpus/03-tech-data-platform",
+      "focus": [
+        "narrative_coherence",
+        "argument_quality"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历12幕=true"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=16字/断言式≥10字=12/12"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:29.883Z"
+    },
+    {
+      "id": "TC-05",
+      "cat": "technical",
+      "brief": "技术选型对比（三框架）",
+      "deck": "derived/02-audience-technical",
+      "focus": [
+        "data_visualization",
+        "argument_quality"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=17字/断言式≥10字=6/6"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:30.357Z"
+    },
+    {
+      "id": "TC-06",
+      "cat": "technical",
+      "brief": "安全渗透测试发现汇报",
+      "deck": "real/05-national-data-infra-guide",
+      "focus": [
+        "evidence_quality",
+        "audience_fit"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=0"
+        },
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团信息中心与数字化团队"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:30.840Z"
+    },
+    {
+      "id": "TC-07",
+      "cat": "technical",
+      "brief": "给非技术高管讲技术债",
+      "deck": "corpus/03-tech-data-platform",
+      "focus": [
+        "audience_fit",
+        "cognitive_load"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团信息中心技术负责人、架构师、安全与运维代表"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=50 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:31.342Z"
+    },
+    {
+      "id": "TC-08",
+      "cat": "technical",
+      "brief": "API 设计评审（含时序图）",
+      "deck": "derived/02-audience-technical",
+      "focus": [
+        "visual_hierarchy",
+        "information_density"
+      ],
+      "checks": {
+        "visual_hierarchy": {
+          "ok": true,
+          "detail": "层级幕=6/6 overflow=0"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:31.836Z"
+    },
+    {
+      "id": "TC-09",
+      "cat": "technical",
+      "brief": "数据管道架构演进分享",
+      "deck": "real/05-national-data-infra-guide",
+      "focus": [
+        "motion_utility",
+        "scene_purpose"
+      ],
+      "checks": {
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=32 (reveal,trace,focus)"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=10 roles=opening/argument/evidence/recommendation/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:32.311Z"
+    },
+    {
+      "id": "TC-10",
+      "cat": "technical",
+      "brief": "开源项目贡献者大会技术演讲",
+      "deck": "corpus/03-tech-data-platform",
+      "focus": [
+        "aesthetic_quality",
+        "reader_usability"
+      ],
+      "checks": {
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=12 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:32.812Z"
+    },
+    {
+      "id": "DA-01",
+      "cat": "data",
+      "brief": "月度经营数据分析会",
+      "deck": "corpus/04-data-quarterly-review",
+      "focus": [
+        "data_visualization",
+        "scene_purpose"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=10 roles=opening/problem/evidence/argument/recommendation/decision/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:33.290Z"
+    },
+    {
+      "id": "DA-02",
+      "cat": "data",
+      "brief": "用户增长漏斗诊断",
+      "deck": "real/01-national-statistical-bulletin",
+      "focus": [
+        "data_visualization",
+        "argument_quality"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=24字/断言式≥10字=12/12"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:33.776Z"
+    },
+    {
+      "id": "DA-03",
+      "cat": "data",
+      "brief": "A/B 实验结果评审",
+      "deck": "real/04-cnnic-report-55th",
+      "focus": [
+        "evidence_quality",
+        "cognitive_load"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=3"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=3 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:34.305Z"
+    },
+    {
+      "id": "DA-04",
+      "cat": "data",
+      "brief": "市场调研报告发布",
+      "deck": "real/06-moutai-annual-report-2024",
+      "focus": [
+        "data_visualization",
+        "reader_usability"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=9 reader入口=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:34.779Z"
+    },
+    {
+      "id": "DA-05",
+      "cat": "data",
+      "brief": "实时运营大屏讲解（Live Data）",
+      "deck": "corpus/04-data-quarterly-review",
+      "focus": [
+        "runtime_stability",
+        "performance"
+      ],
+      "checks": {
+        "runtime_stability": {
+          "ok": true,
+          "detail": "traverse=true consoleErr=0"
+        },
+        "performance": {
+          "ok": true,
+          "detail": "resources=14（预算≤40）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:35.312Z"
+    },
+    {
+      "id": "DA-06",
+      "cat": "data",
+      "brief": "客户流失预警模型汇报",
+      "deck": "real/01-national-statistical-bulletin",
+      "focus": [
+        "data_visualization",
+        "audience_fit"
+      ],
+      "checks": {
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        },
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=集团经营分析人员与分管领导"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:35.785Z"
+    },
+    {
+      "id": "DA-07",
+      "cat": "data",
+      "brief": "年度数据资产盘点",
+      "deck": "real/04-cnnic-report-55th",
+      "focus": [
+        "information_density",
+        "visual_hierarchy"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "visual_hierarchy": {
+          "ok": true,
+          "detail": "层级幕=9/9 overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:36.326Z"
+    },
+    {
+      "id": "DA-08",
+      "cat": "data",
+      "brief": "异常检测案例复盘（含误导性图表纠偏）",
+      "deck": "real/06-moutai-annual-report-2024",
+      "focus": [
+        "evidence_quality",
+        "data_visualization"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=3"
+        },
+        "data_visualization": {
+          "ok": true,
+          "detail": "无图表幕（n/a，通过）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:36.797Z"
+    },
+    {
+      "id": "DA-09",
+      "cat": "data",
+      "brief": "问卷数据洞察分享（学术严谨版）",
+      "deck": "corpus/04-data-quarterly-review",
+      "focus": [
+        "evidence_quality",
+        "argument_quality"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=3"
+        },
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=14字/断言式≥10字=10/10"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:37.283Z"
+    },
+    {
+      "id": "DA-10",
+      "cat": "data",
+      "brief": "给一线的自助取数工具培训",
+      "deck": "real/01-national-statistical-bulletin",
+      "focus": [
+        "interaction_utility",
+        "cognitive_load"
+      ],
+      "checks": {
+        "interaction_utility": {
+          "ok": true,
+          "detail": "搜索命中=1 键盘=可用"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=18 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:37.821Z"
+    },
+    {
+      "id": "RE-01",
+      "cat": "research",
+      "brief": "学术会议 15 分钟论文报告",
+      "deck": "corpus/07-research-industry-briefing",
+      "focus": [
+        "evidence_quality",
+        "scene_purpose"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=3"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=9 roles=opening/argument/evidence/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:38.292Z"
+    },
+    {
+      "id": "RE-02",
+      "cat": "research",
+      "brief": "博士开题答辩",
+      "deck": "real/04-cnnic-report-55th",
+      "focus": [
+        "argument_quality",
+        "evidence_quality"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=26字/断言式≥10字=9/9"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=3"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:38.778Z"
+    },
+    {
+      "id": "RE-03",
+      "cat": "research",
+      "brief": "课题中期检查（含不确定性表达）",
+      "deck": "real/03-digital-economy-plan-14th",
+      "focus": [
+        "evidence_quality",
+        "information_density"
+      ],
+      "checks": {
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=1"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:39.292Z"
+    },
+    {
+      "id": "RE-04",
+      "cat": "research",
+      "brief": "跨学科研讨会邀请报告",
+      "deck": "corpus/07-research-industry-briefing",
+      "focus": [
+        "audience_fit",
+        "cognitive_load"
+      ],
+      "checks": {
+        "audience_fit": {
+          "ok": true,
+          "detail": "audience=战略与投资研究人员、业务线负责人"
+        },
+        "cognitive_load": {
+          "ok": true,
+          "detail": "revealEls=18 overflow=0 stepwise=true"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:39.811Z"
+    },
+    {
+      "id": "RE-05",
+      "cat": "research",
+      "brief": "期刊审稿意见回复演示",
+      "deck": "real/04-cnnic-report-55th",
+      "focus": [
+        "argument_quality",
+        "evidence_quality"
+      ],
+      "checks": {
+        "argument_quality": {
+          "ok": true,
+          "detail": "标题均长=26字/断言式≥10字=9/9"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=9 图表caption=3"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:40.282Z"
+    },
+    {
+      "id": "ST-01",
+      "cat": "story",
+      "brief": "创始人故事（品牌发布会）",
+      "deck": "corpus/10-narrative-bookstore",
+      "focus": [
+        "narrative_coherence",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:40.826Z"
+    },
+    {
+      "id": "ST-02",
+      "cat": "story",
+      "brief": "公益项目资助人汇报",
+      "deck": "corpus/10-narrative-bookstore",
+      "focus": [
+        "narrative_coherence",
+        "evidence_quality"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        },
+        "evidence_quality": {
+          "ok": true,
+          "detail": "source标记=10 图表caption=2"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:40.834Z"
+    },
+    {
+      "id": "ST-03",
+      "cat": "story",
+      "brief": "企业文化价值观宣贯",
+      "deck": "corpus/10-narrative-bookstore",
+      "focus": [
+        "narrative_coherence",
+        "motion_utility"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        },
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=24 (reveal,focus,trace)"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:40.843Z"
+    },
+    {
+      "id": "ST-04",
+      "cat": "story",
+      "brief": "客户成功案例视频化演示",
+      "deck": "corpus/10-narrative-bookstore",
+      "focus": [
+        "narrative_coherence",
+        "scene_purpose"
+      ],
+      "checks": {
+        "narrative_coherence": {
+          "ok": true,
+          "detail": "线性遍历10幕=true"
+        },
+        "scene_purpose": {
+          "ok": true,
+          "detail": "scenes=10 roles=opening/case/argument/problem/evidence/decision/summary/appendix"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:40.848Z"
+    },
+    {
+      "id": "ST-05",
+      "cat": "story",
+      "brief": "年会开场回顾与展望",
+      "deck": "corpus/10-narrative-bookstore",
+      "focus": [
+        "aesthetic_quality",
+        "motion_utility"
+      ],
+      "checks": {
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        },
+        "motion_utility": {
+          "ok": true,
+          "detail": "motion-intent=24 (reveal,focus,trace)"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:40.855Z"
+    },
+    {
+      "id": "DR-01",
+      "cat": "document_reader",
+      "brief": "投资备忘录（纯阅读）",
+      "deck": "real/01-national-statistical-bulletin",
+      "focus": [
+        "reader_usability",
+        "information_density"
+      ],
+      "checks": {
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=12 reader入口=true"
+        },
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:41.369Z"
+    },
+    {
+      "id": "DR-02",
+      "cat": "document_reader",
+      "brief": "技术白皮书网页版",
+      "deck": "real/04-cnnic-report-55th",
+      "focus": [
+        "reader_usability",
+        "accessibility"
+      ],
+      "checks": {
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=9 reader入口=true"
+        },
+        "accessibility": {
+          "ok": true,
+          "detail": "lang=zh-CN aria标注=4（对比度/字号/alt 深查归 verify_a11y）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:41.839Z"
+    },
+    {
+      "id": "DR-03",
+      "cat": "document_reader",
+      "brief": "政策解读长图（打印友好）",
+      "deck": "real/01-national-statistical-bulletin",
+      "focus": [
+        "reader_usability",
+        "visual_hierarchy"
+      ],
+      "checks": {
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=12 reader入口=true"
+        },
+        "visual_hierarchy": {
+          "ok": true,
+          "detail": "层级幕=12/12 overflow=0"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:42.376Z"
+    },
+    {
+      "id": "DR-04",
+      "cat": "document_reader",
+      "brief": "年度报告（线上+印刷双版本）",
+      "deck": "real/04-cnnic-report-55th",
+      "focus": [
+        "reader_usability",
+        "aesthetic_quality"
+      ],
+      "checks": {
+        "reader_usability": {
+          "ok": true,
+          "detail": "anchors=9 reader入口=true"
+        },
+        "aesthetic_quality": {
+          "ok": true,
+          "detail": "overflow=0 fonts=true（主观美学留人工评审，基础质量已断言）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:42.883Z"
+    },
+    {
+      "id": "DR-05",
+      "cat": "document_reader",
+      "brief": "产品文档发布说明",
+      "deck": "real/01-national-statistical-bulletin",
+      "focus": [
+        "information_density",
+        "accessibility"
+      ],
+      "checks": {
+        "information_density": {
+          "ok": true,
+          "detail": "overflow=0"
+        },
+        "accessibility": {
+          "ok": true,
+          "detail": "lang=zh-CN aria标注=4（对比度/字号/alt 深查归 verify_a11y）"
+        }
+      },
+      "status": "passed",
+      "consoleErrors": 0,
+      "executed_at": "2026-09-13T03:00:43.409Z"
+    }
+  ]
+}

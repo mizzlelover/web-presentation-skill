@@ -1,0 +1,151 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "“十四五”数字经济发展规划解读 · 目标、底座与集团的四个位置",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "这份规划，把增长写成了::一张时间表::",
+   "chart": null,
+   "source_refs": [
+    "到2025年，数字经济迈向全面扩展期，数字经济核心产业增加值占GDP比重达到10%"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "target",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "核心指标：核心产业增加值占 GDP ::7.8% → 10%::",
+   "chart": {
+    "kind": "bar",
+    "unit": "占 GDP 比重 %",
+    "categories": [
+     "2020 现状",
+     "2025 目标"
+    ],
+    "series": [
+     {
+      "name": "数字经济核心产业增加值占 GDP 比重",
+      "data": [
+       7.8,
+       10
+      ]
+     }
+    ],
+    "caption": "口径：数字经济核心产业增加值占 GDP 比重；7.8% 为 2020 年现状，10% 为 2025 年规划目标；来源：规划「一」「二（三）」"
+   },
+   "source_refs": [
+    "2020年，我国数字经济核心产业增加值占国内生产总值（GDP）比重达到7.8%",
+    "到2025年，数字经济迈向全面扩展期，数字经济核心产业增加值占GDP比重达到10%"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "base",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "底座已经领先：光纤 >::94%::、移动宽带 ::108%::、IPv6 ::4.6 亿::",
+   "chart": null,
+   "source_refs": [
+    "光纤用户占比超过94%，移动宽带用户普及率达到108%，互联网协议第六版（IPv6）活跃用户数达到4.6亿"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "task-data",
+   "arg_ref": "C3",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "任务一 · 数据要素：官方定位的::核心引擎::",
+   "chart": null,
+   "source_refs": [
+    "数据要素是数字经济深化发展的核心引擎。数据对提高生产效率的乘数作用不断凸显"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "task-infra",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "任务二 · 基础设施：千兆 + 5G + ::6G 前瞻储备::",
+   "chart": null,
+   "source_refs": [
+    "协同推进千兆光纤网络和5G网络基础设施建设",
+    "前瞻布局第六代移动通信（6G）网络技术储备"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "task-fusion",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "任务三 · 融合：数字技术与实体经济融合取得::显著成效::",
+   "chart": null,
+   "source_refs": [
+    "数字技术与实体经济融"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "governance",
+   "arg_ref": "C4",
+   "cognitive_job": "challenge",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "治理与发展并重：治理体系完善本身是::2025 目标::",
+   "chart": null,
+   "source_refs": [
+    "数字经济治理体系更加完善，我国数字经济竞争力和影响力稳步提升"
+   ]
+  },
+  {
+   "order": 8,
+   "id": "implication",
+   "arg_ref": "C5",
+   "cognitive_job": "answer",
+   "load": "medium",
+   "headline_type": "decision",
+   "headline": "集团的四个位置：::用数据 · 上赛道 · 借底座 · 守边界::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 9,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "目标可考核，::位置可落地::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 10,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

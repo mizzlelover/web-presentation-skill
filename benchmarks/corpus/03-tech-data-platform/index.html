@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>集团数据中台技术架构评审</title>
+<link rel="stylesheet" href="../../../themes/technology.css">
+<link rel="stylesheet" href="../../../runtime/core/presentation.css">
+<link rel="stylesheet" href="../../../runtime/components/components.css">
+
+<link rel="stylesheet" href="../../../runtime/print/print.css" media="print">
+<style>:root{--wp-accent:#2f6df6;--wp-bg:#0f1319;--wp-fg:#eef2f7;--wp-muted:#9aa6b4;--wp-radius:12px;--wp-surface:#171d26;}</style>
+</head>
+<body data-wpui="on">
+<main class="wp-deck">
+
+  <section class="wp-scene" data-scene-id="opening" data-role="opening" data-topic="开场" data-claim="中台不是替换，是补一层">
+  <span class="wpk-kicker">技术架构评审</span>
+  <h1>中台不替换数据仓库，<br>而是补一层<em class="wpk-mark">统一口径与统一服务</em></h1>
+  <p class="wpk-lead">本次评审数据中台技术架构：只在三处引入新技术，其余复用既有资产。</p>
+  
+  <aside class="wp-notes">（站定）先设边界，避免后面跑偏：中台不替换数据仓库。仓库继续做它的存储与计算，中台补的是两层东西——统一口径和统一服务。整套方案里真正的新东西只有三处，其余全部复用既有资产。接下来我按原则、架构、数据流、选型、集成、安全、落地七个部分展开，欢迎逐层打断。</aside>
+  <div class="wp-reader">本次评审数据中台技术架构：在既有数据仓库之上补「统一口径 + 统一服务」两层能力；仅引入三处新技术（元数据服务、指标服务、数据服务网关），其余复用既有资产。</div>
+  <p class="wpk-src">依据：集团数据治理规划（内部）· 样例材料已脱敏</p>
+  </section>
+  <section class="wp-scene" data-scene-id="context" data-role="problem" data-topic="现状" data-claim="口径与访问方式各做各的">
+  <h2>仓库有了，缺的是<em class="wpk-mark">口径一致与访问一致</em></h2>
+  <p class="wpk-lead">既有仓库解决了存储与计算；缺的是口径一致与访问一致。</p>
+  <div class="wpk-cmp"><div class="wpk-cmp__col"><h3 class="wpk-cmp__h">仓库已解决<span class="wpk-cmp__tag">DO NOT TOUCH</span></h3><ul><li>结构化存储与分区</li><li>批量 ETL 与调度</li><li>历史数据留存</li></ul></div><div class="wpk-cmp__col is-primary"><h3 class="wpk-cmp__h">仍需补齐<span class="wpk-cmp__tag">GAP</span></h3><ul><li>指标口径<em class="wpk-mark">唯一来源</em></li><li>统一数据服务与鉴权</li><li>血缘与影响分析</li></ul></div></div>
+  
+  <aside class="wp-notes">（指左栏）仓库解决了存储和批量计算，这部分不用动。（指右栏）问题是两个「不一致」：一是口径，同一个指标在不同报表里定义不一样，每月经营数据要人工核对；二是访问，各系统要么直连仓库，要么各自导出，没有统一的服务层，权限也散在各处。中台就是补这两件事。</aside>
+  <div class="wp-reader">既有数据仓库解决存储与批量计算。缺口：①口径不一致（同一指标多定义，需人工核对）；②访问不一致（各系统直连或自导出，无统一服务层，权限散落）。</div>
+  <p class="wpk-src">来源：数据治理现状盘点（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="principles" data-role="argument" data-topic="设计原则" data-claim="四条克制原则">
+  <h2>四条原则，第一条就是<em class="wpk-mark">不动仓库</em></h2>
+  <p class="wpk-lead">四条原则：不动仓库、只做薄层、能力可退、默认最小权限。</p>
+  <div class="wpk-grid is-4"><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">P1</div><div class="wpk-card__title">不动仓库</div><div class="wpk-card__text">不迁移、不重写既有 ETL。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">P2</div><div class="wpk-card__title">只做薄层</div><div class="wpk-card__text">只承担口径与服务，不做新存储计算。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">P3</div><div class="wpk-card__title">能力可退</div><div class="wpk-card__text">任一服务可下线，不影响业务取数。</div></div><div class="wpk-card is-accent" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">P4</div><div class="wpk-card__title">最小权限</div><div class="wpk-card__text">服务层统一鉴权，按需授权。</div></div></div>
+  
+  <aside class="wp-notes">（逐条）四条原则，第一条就是不动仓库——不迁移、不重写既有 ETL。第二，只做薄层，中台只承担口径和服务，不新增存储和计算。第三，能力可退，任何一个服务下线都不影响业务取数。第四，默认最小权限，服务层统一鉴权。（强调）这四条合起来，就是对「过度设计」的回答。</aside>
+  <div class="wp-reader">设计原则：①不动仓库；②只做薄层（不做新存储计算）；③能力可退（服务可下线）；④默认最小权限（服务层统一鉴权）。</div>
+  <p class="wpk-src">来源：架构方案（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="architecture" data-role="argument" data-topic="架构分层" data-claim="四层，新东西只有三处">
+  <h2>架构四层，<em class="wpk-mark">新增仅三处</em></h2>
+  <p class="wpk-lead">四层架构：接入层、服务层、口径层、底座层；新增仅三处。</p>
+  <div class="wpk-arch"><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">接入层（既有）</div><div class="wpk-layer__d">BI、报表平台、业务系统；通过网关统一取数。</div></div><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">服务层（新增）</div><div class="wpk-layer__d">数据服务网关 + 统一鉴权；对外只暴露服务接口。</div></div><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">口径层（新增）</div><div class="wpk-layer__d">元数据服务（血缘、定义）+ 指标服务（唯一口径计算）。</div></div><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">底座层（复用）</div><div class="wpk-layer__d">既有数据仓库与调度；不迁移、不重写。</div></div></div>
+  
+  <aside class="wp-notes">（自上而下）四层。接入层是 BI、报表和各业务系统，全部既有。服务层是数据服务网关加统一鉴权，新增。口径层是元数据服务和指标服务，新增。底座层是既有仓库和调度，完全复用。（收）所以新增就是三处：网关、元数据、指标。</aside>
+  <div class="wp-reader">架构四层：接入层（BI/报表/业务系统，既有）；服务层（数据服务网关 + 统一鉴权，新增）；口径层（元数据服务 + 指标服务，新增）；底座层（既有仓库与调度，复用）。新增三处：网关、元数据服务、指标服务。</div>
+  <p class="wpk-src">来源：架构方案（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="dataflow" data-role="argument" data-topic="数据流" data-claim="一次取数的完整链路">
+  <h2>一次取数：<em class="wpk-mark">口径从指标服务出，权限从网关过</em></h2>
+  <p class="wpk-lead">取数链路：请求→网关鉴权→指标服务解析口径→仓库取数→返回并记血缘。</p>
+  <div class="wpk-steps"><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">01</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">请求</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">BI / 报表 / 业务系统发起取数。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">02</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">网关</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">统一鉴权、限流、审计。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">03</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">指标服务</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">按唯一口径解析为查询计划。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">04</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">仓库执行</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">既有仓库与调度执行查询。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step is-gate" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">05</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">血缘回报</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">结果返回并记录访问血缘。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div></div>
+  
+  <aside class="wp-notes">（手指沿流程）一次取数：业务方发请求；网关做鉴权和限流；指标服务按唯一口径把请求翻译成查询计划；仓库执行；结果返回，同时把这次访问的链路记进元数据服务的血缘。（强调）全过程不允许绕过服务层直连仓库。</aside>
+  <div class="wp-reader">取数链路：请求 → 网关鉴权限流 → 指标服务解析唯一口径 → 仓库执行 → 结果返回并记录血缘；禁止绕过服务层直连仓库。</div>
+  <p class="wpk-src">来源：架构方案（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="stack" data-role="evidence" data-topic="技术选型" data-claim="三处新增的选型与理由">
+  <h2>选型只看三条：<em class="wpk-mark">成熟、可退、可自运维</em></h2>
+  <p class="wpk-lead">选型标准：成熟、可退、可自运维。</p>
+  <table class="wpk-risks"><thead><tr><th>组件</th><th>选型</th><th>理由</th><th>新增/复用</th></tr></thead><tbody><tr><td>元数据服务</td><td>关系型存储 + 开源血缘模型</td><td>可自运维、无外部依赖</td><td>新增</td></tr><tr><td>指标服务</td><td>既有 SQL 引擎</td><td>不引入新执行引擎</td><td>新增</td></tr><tr><td>数据服务网关</td><td>既有网关注册扩展</td><td>复用鉴权与审计插件</td><td>新增</td></tr><tr><td>存储与调度</td><td>既有数据仓库</td><td>不迁移、不重写</td><td>复用</td></tr></tbody></table>
+  
+  <aside class="wp-notes">（指标准）选型我们只看三条：成熟、可退、可自运维。（逐项）元数据服务用成熟关系型存储加开源血缘模型，理由是自运维、无外部依赖；指标服务基于既有 SQL 引擎，不引入新的执行引擎；数据服务网关在既有网关上扩展，复用现成插件和审计。三项都能本地离线部署，不依赖外部 SaaS。</aside>
+  <div class="wp-reader">选型：元数据服务=成熟关系型存储+开源血缘模型；指标服务=复用既有 SQL 引擎；数据服务网关=既有网关扩展。三项均满足成熟、可退、可自运维，且支持离线部署。</div>
+  <p class="wpk-src">来源：技术选型说明（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="integration" data-role="argument" data-topic="集成方式" data-claim="三类系统三种接法">
+  <h2>集成：三类系统，<em class="wpk-mark">三种接法</em></h2>
+  <p class="wpk-lead">三类系统三种接法：BI 直连服务、业务系统走接口、存量报表平移。</p>
+  <div class="wpk-grid is-3"><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">01</div><div class="wpk-card__title">BI / 报表平台</div><div class="wpk-card__text">改造取数连接串指向数据服务网关，应用侧改动最小。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">02</div><div class="wpk-card__title">业务系统</div><div class="wpk-card__text">通过网关 REST 接口取数；不再开放数据库直连。</div></div><div class="wpk-card is-accent" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">03</div><div class="wpk-card__title">存量报表</div><div class="wpk-card__text">分批平移；保留双跑期做口径比对，达标后切流。</div></div></div>
+  
+  <aside class="wp-notes">（分类）三类系统三种接法。BI 和报表平台，改取数连接串指向网关，改动量很小；业务系统通过网关的 REST 接口取数，不再开放库直连；存量报表按批次平移，并且保留一段双跑期做口径比对。（补）第三类是集成成本的大头，所以给了双跑期。</aside>
+  <div class="wp-reader">集成：①BI/报表→改造连接串指向网关；②业务系统→走 REST 接口，禁止库直连；③存量报表→分批平移 + 双跑期口径比对。</div>
+  <p class="wpk-src">来源：集成方案（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="security" data-role="argument" data-topic="安全与权限" data-claim="权限模型与审计">
+  <h2>权限模型：<em class="wpk-mark">一人一角色、一数据一授权、全链路留痕</em></h2>
+  <p class="wpk-lead">权限模型三条：角色化授权、数据级授权、全链路审计。</p>
+  <div class="wpk-grid is-3"><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">S1</div><div class="wpk-card__title">角色化授权</div><div class="wpk-card__text">按岗位定义角色；人员只挂角色，不逐人授权。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">S2</div><div class="wpk-card__title">数据级授权</div><div class="wpk-card__text">敏感字段与数据域单独授权，默认拒绝。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">S3</div><div class="wpk-card__title">全链路审计</div><div class="wpk-card__text">取数留痕：人、时间、口径、数据范围可回溯。</div></div></div>
+  
+  <aside class="wp-notes">（面向安全）三条。角色化：按岗位定义角色，人只挂角色，不单独授权。数据级：敏感字段和数据域要单独授权，默认拒绝。审计：所有取数都经网关留痕，记录人、时间、用的哪个口径、拿了多大范围，事后可回溯。（收）安全口如果有额外要求，我们按最小必要原则再收紧。</aside>
+  <div class="wp-reader">安全：①角色化授权（人挂角色）；②数据级授权（敏感字段/数据域单独授权，默认拒绝）；③全链路审计（人、时、口径、范围可回溯）。</div>
+  <p class="wpk-src">来源：安全方案（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="rollout" data-role="transition" data-topic="落地路径" data-claim="三期，每期可退">
+  <h2>分三期落地，<em class="wpk-mark">每期都有回退开关</em></h2>
+  <p class="wpk-lead">三期：口径治理 → 服务上线 → 存量平移。</p>
+  <div class="wpk-time"><div class="wpk-time__i" data-reveal data-motion-intent="reveal"><div class="wpk-time__when">一期 · 0–3 月</div><div class="wpk-time__t">口径与元数据</div><div class="wpk-time__d">指标口径治理、元数据登记；不触碰线上链路。</div></div><div class="wpk-time__i" data-reveal data-motion-intent="reveal"><div class="wpk-time__when">二期 · 4–7 月</div><div class="wpk-time__t">服务层上线</div><div class="wpk-time__d">数据服务网关与指标服务上线；与旧路径双跑比对。</div></div><div class="wpk-time__i" data-reveal data-motion-intent="reveal"><div class="wpk-time__when">三期 · 8–12 月</div><div class="wpk-time__t">存量平移</div><div class="wpk-time__d">存量报表分批迁入；旧路径保留一季度后关闭。</div></div></div>
+  
+  <aside class="wp-notes">（沿时间线）三期。一期零到三个月，先把口径治理和元数据登记做完——这一步不碰线上。二期四到七个月，网关和指标服务上线，与旧路径双跑比对。三期八到十二个月，存量报表分批平移，旧路径保留一个季度再关。（强调）每一期都有回退开关，任何一期出问题都能退回旧路径。</aside>
+  <div class="wp-reader">三期：一期（0–3 月）口径治理与元数据登记；二期（4–7 月）网关与指标服务上线 + 双跑比对；三期（8–12 月）存量报表平移，旧路径保留一季度。每期可回退。</div>
+  <p class="wpk-src">来源：实施计划（内部）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="ask" data-role="decision" data-topic="评审请求" data-claim="三项评审结论请求">
+  <h2>请求评审形成<em class="wpk-mark">三项结论</em></h2>
+  <p class="wpk-lead">请求形成三项评审结论：架构认可、技术选型认可、实施计划认可。</p>
+  <div class="wpk-actions"><div class="wpk-action" data-reveal data-motion-intent="reveal"><div class="wpk-action__k">结论一</div><div class="wpk-action__t">架构</div><div class="wpk-action__d">认可四层架构与「新增仅三处」的边界。</div></div><div class="wpk-action" data-reveal data-motion-intent="reveal"><div class="wpk-action__k">结论二</div><div class="wpk-action__t">选型</div><div class="wpk-action__d">认可数据服务网关 / 元数据服务 / 指标服务的选型。</div></div><div class="wpk-action" data-reveal data-motion-intent="reveal"><div class="wpk-action__k">结论三</div><div class="wpk-action__t">落地</div><div class="wpk-action__d">认可三期路径与每期回退机制。</div></div></div>
+  
+  <aside class="wp-notes">（逐项）请求形成三项结论：一，认可四层架构和「新增仅三处」这个边界；二，认可三处新增组件的选型；三，认可三期落地路径和回退机制。三项确认后进入详细设计。</aside>
+  <div class="wp-reader">请求评审结论：①认可四层架构与新增边界；②认可三处选型；③认可三期路径与回退机制。确认后进入详细设计。</div>
+  <p class="wpk-src">来源：本次评审目的</p>
+  </section>
+  <section class="wp-scene" data-scene-id="close" data-role="summary" data-topic="收束" data-claim="一句话总结架构立场">
+  <h2>好的架构，<br>是<em class="wpk-mark">让你几乎感觉不到它被换过</em></h2>
+  <p class="wpk-lead">好的架构让业务几乎感觉不到替换。</p>
+  <div class="wpk-quote" data-reveal data-motion-intent="focus"><div class="wpk-quote__text">好的架构，<br>是让你几乎感觉不到它被换过。</div><div class="wpk-quote__cite">本次评审的核心主张</div></div>
+  
+  <aside class="wp-notes">（收）最后一句话：好的架构，是让业务几乎感觉不到它被换过——报表照常在跑，口径变准了，权限变清楚了。请各位评审。</aside>
+  <div class="wp-reader">核心判断：中台的价值在于业务侧几乎感觉不到底层替换，而口径更准、权限更清。</div>
+  <p class="wpk-src">—</p>
+  </section>
+  <section class="wp-scene" data-scene-id="appendix" data-role="appendix" data-topic="附录" data-claim="术语与既有系统清单">
+  <h2>附录：术语与既有系统清单</h2>
+  <p class="wpk-lead">术语与既有系统清单备查。</p>
+  <ul class="wpk-cmp" style="display:block;width:min(100%,900px);padding-left:20px;list-style:disc;text-align:left"><li><b>元数据服务</b>：登记指标定义、血缘与影响分析。</li><li><b>指标服务</b>：唯一口径的解析与计算入口。</li><li><b>数据服务网关</b>：统一鉴权、限流与审计。</li><li><b>血缘</b>：一次取数从请求到结果的完整链路记录。</li></ul>
+  
+  <aside class="wp-notes">（备查，不主动进入）术语表和既有系统清单在这里，被追问时深潜到此，答完按 Esc 返回。</aside>
+  <div class="wp-reader">附录：术语表；既有系统清单；新增组件清单与责任人。</div>
+  <p class="wpk-src"><span data-branch-return class="wpk-return">Esc 返回主线 · </span>—</p>
+  </section>
+
+</main>
+<script src="../../../runtime/core/scene-engine.js"></script>
+<script src="../../../runtime/navigation/router.js"></script>
+<script src="../../../runtime/motion/motion-controller.js"></script>
+<script src="../../../runtime/interaction/interaction.js"></script>
+<script src="../../../runtime/presenter/presenter-view.js"></script>
+<script src="../../../runtime/reader/reader.js"></script>
+
+
+<script src="../../../runtime/core/bootstrap.js"></script>
+<script>WPBoot.start(".wp-deck");</script>
+</body>
+</html>

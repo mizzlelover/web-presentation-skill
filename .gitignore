@@ -1,0 +1,8 @@
+__pycache__/
+.DS_Store
+node_modules/
+dist/
+*.skill
+/tmp
+evals/harness/_artifacts/
+benchmarks/corpus/*/deck.pdf

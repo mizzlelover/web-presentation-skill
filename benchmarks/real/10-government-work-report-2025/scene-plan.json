@@ -1,0 +1,112 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "2025 政府工作报告解读 · 最高规格汇报的三个特征",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "最高规格的汇报，有三个::可复用的形态特征::",
+   "chart": null,
+   "source_refs": [
+    "报告全文\n\n |\n\n 解读报告\n\n |\n\n 代表委员议\n\n政府工作报告——2025年3月5日在第十四届全国人民代表大会第三次会议上国务院总理 李强\n各位代表：\n现在，我代表国务院，向大会报告政府工作，请予审议，并请全国政协委员提出意见。"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "review-stable",
+   "arg_ref": "C1",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "回顾·「稳」：定性分段，::每段都有数字锚点::",
+   "chart": null,
+   "source_refs": [
+    "主要表现在，经济规模稳步扩大，国内生产总值达到134.9万亿元、增长5%，增速居世界主要经济体前列，对全球经济增长的贡献率保持在30%左右。",
+    "就业、物价总体平稳，城镇新增就业1256万人、城镇调查失业率平均为5.1%，居民消费价格上涨0.2%。"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "review-progress",
+   "arg_ref": "C2",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "回顾·「进」：::粮食 1.4 万亿斤::、高技术制造 +8.9%、<br>新能源车 1300 万辆",
+   "chart": null,
+   "source_refs": [
+    "主要表现在，产业升级有新进展，粮食产量首次跃上1.4万亿斤新台阶、亩产提升10.1斤；",
+    "高技术制造业、装备制造业增加值分别增长8.9%、7.7%，新能源汽车年产量突破1300万辆；"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "target2025",
+   "arg_ref": "C3",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "2025 目标：::集中一段、逐一列数::——<br>这是目标管理的标准形态",
+   "chart": null,
+   "source_refs": [
+    "国内生产总值增长5%左右；城镇调查失业率5.5%左右，城镇新增就业1200万人以上；居民消费价格涨幅2%左右",
+    "拟发行超长期特别国债1.3万亿元、比上年增加3000亿元"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "tasks",
+   "arg_ref": "C5",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "任务清单：::逐条部署、条条有落点::<br>（提振消费/科教兴国/改革/民生…）",
+   "chart": null,
+   "source_refs": [
+    "（三）深入实施科教兴国战略，提升国家创新体系整体效能",
+    "制定促进生育政策，发放育儿补贴，大力发展托幼一体服务"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "implication",
+   "arg_ref": "C5",
+   "cognitive_job": "summarize",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "形态三特征：<br>::结论先行 · 数字锚点 · 任务到条::",
+   "chart": null,
+   "source_refs": [
+    "国内生产总值达到134.9万亿元、增长5%"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "好汇报的样子的::长在公开文件里::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 8,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

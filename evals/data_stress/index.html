@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据压力测试 · 补丁 §41</title>
+<link rel="stylesheet" href="../../runtime/components/components.css">
+<style>
+  :root{--wp-accent:#2f6df6;--wp-bg:#fff;--wp-fg:#111;--wp-muted:#666;--wp-radius:10px;--wp-surface:#fff;
+        --wp-line-fallback:#e3e3e3}
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;font:14px/1.7 system-ui,"PingFang SC",sans-serif;background:#fafafa;color:#111}
+  h1{font-size:20px;margin:0 0 4px}
+  .lead{color:#666;margin:0 0 18px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .panel{border:1px solid var(--wp-line-fallback);border-radius:10px;padding:14px;background:#fff}
+  .panel h2{font-size:14px;margin:0 0 8px;color:#444}
+  .panel h2 .id{font-family:ui-monospace,monospace;font-size:11px;background:#eef1ff;color:#2f6df6;border-radius:4px;padding:1px 6px;margin-right:6px}
+  .wpk-chart__box{height:300px}
+  .expect{font-size:12px;color:#666;margin-top:8px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>数据压力测试（补丁 §41）</h1>
+<p class="lead">用生产图表运行时 <code>runtime/visualization/charts.js</code> 直面六类数据压力：20 分类长中文标签、缺失值、正负混合、多单位双轴、小数百分比、极值与单位换算。逐项记录「能渲染 / 渲染失真 / 需要补能力」。</p>
+
+<div class="grid">
+  <div class="panel"><h2><span class="id">S1</span>20 分类 + 长中文机构名称（ranking）</h2>
+    <div class="wpk-chart__box" id="c1"></div>
+    <div class="expect">要求：标签可读、不重叠、不截断成乱码。</div></div>
+
+  <div class="panel"><h2><span class="id">S2</span>缺失值（line，含 null）</h2>
+    <div class="wpk-chart__box" id="c2"></div>
+    <div class="expect">要求：null 处断线而非补零；图例与 tooltip 正常。</div></div>
+
+  <div class="panel"><h2><span class="id">S3</span>正负混合 + 参照零线（bar）</h2>
+    <div class="wpk-chart__box" id="c3"></div>
+    <div class="expect">要求：零轴可见，正负方向一目了然。</div></div>
+
+  <div class="panel"><h2><span class="id">S4</span>多单位双轴（bar + line，万元 vs %）</h2>
+    <div class="wpk-chart__box" id="c4"></div>
+    <div class="expect">要求：两个系列不同量纲时不得挤成一条直线；右轴有独立单位。</div></div>
+
+  <div class="panel"><h2><span class="id">S5</span>小数百分比（bar，0–3%）</h2>
+    <div class="wpk-chart__box" id="c5"></div>
+    <div class="expect">要求：不取整为 0/1；小数位可读。</div></div>
+
+  <div class="panel"><h2><span class="id">S6</span>极值跨度（1 → 98 万，pie 不适用 → bar）</h2>
+    <div class="wpk-chart__box" id="c6"></div>
+    <div class="expect">要求：小值不消失；tooltip 显示原始值。</div></div>
+</div>
+
+<script src="../../runtime/vendor/echarts.min.js"></script>
+<script src="../../runtime/visualization/charts.js"></script>
+<script>
+window.DATASTRESS = { cases: {} };
+(function(){
+  // 直接由 charts.js 渲染（复用生产配置对象，便于契约测试）
+  window.DATASTRESS.render = function(){
+    if (!(window.echarts && window.WPCharts)) return false;
+    var defs = window.DATASTRESS.defs;
+    Object.keys(defs).forEach(function(id){
+      var box = document.getElementById(id);
+      if (window.DATASTRESS.cases[id]) return;
+      try {
+        var inst = window.echarts.init(box, null, { renderer:"canvas" });
+        var opt = window.WPCharts.toOption(defs[id]);
+        inst.setOption(opt, true);
+        window.DATASTRESS.cases[id] = inst;
+      } catch (e) { window.DATASTRESS.cases[id] = { error: e.message }; }
+    });
+    return true;
+  };
+
+  window.DATASTRESS.defs = {
+    c1: { kind:"ranking", unit:"万元",
+      categories:["市体育局竞技体育处场馆运营科","市文化馆群众文化活动部","青少年宫科技教育分部","图书馆文献借阅部","体育中心游泳跳水馆","美术馆公共教育部","博物馆陈列展览部","会展中心市场部","大剧院演出运营部","全民健身中心器材管理科","体育彩票管理中心","文化市场综合执法支队","群众艺术馆培训部","青少年体育俱乐部","老年人体育协会","游泳协会竞赛部","篮球协会赛事部","乒乓球协会","羽毛球协会","围棋协会"],
+      series:[{name:"年度预算（万元）",data:[1860,1420,980,870,760,650,540,480,430,390,360,320,280,240,210,180,150,120,90,60]}],
+      caption:"口径：20 个处室/协会年度预算；标签为真实长度的中文机构全称（样例）" },
+
+    c2: { kind:"line", unit:"万人次",
+      categories:["1月","2月","3月","4月","5月","6月","7月","8月","9月"],
+      series:[{name:"到馆人次",data:[12.4,18.9,null,15.2,null,9.8,22.1,24.6,null]},
+              {name:"活动场次",data:[8,11,9,14,12,null,16,18,10]}],
+      caption:"口径：null 表示该月未统计（场馆闭馆改造），不得补零" },
+
+    c3: { kind:"bar", unit:"同比 pp",
+      categories:["复购频次","客单价","新客人数","履约成本","获客成本"],
+      series:[{name:"对增量的贡献",data:[14,3,-5,-8,-11]}],
+      caption:"口径：对同比增量的百分点贡献；正负并存" },
+
+    c4: { kind:"bar", unit:"万元",
+      categories:["Q1","Q2","Q3","Q4"],
+      series:[{name:"营收（万元）",data:[1820,1980,2140,2380]},
+              {name:"同比增速（%）",data:[18,15,12,16], secondary:true, unit:"%"}],
+      caption:"口径：左轴金额（万元）、右轴百分比；两量纲不可共用一个轴" },
+
+    c5: { kind:"bar", unit:"%",
+      categories:["转化率 A","转化率 B","转化率 C"],
+      series:[{name:"转化率",data:[1.24,2.87,3.05]}],
+      caption:"口径：百分比保留两位小数，禁止取整" },
+
+    c6: { kind:"bar", unit:"元",
+      categories:["单项最小支出","年度总额"],
+      series:[{name:"金额（元）",data:[68, 9864000]}],
+      caption:"口径：数量级跨度 1:145000，检验小值是否可见" }
+  };
+})();
+</script>
+</body>
+</html>

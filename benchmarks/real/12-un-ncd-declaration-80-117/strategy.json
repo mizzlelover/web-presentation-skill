@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "un-a-res-80-117",
+  "title": "大会第四次关于预防和控制非传染性疾病及促进精神卫生和健康的高级别会议政治宣言（联合国大会第80/117号决议通过）",
+  "publisher": "联合国",
+  "url": "https://www.un.org/zh/documents/treaty/A-RES-80-117",
+  "date": "2025-12-15"
+ },
+ "situation": "Policy Briefing / 集团健康产业投资与员工健康管理团队（政策决议类）",
+ "situation_rationale": "材料是联合国大会 2025 年 12 月通过的政治宣言中文正式文本（决议类全新形态），用途是向健康产业相关团队解读全球 NCD 议程的承诺结构与负担证据。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "集团健康产业投资与员工健康管理团队",
+  "expertise": "mixed（投资 + 健康）",
+  "prior_knowledge": "了解慢性病常识，未读过决议原文",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "识别全球 NCD 议程的承诺方向与政策窗口",
+  "concerns": [
+   "疾病负担量级",
+   "可改变风险因素",
+   "2030 承诺节点"
+  ],
+  "objections": [
+   "决议是不是只有表态没有实质"
+  ],
+  "time_budget": "9 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "structured-findings",
+  "likely_questions": [
+   "宣言与此前宣言的关系"
+  ]
+ },
+ "central_thesis": "第 80/117 号决议把全球 NCD 议程续期到 2030：负担侧是每年 4 300 万死亡（1 800 万过早）；疾病谱给出精确规模（高血压 13 亿/糖尿病 8 亿/癌症年增 2 000 万）；风险因素三巨头（烟草 700 万、空气污染 700 万、饮酒 260 万）全部可预防——承诺侧重申「到 2030 年将 NCD 过早死亡减少三分之一」。",
+ "key_messages": [
+  "续期：2025-12-15 第 80/117 号决议通过，重申 2030 年 NCD 过早死亡减少三分之一",
+  "负担：NCD 每年致死超 4 300 万人，其中 1 800 万属于 70 岁前过早死亡",
+  "疾病谱：高血压 13 亿（仅 1/5 控制）、糖尿病 8 亿、口腔疾病 37 亿、慢性肾病 6.74 亿",
+  "风险三巨头：烟草 700 万、空气污染 700 万、饮酒 260 万——均可预防",
+  "年轻一代：3 500 万 5 岁以下超重、3.9 亿 5–19 岁超重或肥胖"
+ ],
+ "supporting_structure": "三层读法：承诺（续期与目标）→ 负担（死亡与疾病谱）→ 杠杆（可改变风险因素）",
+ "duration_minutes": 9,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；UN 中文分节数字（如「4 300万」）在引文中逐字保留；对政策窗口的判断为推导内容须声明",
+ "anti_goals": [
+  "不解读成员国博弈",
+  "不做投资标的推荐"
+ ]
+}

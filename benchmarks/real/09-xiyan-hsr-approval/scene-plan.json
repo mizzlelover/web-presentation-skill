@@ -1,0 +1,131 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "西十高铁可研批复解读 · 一份批复的四要素",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "一份批复只有一页半，但::四要素::一个不少",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 2,
+   "id": "necessity",
+   "arg_ref": "THESIS",
+   "cognitive_job": "explain",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "要素一 · 必要性：完善路网 + ::区域战略::",
+   "chart": null,
+   "source_refs": [
+    "经研究，现批复如下：\n\n  一、为进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建“一带一路”、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展，同意新建西安至十堰高速铁路（项目代码：2018-000052-53-01-000601）。"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "standard",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "要素二 · 内容与标准：::256.7 公里::、<br>350 km/h、::3000 万人/年::",
+   "chart": null,
+   "source_refs": [
+    "新建西安至十堰高速铁路起自西安枢纽西安东站，经蓝田、商洛西、山阳、漫川关、郧西站，接入既有十堰东站，正线全长256.7公里，全线设7个车站，其中新建车站6个。",
+    "设计速度：350公里/小时。",
+    "规划远景年输送能力：单向3000万人/年。"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "investment",
+   "arg_ref": "C2",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "要素三 · 投资与资金：::476.8 亿::，<br>资本金 50% 三方出资",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "亿元",
+    "categories": [
+     "国铁集团",
+     "陕西省",
+     "湖北省"
+    ],
+    "series": [
+     {
+      "name": "资本金出资",
+      "data": [
+       103.8,
+       99.0,
+       35.6
+      ]
+     }
+    ],
+    "caption": "口径：项目资本金出资（三方合计 238.4 亿元，占总投资 50%）；来源：批复「三、投资估算、资金来源」"
+   },
+   "source_refs": [
+    "三、投资估算、资金来源及建设安排\n  项目总投资476.8亿元，其中工程投资452.1亿元，动车组购置费24.7亿元。",
+    "项目资本金占总投资的50%，为238.4亿元：其中中国国家铁路集团有限公司出资103.8亿元，由企业自筹解决（中央预算内投资另行研究确定）；"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "arrangement",
+   "arg_ref": "C3",
+   "cognitive_job": "explain",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "要素四 · 建设安排：工期 ::4.5 年::，<br>两段两种治理结构",
+   "chart": null,
+   "source_refs": [
+    "建设工期4.5年",
+    "本项目陕西段和西安至延安铁路项目组建新公司，湖北段纳入湖北汉十城际铁路有限责任公司管理。"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "implication",
+   "arg_ref": "C4",
+   "cognitive_job": "summarize",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "通用读法：批复四要素模板——<br>::必要性/标准/资金/安排::",
+   "chart": null,
+   "source_refs": [
+    "经研究，现批复如下：\n\n  一、为进一步完善高铁路网，加强关中城市群与长江中游城市群联系，推动秦巴山区全面脱贫和乡村振兴，更好支撑共建“一带一路”、长江经济带发展和西部大开发等国家发展战略，带动沿线经济社会发展，同意新建西安至十堰高速铁路（项目代码：2018-000052-53-01-000601）。",
+    "三、投资估算、资金来源及建设安排\n  项目总投资476.8亿元，其中工程投资452.1亿元，动车组购置费24.7亿元。"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "批复虽短，::骨架齐全::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 8,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

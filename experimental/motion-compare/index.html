@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实验 · 动效技术对照（CSS / WAAPI / View Transition / GSAP）</title>
+<style>
+  :root{ --bg:#fff; --fg:#111; --muted:#666; --line:#e3e3e3; --accent:#2f6df6; }
+  *{box-sizing:border-box}
+  body{margin:0;padding:28px;background:var(--bg);color:var(--fg);font:14px/1.7 system-ui,"PingFang SC",sans-serif}
+  h1{font-size:20px;margin:0 0 6px}
+  p.lead{color:var(--muted);margin:0 0 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:16px}
+  .card h2{font-size:14px;margin:0 0 10px;color:var(--muted);letter-spacing:.08em}
+  .stage{height:120px;border:1px dashed var(--line);border-radius:8px;position:relative;overflow:hidden;background:#fafafa}
+  .dot{position:absolute;left:8px;top:48px;width:24px;height:24px;border-radius:50%;background:var(--accent)}
+  .reveal{opacity:0;transform:translateY(10px)}
+  .reveal.on{opacity:1;transform:none;transition:opacity .4s,transform .4s}
+  .bars{position:absolute;inset:16px;display:flex;align-items:flex-end;gap:8px}
+  .bars i{flex:1;background:var(--accent);height:0;border-radius:3px 3px 0 0}
+  .row{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+  button{font:inherit;font-size:12px;padding:5px 10px;border:1px solid var(--line);background:#fff;border-radius:999px;cursor:pointer}
+  button:hover{border-color:var(--accent);color:var(--accent)}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  table{border-collapse:collapse;width:100%;margin-top:22px;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{color:var(--muted);font-weight:600}
+  code{background:#f3f4f6;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>实验 · 动效技术对照（补丁 §21）</h1>
+<p class="lead">同一组场景，分别用 CSS Animation / Web Animations API / View Transition API / GSAP 实现，比较控制力、实现成本与可控性。仅用于技术取舍，不进入生产运行时。</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>场景 A · simple reveal（简单揭示）</h2>
+    <div class="stage"><div class="dot reveal" id="a-target"></div></div>
+    <div class="row">
+      <button data-tech="css" data-scene="A">CSS</button>
+      <button data-tech="waapi" data-scene="A">WAAPI</button>
+      <button data-tech="vt" data-scene="A">ViewTransition</button>
+      <button data-tech="gsap" data-scene="A">GSAP</button>
+    </div>
+    <div class="note" id="a-note">—</div>
+  </div>
+
+  <div class="card">
+    <h2>场景 B · object continuity（对象连续性）</h2>
+    <div class="stage"><div class="dot" id="b-target" style="position:absolute;left:8px;top:48px"></div></div>
+    <div class="row">
+      <button data-tech="css" data-scene="B">CSS</button>
+      <button data-tech="waapi" data-scene="B">WAAPI</button>
+      <button data-tech="vt" data-scene="B">ViewTransition</button>
+      <button data-tech="gsap" data-scene="B">GSAP</button>
+    </div>
+    <div class="note" id="b-note">—</div>
+  </div>
+
+  <div class="card">
+    <h2>场景 C · complex explanatory sequence（复杂解释序列）</h2>
+    <div class="stage"><div class="bars" id="c-target"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="row">
+      <button data-tech="css" data-scene="C">CSS</button>
+      <button data-tech="waapi" data-scene="C">WAAPI</button>
+      <button data-tech="vt" data-scene="C">ViewTransition</button>
+      <button data-tech="gsap" data-scene="C">GSAP</button>
+    </div>
+    <div class="note" id="c-note">—</div>
+  </div>
+</div>
+
+<table id="matrix">
+  <thead><tr><th>技术</th><th>场景 A</th><th>场景 B</th><th>场景 C</th><th>pause/seek/reverse</th><th>实现成本</th><th>适用判断</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<script src="../vendor/gsap.min.js"></script>
+<script>
+window.MOTION_BENCH = { results: {}, notes: {} };
+var table = { };
+
+function mark(scene, tech, ok, ms, extra) {
+  window.MOTION_BENCH.results[scene + "/" + tech] = { ok: !!ok, ms: Math.round(ms), extra: extra || "" };
+  document.getElementById(scene.toLowerCase() + "-note").textContent =
+    tech + "：" + (ok ? "完成" : "不支持/失败") + " · " + Math.round(ms) + "ms" + (extra ? " · " + extra : "");
+}
+
+// 场景 A：简单揭示
+function sceneA(tech) {
+  var el = document.getElementById("a-target");
+  var t0 = performance.now();
+  el.className = "dot reveal";
+  void el.offsetWidth;
+  if (tech === "css") { el.classList.add("on"); mark("A", tech, true, performance.now() - t0, "仅需切换 class"); }
+  else if (tech === "waapi") {
+    var an = el.animate([{ opacity: 0, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }], { duration: 400, fill: "both" });
+    an.onfinish = function () { mark("A", tech, true, performance.now() - t0, "可 pause/seek/reverse"); };
+  } else if (tech === "vt") {
+    if (!document.startViewTransition) { mark("A", tech, false, 0, "API 不可用"); return; }
+    el.style.viewTransitionName = "dot";
+    document.startViewTransition(function () { el.classList.add("on"); });
+    mark("A", tech, true, performance.now() - t0, "需同时定义两个状态");
+  } else {
+    gsap.fromTo(el, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4, onComplete: function () { mark("A", tech, true, performance.now() - t0, "时间线可控"); } });
+  }
+}
+
+// 场景 B：对象连续性（同一对象从 A 位置移动到 B 位置）
+function sceneB(tech) {
+  var el = document.getElementById("b-target");
+  var t0 = performance.now();
+  el.style.transform = "";
+  var to = (el.dataset.pos === "right") ? { x: 0, y: 0 } : { x: 150, y: 20 };
+  el.dataset.pos = (el.dataset.pos === "right") ? "left" : "right";
+  if (tech === "css") {
+    el.style.transition = "transform .45s cubic-bezier(.2,.7,.3,1)";
+    el.style.transform = "translate(" + to.x + "px," + to.y + "px)";
+    mark("B", tech, true, performance.now() - t0, "布局位置仍会替换，非真连续性");
+  } else if (tech === "waapi") {
+    el.animate([{ transform: el.style.transform || "none" }, { transform: "translate(" + to.x + "px," + to.y + "px)" }], { duration: 450, fill: "both", easing: "cubic-bezier(.2,.7,.3,1)" });
+    mark("B", tech, true, performance.now() - t0, "同上：需自行维护位置状态");
+  } else if (tech === "vt") {
+    if (!document.startViewTransition) { mark("B", tech, false, 0, "API 不可用"); return; }
+    el.style.viewTransitionName = "obj";
+    document.startViewTransition(function () { el.style.transform = "translate(" + to.x + "px," + to.y + "px)"; });
+    mark("B", tech, true, performance.now() - t0, "跨状态自动衔接，最贴近语义");
+  } else {
+    gsap.to(el, { x: to.x, y: to.y, duration: .45, ease: "power2.out", onComplete: function () { mark("B", tech, true, performance.now() - t0, "可与时间线合并"); } });
+  }
+}
+
+// 场景 C：复杂解释序列（五根柱依次生长 + 一次高亮）
+function sceneC(tech) {
+  var bars = Array.prototype.slice.call(document.querySelectorAll("#c-target i"));
+  var vals = [40, 90, 60, 120, 80];
+  bars.forEach(function (b) { b.style.transition = ""; b.style.height = "0px"; b.style.background = ""; });
+  var t0 = performance.now();
+  if (tech === "css") {
+    bars.forEach(function (b, i) {
+      setTimeout(function () { b.style.height = vals[i] + "px"; }, i * 70);
+    });
+    mark("C", tech, true, performance.now() - t0, "逐条 setTimeout，时序难控制");
+  } else if (tech === "waapi") {
+    bars.forEach(function (b, i) {
+      b.animate([{ height: "0px" }, { height: vals[i] + "px" }], { duration: 320, delay: i * 70, fill: "both" });
+    });
+    mark("C", tech, true, performance.now() - t0, "每元素一条 Animation，可统一控制");
+  } else if (tech === "vt") {
+    if (!document.startViewTransition) { mark("C", tech, false, 0, "API 不可用（序列场景不适用）"); return; }
+    document.startViewTransition(function () { bars.forEach(function (b, i) { b.style.height = vals[i] + "px"; }); });
+    mark("C", tech, true, performance.now() - t0, "仅适合状态切换，不适合分步序列");
+  } else {
+    gsap.timeline()
+      .to(bars, { height: function (i) { return vals[i] + "px"; }, duration: .32, stagger: .07, ease: "power2.out" })
+      .to(bars[3], { backgroundColor: "#ff6a4d", duration: .3 });
+    mark("C", tech, true, performance.now() - t0, "时间线最自然，但库体积大");
+  }
+}
+
+document.addEventListener("click", function (e) {
+  var b = e.target.closest("button[data-tech]");
+  if (!b) return;
+  var tech = b.dataset.tech, scene = b.dataset.scene;
+  if (scene === "A") sceneA(tech);
+  if (scene === "B") sceneB(tech);
+  if (scene === "C") sceneC(tech);
+});
+
+// 汇总矩阵
+table.rows = [
+  ["CSS Animation", "✔ 够用", "✖ 非真连续", "△ 时序靠延时", "✖ 不可 seek", "最低", "简单揭示首选"],
+  ["Web Animations API", "✔ 够用", "△ 需自维护状态", "✔ 可统一控制", "✔ 完整支持", "低（原生）", "本项目运行时采用"],
+  ["View Transition API", "△ 大材小用", "✔ 最贴近语义", "✖ 不适用序列", "✖ 不可 seek", "低（原生，需同文档）", "仅用于跨状态连续性"],
+  ["GSAP", "✔ 够用", "△ 需自维护状态", "✔ 最自然", "✔ 完整支持", "中（库 ~73KB + 非 OSI 许可）", "仅复杂编排时考虑"]
+];
+var tb = document.querySelector("#matrix tbody");
+tb.innerHTML = table.rows.map(function (r) { return "<tr>" + r.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>"; }).join("");
+</script>
+</body>
+</html>

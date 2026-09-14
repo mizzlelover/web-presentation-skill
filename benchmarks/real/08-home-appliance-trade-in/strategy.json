@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "trade-in",
+  "title": "商务部等4部门办公厅《关于进一步做好家电以旧换新工作的通知》",
+  "publisher": "商务部等4部门办公厅",
+  "url": "https://www.mofcom.gov.cn/zcfb/zc/art/2024/art_02840ccdc6c54810b5e37715ec81a145.html",
+  "date": "2024"
+ },
+ "situation": "Sales Enablement Briefing / 渠道与门店运营团队（销售类）",
+ "situation_rationale": "材料是四部门销售政策通知（补贴结构+流程+合规），用途是给渠道与门店团队可执行的售卖与合规指引。",
+ "communication_goal": [
+  "inform",
+  "explain",
+  "align"
+ ],
+ "audience": {
+  "role": "集团家电渠道与门店运营团队",
+  "expertise": "intermediate",
+  "prior_knowledge": "熟悉门店销售流程",
+  "decision_power": "none",
+  "attitude": "supportive",
+  "motivation": "用足补贴政策且不踩合规红线",
+  "concerns": [
+   "补贴怎么算",
+   "流程怎么走",
+   "哪些行为会被大数据识别"
+  ],
+  "objections": [
+   "流程复杂"
+  ],
+  "time_budget": "8 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "step-by-step",
+  "likely_questions": [
+   "1级能效多补多少",
+   "哪些行为算骗补"
+  ]
+ },
+ "central_thesis": "这份通知是门店的作战地图：8 类家电、15% 基础补贴、1 级能效再 +5%、每件封顶 2000 元——同时划了一条大数据红线：虚假交易、跨区重复、囤货骗补会被识别。",
+ "key_messages": [
+  "8 类家电、15% 基础补贴、1 级能效额外 +5%",
+  "每类 1 件、每件不超 2000 元",
+  "支付立减或实名代金券，优惠直达消费者",
+  "大数据严防虚假交易、跨区重复、囤货骗补"
+ ],
+ "supporting_structure": "补贴结构 → 流程与体验 → 合规红线 → 市场环境 → 执行时限",
+ "duration_minutes": 8,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；销售团队参考为推导内容须声明",
+ "anti_goals": [
+  "不教任何规避监管的方法"
+ ]
+}

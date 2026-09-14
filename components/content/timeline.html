@@ -1,0 +1,17 @@
+<!-- Timeline — Cognitive Job: Trace / Explain
+     规则：时间轴必须标刻度与关键里程碑；甘特须标串行/并行；禁止用时间轴装饰非时序内容。 -->
+<section class="wp-scene wp-timeline">
+  <h2>{{HEADLINE}}</h2>
+  <ol class="wp-timeline__list">
+    <li data-reveal><time>{{T1}}</time><strong>{{MILESTONE_1}}</strong><span>{{NOTE_1}}</span></li>
+    <li data-reveal><time>{{T2}}</time><strong>{{MILESTONE_2}}</strong><span>{{NOTE_2}}</span></li>
+    <li data-reveal><time>{{T3}}</time><strong>{{MILESTONE_3}}</strong><span>{{NOTE_3}}</span></li>
+  </ol>
+  <aside class="wp-notes">{{SPEAKER_NOTES}}</aside>
+  <div class="wp-reader">{{FULL_READER_CONTENT}}</div>
+</section>
+
+<style>
+.wp-timeline__list { list-style: none; margin: 0; padding: 0; display: grid; gap: calc(var(--wp-space) * .5); border-inline-start: 2px solid var(--wp-accent); padding-inline-start: 1.2em; }
+.wp-timeline__list time { color: var(--wp-muted); font-variant-numeric: tabular-nums; margin-inline-end: 1em; }
+</style>

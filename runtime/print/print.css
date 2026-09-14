@@ -1,0 +1,53 @@
+/* WP Print Mode — 打印/PDF 视图（§15 / §50）
+   策略：打印页 = 设计画布（1920×1080，16:9）。Stage 与 Print 同源同尺寸，
+   因此舞台上不溢出的幕，打印必然不溢出；每幕恰好一页。
+   另：冻结动画终态、展开全部内容、显示引用、保留图表色彩。 */
+
+@page {
+  size: 1920px 1080px;   /* = 设计画布；与 Stage 完全一致，避免任何重排失真 */
+  margin: 0;
+}
+
+@media print {
+  :root { --wp-bg: #fff; --wp-fg: #000; }
+
+  html, body { background: #fff !important; color: #000 !important; overflow: visible !important; }
+
+  /* 保留图表与色块的印刷色彩（否则 ECharts/强调色被剥离） */
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  .wp-deck { height: auto !important; }
+
+  /* 每幕一页，尺寸与舞台一致 */
+  .wp-scene {
+    display: grid !important;
+    height: 1080px !important;
+    min-height: 0 !important;
+    overflow: hidden;
+    page-break-after: always;
+    break-inside: avoid;
+  }
+  .wp-scene[hidden] { display: grid !important; }
+
+  /* 展开渐进元素与 reader 补充 */
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .wp-revealed { opacity: 1 !important; }
+  .wp-reader { display: block !important; }
+
+  /* 隐藏控制、交互控件与 Deck 导航链接（留档稿不应出现"点这里"） */
+  .wp-search, .wp-presenter-bar, .wp-controls, .wp-status, .wp-hints, .wp-progress,
+  .wp-help, .wp-ov-bar, .wp-ov-num,
+  [data-interact], nav, button, .wpk-navrow { display: none !important; }
+
+  /* 冻结动画终态 */
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+
+  /* 显示引用来源 */
+  .wp-source, .wpk-src, [data-citation] { display: block !important; font-size: 9px; color: #444; }
+
+  /* 链接展开 URL（引用友好） */
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9px; color: #444; }
+
+  /* 可读性兜底 */
+  img, svg, canvas { filter: none !important; max-width: 100% !important; }
+}

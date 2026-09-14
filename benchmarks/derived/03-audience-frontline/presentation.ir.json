@@ -1,0 +1,76 @@
+{
+  "ir_version": "1.0",
+  "presentation": {
+    "id": "audience-frontline",
+    "title": "数字化门户项目 · 致一线运营同事",
+    "situation": "Internal Communication / Training（同内容多受众基准 · 一线版）",
+    "communication_goal": ["explain", "align", "build_trust"],
+    "audience": { "role": "场馆售票、活动运营、客服等一线同事", "expertise": "novice", "prior_knowledge": "日常使用既有售票与报名系统，不关心架构与预算", "decision_power": "none", "attitude": "neutral（关注是否增加工作量）", "motivation": "知道自己的工作会发生什么变化、怎么应对", "concerns": ["是不是又要学新系统", "多了多少活儿", "出了问题找谁"], "objections": ["现在也能用", "又要培训"], "time_budget": "10 分钟", "cognitive_load_tolerance": "low", "expected_detail": "step-by-step", "likely_questions": ["要学几个操作", "遇到问题找谁", "旧流程还能不能走"] },
+    "central_thesis": "对一线只有三个变化：多扫一次码、报名从手工表改成系统、日报从抄写变成自动生成；其余流程不变，且有两个月的并行期。",
+    "duration_minutes": 10,
+    "modes": ["stage", "reader", "print"],
+    "brand": { "theme": "corporate", "constraints": "一线版：只说「对你有什么变化」，不出现架构、预算、接口等术语" },
+    "graph": { "core_path": ["opening", "changes", "process", "benefit", "support"], "optional_paths": [], "deep_dives": [], "evidence_appendix": [] },
+    "qa_preparation": { "likely_questions": [{ "question": "遇到问题找谁", "answer_scene": "support" }], "objection_handling": [{ "objection": "现在也能用", "response_scene": "changes" }] },
+    "constraints": "同内容多受众基准之一线版；与 CEO / technical 版共用同一源材料"
+  },
+  "theme": { "name": "corporate", "css": "themes/corporate.css", "tokens": { "--wp-accent": "#e8590c", "--wp-bg": "#ffffff", "--wp-fg": "#1a1a1a", "--wp-muted": "#5c5c5c", "--wp-radius": "10px", "--wp-surface": "#fdf6f0" } },
+  "runtime": { "navigation": { "keyboard": true, "search": true, "jump": true }, "presenter_view": { "notes": true, "timer": true, "next_scene": true }, "motion": { "respect_reduced_motion": true, "controllable": true }, "offline": true, "performance_budget": { "first_load_kb": 1400, "max_image_kb": 200, "target_fps": 60 } },
+  "modes": { "stage": true, "reader": { "enabled": true, "deep_links": true }, "print": { "enabled": true, "expand_critical": true, "show_citations": true } },
+  "scenes": [
+    { "id": "opening", "role": "opening", "cognitive_job": "orient", "topic": "开场", "claim": "只有三个变化",
+      "headline": { "type": "assertion", "text": "对大家只有::三个变化::，其他都不变", "rationale": "一线受众最担心「又学新系统」；开场用断言标题把变化量说到最少，降低抵触" },
+      "content": { "stage": "三个变化：多扫一次码、报名改在系统里、日报自动生成。", "reader": "本项目上线后，一线同事的工作只有三个变化：①售票/入场时多扫一次会员码；②活动报名从手工表格改为系统登记；③日报由系统自动生成，不用手工抄写。其余流程、系统与权限都不变。与 CEO / technical 版同源。" },
+      "speaker_notes": "（先安抚）大家最关心的是「是不是又要学新东西」。我直接说：只有三个变化，其他都不变。第一，售票和入场的时候多扫一次会员码。第二，活动报名从现在的 Excel 表格，改到系统里登记。第三，日报系统自动生成，不用再手工抄。就这三件。",
+      "reader_content": "三个变化：①多扫一次会员码；②报名改为系统登记；③日报自动生成。其余流程不变。",
+      "source": "源材料：数字化门户项目立项材料（与 CEO / technical 版同源）", "render_level": "L1", "cognitive_load": "low", "kicker": "致一线运营同事",
+      "blocks": [{ "type": "cards", "cols": 3, "items": [
+        { "no": "变化 1", "title": "多扫一次码", "text": "售票与入场时扫会员码，约 3 秒。" },
+        { "no": "变化 2", "title": "报名进系统", "text": "从 Excel 表格改为系统登记。" },
+        { "no": "变化 3", "title": "日报自动生成", "text": "不用手工抄写，次日上午可查。", "accent": true } ] }] },
+
+    { "id": "changes", "role": "argument", "cognitive_job": "explain", "topic": "逐项说明", "claim": "每个变化怎么做",
+      "headline": { "type": "question", "text": "这三件事::具体怎么做::？", "rationale": "用问句式标题把听众的疑问显式化，再逐条给操作级说明" },
+      "content": { "stage": "逐项操作说明。", "reader": "具体操作：①扫码——打开收银界面点「会员」，对准顾客会员码，屏幕显示姓名首字与积分后确认；②报名——在「活动」菜单新建或选择活动，扫码或输入手机号完成登记；③日报——当日 23:00 自动生成，次日 9:00 前可在「报表」菜单查看。" },
+      "speaker_notes": "（逐条演示，慢）第一件，扫码：打开收银界面，点「会员」，对准顾客的会员码，屏幕会显示姓名首字和积分，确认就行，大概 3 秒。第二件，报名：在「活动」菜单里选活动，扫码或者输手机号完成登记，系统自动记来源渠道。第三件，日报：当天晚上 11 点自动生成，第二天上午 9 点前在「报表」里看。",
+      "reader_content": "操作：①扫码→收银界面点「会员」→对准码→确认；②报名→「活动」菜单选活动→扫码或输手机号；③日报→当日 23:00 自动生成，次日 9:00 前在「报表」查看。",
+      "source": "源材料：一线操作说明（样例）", "render_level": "L2", "cognitive_load": "medium",
+      "blocks": [{ "type": "steps", "items": [
+        { "k": "第一步", "title": "扫码", "text": "收银界面点「会员」，对准会员码，确认；约 3 秒。" },
+        { "k": "第二步", "title": "报名登记", "text": "「活动」菜单选活动，扫码或输手机号完成登记。" },
+        { "k": "第三步", "title": "看日报", "text": "当晚 23:00 自动生成，次日上午在「报表」查看。", "gate": true } ] }] },
+
+    { "id": "process", "role": "transition", "cognitive_job": "transition", "topic": "过渡安排", "claim": "两个月并行期",
+      "headline": { "type": "topic", "text": "过渡：::新旧并行两个月，旧的先不关::", "rationale": "过渡幕陈述事实安排，直接消除「万一不习惯怎么办」的顾虑" },
+      "content": { "stage": "并行两个月，旧流程保留。", "reader": "过渡安排：新流程上线后，旧流程（Excel 报名、手工日报）继续保留两个月。期间两种方式都可用；两个月后由各场馆确认无误再关闭旧入口。不会出现「系统不能用又没别的办法」的情况。" },
+      "speaker_notes": "（重要）过渡期两个月。新流程上线以后，Excel 报名和手工日报继续保留两个月，两种方式都能用。两个月后，各场馆确认没问题了，我们再关旧入口。所以不会出现「系统不好用，又没别的办法」的情况。",
+      "reader_content": "过渡：新流程上线后旧流程保留两个月，两者并行可用；两个月后经场馆确认再关闭旧入口。",
+      "source": "源材料：上线方案（样例）", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "timeline", "items": [
+        { "when": "上线首日", "title": "新流程可用", "text": "旧流程同时保留。" },
+        { "when": "第 1–2 月", "title": "并行期", "text": "两种方式都可用，按习惯选择。" },
+        { "when": "第 3 月", "title": "关闭旧入口", "text": "各场馆确认无误后关闭。" } ] }] },
+
+    { "id": "benefit", "role": "evidence", "cognitive_job": "prove", "topic": "对大家的好处", "claim": "省时间、少扯皮",
+      "headline": { "type": "assertion", "text": "对大家的好处：::每天省下约 40 分钟::", "rationale": "用可感知的时间量替代抽象收益，契合一线受众的关切点" },
+      "content": { "stage": "每天省约 40 分钟；对账不再扯皮。", "reader": "对一线的好处：①日报自动生成，每天节省约 40 分钟抄写与核对；②报名与售票数据自动归集，月底对账不再手工比表；③顾客咨询「我参加过几次」时可当场查询，不必转后台。" },
+      "speaker_notes": "（讲收益）好处三个：日报自动出来，每天大概省 40 分钟抄写和核对；报名和售票数据自动汇总，月底对账不用再比表；顾客问「我参加过几次活动」，当场就能查，不用转后台等回复。",
+      "reader_content": "好处：①每天省约 40 分钟（日报自动）；②月底对账不必手工比表；③顾客历史可当场查询。",
+      "source": "源材料：效益测算（样例）", "render_level": "L2", "cognitive_load": "low",
+      "blocks": [{ "type": "numbers", "items": [
+        { "value": "40", "label": "每天节省（分钟）", "accent": true },
+        { "value": "0", "label": "月底手工比表次数" },
+        { "value": "当场", "label": "顾客历史查询" } ] }] },
+
+    { "id": "support", "role": "summary", "cognitive_job": "summarize", "topic": "遇到问题找谁", "claim": "求助渠道",
+      "headline": { "type": "topic", "text": "遇到问题::找谁::（请存这三条）", "rationale": "收束幕给出可直接执行的求助信息，比抽象总结更有用" },
+      "content": { "stage": "三条求助渠道。", "reader": "遇到问题：①系统打不开或扫码不成功——联系场馆值班主管；②流程不清楚——联系运营中心（内线 8xxx）；③顾客投诉或需退款——按既有流程联系客服，本系统不改变退款流程。" },
+      "speaker_notes": "（收）遇到问题三条：系统打不开、扫码不成功，找场馆值班主管；流程不清楚，打运营中心内线；顾客投诉退款，还是按现在的流程找客服——这个我们没改。谢谢大家，有问题现在可以问。",
+      "reader_content": "求助：①系统/扫码问题→场馆值班主管；②流程问题→运营中心（内线）；③投诉退款→既有客服流程（未变更）。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "evidence", "items": [
+        { "title": "系统 / 扫码问题", "source": "场馆值班主管", "grade": "首选" },
+        { "title": "流程不清楚", "source": "运营中心（内线 8xxx）", "grade": "二选" },
+        { "title": "投诉 / 退款", "source": "既有客服流程（未变更）", "grade": "沿用" } ] }] }
+  ]
+}

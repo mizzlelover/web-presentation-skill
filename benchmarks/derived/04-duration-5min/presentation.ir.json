@@ -1,0 +1,69 @@
+{
+  "ir_version": "1.0",
+  "presentation": {
+    "id": "duration-5min",
+    "title": "数字化门户项目 · 5 分钟版",
+    "situation": "Same Content / Different Duration（同内容不同时长基准 · 5 分钟）",
+    "communication_goal": ["request_decision"],
+    "audience": { "role": "已在会前读过材料的决策者", "expertise": "executive", "prior_knowledge": "已了解背景，只需确认结论与决策项", "decision_power": "decider", "attitude": "supportive", "motivation": "快速确认并进入表决", "concerns": ["结论是否变过", "要定什么"], "objections": [], "time_budget": "5 分钟", "cognitive_load_tolerance": "low", "expected_detail": "conclusions-only", "likely_questions": ["与材料是否有出入"] },
+    "central_thesis": "5 分钟版只保留决策必需的推演：结论、依据一条、风险一条、请求三项；不重述背景与方案比较。",
+    "duration_minutes": 5,
+    "modes": ["stage", "reader", "print"],
+    "brand": { "theme": "government", "constraints": "5 分钟版：删除背景重述与方案比较，只留决策链" },
+    "graph": { "core_path": ["opening", "basis", "risk", "ask", "close"], "optional_paths": [], "deep_dives": [], "evidence_appendix": [] },
+    "qa_preparation": { "likely_questions": [{ "question": "与材料出入", "answer_scene": "basis" }], "objection_handling": [] },
+    "constraints": "同内容不同时长基准；与 15 分钟版、20 分钟版（corpus/01）同源"
+  },
+  "theme": { "name": "government", "css": "themes/government.css", "tokens": { "--wp-accent": "#1f4e79", "--wp-bg": "#ffffff", "--wp-fg": "#101418", "--wp-muted": "#4a5560", "--wp-radius": "6px", "--wp-surface": "#fbfcfd" } },
+  "runtime": { "navigation": { "keyboard": true, "search": true, "jump": true }, "presenter_view": { "notes": true, "timer": true, "next_scene": true }, "motion": { "respect_reduced_motion": true, "controllable": true }, "offline": true, "performance_budget": { "first_load_kb": 1400, "max_image_kb": 200, "target_fps": 60 } },
+  "modes": { "stage": true, "reader": { "enabled": true, "deep_links": true }, "print": { "enabled": true, "expand_critical": true, "show_citations": true } },
+  "scenes": [
+    { "id": "opening", "role": "opening", "cognitive_job": "orient", "topic": "结论", "claim": "结论与材料一致",
+      "headline": { "type": "decision", "text": "结论与材料一致：::建议立项，按方案 B::", "rationale": "5 分钟版假设听众已读材料，开场只做结论确认而不重述背景" },
+      "content": { "stage": "结论未变：建议立项，按方案 B 分两期。", "reader": "5 分钟版：假设各位已阅会前材料，本版只做三件事——确认结论未变、给一条最关键依据、明确三项决策。结论：建议立项，按方案 B 分两期实施。" },
+      "speaker_notes": "（直接进入）材料各位看过了，我只做三件事：确认结论没变、给最关键的一条依据、明确要定什么。结论：建议立项，按方案 B 分两期。",
+      "reader_content": "5 分钟版目的：确认结论、给出关键依据、明确决策项。结论未变：建议立项，按方案 B 分两期。",
+      "source": "源材料：数字化门户项目立项材料（与 15/20 分钟版同源）", "render_level": "L1", "cognitive_load": "low", "kicker": "5 分钟版 · 决策确认",
+      "blocks": [{ "type": "cards", "cols": 3, "items": [
+        { "no": "保留", "title": "结论与依据", "text": "结论未变；保留一条最关键依据。" },
+        { "no": "删除", "title": "背景与比较", "text": "已在材料中，本版不重述。" },
+        { "no": "聚焦", "title": "三项决策", "text": "只讨论要定的事。", "accent": true } ] }] },
+
+    { "id": "basis", "role": "evidence", "cognitive_job": "quantify", "topic": "关键依据", "claim": "回收期是主依据",
+      "headline": { "type": "assertion", "text": "最关键的一条依据：::第二年内回收::", "rationale": "5 分钟版只保留最能支撑决策的一条依据，避免平均用力" },
+      "content": { "stage": "依据：投入 310 万，收益 760 万，第二年内回收。", "reader": "关键依据（三年口径，样例）：累计投入 310 万元、累计收益 760 万元，交叉点位于第二年内；最保守情形回收期 34 个月。其余测算见会前材料附录。" },
+      "speaker_notes": "（指图）最关键的一条：三年投入 310 万，收益 760 万，线交叉在第二年内。最保守情形 34 个月。其余测算都在材料附录里，如果各位要核，我可以现场翻。",
+      "reader_content": "关键依据：投入 310 万 / 收益 760 万（三年），第二年内回收；最保守 34 个月。",
+      "source": "源材料：项目财务模型（样例）", "render_level": "L3", "render_rationale": "仅有的一条依据更需图形化以确保一眼可读", "cognitive_load": "low",
+      "blocks": [{ "type": "chart", "kind": "bar", "unit": "万元", "categories": ["首年", "次年", "第三年"],
+        "series": [{ "name": "累计投入", "data": [280, 300, 310] }, { "name": "累计收益", "data": [180, 420, 760] }],
+        "caption": "口径：三年累计；最保守情形回收期 34 个月（样例数据）" }] },
+
+    { "id": "risk", "role": "argument", "cognitive_job": "challenge", "topic": "风险", "claim": "只需关注一条",
+      "headline": { "type": "assertion", "text": "只需各位关注::一条风险::", "rationale": "5 分钟版对风险做筛选，只保留需要决策者介入的那一条" },
+      "content": { "stage": "唯一需关注的高风险：数据口径一致性。", "reader": "风险筛选：四项风险中三项已有对策、由执行层处置；唯一需要集团层面介入的是「数据口径与集团框架一致性」（高）。处置方式即今天请求的第三项决策。" },
+      "speaker_notes": "（筛选）四个风险里三个我们内部就能处置。只有一条需要各位——数据口径和集团框架是否一致，等级高。处置办法就是今天请你定的第三件事。",
+      "reader_content": "风险筛选：三项由执行层处置；唯一需集团介入的是数据口径一致性（高），对应第三项决策。",
+      "source": "源材料：风险评估（样例）", "render_level": "L2", "cognitive_load": "low",
+      "blocks": [{ "type": "compare", "left": { "title": "执行层处置（3 项）", "tag": "不需决策", "items": ["供应商锁定 → 合同条款", "使用意愿 → 运营考核", "工期 → 避开汛期"] }, "right": { "title": "需集团决策（1 项）", "tag": "今日议题", "items": ["数据口径与集团框架一致性"] } }] },
+
+    { "id": "ask", "role": "decision", "cognitive_job": "decide", "topic": "决策", "claim": "三项决策",
+      "headline": { "type": "decision", "text": "请求三项决策", "rationale": "决策请求保持与长版一致，便于跨版本对照而不产生歧义" },
+      "content": { "stage": "立项、预算 280 万、口径。", "reader": "请求三项决策：①同意立项（方案 B，分两期）；②核定首期预算 280 万元；③由信息中心明确数据对接标准。" },
+      "speaker_notes": "（逐项）三项：一、立项，方案 B 分两期；二、首期预算 280 万；三、信息中心明确数据对接标准。",
+      "reader_content": "请求：①立项（方案 B 两期）；②首期预算 280 万元；③信息中心明确数据对接标准。",
+      "source": "—", "render_level": "L2", "cognitive_load": "low",
+      "blocks": [{ "type": "actions", "items": [
+        { "k": "一", "title": "立项", "text": "同意立项，方案 B 分两期。" },
+        { "k": "二", "title": "预算", "text": "核定首期预算 280 万元。" },
+        { "k": "三", "title": "口径", "text": "信息中心明确数据对接标准。" } ] }] },
+
+    { "id": "close", "role": "summary", "cognitive_job": "summarize", "topic": "收束", "claim": "一句话",
+      "headline": { "type": "narrative", "text": "结论没变，::请表决三项::", "rationale": "短版收束不引入新信息，只收口到表决动作" },
+      "content": { "stage": "结论未变，请表决。", "reader": "结论未变；请就三项决策表决。详细论证见会前材料。" },
+      "speaker_notes": "（收）结论没变，请各位就这三项表决。细节都在材料里，会后我随时可以答。",
+      "reader_content": "结论未变，请就三项决策表决；详细论证见会前材料。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "quote", "text": "结论没变，<br>请表决::三项::。", "cite": "5 分钟版收束" }] }
+  ]
+}

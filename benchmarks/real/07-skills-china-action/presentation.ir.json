@@ -1,0 +1,677 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-skills-china-action",
+  "title": "“技能中国行动”实施方案解读 · 一个可考核的人才目标",
+  "situation": "Training Briefing / 集团人力与培训团队（教育培训类）",
+  "communication_goal": [
+   "inform",
+   "explain",
+   "align"
+  ],
+  "audience": {
+   "role": "集团人力与培训团队",
+   "expertise": "intermediate",
+   "prior_knowledge": "了解集团培训体系",
+   "decision_power": "influencer",
+   "attitude": "neutral",
+   "motivation": "找出集团可参与的政策窗口与合规要求",
+   "concerns": [
+    "硬指标",
+    "企业可参与什么",
+    "激励政策"
+   ],
+   "objections": [
+    "方案太宏观"
+   ],
+   "time_budget": "10 分钟",
+   "cognitive_load_tolerance": "medium",
+   "expected_detail": "summary",
+   "likely_questions": [
+    "企业自主认定怎么操作",
+    "学徒制补贴怎么拿"
+   ]
+  },
+  "central_thesis": "「技能中国行动」不是口号，而是可考核的规模目标——十四五新增技能人才 4000 万人以上、技能人才占就业 30%；对企业，最大的两个窗口是企业自主技能等级认定与新型学徒制「双师联合培养」。",
+  "duration_minutes": 10,
+  "modes": {
+   "stage": true,
+   "reader": {
+    "enabled": true,
+    "deep_links": true
+   },
+   "print": {
+    "enabled": true,
+    "expand_critical": true,
+    "show_citations": true
+   }
+  },
+  "brand": {
+   "theme": "corporate",
+   "constraints": "教育培训解读：全部数字可溯源；集团参考为推导内容须声明"
+  },
+  "theme": {
+   "name": "corporate",
+   "css": "themes/corporate.css",
+   "tokens": {
+    "--wp-accent": "#c2410c",
+    "--wp-bg": "#ffffff",
+    "--wp-fg": "#1a1a1a",
+    "--wp-muted": "#5f6b80",
+    "--wp-radius": "10px",
+    "--wp-surface": "#fdf6f0"
+   }
+  },
+  "runtime": {
+   "navigation": {
+    "keyboard": true,
+    "search": true,
+    "jump": true
+   },
+   "presenter_view": {
+    "notes": true,
+    "timer": true,
+    "next_scene": true
+   },
+   "motion": {
+    "respect_reduced_motion": true,
+    "controllable": true
+   },
+   "offline": true,
+   "performance_budget": {
+    "first_load_kb": 1400,
+    "max_image_kb": 200,
+    "target_fps": 60
+   }
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "target",
+    "actions",
+    "window1",
+    "window2",
+    "implication",
+    "close"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "企业自主认定怎么操作",
+     "answer_scene": "window1"
+    }
+   ],
+   "objection_handling": [
+    {
+     "objection": "方案太宏观",
+     "response_scene": "window1"
+    }
+   ]
+  },
+  "constraints": "教育培训解读：全部数字可溯源；集团参考为推导内容须声明"
+ },
+ "theme": {
+  "name": "corporate",
+  "css": "themes/corporate.css",
+  "tokens": {
+   "--wp-accent": "#c2410c",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#1a1a1a",
+   "--wp-muted": "#5f6b80",
+   "--wp-radius": "10px",
+   "--wp-surface": "#fdf6f0"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "「技能中国」不是口号，是",
+   "claim": "「技能中国」不是口号，是可考核的规模目标",
+   "headline": {
+    "type": "assertion",
+    "text": "「技能中国」不是口号，是::可考核的规模目标::",
+    "rationale": "开场即给可核数字，orient 任务需要断言式"
+   },
+   "kicker": "“技能中国行动”实施方案解读（教育培训）",
+   "content": {
+    "stage": "十四五新增技能人才 4000 万以上、技能人才占就业 30%——本简报读目标、窗口与集团参考。",
+    "reader": "本简报基于人社部《“技能中国行动”实施方案》（人社部发〔2021〕48号）。核心目标：新增技能人才 4000 万人以上、技能人才占就业人员比例 30%、东部省份高技能人才占比 35%。框架：目标 → 四大行动 → 企业窗口 → 集团参考。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "本简报基于人社部《“技能中国行动”实施方案》（人社部发〔2021〕48号）。核心目标：新增技能人才 4000 万人以上、技能人才占就业人员比例 30%、东部省份高技能人才占比 35%。框架：目标 → 四大行动 → 企业窗口 → 集团参考。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "本简报基于人社部《“技能中国行动”实施方案》（人社部发〔2021〕48号）。核心目标：新增技能人才 4000 万人以上、技能人才占就业人员比例 30%、东部省份高技能人才占比 35%。框架：目标 → 四大行动 → 企业窗口 → 集团参考。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [],
+   "source_refs": [
+    "“十四五”期间，新增技能人才4000万人以上，技能人才占就业人员比例达到30%，东部省份高技能人才占技能人才比例达到35%，中西部省份高技能人才占技能人才比例在现有基础上提高2-3个百分点。"
+   ]
+  },
+  {
+   "id": "target",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "目标",
+   "claim": "新增 4000 万技能人才，<br>占就业 30%",
+   "headline": {
+    "type": "assertion",
+    "text": "目标：新增 ::4000 万::技能人才，<br>占就业 ::30%::",
+    "rationale": "核心指标用大数字呈现，quantify 任务"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "4000 万人以上、30%、东部 35%、中西部 +2-3 个百分点。",
+    "reader": "目标（方案原文）：新增技能人才 4000 万人以上；技能人才占就业人员比例达到 30%；东部省份高技能人才占技能人才比例达到 35%；中西部省份在现有基础上提高 2-3 个百分点。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "目标（方案原文）：新增技能人才 4000 万人以上；技能人才占就业人员比例达到 30%；东部省份高技能人才占技能人才比例达到 35%；中西部省份在现有基础上提高 2-3 个百分点。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "目标（方案原文）：新增技能人才 4000 万人以上；技能人才占就业人员比例达到 30%；东部省份高技能人才占技能人才比例达到 35%；中西部省份在现有基础上提高 2-3 个百分点。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "4000 万+",
+       "label": "新增技能人才",
+       "accent": true
+      },
+      {
+       "value": "30%",
+       "label": "技能人才占就业人员比例"
+      },
+      {
+       "value": "35%",
+       "label": "东部高技能人才占比"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "“十四五”期间，新增技能人才4000万人以上，技能人才占就业人员比例达到30%，东部省份高技能人才占技能人才比例达到35%，中西部省份高技能人才占技能人才比例在现有基础上提高2-3个百分点。"
+   ]
+  },
+  {
+   "id": "actions",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "四大行动 20 条",
+   "claim": "<br>提升 · 强企 · 激励 · 合作",
+   "headline": {
+    "type": "assertion",
+    "text": "四大行动 ::20 条::：<br>提升 · 强企 · 激励 · 合作",
+    "rationale": "结构陈述，assertion + 四卡"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "四大行动 20 条：技能提升（培训/技工教育）、技能强企（学徒制/自主认定）、技能激励（薪酬/表彰）、技能合作（世赛/互认）。",
+    "reader": "方案围绕政策制度体系与四大行动提出 20 条举措：技能提升（职业技能提升行动、技工教育、乡村振兴帮扶、创业创新）、技能强企（新型学徒制、产教融合、岗位练兵、自主认定）、技能激励（表彰、薪酬、社会地位、贯通机制）、技能合作（世赛、国际交流、证书互认）。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "方案围绕政策制度体系与四大行动提出 20 条举措：技能提升（职业技能提升行动、技工教育、乡村振兴帮扶、创业创新）、技能强企（新型学徒制、产教融合、岗位练兵、自主认定）、技能激励（表彰、薪酬、社会地位、贯通机制）、技能合作（世赛、国际交流、证书互认）。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "方案围绕政策制度体系与四大行动提出 20 条举措：技能提升（职业技能提升行动、技工教育、乡村振兴帮扶、创业创新）、技能强企（新型学徒制、产教融合、岗位练兵、自主认定）、技能激励（表彰、薪酬、社会地位、贯通机制）、技能合作（世赛、国际交流、证书互认）。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 4,
+     "items": [
+      {
+       "no": "①",
+       "title": "技能提升",
+       "text": "终身培训制度、技工教育、帮扶地区工程。"
+      },
+      {
+       "no": "②",
+       "title": "技能强企",
+       "text": "新型学徒制、产教融合、自主认定。"
+      },
+      {
+       "no": "③",
+       "title": "技能激励",
+       "text": "表彰奖励、薪酬指引、职业贯通。"
+      },
+      {
+       "no": "④",
+       "title": "技能合作",
+       "text": "世赛体系、国际交流、证书互认。"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "实施“技能提升”行动",
+    "实施“技能强企”行动",
+    "实施“技能激励”行动",
+    "实施“技能合作”行动"
+   ]
+  },
+  {
+   "id": "window1",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "企业窗口①",
+   "claim": "自主认定——<br>一线职工可直接认定为技师",
+   "headline": {
+    "type": "assertion",
+    "text": "企业窗口①：::自主认定::——<br>一线职工可直接认定为技师",
+    "rationale": "对企业最有操作价值的条款，assertion 突出"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "企业自主确定评价范围与等级；业绩突出的一线职工可按规定直接认定为高级工、技师、高级技师。",
+    "reader": "方案支持企业自主确定评价职业（工种）范围、自主设置职业技能岗位等级、自主开发评价标准、自主开展评价；对掌握高超技能、业绩突出的一线职工，可按规定直接认定为高级工、技师、高级技师——打破学历、资历、年龄、身份、比例等限制。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "方案支持企业自主确定评价职业（工种）范围、自主设置职业技能岗位等级、自主开发评价标准、自主开展评价；对掌握高超技能、业绩突出的一线职工，可按规定直接认定为高级工、技师、高级技师——打破学历、资历、年龄、身份、比例等限制。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "方案支持企业自主确定评价职业（工种）范围、自主设置职业技能岗位等级、自主开发评价标准、自主开展评价；对掌握高超技能、业绩突出的一线职工，可按规定直接认定为高级工、技师、高级技师——打破学历、资历、年龄、身份、比例等限制。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [],
+   "source_refs": [
+    "打破学历、资历、年龄、身份、比例等限制，对掌握高超技能、业绩突出的企业一线职工，可按规定直接认定为高级工、技师、高级技师。"
+   ]
+  },
+  {
+   "id": "window2",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "企业窗口②",
+   "claim": "新型学徒制<br>「招工即招生、入企即入校」",
+   "headline": {
+    "type": "assertion",
+    "text": "企业窗口②：新型学徒制<br>::「招工即招生、入企即入校」::",
+    "rationale": "第二企业窗口，assertion"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "企校双师联合培养；企业实训基地与院校培训基地「双基地」、企业导师与院校导师「双导师」。",
+    "reader": "中国特色企业新型学徒制：招工即招生、入企即入校、企校双师联合培养；推行「双结合」「双基地」「双导师」联合培养模式，组织新招用和转岗人员参加学徒制培训。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "中国特色企业新型学徒制：招工即招生、入企即入校、企校双师联合培养；推行「双结合」「双基地」「双导师」联合培养模式，组织新招用和转岗人员参加学徒制培训。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "中国特色企业新型学徒制：招工即招生、入企即入校、企校双师联合培养；推行「双结合」「双基地」「双导师」联合培养模式，组织新招用和转岗人员参加学徒制培训。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [],
+   "source_refs": [
+    "全面推行“招工即招生、入企即入校、企校双师联合培养”为主要内容的中国特色企业新型学徒制"
+   ]
+  },
+  {
+   "id": "implication",
+   "role": "recommendation",
+   "cognitive_job": "answer",
+   "topic": "集团参考",
+   "claim": "<br>申报认定 · 学徒试点 · 薪酬衔接 · 校企合作",
+   "headline": {
+    "type": "decision",
+    "text": "集团参考：<br>::申报认定 · 学徒试点 · 薪酬衔接 · 校企合作::",
+    "rationale": "answer 任务用决策式标题给出四个可执行方向"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "推导参考：申报自主认定与学徒制试点、技能等级与薪酬衔接、对接优质技工院校。",
+    "reader": "集团参考（推导内容，非方案原文）：①申报企业自主技能等级认定备案；②新型学徒制试点（对接 300 所左右优质技工院校资源）；③按《技能人才薪酬分配指引》衔接技能等级与薪酬；④关注技工教育集团试点合作。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "集团参考（推导内容，非方案原文）：①申报企业自主技能等级认定备案；②新型学徒制试点（对接 300 所左右优质技工院校资源）；③按《技能人才薪酬分配指引》衔接技能等级与薪酬；④关注技工教育集团试点合作。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "集团参考（推导内容，非方案原文）：①申报企业自主技能等级认定备案；②新型学徒制试点（对接 300 所左右优质技工院校资源）；③按《技能人才薪酬分配指引》衔接技能等级与薪酬；④关注技工教育集团试点合作。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [
+    {
+     "type": "actions",
+     "items": [
+      {
+       "k": "参考 一",
+       "title": "自主认定",
+       "text": "申报企业自主技能等级认定。"
+      },
+      {
+       "k": "参考 二",
+       "title": "学徒试点",
+       "text": "对接优质技工院校，开展新型学徒制。"
+      },
+      {
+       "k": "参考 三",
+       "title": "薪酬衔接",
+       "text": "按薪酬分配指引衔接技能等级。"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "遴选建设300所左右优质技工院校和500个左右优质专业，开展100个左右技工教育（联盟）集团建设试点工作。",
+    "引导企业建立健全体现技能价值激励导向的薪酬分配制度"
+   ]
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "目标可考核，窗口可申报",
+   "claim": "目标可考核，窗口可申报",
+   "headline": {
+    "type": "narrative",
+    "text": "目标可考核，::窗口可申报::",
+    "rationale": "叙事式收束"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "目标可考核，窗口可申报。",
+    "reader": "核心判断：目标可考核（4000 万/30%），企业窗口可申报（自主认定/学徒制）。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "核心判断：目标可考核（4000 万/30%），企业窗口可申报（自主认定/学徒制）。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "核心判断：目标可考核（4000 万/30%），企业窗口可申报（自主认定/学徒制）。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "目标可考核，::窗口可申报::。",
+     "cite": "技能中国行动解读 · 收束"
+    }
+   ],
+   "source_refs": []
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "附录",
+   "claim": "来源、口径与诚实声明",
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "附录备查，主题式"
+   },
+   "kicker": "“技能中国行动”实施方案解读",
+   "content": {
+    "stage": "来源、口径与诚实声明。",
+    "reader": "附录：唯一来源为人社部《“技能中国行动”实施方案》（人社部发〔2021〕48号）；集团参考为推导内容；方案目标为实现值声明非当期统计。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "skills-china",
+     "source": "人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+     "unit": null,
+     "time": "2021-06-30",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "附录：唯一来源为人社部《“技能中国行动”实施方案》（人社部发〔2021〕48号）；集团参考为推导内容；方案目标为实现值声明非当期统计。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "附录：唯一来源为人社部《“技能中国行动”实施方案》（人社部发〔2021〕48号）；集团参考为推导内容；方案目标为实现值声明非当期统计。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：人力资源社会保障部《“技能中国行动”实施方案》（人社部发〔2021〕48号）",
+   "blocks": [
+    {
+     "type": "evidence",
+     "items": [
+      {
+       "title": "唯一来源",
+       "source": "人社部发〔2021〕48号（gov.cn 政策库）",
+       "grade": "官方"
+      },
+      {
+       "title": "口径说明",
+       "source": "目标值为方案提出值",
+       "grade": "口径"
+      },
+      {
+       "title": "性质声明",
+       "source": "集团参考为推导内容",
+       "grade": "声明"
+      }
+     ]
+    }
+   ],
+   "source_refs": []
+  }
+ ]
+}

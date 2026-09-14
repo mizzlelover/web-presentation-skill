@@ -1,0 +1,704 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-moutai-annual-report-2024",
+  "title": "贵州茅台 2024 年报解读 · 增长、渠道与现金分红",
+  "situation": "Business Analysis Briefing / 经营分析方法学习（经营分析类）",
+  "communication_goal": [
+   "inform",
+   "explain"
+  ],
+  "audience": {
+   "role": "经营分析学习者与集团财务人员",
+   "expertise": "intermediate",
+   "prior_knowledge": "懂基本财务指标",
+   "decision_power": "none",
+   "attitude": "neutral",
+   "motivation": "学习年报的结构化读法",
+   "concerns": [
+    "增长构成",
+    "渠道结构",
+    "现金流与利润的关系"
+   ],
+   "objections": [
+    "大公司数据没有参考性"
+   ],
+   "time_budget": "10 分钟",
+   "cognitive_load_tolerance": "medium",
+   "expected_detail": "structured-findings",
+   "likely_questions": [
+    "现金流为何大增",
+    "直销与批发的毛利差"
+   ]
+  },
+  "central_thesis": "茅台 2024 年报的看点不是 15.71% 的增速，而是三张报表的联动：收入 +15.71% 的同时经营现金流 +38.85%（回款质量）、毛利率 95.33%/89.42% 的双渠道结构（直销提占比 vs 批发提增速）、346.71 亿分红有现金流背书——经营分析要读报表间的勾稽。",
+  "duration_minutes": 10,
+  "modes": [
+   "stage",
+   "reader",
+   "print"
+  ],
+  "brand": {
+   "theme": "corporate",
+   "constraints": "经营分析范例：全部数字溯源至年报原文；推导值（占比/换算）须标注；不构成投资建议"
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "total",
+    "quality",
+    "channel",
+    "cashflow",
+    "dividend",
+    "method",
+    "close"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "现金流为何大增",
+     "answer_scene": "cashflow"
+    }
+   ],
+   "objection_handling": [
+    {
+     "objection": "大公司数据没参考性",
+     "response_scene": "method"
+    }
+   ]
+  },
+  "constraints": "真实世界语料（年报 PDF 前 45 页）；全部数字可溯源；附表级数据未入语料不引用"
+ },
+ "theme": {
+  "name": "corporate",
+  "css": "themes/corporate.css",
+  "tokens": {
+   "--wp-accent": "#c2410c",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#1a1a1a",
+   "--wp-muted": "#5f6b80",
+   "--wp-radius": "10px",
+   "--wp-surface": "#fdf6f0"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "assertion",
+   "claim": "这份年报的看点不是 15.71%，<br>而是三张报表的联动",
+   "headline": {
+    "type": "assertion",
+    "text": "这份年报的看点不是 15.71%，<br>而是::三张报表的联动::",
+    "rationale": "assertion 给出全场解读框架（三表联动），orient 需要"
+   },
+   "kicker": "贵州茅台 2024 年报解读（经营分析范例）",
+   "content": {
+    "stage": "总量：营收 1,708.99 亿（+15.71%）、归母净利 862.28 亿（+15.38%）、经营现金流 924.64 亿（+38.85%）。",
+    "reader": "总量：营收 1,708.99 亿（+15.71%）、归母净利 862.28 亿（+15.38%）、经营现金流 924.64 亿（+38.85%）。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "总量：营收 1,708.99 亿（+15.71%）、归母净利 862.28 亿（+15.38%）、经营现金流 924.64 亿（+38.85%）。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "总量：营收 1,708.99 亿（+15.71%）、归母净利 862.28 亿（+15.38%）、经营现金流 924.64 亿（+38.85%）。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [],
+   "source_refs": [
+    "营业收入 170,899,152,276.34 147,693,604,994.14 15.71",
+    "经营活动产生的现金流量净额 92,463,692,168.43 66,593,247,721.09 38.85"
+   ]
+  },
+  {
+   "id": "total",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertion",
+   "claim": "营收 1,708.99 亿，连续三年上台阶",
+   "headline": {
+    "type": "assertion",
+    "text": "总量：营收 ::1,708.99 亿::，连续三年上台阶",
+    "rationale": "总量事实，assertion + 柱状图三年对比"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "2022—2024：1,241.00 → 1,476.94 → 1,708.99 亿元；归母净利 862.28 亿（+15.38%）；EPS 68.64 元。",
+    "reader": "2022—2024：1,241.00 → 1,476.94 → 1,708.99 亿元；归母净利 862.28 亿（+15.38%）；EPS 68.64 元。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L3",
+   "render_rationale": "三年营收对比与分季度现金流必须图形化",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "2022—2024：1,241.00 → 1,476.94 → 1,708.99 亿元；归母净利 862.28 亿（+15.38%）；EPS 68.64 元。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "2022—2024：1,241.00 → 1,476.94 → 1,708.99 亿元；归母净利 862.28 亿（+15.38%）；EPS 68.64 元。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": "图表见 caption",
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "亿元",
+     "categories": [
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "name": "营业收入",
+       "data": [
+        1241.0,
+        1476.94,
+        1708.99
+       ]
+      }
+     ],
+     "caption": "口径：营业收入（亿元，由年报原值 124,099,843,771.99 / 147,693,604,994.14 / 170,899,152,276.34 元换算为亿元）；来源：年报第二节",
+     "source_values": [
+      124099843771.99,
+      147693604994.14,
+      170899152276.34
+     ]
+    }
+   ],
+   "source_refs": [
+    "营业收入 170,899,152,276.34 147,693,604,994.14 15.71",
+    "归属于上市公司股东的净利润 86,228,146,421.62 74,734,071,550.75 15.38"
+   ]
+  },
+  {
+   "id": "quality",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "ROE 36.02%（+1.83pp），EPS 68.64 ",
+   "headline": {
+    "type": "assertion",
+    "text": "盈利质量：ROE ::36.02%::（+1.83pp），EPS 68.64 元",
+    "rationale": "盈利质量事实，assertion + 大数字"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "归母净利 862.28 亿（+15.38%）；扣非归母 862.41 亿（+15.37%）——非经常性损益影响极小。",
+    "reader": "归母净利 862.28 亿（+15.38%）；扣非归母 862.41 亿（+15.37%）——非经常性损益影响极小。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "归母净利 862.28 亿（+15.38%）；扣非归母 862.41 亿（+15.37%）——非经常性损益影响极小。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "归母净利 862.28 亿（+15.38%）；扣非归母 862.41 亿（+15.37%）——非经常性损益影响极小。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "862.28 亿",
+       "label": "归母净利润（+15.38%）",
+       "accent": true
+      },
+      {
+       "value": "68.64 元",
+       "label": "基本 EPS"
+      },
+      {
+       "value": "36.02%",
+       "label": "加权平均 ROE（+1.83pp）"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "基本每股收益（元／股）68.64",
+    "加权平均净资产收益率（%）36.02 34.19 增加1.83个百分点"
+   ]
+  },
+  {
+   "id": "channel",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertion",
+   "claim": "直销 748.43 亿（毛利率 95.33%）vs 批发 9",
+   "headline": {
+    "type": "assertion",
+    "text": "双渠道：直销 ::748.43 亿::（毛利率 95.33%）vs 批发 ::957.69 亿::（89.42%）",
+    "rationale": "渠道结构是本年报核心看点，assertion + 对比柱状图"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "直销指自营和「i 茅台」等数字营销平台渠道；批发代理指社会经销商等。",
+    "reader": "直销指自营和「i 茅台」等数字营销平台渠道；批发代理指社会经销商等。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L3",
+   "render_rationale": "三年营收对比与分季度现金流必须图形化",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "直销指自营和「i 茅台」等数字营销平台渠道；批发代理指社会经销商等。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "直销指自营和「i 茅台」等数字营销平台渠道；批发代理指社会经销商等。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": "图表见 caption",
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "亿元",
+     "categories": [
+      "直销",
+      "批发代理"
+     ],
+     "series": [
+      {
+       "name": "营业收入",
+       "data": [
+        748.43,
+        957.69
+       ]
+      }
+     ],
+     "caption": "口径：渠道营业收入（直销 74,843,327,030.79 元 / 批发代理 95,768,511,021.23 元，换算为亿元）；毛利率分别为 95.33% / 89.42%；来源：年报第三节渠道表",
+     "source_values": [
+      74843327030.79
+     ]
+    }
+   ],
+   "source_refs": [
+    "直销 74,843,327,030.79 3,493,952,839.59 95.33 11.32",
+    "批发代理 95,768,511,021.23 10,136,042,973.30 89.42 19.73"
+   ]
+  },
+  {
+   "id": "cashflow",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertion",
+   "claim": "经营净额 924.64 亿，增速 38.85% 远超收入",
+   "headline": {
+    "type": "assertion",
+    "text": "现金流：经营净额 ::924.64 亿::，增速 38.85% 远超收入",
+    "rationale": "现金流为本年报第二看点，assertion + 分季度柱状图"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "分季度经营现金流：Q1 91.87 / Q2 274.34 / Q3 78.00 / Q4 480.42 亿元——四季度集中回款。",
+    "reader": "分季度经营现金流：Q1 91.87 / Q2 274.34 / Q3 78.00 / Q4 480.42 亿元——四季度集中回款。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L3",
+   "render_rationale": "三年营收对比与分季度现金流必须图形化",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "分季度经营现金流：Q1 91.87 / Q2 274.34 / Q3 78.00 / Q4 480.42 亿元——四季度集中回款。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "分季度经营现金流：Q1 91.87 / Q2 274.34 / Q3 78.00 / Q4 480.42 亿元——四季度集中回款。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": "图表见 caption",
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "亿元",
+     "categories": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4"
+     ],
+     "series": [
+      {
+       "name": "经营现金流净额（分季度）",
+       "data": [
+        91.87,
+        274.34,
+        78.0,
+        480.42
+       ]
+      }
+     ],
+     "caption": "口径：分季度经营活动现金流量净额（由 9,187,422,415.09 / 27,434,411,397.54 / 7,799,552,404.82 / 48,042,305,950.98 元换算为亿元）；来源：年报第二节分季度数据",
+     "source_values": [
+      9187422415.09,
+      27434411397.54,
+      7799552404.82,
+      48042305950.98
+     ]
+    }
+   ],
+   "source_refs": [
+    "经营活动产生的现金流量净额 92,463,692,168.43 66,593,247,721.09 38.85"
+   ]
+  },
+  {
+   "id": "dividend",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "每 10 股 276.24 元，合计 346.71 亿——有",
+   "headline": {
+    "type": "assertion",
+    "text": "分红：每 10 股 ::276.24 元::，合计 346.71 亿——有现金流背书",
+    "rationale": "分红事实，assertion + 大数字"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "分红预案需股东大会审议；经营现金流 924.64 亿为分红能力提供依据。",
+    "reader": "分红预案需股东大会审议；经营现金流 924.64 亿为分红能力提供依据。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "分红预案需股东大会审议；经营现金流 924.64 亿为分红能力提供依据。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "分红预案需股东大会审议；经营现金流 924.64 亿为分红能力提供依据。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "276.24 元",
+       "label": "每 10 股派现（含税）",
+       "accent": true
+      },
+      {
+       "value": "346.71 亿",
+       "label": "分红总额（含税）"
+      },
+      {
+       "value": "924.64 亿",
+       "label": "经营现金流净额（背书）"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "向全体股东每10股派发现金红利276.24元（含税）",
+    "以此计算合计派发现金红利34,671,299,522.40元（含税）"
+   ]
+  },
+  {
+   "id": "method",
+   "role": "argument",
+   "cognitive_job": "summarize",
+   "topic": "assertion",
+   "claim": "读年报的四步——增速 → 现金流 → 结构 → 分红",
+   "headline": {
+    "type": "assertion",
+    "text": "方法小结：读年报的四步——::增速 → 现金流 → 结构 → 分红::",
+    "rationale": "方法小结为学习目标，assertion"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "先看利润表增速，再用现金流验证质量，然后拆渠道/结构，最后看分红与再投资。",
+    "reader": "先看利润表增速，再用现金流验证质量，然后拆渠道/结构，最后看分红与再投资。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "先看利润表增速，再用现金流验证质量，然后拆渠道/结构，最后看分红与再投资。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "先看利润表增速，再用现金流验证质量，然后拆渠道/结构，最后看分红与再投资。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [],
+   "source_refs": [
+    "营业收入 170,899,152,276.34 147,693,604,994.14 15.71"
+   ]
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "narrative",
+   "claim": "三张报表互相作证",
+   "headline": {
+    "type": "narrative",
+    "text": "好年报的标准：::三张报表互相作证::",
+    "rationale": "叙事式收束"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "一句收束。",
+    "reader": "一句收束。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "一句收束。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "一句收束。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [],
+   "source_refs": []
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "topic",
+   "claim": "来源、口径与诚实声明",
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "附录备查，topic"
+   },
+   "kicker": "贵州茅台 2024 年报解读",
+   "content": {
+    "stage": "唯一来源为公司年报 PDF 前 45 页；附表未入语料；直销占比 43.8% 为推导；不构成投资建议。",
+    "reader": "唯一来源为公司年报 PDF 前 45 页；附表未入语料；直销占比 43.8% 为推导；不构成投资建议。（Reader 版含列口径与换算说明；分母与单位以原文为准。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "moutai-ar2024",
+     "source": "公司 2024 年年度报告（巨潮资讯网）",
+     "unit": null,
+     "time": "2024",
+     "scope": "贵州茅台"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L0",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "唯一来源为公司年报 PDF 前 45 页；附表未入语料；直销占比 43.8% 为推导；不构成投资建议。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "唯一来源为公司年报 PDF 前 45 页；附表未入语料；直销占比 43.8% 为推导；不构成投资建议。（口径：亿元为原文元值换算；渠道毛利率与同比为原文列值。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：贵州茅台 2024 年年度报告（巨潮资讯网 2025-04-03）",
+   "blocks": [],
+   "source_refs": []
+  }
+ ]
+}

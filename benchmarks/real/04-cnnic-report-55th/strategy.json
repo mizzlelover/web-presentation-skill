@@ -1,0 +1,53 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "title": "第55次《中国互联网络发展状况统计报告》",
+  "publisher": "CNNIC",
+  "url": "https://www.cnnic.net.cn/NMediaFile/2025/0428/MAIN17458061595875K4FP1NEUO.pdf",
+  "date": "2025-01-17"
+ },
+ "situation": "Research Briefing / 集团经营分析会（研究报告类）",
+ "situation_rationale": "材料是权威机构的大型调查报告（研究报告类），用途是从接入、底座、应用、新变量四个切面读出集团数字渠道的优先级参考。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "集团经营分析人员",
+  "expertise": "domain-expert",
+  "prior_knowledge": "了解集团业务",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "校准集团数字渠道优先级",
+  "concerns": [
+   "网民是否见顶",
+   "生成式AI渗透率",
+   "渠道优先级"
+  ],
+  "objections": [
+   "报告太厚读不完"
+  ],
+  "time_budget": "10 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "summary",
+  "likely_questions": [
+   "生成式AI用户为何只有 17.7%",
+   "哪些渠道该加码"
+  ]
+ },
+ "central_thesis": "11.08 亿网民意味着接入接近见顶——报告的重心已从『接入』转向『应用深度』：物的连接（26.42 亿）超过人的连接，生成式 AI 完成『听说（23.5%）→使用（17.7%）』的第一轮渗透；对集团而言，支付与购物是基本盘、生成式 AI 是新增量、微短剧是内容渠道。",
+ "key_messages": [
+  "接入接近见顶（78.6%），增量看深度",
+  "物的连接 26.42 亿已是人的 2.4 倍",
+  "生成式 AI 完成「听说→使用」第一轮渗透（23.5%→17.7%）",
+  "支付/购物是基本盘，微短剧是内容渠道"
+ ],
+ "supporting_structure": "规模 → 底座 → 应用（消费/内容）→ 新变量（生成式 AI）→ 集团参考",
+ "duration_minutes": 10,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；区分『占网民整体』与『占整体人口』两种分母；集团参考为推导内容须声明",
+ "anti_goals": [
+  "不做预测",
+  "不混用不同分母的数据"
+ ]
+}

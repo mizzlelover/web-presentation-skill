@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机制正反例画廊（补丁 §20）</title>
+<link rel="stylesheet" href="../../runtime/components/components.css">
+<style>
+  :root {
+    --wp-accent:#3b5bff; --wp-bg:#faf8f4; --wp-fg:#17150f; --wp-muted:#57534a;
+    --wp-radius:14px; --wp-surface:#fff;
+    --wp-line-fallback: rgba(23,21,15,.12);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:32px clamp(16px,4vw,56px) 64px;background:var(--wp-bg);color:var(--wp-fg);
+       font:15px/1.75 "PingFang SC","Helvetica Neue",system-ui,sans-serif}
+  h1{font-size:26px;margin:0 0 6px}
+  .lead{color:var(--wp-muted);max-width:80ch;margin:0 0 26px}
+  .mech{background:var(--wp-surface);border:1px solid var(--wp-line-fallback);border-radius:var(--wp-radius);
+        padding:20px 22px;margin:0 0 20px}
+  header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  header h2{font-size:17px;margin:0}
+  .mid{font-family:ui-monospace,monospace;font-size:12px;background:#eef1ff;color:var(--wp-accent);
+       border-radius:6px;padding:2px 8px;font-weight:700}
+  .node{font-size:12px;color:var(--wp-muted);margin-left:auto}
+  .principle{margin:6px 0 14px;color:var(--wp-muted)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .side{border:1px solid var(--wp-line-fallback);border-radius:10px;overflow:hidden}
+  .side-h{font-size:12px;font-weight:700;padding:6px 12px;letter-spacing:.06em}
+  .side.pos .side-h{background:#e8f6ee;color:#14713c}
+  .side.neg .side-h{background:#fdecec;color:#a3231f}
+  .stage{padding:16px;font-size:14px}
+  .stage .wpk-num__v{font-size:44px}
+  .rule,.evidence{font-size:13px;color:var(--wp-muted);margin:12px 0 0}
+  .rule b,.evidence b{color:var(--wp-fg)}
+  table{border-collapse:collapse;width:100%;margin-top:28px;font-size:13px;background:var(--wp-surface)}
+  th,td{border-bottom:1px solid var(--wp-line-fallback);padding:9px 10px;text-align:left;vertical-align:top}
+  th{color:var(--wp-muted);font-weight:600}
+  @media(max-width:820px){.pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>机制正反例画廊</h1>
+<p class="lead">25 条机制，每条给出<b>正例</b>与<b>反例</b>对照，并导出可执行的渲染规则。所有片段使用生产组件类名（<code>runtime/components/components.css</code>），因此本页同时是组件契约的回归夹具。</p>
+
+  <section class="mech" id="M01">
+    <header>
+      <span class="mid">M01</span>
+      <h2>一致性 Coherence</h2>
+      <span class="node">cognition/multimedia-learning · KN-MML-001</span>
+    </header>
+    <p class="principle">排除与学习目标无关的材料（装饰、背景音、无关图文）。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__title">促销转化率</div><div class="wpk-card__text">本季度 6.2%，环比 +1.4pp。</div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__title">🎉✨🚀 超劲爆！促销转化率 🎉✨🚀</div><div class="wpk-card__text">（此处插入无关插画、背景音乐、闪烁边框）本季度 6.2%。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 不得为「丰富度」自动添加装饰元素；每个视觉元素必须能回答「它承担什么认知任务」。</p>
+    <p class="evidence"><b>证据/依据</b>：Sundararajan &amp; Adesope 2020 元分析：诱惑性细节降低学习效果（中文材料 g=-0.75）</p>
+  </section>
+  <section class="mech" id="M02">
+    <header>
+      <span class="mid">M02</span>
+      <h2>线索 Signaling</h2>
+      <span class="node">cognition/attention-fluency · KN-ATT-001</span>
+    </header>
+    <p class="principle">用线索突出组织的真实结构，而非到处加亮。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-grid is-3"><div class="wpk-card is-accent"><div class="wpk-card__title">本幕唯一重点</div><div class="wpk-card__text">只强调一处结构。</div></div><div class="wpk-card"><div class="wpk-card__title">次要信息</div><div class="wpk-card__text">常规样式。</div></div><div class="wpk-card"><div class="wpk-card__title">次要信息</div><div class="wpk-card__text">常规样式。</div></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-grid is-3"><div class="wpk-card is-accent"><div class="wpk-card__title">★ 加粗 ★</div></div><div class="wpk-card is-accent"><div class="wpk-card__title">★ 高亮 ★</div></div><div class="wpk-card is-accent"><div class="wpk-card__title">★ 荧光 ★</div></div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：每幕强调元素数量上限：1 处（必要时 ≤2）；超限时 Renderer 必须降级非结构元素。</p>
+    <p class="evidence"><b>证据/依据</b>：de Koning 2009 综述；谢和平 2016 中文元分析 g=0.53（与 Schneider 2018 独立互证）</p>
+  </section>
+  <section class="mech" id="M03">
+    <header>
+      <span class="mid">M03</span>
+      <h2>冗余 Redundancy</h2>
+      <span class="node">cognition/multimedia-learning · KN-MML-002</span>
+    </header>
+    <p class="principle">屏幕文字与讲解内容不应逐字重复（Stage 模式）；但在 Reader 模式需要完整文字。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-lead">屏幕给<b>结论与结构</b>，讲者补充解释与细节。</div><p class="wpk-src">Reader 模式：本页完整论述见 wp-reader 层</p></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">（屏幕上整段照抄讲者将逐字念出的 120 字讲稿……）</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 依据 mode 分流：Stage 屏幕承载结论/结构，Reader 承载完整文本；禁止把 speaker_notes 直接渲染到屏幕。</p>
+    <p class="evidence"><b>证据/依据</b>：Trypke 2023 冗余效应系统综述（63 研究，两类冗余四场景）</p>
+  </section>
+  <section class="mech" id="M04">
+    <header>
+      <span class="mid">M04</span>
+      <h2>空间临近 Spatial Contiguity</h2>
+      <span class="node">cognition/multimedia-learning</span>
+    </header>
+    <p class="principle">相关文字与图形应相邻呈现，减少来回搜索。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-grid is-2"><div class="wpk-card"><div class="wpk-card__title">图 A</div><div class="wpk-card__text">说明紧贴图 A 下方</div></div><div class="wpk-card"><div class="wpk-card__title">图 B</div><div class="wpk-card__text">说明紧贴图 B 下方</div></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-grid is-2"><div class="wpk-card"><div class="wpk-card__title">图 A / 图 B</div></div><div class="wpk-card"><div class="wpk-card__text">图 A 的说明、图 B 的说明、以及两图共同的注释，全部堆在右侧一栏。</div></div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：注释必须渲染在其所属图形/数据的同一容器内；禁止集中式图例注释块（图表内置图例除外）。</p>
+    <p class="evidence"><b>证据/依据</b>：Ginns 2006 空间/时间临近元分析（摘要级登记，未推断效应量）</p>
+  </section>
+  <section class="mech" id="M05">
+    <header>
+      <span class="mid">M05</span>
+      <h2>时间临近 Temporal Contiguity</h2>
+      <span class="node">cognition/multimedia-learning</span>
+    </header>
+    <p class="principle">对应文字与图形应在时间上同时呈现，而非先后分置两幕。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__title">同比增量拆解</div><div class="wpk-card__text">图与说明同幕同步揭示（::逐条同步::）。</div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">先播一页「图」，翻页后再播一页「说明文字」——学习者需在记忆中回取上一页。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 把 explanations 与 visual 放在同一 Scene；不得把同一机制的图与说明拆到相邻两幕。</p>
+    <p class="evidence"><b>证据/依据</b>：Liu / Lin / Paas 2022 中文幻灯片实验（逐条同步揭示 d=.67）</p>
+  </section>
+  <section class="mech" id="M06">
+    <header>
+      <span class="mid">M06</span>
+      <h2>分段 Segmenting</h2>
+      <span class="node">cognition/multimedia-learning</span>
+    </header>
+    <p class="principle">把复杂连续内容切成可自定节奏的小段。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-steps"><div class="wpk-step" data-reveal><div class="wpk-step__k">01</div><div class="wpk-step__t">第一段</div><div class="wpk-step__d">讲者控速</div></div><div class="wpk-link" data-reveal></div><div class="wpk-step" data-reveal><div class="wpk-step__k">02</div><div class="wpk-step__t">第二段</div><div class="wpk-step__d">讲者控速</div></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">六步流程一次性全部呈现，讲者无法控制节奏，听众无法分段消化。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：多步内容必须使用 data-reveal 逐步揭示，并挂到统一动效控制器（可 pause/reverse/skip）。</p>
+    <p class="evidence"><b>证据/依据</b>：Rey 2019 分段效应元分析（Education Psychology Review 31(2)）</p>
+  </section>
+  <section class="mech" id="M07">
+    <header>
+      <span class="mid">M07</span>
+      <h2>通道 Modality</h2>
+      <span class="node">cognition/cognitive-load</span>
+    </header>
+    <p class="principle">图形配语音优于图形配屏读文字（避免视觉通道双载）。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-lead">屏幕：<b>图与关键词</b>；通道：讲者口头解释。</div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">屏幕上同时出现图形 + 长段文字，且讲者逐字念出同一长段文字（视觉通道过载）。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Stage 模式单幕屏幕文字量与图形复杂度需满足「视觉通道余量」约束：正文超过阈值时 Renderer 提示拆分。</p>
+    <p class="evidence"><b>证据/依据</b>：Sweller 2019 CLT 修订综述（Springer OA 全文精读）</p>
+  </section>
+  <section class="mech" id="M08">
+    <header>
+      <span class="mid">M08</span>
+      <h2>预训练 Pretraining</h2>
+      <span class="node">cognition/cognitive-load</span>
+    </header>
+    <p class="principle">在进入复杂内容前先交代必要术语与组件。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__title">先立术语</div><div class="wpk-card__text">元数据服务 / 指标服务 / 血缘 —— 三个术语各一句话。</div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">直接进入架构细节，术语首次出现即被用于论证。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：当 Scene 使用专业术语时，Renderer 在 Core Path 前部安排 Pretraining 型 Scene（或本幕内术语条）。</p>
+    <p class="evidence"><b>证据/依据</b>：Sweller 2019；Mayer 多媒体学习原则</p>
+  </section>
+  <section class="mech" id="M09">
+    <header>
+      <span class="mid">M09</span>
+      <h2>个性化 Personalization</h2>
+      <span class="node">communication/persuasion-elm</span>
+    </header>
+    <p class="principle">对话式、第二人称的表达提升涉入度。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-lead">「你的问题不是内容不够，而是产出不稳定。」</div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-lead">「本方案旨在提升内容供给侧的稳定性与交付确定性。」</div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：对高涉入场景，标题与导语优先第二人称；Renderer 保留 authored 文案，不自动改写为公文语。</p>
+    <p class="evidence"><b>证据/依据</b>：Petty &amp; Cacioppo 1984 ELM（涉入度 × 论证质量 × 来源线索交互）</p>
+  </section>
+  <section class="mech" id="M10">
+    <header>
+      <span class="mid">M10</span>
+      <h2>认知负荷曲线 Cognitive Load Curve</h2>
+      <span class="node">cognition/cognitive-load</span>
+    </header>
+    <p class="principle">禁止连续多幕高负荷，用节奏交替。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-steps"><div class="wpk-step"><div class="wpk-step__t">概念</div></div><div class="wpk-step"><div class="wpk-step__t">例证</div></div><div class="wpk-step"><div class="wpk-step__t">数据</div></div><div class="wpk-step is-gate"><div class="wpk-step__t">综合</div></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">连续四幕高密度数据表，无过渡、无例证、无综合。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：validate_ir.py 对连续 ≥3 幕 high 负荷告警；Renderer 在高低负荷之间插入过渡/例证幕。</p>
+    <p class="evidence"><b>证据/依据</b>：Sweller 2019；项目 §23 认知负荷曲线</p>
+  </section>
+  <section class="mech" id="M11">
+    <header>
+      <span class="mid">M11</span>
+      <h2>工作记忆组块 Working Memory</h2>
+      <span class="node">cognition/working-memory</span>
+    </header>
+    <p class="principle">单次呈现的新元素控制在 3–5 个组块内。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-grid is-3"><div class="wpk-card"><div class="wpk-card__title">3 项</div></div><div class="wpk-card"><div class="wpk-card__title">并列</div></div><div class="wpk-card"><div class="wpk-card__title">上限</div></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-grid is-4"><div class="wpk-card"><div class="wpk-card__title">9</div></div><div class="wpk-card"><div class="wpk-card__title">个</div></div><div class="wpk-card"><div class="wpk-card__title">新</div></div><div class="wpk-card"><div class="wpk-card__title">概念</div></div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：单幕并列新元素 &gt; 5 时，Renderer 必须分组或拆幕（Contextual Heuristic，非普适规则）。</p>
+    <p class="evidence"><b>证据/依据</b>：Cowan 2010 工作记忆容量综述（3–5 组块中央上限）</p>
+  </section>
+  <section class="mech" id="M12">
+    <header>
+      <span class="mid">M12</span>
+      <h2>注意线索 Attention Cueing</h2>
+      <span class="node">cognition/attention-fluency</span>
+    </header>
+    <p class="principle">用前注意属性（颜色、位置、大小）引导注意，而非事后加箭头。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-num is-accent"><div class="wpk-num__v">+12%</div><div class="wpk-num__l">关键数字用尺寸 + 强调色</div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">在普通字号文本上叠加 5 个箭头与 3 个圈注来说明重点。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：优先用尺寸/位置/色彩编码承载层级；箭头与圈注仅在空间关系无法用布局表达时使用。</p>
+    <p class="evidence"><b>证据/依据</b>：de Koning 2009 三功能综述（Springer OA 全文精读）</p>
+  </section>
+  <section class="mech" id="M13">
+    <header>
+      <span class="mid">M13</span>
+      <h2>断言-证据 Assertion-Evidence</h2>
+      <span class="node">presentation/assertion-evidence</span>
+    </header>
+    <p class="principle">标题写完整断言，正文给视觉证据。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><h2>问题不在流量不够，而在::每次触达都无法沉淀::</h2><div class="wpk-cmp"><div class="wpk-cmp__col"><h3 class="wpk-cmp__h">看似的问题</h3></div><div class="wpk-cmp__col is-primary"><h3 class="wpk-cmp__h">真实的问题</h3></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><h2>关于用户触达情况的几点说明</h2><div class="wpk-card"><div class="wpk-card__text">一段没有断言、只有话题标签的正文。</div></div></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：标题必须是完整句子（断言/问题/决策），禁止话题标签式标题；话题式仅用于附录与过渡幕。</p>
+    <p class="evidence"><b>证据/依据</b>：Garner &amp; Alley 2013（d=0.81/0.89）；Aippersbach 2013 讲者侧 t(51)=2.62</p>
+  </section>
+  <section class="mech" id="M14">
+    <header>
+      <span class="mid">M14</span>
+      <h2>标题类型由认知任务决定</h2>
+      <span class="node">presentation/headline-system</span>
+    </header>
+    <p class="principle">问句/断言/主题/决策/对比/叙事六型，按 Scene 的认知任务选择。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><h2>「采集用户数据，::合规吗::？」</h2><p class="wpk-src">异议应对幕 → 问句式（复述质疑）</p></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">把所有标题一律改成问句（含结论幕、决策幕），导致结论被推迟到正文。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 不做标题类型的全局变换；类型由 scene.headline.type 决定，validate_ir 要求填写 rationale。</p>
+    <p class="evidence"><b>证据/依据</b>：Aippersbach 2013；Garner 2009 理论映射</p>
+  </section>
+  <section class="mech" id="M15">
+    <header>
+      <span class="mid">M15</span>
+      <h2>信息密度按模式决定</h2>
+      <span class="node">presentation/information-density</span>
+    </header>
+    <p class="principle">Stage 低密度、Reader 高密度、Print 完整 —— 同一内容模型三套密度。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-lead">Stage：结论一句话</div><div class="wpk-src">Reader：完整论述单独渲染在 wp-reader 层</div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">用同一段文字同时服务讲台与阅读，结果讲台上太密、打印稿又太简。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 从 content.stage / content.reader 分别取值渲染到不同层；禁止共用同一字符串。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §22/§57 信息密度策略（SUPPORTED PRINCIPLE）</p>
+  </section>
+  <section class="mech" id="M16">
+    <header>
+      <span class="mid">M16</span>
+      <h2>叙事传输 Narrative Transportation</h2>
+      <span class="node">communication/narrative</span>
+    </header>
+    <p class="principle">叙事通过角色-目标-冲突-转变提升情感投入，但仅适用于对应用途。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-time"><div class="wpk-time__i"><div class="wpk-time__when">冲突</div><div class="wpk-time__t">账算不平</div></div><div class="wpk-time__i"><div class="wpk-time__when">转折</div><div class="wpk-time__t">换个角色</div></div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">在审计、合规读本、操作清单里强行插入人物故事（干扰信息检索）。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：叙事型组件（时间线/角色弧）仅用于 narrative/case/opening/summary 角色的幕；审计类不启用。</p>
+    <p class="evidence"><b>证据/依据</b>：van Laer 2014 叙事传输元分析（76 文 / 132 效应量）</p>
+  </section>
+  <section class="mech" id="M17">
+    <header>
+      <span class="mid">M17</span>
+      <h2>说服双路径 ELM</h2>
+      <span class="node">communication/persuasion-elm</span>
+    </header>
+    <p class="principle">高涉入受众走中心路径（论证质量），低涉入走边缘路径（来源线索）。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__title">对决策者：给论证与数据</div><div class="wpk-card__text">财务口径、敏感性、退出底线。</div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">对需要拍板的决策者只讲品牌口号与领导背书（用边缘线索替代论证）。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 依 audience.decision_power / attitude 决定证据强度：decider 幕必须含 evidence 块。</p>
+    <p class="evidence"><b>证据/依据</b>：Petty &amp; Cacioppo 1984（原文扫描件逐页精读）</p>
+  </section>
+  <section class="mech" id="M18">
+    <header>
+      <span class="mid">M18</span>
+      <h2>图形选择由认知任务决定</h2>
+      <span class="node">visualization/chart-selection</span>
+    </header>
+    <p class="principle">先定 Comparison/Trend/Distribution/Ranking/Composition，再选图形。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-chart__cap">任务 = 排名 → 横向条形图（ranking）</div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">任务 = 准确比较量级，却用饼图/3D 饼图/双 Y 轴折线表达。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：chart.kind 由 Scene 的认知任务推导；validate_ir 校验 kind 合法性，Renderer 不得为美观更换图形。</p>
+    <p class="evidence"><b>证据/依据</b>：Cleveland &amp; McGill 1986（N=127 精度排序）；Heer &amp; Bostock 2010 众包复现</p>
+  </section>
+  <section class="mech" id="M19">
+    <header>
+      <span class="mid">M19</span>
+      <h2>图表诚信 Chart Honesty</h2>
+      <span class="node">visualization/visual-perception</span>
+    </header>
+    <p class="principle">坐标轴、比例、口径不得误导。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-chart__cap">口径：纵轴从 0 起；样本 n=240；剔除规则见附录</div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">纵轴截断放大差异、无样本量、无口径说明、把相关性暗示为因果。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：chart 必须有 caption 交代口径与样本；Renderer 对缺失 caption 的 chart 输出 warning（validate_ir 已实现）。</p>
+    <p class="evidence"><b>证据/依据</b>：Franconeri 2021 可视化沟通科学综述</p>
+  </section>
+  <section class="mech" id="M20">
+    <header>
+      <span class="mid">M20</span>
+      <h2>语义动效 Semantic Motion</h2>
+      <span class="node">motion/semantic-motion</span>
+    </header>
+    <p class="principle">动效必须承担认知任务（揭示/聚焦/连接/因果…），否则静态。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-step" data-reveal data-motion-intent="trace"><div class="wpk-step__t">连接线随流程逐步绘制（表达因果顺序）</div></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">每页加一个无意义的飞入/旋转/弹跳，只为「显得高级」。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：motion_intent 必须取自 10 类语义集合；无法回答「为什么静态不够」时降级为静态或仅揭示。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §35/§36/§37（PRACTITIONER HEURISTIC + 工程可验证）</p>
+  </section>
+  <section class="mech" id="M21">
+    <header>
+      <span class="mid">M21</span>
+      <h2>核心路径不依赖交互</h2>
+      <span class="node">interaction/interaction-patterns</span>
+    </header>
+    <p class="principle">不操作任何交互也能完整理解 Core Path。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-card"><div class="wpk-card__text">结论先给（无需展开）；细节放在可展开层供追问。</div><span class="wpk-card__tag">展开为可选</span></div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">关键结论只存在于 hover 提示或需点击展开的面板中——不交互就看不到结论。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：interaction 必须带 purpose；Renderer 保证主结论在静态层，交互只承载补充信息。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §44；interaction.js 启动时扫描告警</p>
+  </section>
+  <section class="mech" id="M22">
+    <header>
+      <span class="mid">M22</span>
+      <h2>讲者-屏幕分工</h2>
+      <span class="node">presentation/information-density</span>
+    </header>
+    <p class="principle">屏幕承担不了的交给讲者，不要屏幕写一遍讲者再念一遍。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><div class="wpk-lead">屏幕：<b>图</b></div><div class="wpk-src">讲者：解释图背后的判断与取舍</div></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">屏幕完整写出 200 字讲稿，讲者逐字念出同一段文字（双向冗余）。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：screen_role 与 speaker_role 必填；二者内容不得高度重叠（Renderer 不校验语义，由 validate_ir + 人工评审把关）。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §58（SUPPORTED PRINCIPLE）</p>
+  </section>
+  <section class="mech" id="M23">
+    <header>
+      <span class="mid">M23</span>
+      <h2>反模式：普适规则谬误</h2>
+      <span class="node">anti_patterns/universal-rule-fallacy</span>
+    </header>
+    <p class="principle">把情境化启发式当成普适军规。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><p class="wpk-src">「字少」只在 Stage 成立；Reader 必须完整。条件、机制、边界三者齐全才可入规则库。</p></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">「每页最多 6 行」「标题必须是问句」「字号不得小于 24」——以无条件军规形式写入工具。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：Renderer 不得内置无条件排版军规；所有阈值为 Token 化的默认值，可被 Scene 覆盖。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §10；knowledge/anti_patterns/universal-rule-fallacy.md</p>
+  </section>
+  <section class="mech" id="M24">
+    <header>
+      <span class="mid">M24</span>
+      <h2>反模式：技术滥用</h2>
+      <span class="node">anti_patterns/tech-abuse</span>
+    </header>
+    <p class="principle">能实现不等于应该实现。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><p class="wpk-src">该内容用 2D 表更清楚 → 使用表格；3D 仅用于空间关系（本 Deck 未用）。</p></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">所有数据都做 3D 柱状图、每页都加粒子背景、为显示技术能力引入 3 个库。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：render_level 逐幕选择最低充分层级并填写 rationale（L3+ 强制）；技术超出需求时降级。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §36/§43/§47；audits/TECH_DECISIONS.md</p>
+  </section>
+  <section class="mech" id="M25">
+    <header>
+      <span class="mid">M25</span>
+      <h2>反模式：装饰优先</h2>
+      <span class="node">anti_patterns/decoration-first</span>
+    </header>
+    <p class="principle">先解决传播，再考虑形式。</p>
+    <div class="pair">
+      <div class="side pos"><div class="side-h">✓ 正例</div><div class="stage"><p class="wpk-src">先定认知任务与信息结构 → 再选视觉表达（本画廊全部按此顺序构建）。</p></div></div>
+      <div class="side neg"><div class="side-h">✕ 反例</div><div class="stage"><p class="wpk-src">先挑一个炫酷模板 → 再想办法把内容塞进去（内容被形式裁剪）。</p></div></div>
+    </div>
+    <p class="rule"><b>导出的渲染规则</b>：管线强制 Strategy → IR → Renderer；禁止 Input → HTML 一步生成。</p>
+    <p class="evidence"><b>证据/依据</b>：项目 §0/§1/§55</p>
+  </section>
+
+<h2 style="margin-top:34px">导出的渲染规则汇总（Renderer Planning Rules）</h2>
+<table><thead><tr><th>#</th><th>机制</th><th>规则</th></tr></thead><tbody>
+<tr><td>M01</td><td>一致性 Coherence</td><td>Renderer 不得为「丰富度」自动添加装饰元素；每个视觉元素必须能回答「它承担什么认知任务」。</td></tr>
+<tr><td>M02</td><td>线索 Signaling</td><td>每幕强调元素数量上限：1 处（必要时 ≤2）；超限时 Renderer 必须降级非结构元素。</td></tr>
+<tr><td>M03</td><td>冗余 Redundancy</td><td>Renderer 依据 mode 分流：Stage 屏幕承载结论/结构，Reader 承载完整文本；禁止把 speaker_notes 直接渲染到屏幕。</td></tr>
+<tr><td>M04</td><td>空间临近 Spatial Contiguity</td><td>注释必须渲染在其所属图形/数据的同一容器内；禁止集中式图例注释块（图表内置图例除外）。</td></tr>
+<tr><td>M05</td><td>时间临近 Temporal Contiguity</td><td>Renderer 把 explanations 与 visual 放在同一 Scene；不得把同一机制的图与说明拆到相邻两幕。</td></tr>
+<tr><td>M06</td><td>分段 Segmenting</td><td>多步内容必须使用 data-reveal 逐步揭示，并挂到统一动效控制器（可 pause/reverse/skip）。</td></tr>
+<tr><td>M07</td><td>通道 Modality</td><td>Stage 模式单幕屏幕文字量与图形复杂度需满足「视觉通道余量」约束：正文超过阈值时 Renderer 提示拆分。</td></tr>
+<tr><td>M08</td><td>预训练 Pretraining</td><td>当 Scene 使用专业术语时，Renderer 在 Core Path 前部安排 Pretraining 型 Scene（或本幕内术语条）。</td></tr>
+<tr><td>M09</td><td>个性化 Personalization</td><td>对高涉入场景，标题与导语优先第二人称；Renderer 保留 authored 文案，不自动改写为公文语。</td></tr>
+<tr><td>M10</td><td>认知负荷曲线 Cognitive Load Curve</td><td>validate_ir.py 对连续 ≥3 幕 high 负荷告警；Renderer 在高低负荷之间插入过渡/例证幕。</td></tr>
+<tr><td>M11</td><td>工作记忆组块 Working Memory</td><td>单幕并列新元素 &gt; 5 时，Renderer 必须分组或拆幕（Contextual Heuristic，非普适规则）。</td></tr>
+<tr><td>M12</td><td>注意线索 Attention Cueing</td><td>优先用尺寸/位置/色彩编码承载层级；箭头与圈注仅在空间关系无法用布局表达时使用。</td></tr>
+<tr><td>M13</td><td>断言-证据 Assertion-Evidence</td><td>标题必须是完整句子（断言/问题/决策），禁止话题标签式标题；话题式仅用于附录与过渡幕。</td></tr>
+<tr><td>M14</td><td>标题类型由认知任务决定</td><td>Renderer 不做标题类型的全局变换；类型由 scene.headline.type 决定，validate_ir 要求填写 rationale。</td></tr>
+<tr><td>M15</td><td>信息密度按模式决定</td><td>Renderer 从 content.stage / content.reader 分别取值渲染到不同层；禁止共用同一字符串。</td></tr>
+<tr><td>M16</td><td>叙事传输 Narrative Transportation</td><td>叙事型组件（时间线/角色弧）仅用于 narrative/case/opening/summary 角色的幕；审计类不启用。</td></tr>
+<tr><td>M17</td><td>说服双路径 ELM</td><td>Renderer 依 audience.decision_power / attitude 决定证据强度：decider 幕必须含 evidence 块。</td></tr>
+<tr><td>M18</td><td>图形选择由认知任务决定</td><td>chart.kind 由 Scene 的认知任务推导；validate_ir 校验 kind 合法性，Renderer 不得为美观更换图形。</td></tr>
+<tr><td>M19</td><td>图表诚信 Chart Honesty</td><td>chart 必须有 caption 交代口径与样本；Renderer 对缺失 caption 的 chart 输出 warning（validate_ir 已实现）。</td></tr>
+<tr><td>M20</td><td>语义动效 Semantic Motion</td><td>motion_intent 必须取自 10 类语义集合；无法回答「为什么静态不够」时降级为静态或仅揭示。</td></tr>
+<tr><td>M21</td><td>核心路径不依赖交互</td><td>interaction 必须带 purpose；Renderer 保证主结论在静态层，交互只承载补充信息。</td></tr>
+<tr><td>M22</td><td>讲者-屏幕分工</td><td>screen_role 与 speaker_role 必填；二者内容不得高度重叠（Renderer 不校验语义，由 validate_ir + 人工评审把关）。</td></tr>
+<tr><td>M23</td><td>反模式：普适规则谬误</td><td>Renderer 不得内置无条件排版军规；所有阈值为 Token 化的默认值，可被 Scene 覆盖。</td></tr>
+<tr><td>M24</td><td>反模式：技术滥用</td><td>render_level 逐幕选择最低充分层级并填写 rationale（L3+ 强制）；技术超出需求时降级。</td></tr>
+<tr><td>M25</td><td>反模式：装饰优先</td><td>管线强制 Strategy → IR → Renderer；禁止 Input → HTML 一步生成。</td></tr>
+</tbody></table>
+</body>
+</html>

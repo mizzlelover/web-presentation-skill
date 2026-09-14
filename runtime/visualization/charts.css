@@ -1,0 +1,35 @@
+/* WP Charts — 可视化模块样式（Stage / Reader / Print 三态） */
+
+.wpk-chart__box { width: 100%; height: clamp(240px, 40cqi, 400px); }
+
+/* Reader：图表在阅读宽度下重排，允许更高 */
+body.wp-reader-mode .wpk-chart__box { height: clamp(260px, 38vw, 420px); }
+
+/* 打印：不改变尺寸（打印页 = 设计画布），仅禁止跨页截断与动画 */
+@media print {
+  .wpk-chart, .wpk-chart__box { break-inside: avoid; page-break-inside: avoid; }
+}
+
+/* 打印态禁用过渡 */
+@media (prefers-reduced-motion: reduce) {
+  .wpk-chart__box canvas { transition: none !important; }
+}
+
+/* ── 短屏适配（高度感知）：图表盒随高度三档压缩 ── */
+@media (max-height: 820px) {
+  .wpk-chart__box { height: clamp(220px, 34cqi, 340px); }
+}
+@media (max-height: 740px) {
+  .wpk-chart__box { height: clamp(200px, 30cqi, 300px); }
+}
+
+/* ── 数据兜底：echarts 缺失时的语义表格（补丁 §3/§16） ── */
+.wpk-chart__table {
+  width: 100%; border-collapse: collapse; font-size: clamp(12px, 1.1cqi, 15px);
+  background: var(--wp-surface, #fff); color: var(--wp-fg, #111);
+}
+.wpk-chart__table th, .wpk-chart__table td {
+  border-bottom: 1px solid var(--wp-line, #ddd); padding: 7px 10px; text-align: left;
+}
+.wpk-chart__table th { color: var(--wp-muted, #666); font-weight: 600; }
+.wpk-chart__table tbody th { font-weight: 500; }

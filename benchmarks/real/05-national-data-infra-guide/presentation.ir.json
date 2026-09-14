@@ -1,0 +1,730 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-national-data-infra-guide",
+  "title": "《国家数据基础设施建设指引》解读 · 一张架构图与三张时间表",
+  "situation": "Technical Architecture Briefing / 集团信息中心与数字化团队（技术架构类）",
+  "communication_goal": [
+   "inform",
+   "explain",
+   "align"
+  ],
+  "audience": {
+   "role": "集团信息中心与数字化团队",
+   "expertise": "domain-expert",
+   "prior_knowledge": "熟悉集团系统架构",
+   "decision_power": "influencer",
+   "attitude": "neutral",
+   "motivation": "判断集团在数据基础设施格局中的接入位置",
+   "concerns": [
+    "时间表",
+    "技术选型",
+    "安全要求",
+    "集团接入点"
+   ],
+   "objections": [
+    "又是概念文件"
+   ],
+   "time_budget": "12 分钟",
+   "cognitive_load_tolerance": "high",
+   "expected_detail": "technical",
+   "likely_questions": [
+    "三个统一的落地标准是什么",
+    "可信数据空间怎么接"
+   ]
+  },
+  "central_thesis": "这是国内数据基础设施的第一个顶层文件：以「三大统一」为底座、八大能力为主体、三阶段为时间表；对集团而言，接入点是数据目录与身份体系先行，可信数据空间是行业协作的候选形态。",
+  "duration_minutes": 12,
+  "modes": [
+   "stage",
+   "reader",
+   "print"
+  ],
+  "brand": {
+   "theme": "government",
+   "constraints": "技术架构解读：原文结构与限定语必须保留；集团接入参考为推导内容须声明"
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "concept",
+    "timeline",
+    "capabilities",
+    "unified",
+    "facilities",
+    "functions",
+    "implication",
+    "close"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "三个统一的落地标准是什么",
+     "answer_scene": "unified"
+    }
+   ],
+   "objection_handling": [
+    {
+     "objection": "又是概念文件",
+     "response_scene": "timeline"
+    }
+   ]
+  },
+  "constraints": "真实世界语料（《指引》全文 10,211 字）；全部表述可溯源"
+ },
+ "theme": {
+  "name": "government",
+  "css": "themes/government.css",
+  "tokens": {
+   "--wp-accent": "#1f4e79",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#101418",
+   "--wp-muted": "#6b7280",
+   "--wp-radius": "6px",
+   "--wp-surface": "#fbfcfd"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "assertion",
+   "claim": "这是数据基础设施的第一个顶层文件——把「数据」当基础设施来规划",
+   "headline": {
+    "type": "assertion",
+    "text": "这是数据基础设施的::第一个顶层文件::——把「数据」当基础设施来规划",
+    "rationale": "assertion 给出「首个顶层文件」的定性判断，orient 任务需要"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读（技术架构）",
+   "content": {
+    "stage": "国内关于国家数据基础设施建设的首个文件：概念、架构、时间表一次讲清。",
+    "reader": "国内关于国家数据基础设施建设的首个文件：概念、架构、时间表一次讲清。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "国内关于国家数据基础设施建设的首个文件：概念、架构、时间表一次讲清。",
+   "reader_content": "国内关于国家数据基础设施建设的首个文件：概念、架构、时间表一次讲清。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [],
+   "source_refs": [
+    "力争在当前情况下，说清楚数据基础设施的概念、发展愿景和建设目标"
+   ]
+  },
+  {
+   "id": "concept",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "概念：提供八大服务的新型基础设施，是有机整体",
+   "headline": {
+    "type": "assertion",
+    "text": "概念：提供八大服务的新型基础设施，是::有机整体::",
+    "rationale": "概念定义为事实陈述，assertion 直接传达"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "定义要点：八类服务 + 五类集成要素（硬件/软件/模型算法/标准规范/机制设计）。",
+    "reader": "定义要点：八类服务 + 五类集成要素（硬件/软件/模型算法/标准规范/机制设计）。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "定义要点：八类服务 + 五类集成要素（硬件/软件/模型算法/标准规范/机制设计）。",
+   "reader_content": "定义要点：八类服务 + 五类集成要素（硬件/软件/模型算法/标准规范/机制设计）。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [],
+   "source_refs": [
+    "面向社会提供数据采集、汇聚、传输、加工、流通、利用、运营、安全服务的一类新型基础设施，是集成硬件、软件、模型算法、标准规范、机制设计等在内的有机整体"
+   ]
+  },
+  {
+   "id": "timeline",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "assertion",
+   "claim": "三阶段时间表：试点 → 规模化流通 → 主体结构基本建成",
+   "headline": {
+    "type": "assertion",
+    "text": "三阶段时间表：试点 → 规模化流通 → ::主体结构基本建成::",
+    "rationale": "三阶段是全文件最有行动价值的结构，用断言标题+时间轴组件"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "2024-2026 试点试验；2027-2028 规模化流通、大中型城市基本覆盖；2029 主体结构基本建成。",
+    "reader": "2024-2026 试点试验；2027-2028 规模化流通、大中型城市基本覆盖；2029 主体结构基本建成。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L3",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "2024-2026 试点试验；2027-2028 规模化流通、大中型城市基本覆盖；2029 主体结构基本建成。",
+   "reader_content": "2024-2026 试点试验；2027-2028 规模化流通、大中型城市基本覆盖；2029 主体结构基本建成。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [
+    {
+     "type": "steps",
+     "items": [
+      {
+       "k": "2024—2026",
+       "title": "试点试验",
+       "text": "技术路线试点试验；完成顶层设计；制定「三个统一」标准规范。"
+      },
+      {
+       "k": "2027—2028",
+       "title": "规模化流通",
+       "text": "建成支撑数据规模化流通、互联互通的设施；大中型城市基本覆盖。"
+      },
+      {
+       "k": "2029",
+       "title": "主体结构建成",
+       "text": "横向联通、纵向贯通的基本格局；建设运营体制机制基本建立。",
+       "gate": true
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "2024—2026年，利用2—3年左右时间，围绕重要行业领域和典型应用场景，开展数据基础设施技术路线试点试验",
+    "2027—2028年，建成支撑数据规模化流通、互联互通的数据基础设施",
+    "到2029年，基本建成国家数据基础设施主体结构"
+   ],
+   "render_rationale": "三阶段时间表是本文件最具行动价值的结构，时间轴组件表达先后与闸门关系，文字无法表达"
+  },
+  {
+   "id": "capabilities",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "能力结构：八大能力覆盖数据全生命周期",
+   "headline": {
+    "type": "assertion",
+    "text": "能力结构：::八大能力::覆盖数据全生命周期",
+    "rationale": "八大能力是结构事实，assertion + 架构组件"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "采集、汇聚、传输、加工、流通、利用、运营、安全——外加赋能各行业。",
+    "reader": "采集、汇聚、传输、加工、流通、利用、运营、安全——外加赋能各行业。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "采集、汇聚、传输、加工、流通、利用、运营、安全——外加赋能各行业。",
+   "reader_content": "采集、汇聚、传输、加工、流通、利用、运营、安全——外加赋能各行业。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [
+    {
+     "type": "arch",
+     "items": [
+      {
+       "title": "采集 / 汇聚",
+       "text": "传感器与业务系统采集；标识编码解析、数据目录接入编目。"
+      },
+      {
+       "title": "传输 / 加工",
+       "text": "节点即时组网、高效传输；清洗计算服务与质量控制。"
+      },
+      {
+       "title": "流通 / 利用",
+       "text": "分类分级共享交易；数据分析与可视化降低应用门槛。"
+      },
+      {
+       "title": "运营 / 安全",
+       "text": "登记监管认证合规；防窃取泄露滥用破坏的全过程安全。"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "国家数据基础设施具有数据采集、汇聚、传输、加工、流通、利用、运营、安全八大能力"
+   ]
+  },
+  {
+   "id": "unified",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "底座是「三大统一」：全国数据一本账",
+   "headline": {
+    "type": "assertion",
+    "text": "底座是「三大统一」：全国数据::一本账::",
+    "rationale": "「三大统一」是本文件最核心的机制设计，assertion 强调"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "统一目录标识、统一身份登记、统一接口要求；分布式数据目录覆盖政府/行业/企业、国家/省/市/县。",
+    "reader": "统一目录标识、统一身份登记、统一接口要求；分布式数据目录覆盖政府/行业/企业、国家/省/市/县。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L3",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "统一目录标识、统一身份登记、统一接口要求；分布式数据目录覆盖政府/行业/企业、国家/省/市/县。",
+   "reader_content": "统一目录标识、统一身份登记、统一接口要求；分布式数据目录覆盖政府/行业/企业、国家/省/市/县。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [
+    {
+     "type": "arch",
+     "items": [
+      {
+       "title": "统一目录标识",
+       "text": "全国一体化分布式数据目录，形成全国数据「一本账」。"
+      },
+      {
+       "title": "统一身份登记",
+       "text": "分布式数字身份体系，规范标识生成、注册与认证。"
+      },
+      {
+       "title": "统一接口要求",
+       "text": "标准化交互接口，实现数据基础设施互联互通。"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "按照统一目录标识、统一身份登记、统一接口要求，建设数据流通利用设施底座",
+    "建立覆盖政府、行业、企业等主体及国家、省、市、县等层级的全国一体化的分布式数据目录，形成全国数据“一本账”"
+   ],
+   "render_rationale": "「三大统一」是底座的机制核心，架构组件表达三要素并列且同层，优于文字罗列"
+  },
+  {
+   "id": "facilities",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "六类流通利用技术设施：可信数据空间领衔",
+   "headline": {
+    "type": "assertion",
+    "text": "六类流通利用技术设施：::可信数据空间::领衔",
+    "rationale": "六类设施为事实清单，assertion + 卡片"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台——多路线并行探索。",
+    "reader": "可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台——多路线并行探索。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台——多路线并行探索。",
+   "reader_content": "可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台——多路线并行探索。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 3,
+     "items": [
+      {
+       "no": "①",
+       "title": "可信数据空间",
+       "text": "企业/行业/城市，探索个人与跨境场景。"
+      },
+      {
+       "no": "②",
+       "title": "数场 / 数据元件",
+       "text": "先行先试数场；探索数据元件等设施。"
+      },
+      {
+       "no": "③",
+       "title": "数联网 / 区块链 / 隐私计算",
+       "text": "多技术路线并行，鼓励探索建设。"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "包括可信数据空间、数场、数据元件、数联网、区块链网络、隐私保护计算平台等技术设施"
+   ]
+  },
+  {
+   "id": "functions",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "assertion",
+   "claim": "四大总体功能：可信流通 · 算力供给 · 高速传输 · 安全可靠",
+   "headline": {
+    "type": "assertion",
+    "text": "四大总体功能：::可信流通 · 算力供给 · 高速传输 · 安全可靠::",
+    "rationale": "四大功能为事实归纳，assertion + 四卡"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "含「东数西算」异构算力调度、多元异构协同、动态内生安全。",
+    "reader": "含「东数西算」异构算力调度、多元异构协同、动态内生安全。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "含「东数西算」异构算力调度、多元异构协同、动态内生安全。",
+   "reader_content": "含「东数西算」异构算力调度、多元异构协同、动态内生安全。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 4,
+     "items": [
+      {
+       "no": "F1",
+       "title": "可信流通",
+       "text": "低成本高效率可信赖的流通环境。"
+      },
+      {
+       "no": "F2",
+       "title": "算力供给",
+       "text": "多元异构算力统筹调度（东数西算）。"
+      },
+      {
+       "no": "F3",
+       "title": "高速传输",
+       "text": "泛在接入、高速可靠、动态弹性。"
+      },
+      {
+       "no": "F4",
+       "title": "安全可靠",
+       "text": "静态→动态、边界→内生。"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "推动安全防护由静态保护向动态保护、由边界安全向内生安全",
+    "面向“东数西算”等场景中对异属异构异地算力的调度需求"
+   ]
+  },
+  {
+   "id": "implication",
+   "role": "recommendation",
+   "cognitive_job": "answer",
+   "topic": "decision",
+   "claim": "集团的接入参考：目录身份先行 · 数据空间候选 · 算力盯枢纽 · 安全转动态",
+   "headline": {
+    "type": "decision",
+    "text": "集团的接入参考：::目录身份先行 · 数据空间候选 · 算力盯枢纽 · 安全转动态::",
+    "rationale": "answer 任务给可执行接入参考，decision 标题"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "推导参考（非指引原文）：①数据目录与数字身份体系先行对接；②可信数据空间作为行业协作候选形态；③算力布局关注国家枢纽节点；④安全防护向动态内生升级。",
+    "reader": "推导参考（非指引原文）：①数据目录与数字身份体系先行对接；②可信数据空间作为行业协作候选形态；③算力布局关注国家枢纽节点；④安全防护向动态内生升级。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "推导参考（非指引原文）：①数据目录与数字身份体系先行对接；②可信数据空间作为行业协作候选形态；③算力布局关注国家枢纽节点；④安全防护向动态内生升级。",
+   "reader_content": "推导参考（非指引原文）：①数据目录与数字身份体系先行对接；②可信数据空间作为行业协作候选形态；③算力布局关注国家枢纽节点；④安全防护向动态内生升级。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [],
+   "source_refs": [
+    "建立全国一体化的分布式数字身份体系",
+    "支持建设企业可信数据空间、行业可信数据空间、城市可信数据空间",
+    "促进各类新增算力向国家枢纽节点集聚"
+   ]
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "narrative",
+   "claim": "数据有了基础设施，就有了可建设的秩序",
+   "headline": {
+    "type": "narrative",
+    "text": "数据有了::基础设施::，就有了可建设的秩序",
+    "rationale": "叙事式一句话收束"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "一句收束：数据从资源到基础设施，是治理与建设的分水岭。",
+    "reader": "一句收束：数据从资源到基础设施，是治理与建设的分水岭。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "一句收束：数据从资源到基础设施，是治理与建设的分水岭。",
+   "reader_content": "一句收束：数据从资源到基础设施，是治理与建设的分水岭。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "数据从资源到::基础设施::，<br>是治理与建设的分水岭。",
+     "cite": "《国家数据基础设施建设指引》解读 · 收束"
+    }
+   ],
+   "source_refs": []
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "topic",
+   "claim": "附录：来源、口径与诚实声明",
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "附录备查，主题式标题"
+   },
+   "kicker": "《国家数据基础设施建设指引》解读",
+   "content": {
+    "stage": "唯一来源为指引全文（广东政数局全文转载页，来源国家数据局微信公众号）；「集团接入参考」为推导内容；指引为指引性文件，技术路线未收敛。",
+    "reader": "唯一来源为指引全文（广东政数局全文转载页，来源国家数据局微信公众号）；「集团接入参考」为推导内容；指引为指引性文件，技术路线未收敛。（Reader 版含原文限定语与诚实声明。）"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "data-infra-guide",
+     "source": "《国家数据基础设施建设指引》（2024年12月）",
+     "unit": null,
+     "time": "2024-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L0",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "唯一来源为指引全文（广东政数局全文转载页，来源国家数据局微信公众号）；「集团接入参考」为推导内容；指引为指引性文件，技术路线未收敛。",
+   "reader_content": "唯一来源为指引全文（广东政数局全文转载页，来源国家数据局微信公众号）；「集团接入参考」为推导内容；指引为指引性文件，技术路线未收敛。（全部表述以指引原文为准；「集团接入参考」为推导。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：《国家数据基础设施建设指引》（2024年12月）",
+   "blocks": [],
+   "source_refs": []
+  }
+ ]
+}

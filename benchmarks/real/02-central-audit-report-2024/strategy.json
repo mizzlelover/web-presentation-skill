@@ -1,0 +1,39 @@
+{
+  "schema": "strategy.v1",
+  "source_material": {
+    "file": "source-material.md",
+    "title": "国务院关于2024年度中央预算执行和其他财政收支的审计工作报告",
+    "publisher": "审计署",
+    "url_pdf": "https://sjj.lsz.gov.cn/zcwj_20311/202507/P020250707332316801541.pdf",
+    "date": "2025-06-24"
+  },
+  "situation": "Government Report / 内部合规学习会",
+  "situation_rationale": "材料是年度审计工作报告（问题清单型），用途是让纪检、财务、内审人员把审计视角变成集团内控参考——属于政府报告解读 + 内部合规学习，不是决策请示。",
+  "communication_goal": ["inform", "explain", "align"],
+  "audience": {
+    "role": "集团纪检、财务与内审人员",
+    "expertise": "domain-expert（熟悉财务与内控，未通读报告）",
+    "prior_knowledge": "了解集团资金与内控流程",
+    "decision_power": "influencer",
+    "attitude": "neutral-supportive",
+    "motivation": "对照国家审计发现的问题类型，检视集团自身内控缝隙",
+    "concerns": ["问题集中在哪些环节", "哪些是制度性缝隙", "对集团内控的直接参考"],
+    "objections": ["这些是中央层面的问题，与集团无关", "又是念文件"],
+    "time_budget": "15 分钟",
+    "cognitive_load_tolerance": "high",
+    "expected_detail": "structured-findings",
+    "likely_questions": ["问题金额怎么统计的", "哪些类型在我们集团也可能存在", "整改机制什么样"]
+  },
+  "central_thesis": "审计报告的本质是一张问题地图：资金流向哪里，问题就沉淀在哪里——从财政管理到部门执行、重大项目、民生资金、国资五条线索，指向的共同根源是资金链上的监管缝隙；对集团的参考是把这五类缝隙变成内控自查清单。",
+  "key_messages": [
+    "问题地图的五条线索：财政管理、部门执行、重大项目、民生资金、国资管理",
+    "问题向「所属单位」下沉：42 部门的问题金额 93% 在所属单位（261.36 亿）",
+    "量的图景：专项债 1325.97 亿、养老保险 601.61 亿、过头税费 889.97 亿——资金规模越大、监管缝隙越贵",
+    "根源不是个案而是机制：支出固化、虚报支出、挤占挪用的背后是预算编制、监控与审核的缝隙",
+    "对集团的参考：不相容职责分离、专项债/专项资金全周期监控、补贴审核实质化"
+  ],
+  "supporting_structure": "五条线索（每条给出可核金额）→ 共同根源 → 集团内控自查参考",
+  "duration_minutes": 15,
+  "ethical_constraints": "全部数字与问题表述必须能在 source-material.md 找到原文；涉及具体人名/单位的案例只引结构不引细节；报告的官方定性表述与事实数据分层呈现；不推测未披露内容",
+  "anti_goals": ["不做政治解读", "不点名引申到具体企业或个人", "不用个案代替结构结论"]
+}

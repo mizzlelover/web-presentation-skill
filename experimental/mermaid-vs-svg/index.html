@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>实验 · Mermaid 默认 vs 定制 SVG（补丁 §12/§19）</title>
+<style>
+  :root{ --bg:#fff; --fg:#111; --muted:#666; --line:#e3e3e3; --accent:#2f6df6 }
+  *{box-sizing:border-box}
+  body{margin:0;padding:28px;background:var(--bg);color:var(--fg);font:14px/1.7 system-ui,"PingFang SC",sans-serif}
+  h1{font-size:20px;margin:0 0 6px}
+  p.lead{color:var(--muted);margin:0 0 20px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:16px}
+  .card h2{font-size:14px;margin:0 0 10px;color:var(--muted)}
+  .box{min-height:280px;display:grid;place-items:center;overflow:auto}
+  .metric{font-size:12px;color:var(--muted);margin-top:10px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>实验 · Mermaid 默认渲染 vs 定制 SVG（补丁 §12）</h1>
+<p class="lead">同一张流程图：左侧为 Mermaid 默认输出，右侧为按本项目组件风格手工输出的 SVG。判断标准是「默认渲染品质是否达到正式演示标准」。</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>Mermaid 默认渲染</h2>
+    <div class="box" id="mm"></div>
+    <div class="metric" id="mm-metric">渲染中…</div>
+  </div>
+  <div class="card">
+    <h2>定制 SVG（组件风格）</h2>
+    <div class="box">
+      <svg viewBox="0 0 460 300" width="100%" height="280" role="img" aria-label="取数流程定制 SVG">
+        <defs>
+          <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L7,3 L0,6 z" fill="#64748b"/>
+          </marker>
+        </defs>
+        <g font-family="system-ui,PingFang SC" font-size="13">
+          <rect x="20" y="24" width="120" height="44" rx="8" fill="#fff" stroke="#cbd5e1"/>
+          <text x="80" y="51" text-anchor="middle" fill="#111">业务方发起请求</text>
+
+          <rect x="20" y="102" width="120" height="44" rx="8" fill="#fff" stroke="#cbd5e1"/>
+          <text x="80" y="129" text-anchor="middle" fill="#111">网关鉴权 / 限流</text>
+
+          <rect x="170" y="102" width="120" height="44" rx="8" fill="#eef3ff" stroke="#2f6df6" stroke-width="1.5"/>
+          <text x="230" y="129" text-anchor="middle" fill="#1d4ed8" font-weight="700">指标服务（唯一口径）</text>
+
+          <rect x="170" y="180" width="120" height="44" rx="8" fill="#fff" stroke="#cbd5e1"/>
+          <text x="230" y="207" text-anchor="middle" fill="#111">仓库执行查询</text>
+
+          <rect x="320" y="102" width="120" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+          <text x="380" y="129" text-anchor="middle" fill="#166534">结果返回 + 血缘记录</text>
+
+          <path d="M80,68 L80,100" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)" fill="none"/>
+          <path d="M140,124 L168,124" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)" fill="none"/>
+          <path d="M230,146 L230,178" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)" fill="none"/>
+          <path d="M290,124 L318,124" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)" fill="none"/>
+          <path d="M230,224 Q330,224 372,150" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3" fill="none" marker-end="url(#ar)"/>
+          <text x="252" y="244" fill="#94a3b8" font-size="11">血缘回报</text>
+
+          <text x="20" y="286" fill="#666" font-size="11">同一流程：可控字号、可控语义色（口径层为强调色）、可打印、可无障碍标注</text>
+        </g>
+      </svg>
+    </div>
+    <div class="metric">0 依赖、0 额外体积、与 Deck 主题 token 完全一致、可作为打印与 Reader 输出。</div>
+  </div>
+</div>
+
+<script src="../vendor/mermaid.min.js"></script>
+<script>
+window.MERMAID_BENCH = {};
+(function () {
+  var code = "flowchart LR\n" +
+    "  A[业务方发起请求] --> B[网关鉴权/限流]\n" +
+    "  B --> C[指标服务 唯一口径]\n" +
+    "  C --> D[仓库执行查询]\n" +
+    "  D --> E[结果返回 + 血缘记录]\n" +
+    "  D -.血缘回报.-> C";
+  if (typeof mermaid === "undefined") {
+    document.getElementById("mm-metric").textContent = "mermaid 未加载";
+    return;
+  }
+  var t0 = performance.now();
+  try {
+    mermaid.initialize({ startOnLoad: false, theme: "default", securityLevel: "loose", fontFamily: "system-ui,PingFang SC" });
+    mermaid.render("mm-graph", code).then(function (res) {
+      document.getElementById("mm").innerHTML = res.svg;
+      var ms = Math.round(performance.now() - t0);
+      window.MERMAID_BENCH.renderMs = ms;
+      var svg = document.querySelector("#mm svg");
+      window.MERMAID_BENCH.svgCount = document.querySelectorAll("#mm svg").length;
+      window.MERMAID_BENCH.width = svg ? Math.round(svg.getBoundingClientRect().width) : 0;
+      document.getElementById("mm-metric").textContent =
+        "渲染 " + ms + "ms · 库体积约 3.3MB · 默认主题与 Deck 主题不统一（需 themeVariables 二次调校）";
+    }).catch(function (e) {
+      document.getElementById("mm-metric").textContent = "渲染失败：" + e.message;
+      window.MERMAID_BENCH.error = e.message;
+    });
+  } catch (e) {
+    document.getElementById("mm-metric").textContent = "初始化失败：" + e.message;
+    window.MERMAID_BENCH.error = e.message;
+  }
+})();
+</script>
+</body>
+</html>

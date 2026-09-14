@@ -1,0 +1,54 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "gwr-2025",
+  "title": "政府工作报告（2025年3月5日，第十四届全国人大第三次会议）",
+  "publisher": "国务院（李强总理向大会作报告）",
+  "url": "https://www.gov.cn/govweb/zhuanti/2025qglh/mobile.htm",
+  "date": "2025-03-05"
+ },
+ "situation": "Executive Report Deconstruction / 集团高管层（高管汇报类）",
+ "situation_rationale": "材料是最高规格的年度工作汇报（高管汇报类原型），用途是解构其汇报形态（结论先行/数字锚点/任务清单）供集团汇报参照。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "集团高管层",
+  "expertise": "executive",
+  "prior_knowledge": "了解宏观背景",
+  "decision_power": "decider",
+  "attitude": "neutral",
+  "motivation": "校准集团年度汇报与目标管理方式",
+  "concerns": [
+   "汇报结构",
+   "目标数字的表述方式",
+   "任务如何到人"
+  ],
+  "objections": [
+   "政府报告和企业的报告不一样"
+  ],
+  "time_budget": "12 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "summary",
+  "likely_questions": [
+   "目标怎么表述",
+   "任务怎么分配"
+  ]
+ },
+ "central_thesis": "最高规格的汇报有三个可复用的形态特征：结论先行（稳/进两段定性）、数字锚点（每个定性都有数字支撑）、任务到条（2025 任务逐条部署）——对集团的年度汇报是最直接的范本。",
+ "key_messages": [
+  "2024 回顾用「稳/进」两段定性 + 数字支撑（GDP 134.9 万亿 +5%、就业 1256 万、CPI 0.2%）",
+  "2025 目标逐一列数：GDP 5% 左右、失业率 5.5% 左右、就业 1200 万+、CPI 2% 左右、粮食 1.4 万亿斤左右",
+  "任务清单到条：提振消费/科教兴国/改革/开放/风险/乡村/城镇/绿色/民生等逐一部署",
+  "汇报形态可复用：定性有度、数字有锚、任务有条"
+ ],
+ "supporting_structure": "回顾（稳/进）→ 2025 目标（逐一列数）→ 任务清单 → 汇报形态三特征 → 集团对表",
+ "duration_minutes": 12,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；汇报形态三特征为推导观察须声明；不添加报告外数字",
+ "anti_goals": [
+  "不做政策解读外延",
+  "不与集团经营数据混算"
+ ]
+}

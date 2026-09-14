@@ -1,0 +1,53 @@
+{
+ "schema": "strategy.v1",
+ "source_material": {
+  "file": "source-material.md",
+  "ref": "xiyan-hsr",
+  "title": "国家发展改革委关于新建西安至十堰高速铁路可行性研究报告的批复（发改基础〔2020〕595号）",
+  "publisher": "国家发展改革委",
+  "url": "https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=16967",
+  "date": "2020-04"
+ },
+ "situation": "Project Review Briefing / 项目管理与投资团队（项目方案类）",
+ "situation_rationale": "材料是真实的重大项目可研批复（项目方案类典型文件），用途是演示批复文件的标准读法：必要性/内容标准/投资资金/建设安排四要素。",
+ "communication_goal": [
+  "inform",
+  "explain"
+ ],
+ "audience": {
+  "role": "集团项目管理与投资团队",
+  "expertise": "domain-expert",
+  "prior_knowledge": "熟悉项目投资流程",
+  "decision_power": "influencer",
+  "attitude": "neutral",
+  "motivation": "学习批复文件的结构化读法",
+  "concerns": [
+   "批复的四要素",
+   "资金结构",
+   "工期安排"
+  ],
+  "objections": [
+   "批复太短没什么可读"
+  ],
+  "time_budget": "6 分钟",
+  "cognitive_load_tolerance": "medium",
+  "expected_detail": "structured-findings",
+  "likely_questions": [
+   "资本金结构怎么看"
+  ]
+ },
+ "central_thesis": "一份批复虽短，四要素齐全：必要性（完善路网/区域战略）、内容与标准（256.7 公里/350 km/h）、投资与资金（476.8 亿/资本金 50%/三方出资）、建设安排（4.5 年）——这正是所有项目方案的通用骨架。",
+ "key_messages": [
+  "线路：256.7 公里、7 站（新建 6）、350 km/h、远景单向 3000 万人/年",
+  "投资：476.8 亿 = 工程 452.1 + 动车组 24.7；资本金 50%（238.4 亿）",
+  "出资：国铁 103.8 + 湖北 35.6 + 陕西 99.0 亿",
+  "工期 4.5 年；治理：陕西段组建新公司、湖北段纳入汉十城际"
+ ],
+ "supporting_structure": "四要素：必要性 → 内容标准 → 投资资金 → 建设安排 → 通用读法",
+ "duration_minutes": 6,
+ "ethical_constraints": "全部数字必须能在 source-material.md 找到原文；通用读法为推导内容须声明；材料薄是事实，不注水",
+ "anti_goals": [
+  "不注水凑页数",
+  "不做工程可行性再评估"
+ ]
+}

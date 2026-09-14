@@ -1,0 +1,117 @@
+{
+  "ir_version": "1.0",
+  "presentation": {
+    "id": "training-safety-induction",
+    "title": "新员工安全培训 · 现场作业风险识别",
+    "situation": "Teaching / Training（教学培训）",
+    "communication_goal": ["teach", "explain", "align"],
+    "audience": { "role": "入职 1 个月内的新员工（一线作业岗）", "expertise": "novice", "prior_knowledge": "无系统安全培训经历，但对作业场景有初步接触", "decision_power": "none", "attitude": "neutral（培训义务性质）", "motivation": "通过培训与考核，安全完成日常作业", "concerns": ["内容太多记不住", "与实际作业脱节", "考核标准不明确"], "objections": ["以前干活也没出过事", "太啰嗦"], "time_budget": "45 分钟", "cognitive_load_tolerance": "low", "expected_detail": "step-by-step", "likely_questions": ["遇到问题找谁", "什么情况下必须停止作业", "考核不过怎么办"] },
+    "central_thesis": "风险识别的核心只有一件事：在动手之前，用 30 秒问自己「如果出事，会怎么出事」；本课用四类风险、一个案例和一次演练把这件事变成习惯。",
+    "duration_minutes": 45,
+    "modes": ["stage", "reader", "print"],
+    "brand": { "theme": "corporate", "constraints": "教学语境：分段（Segmenting）、例句化、可复述、低负荷" },
+    "graph": { "core_path": ["opening", "objectives", "concept", "example", "practice", "recall", "assessment", "close"], "optional_paths": [], "deep_dives": [], "evidence_appendix": ["appendix"] },
+    "qa_preparation": { "likely_questions": [{ "question": "必须停止作业的情形", "answer_scene": "recall" }, { "question": "考核标准", "answer_scene": "assessment" }], "objection_handling": [{ "objection": "以前没出过事", "response_scene": "example" }] },
+    "constraints": "内容为脱敏样例；用于教学类 Deck 的分段与检查点验证"
+  },
+  "theme": { "name": "corporate", "css": "themes/corporate.css", "tokens": { "--wp-accent": "#0f62fe", "--wp-bg": "#ffffff", "--wp-fg": "#161616", "--wp-muted": "#525252", "--wp-radius": "8px", "--wp-surface": "#f4f6f8" } },
+  "runtime": { "navigation": { "keyboard": true, "search": true, "jump": true }, "presenter_view": { "notes": true, "timer": true, "next_scene": true }, "motion": { "respect_reduced_motion": true, "controllable": true }, "offline": true, "performance_budget": { "first_load_kb": 1400, "max_image_kb": 200, "target_fps": 60 } },
+  "modes": { "stage": true, "reader": { "enabled": true, "deep_links": true }, "print": { "enabled": true, "expand_critical": true, "show_citations": true } },
+  "scenes": [
+    { "id": "opening", "role": "opening", "cognitive_job": "orient", "topic": "开场", "claim": "只需记住一件事",
+      "headline": { "type": "assertion", "text": "今天只要求你记住一件事：<br>::动手之前先问一句::", "rationale": "教学开场用断言标题降低预期负荷（45 分钟只记一件事），契合新手受众的低负荷耐受" },
+      "content": { "stage": "本课只要求记住一件事：动手之前问「如果出事，会怎么出事」。", "reader": "本课目标非常克制：不要求背规程，只要求把一个动作变成习惯——动手之前，用 30 秒问自己「如果出事，会怎么出事」。其余内容都是为这一个动作服务。" },
+      "speaker_notes": "（开场，语速慢）先说清楚：今天不要求你们背规程。45 分钟只要求记住一件事——动手之前，先问自己一句：「如果出事，会怎么出事」。这句话听起来简单，但今天所有内容，都是为了让它变成你的习惯。",
+      "reader_content": "本课只要求把一个动作变成习惯：动手之前用 30 秒自问「如果出事，会怎么出事」。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low", "kicker": "新员工安全培训",
+      "blocks": [{ "type": "quote", "text": "动手之前，<br>先问一句：<br>::如果出事，会怎么出事？::", "cite": "本课唯一要求的动作" }] },
+
+    { "id": "objectives", "role": "transition", "cognitive_job": "orient", "topic": "学习目标", "claim": "三个可检验目标",
+      "headline": { "type": "topic", "text": "45 分钟，::三个可检查的目标::", "rationale": "培训幕用主题式标题列出可检验目标，让学员知道「怎样算学会」" },
+      "content": { "stage": "三个目标：认出四类风险、说出停止作业条件、完成一次演练。", "reader": "学习目标：①能认出四类现场风险（坠落、机械、化学、电气）；②能说出「必须停止作业」的三个条件；③能在给定场景中完成一次风险自问演练。" },
+      "speaker_notes": "（列目标）三个目标，都能量出来。第一，能认出四类风险。第二，能说出什么情况下必须停止作业。第三，能在一个真实场景里做一次风险自问。第三条是重点，最后我们会当场练。",
+      "reader_content": "目标：①认出四类风险；②说出必须停止作业的三个条件；③完成一次风险自问演练。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "cards", "cols": 3, "items": [
+        { "no": "目标 1", "title": "认出四类风险", "text": "坠落、机械、化学、电气——在作业现场快速识别。" },
+        { "no": "目标 2", "title": "说出停止条件", "text": "明确三种必须停止作业的情形。" },
+        { "no": "目标 3", "title": "完成一次演练", "text": "在给定场景中做一次风险自问。", "accent": true } ] }] },
+
+    { "id": "concept", "role": "argument", "cognitive_job": "explain", "topic": "四类风险", "claim": "四类风险与一句话识别法",
+      "headline": { "type": "topic", "text": "四类风险，每类::只记一句话::", "rationale": "概念幕用主题式标题并主动限缩记忆量（每类一句话），符合分段与降低负荷原则" },
+      "content": { "stage": "四类风险各配一句识别口诀。", "reader": "四类风险：①坠落——离地超过 2 米且有开口，先看有没有护栏；②机械——设备运转中，先看有没有护罩与急停；③化学——有气味或标识，先看有没有通风与手套；④电气——有裸露或潮湿，先看有没有漏保与断电。" },
+      "speaker_notes": "（逐类，每类停一拍）四类风险，每类只记一句话。坠落：离地超过两米还有开口，先看护栏在不在。机械：设备在转，先看护罩和急停在不在。化学：有气味或标识，先看通风和手套。电气：有裸露或者潮湿，先看漏电保护和断电。（收）四句话，够了。",
+      "reader_content": "四类风险口诀：坠落（离地>2m 有开口→看护栏）；机械（运转中→看护罩与急停）；化学（有气味/标识→看通风与手套）；电气（裸露/潮湿→看漏保与断电）。",
+      "source": "依据：现场作业安全规程（内部）", "render_level": "L2", "cognitive_load": "medium",
+      "blocks": [{ "type": "cards", "cols": 4, "items": [
+        { "no": "坠落", "title": "先看护栏", "text": "离地 > 2 米且有开口。" },
+        { "no": "机械", "title": "先看护罩", "text": "设备运转中，急停是否可用。" },
+        { "no": "化学", "title": "先看通风", "text": "有气味或标识，手套是否到位。" },
+        { "no": "电气", "title": "先看漏保", "text": "有裸露或潮湿，能否断电。" } ] }] },
+
+    { "id": "example", "role": "case", "cognitive_job": "demonstrate", "topic": "一个案例", "claim": "案例复盘：三分钟",
+      "headline": { "type": "narrative", "text": "去年的一起事故：<br>::他在第 40 分钟犯的错::", "rationale": "案例幕用叙事式标题制造悬念，用具体故事替代抽象警告，提升情境记忆" },
+      "content": { "stage": "案例：作业第 40 分钟，未复检直接进入。", "reader": "案例（脱敏）：某员工在作业第 40 分钟，因前一工序已确认「安全」，直接进入区域，未做第二次自问；此时上方临时堆载发生位移，造成轻伤。要点：风险不是静态的，作业进行中风险会变。" },
+      "speaker_notes": "（语气放沉）讲一个真事，细节脱敏过。去年有位同事，作业到第 40 分钟，因为前面工序已经确认过安全，就直接进去了，没有做第二次自问。结果上方临时堆载移位，人受了轻伤。（停顿）要点不在他粗心，而在于——风险不是静态的，它会在作业过程中变化。前面安全，不代表现在安全。",
+      "reader_content": "案例：作业第 40 分钟未做二次自问直接进入区域，上方临时堆载位移致轻伤。要点：风险随作业进程变化，前次安全不代表当前安全。",
+      "source": "来源：事故复盘记录（脱敏）", "render_level": "L2", "cognitive_load": "medium",
+      "blocks": [{ "type": "timeline", "items": [
+        { "when": "第 0–20 分钟", "title": "按规程作业", "text": "完成自问与防护，状态正常。" },
+        { "when": "第 20–39 分钟", "title": "工序切换", "text": "前一工序确认安全，形成惯性判断。" },
+        { "when": "第 40 分钟", "title": "未二次自问", "text": "直接进入区域；上方堆载位移，造成轻伤。" } ] }] },
+
+    { "id": "practice", "role": "argument", "cognitive_job": "simulate", "topic": "现场演练", "claim": "给场景，做一次自问",
+      "headline": { "type": "question", "text": "现在给你一个场景，::你会怎么问自己::？", "rationale": "演练幕用问句式标题把学员拉入主动加工，符合 Practice→Recall 的教学结构" },
+      "content": { "stage": "场景：临边作业，护栏部分缺失，天将下雨。", "reader": "演练场景：临边作业，护栏有一段缺失，天气预报 30 分钟后有雨。请在 60 秒内写出你的自问与动作。参考答案：①如果出事，会怎么出事？——湿滑导致失足坠落；②动作——暂停作业、上报、补护栏、确认防滑措施后再恢复。" },
+      "speaker_notes": "（发场景）场景是：临边作业，护栏缺一段，30 分钟后要下雨。给你们 60 秒，写下你会怎么问自己、然后做什么。（60 秒后）我们一起对答案：自问是「如果出事会怎么出事」——湿滑失足坠落；动作是暂停、上报、补护栏、确认防滑，再恢复。注意，这里的第一个动作是「暂停」，不是「小心点」。",
+      "reader_content": "演练场景：临边作业 + 护栏缺失 + 30 分钟后有雨。参考答案：自问→湿滑坠落；动作→暂停作业、上报、补护栏、确认防滑后恢复。",
+      "source": "—", "render_level": "L2", "cognitive_load": "medium",
+      "blocks": [{ "type": "matrix", "items": [
+        { "title": "场景", "text": "临边作业；护栏有一段缺失；30 分钟后有雨。" },
+        { "title": "自问", "text": "如果出事，会怎么出事？——湿滑导致失足坠落。" },
+        { "title": "动作（顺序）", "text": "① 暂停作业 ② 上报 ③ 补护栏 ④ 确认防滑后恢复。" },
+        { "title": "常见错误", "text": "第一反应是「小心一点」而不是「先停下」。" } ] }] },
+
+    { "id": "recall", "role": "argument", "cognitive_job": "summarize", "topic": "回忆要点", "claim": "四句口诀 + 三个停止条件",
+      "headline": { "type": "topic", "text": "要带走的：::四句口诀 + 三个停止条件::", "rationale": "回忆幕用主题式标题把全课压缩为可带走的清单，服务记忆留存" },
+      "content": { "stage": "四句口诀与三个必须停止的条件。", "reader": "要带走的：四句口诀（坠落看护栏 / 机械看护罩 / 化学看通风 / 电气看漏保）；三个必须停止作业的条件：①防护缺失且无法立即补上；②有人身危险且无法排除；③需要动火、受限空间等特殊许可而许可未到位。" },
+      "speaker_notes": "（放慢，逐条）带走两样东西。四句口诀：坠落看护栏、机械看护罩、化学看通风、电气看漏保。三个必须停止的条件：防护缺失且不能马上补上；有人身危险且排不掉；需要特殊许可而许可没到位。（强调）遇到这三个，停下不丢人，硬上才丢人。",
+      "reader_content": "口诀：坠落看护栏 / 机械看护罩 / 化学看通风 / 电气看漏保。必须停止作业：①防护缺失且无法立即补齐；②人身危险无法排除；③特殊作业许可未到位。",
+      "source": "依据：现场作业安全规程（内部）", "render_level": "L2", "cognitive_load": "medium",
+      "blocks": [{ "type": "list", "items": [
+        "**必须停止 ①**：防护缺失且无法立即补上。",
+        "**必须停止 ②**：存在人身危险且无法当场排除。",
+        "**必须停止 ③**：动火、受限空间等特殊作业许可未到位。",
+        "**口诀**：坠落看护栏 · 机械看护罩 · 化学看通风 · 电气看漏保。" ] }] },
+
+    { "id": "assessment", "role": "argument", "cognitive_job": "ask", "topic": "考核", "claim": "考核标准透明",
+      "headline": { "type": "topic", "text": "考核：::三个场景，答对两个通过::", "rationale": "考核幕用主题式标题明确标准，消除「考核不透明」的焦虑" },
+      "content": { "stage": "考核三个场景题，答对两个通过；未通过两周内补考。", "reader": "考核方式：三个场景判断题，需指出自问内容与首个动作；答对两个即通过。未通过者两周内安排补考。考核不涉及背诵条款。" },
+      "speaker_notes": "考核很简单：三个场景题，指出你会怎么自问、第一个动作是什么。答对两个就过。不考背诵。没通过的，两周内安排补考，不扣分。",
+      "reader_content": "考核：三个场景判断题（自问内容 + 首个动作），答对两个通过；未通过两周内补考；不考背诵。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "cards", "cols": 3, "items": [
+        { "no": "题量", "title": "三个场景题", "text": "每题为真实作业场景。" },
+        { "no": "通过线", "title": "答对两个", "text": "答对两个即通过。" },
+        { "no": "补考", "title": "两周内", "text": "未通过者两周内补考，不扣分。" } ] }] },
+
+    { "id": "close", "role": "summary", "cognitive_job": "summarize", "topic": "收束", "claim": "回到那一句话",
+      "headline": { "type": "narrative", "text": "把它变成习惯：<br>::问一句，再动手::", "rationale": "收束用叙事式标题回到开场那一句，形成闭环强化" },
+      "content": { "stage": "回到那一句：问一句，再动手。", "reader": "核心：把「动手之前先问一句」变成不需要回忆的习惯。请记住：问一句，再动手。" },
+      "speaker_notes": "（收，放慢）最后回到开头那一句：动手之前，先问一句「如果出事，会怎么出事」。希望一个月后你不需要回想今天，也会自然地问出这句话。谢谢。",
+      "reader_content": "把「动手之前先问一句」变成习惯。问一句，再动手。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "quote", "text": "问一句，<br>再动手。", "cite": "本课唯一要求的动作" }] },
+
+    { "id": "appendix", "role": "appendix", "cognitive_job": "prove", "topic": "附录", "claim": "求助渠道与规程索引",
+      "headline": { "type": "topic", "text": "附录：遇到问题找谁", "rationale": "附录用主题式标题提供实操信息，供课后查阅" },
+      "content": { "stage": "求助渠道与规程索引。", "reader": "附录：①班组安全员（当班第一时间联系）；②现场管理处值班电话；③安全规程索引（坠落防护、机械防护、化学品管理、临时用电）。" },
+      "speaker_notes": "（备查）遇到不确定的情况，第一联系人是班组安全员；其次是现场管理处值班电话。规程索引在最后一页，课后可以自己查。",
+      "reader_content": "附录：班组安全员 → 现场管理处值班电话 → 规程索引（坠落防护/机械防护/化学品管理/临时用电）。",
+      "source": "—", "render_level": "L0", "cognitive_load": "low",
+      "blocks": [{ "type": "evidence", "items": [
+        { "title": "班组安全员", "source": "当班第一时间联系", "grade": "首选" },
+        { "title": "现场管理处值班电话", "source": "安全员不在场时", "grade": "备选" },
+        { "title": "安全规程索引", "source": "坠落防护 / 机械防护 / 化学品管理 / 临时用电", "grade": "查阅" } ] }] }
+  ]
+}

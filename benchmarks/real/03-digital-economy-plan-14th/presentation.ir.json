@@ -1,0 +1,742 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-digital-economy-plan-14th",
+  "title": "“十四五”数字经济发展规划解读 · 目标、底座与集团的四个位置",
+  "situation": "Strategy Briefing / 集团战略与经营分析会",
+  "communication_goal": [
+   "inform",
+   "explain",
+   "align"
+  ],
+  "audience": {
+   "role": "集团战略与经营分析人员",
+   "expertise": "domain-expert",
+   "prior_knowledge": "了解集团业务，未通读规划全文",
+   "decision_power": "influencer",
+   "attitude": "neutral",
+   "motivation": "从规划中找集团的业务位置与合规边界",
+   "concerns": [
+    "硬指标有哪些",
+    "重心在哪",
+    "集团的位置"
+   ],
+   "objections": [
+    "规划离执行太远"
+   ],
+   "time_budget": "10 分钟",
+   "cognitive_load_tolerance": "medium",
+   "expected_detail": "summary",
+   "likely_questions": [
+    "7.8→10 意味着什么",
+    "数据要素怎么落地"
+   ]
+  },
+  "central_thesis": "这份规划把数字经济的增长写成了可考核的时间表：核心产业增加值占 GDP 比重从 7.8% 到 10%；而底座（网络）已全球领先，重心转向数据要素与融合应用——集团的位置在『用数据要素、上融合赛道、守治理边界』。",
+  "duration_minutes": 10,
+  "modes": [
+   "stage",
+   "reader",
+   "print"
+  ],
+  "brand": {
+   "theme": "government",
+   "constraints": "战略规划解读：目标值与现状值严格区分；集团位置为推导内容须声明"
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "target",
+    "base",
+    "task-data",
+    "task-infra",
+    "task-fusion",
+    "governance",
+    "implication",
+    "close"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "7.8→10 意味着什么",
+     "answer_scene": "target"
+    }
+   ],
+   "objection_handling": [
+    {
+     "objection": "规划离执行太远",
+     "response_scene": "implication"
+    }
+   ]
+  },
+  "constraints": "真实世界语料（国务院规划原文）；全部数字可溯源（source_refs 逐字命中 source-material.md）"
+ },
+ "theme": {
+  "name": "government",
+  "css": "themes/government.css",
+  "tokens": {
+   "--wp-accent": "#1f4e79",
+   "--wp-bg": "#ffffff",
+   "--wp-fg": "#101418",
+   "--wp-muted": "#4a5560",
+   "--wp-radius": "6px",
+   "--wp-surface": "#fbfcfd"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "这份规划，把增长写成了:",
+   "claim": "这份规划，把增长写成了一张时间表",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "这份规划，把增长写成了::一张时间表::",
+    "rationale": "开场即给出全场解读框架（可考核时间表），符合 orient 任务对结论先行的要求"
+   },
+   "kicker": "“十四五”数字经济发展规划解读（战略规划）",
+   "content": {
+    "stage": "规划把增长写成了时间表：核心产业增加值占 GDP 比重 7.8% → 10%。本简报读三件事：目标、底座、任务重心，最后落到集团的四个位置。",
+    "reader": "本简报基于国务院《“十四五”数字经济发展规划》（国发〔2021〕29号，2022-01-12 公开，原样抓取）。核心可考核指标：数字经济核心产业增加值占 GDP 比重，2020 年 7.8%（现状）→ 2025 年 10%（目标）。框架：目标时间表 → 现状底座 → 任务重心（数据要素/基础设施/融合）→ 治理 → 集团四个位置。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（开场）今天读的是一张可考核的时间表。7.8 到 10，这两个数字是规划的核心。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "本简报基于国务院《“十四五”数字经济发展规划》（国发〔2021〕29号，2022-01-12 公开，原样抓取）。核心可考核指标：数字经济核心产业增加值占 GDP 比重，2020 年 7.8%（现状）→ 2025 年 10%（目标）。框架：目标时间表 → 现状底座 → 任务重心（数据要素/基础设施/融合）→ 治理 → 集团四个位置。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [],
+   "source_refs": [
+    "到2025年，数字经济迈向全面扩展期，数字经济核心产业增加值占GDP比重达到10%"
+   ]
+  },
+  {
+   "id": "target",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "核心指标",
+   "claim": "核心产业增加值占 GDP 7.8% → 10%",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "核心指标：核心产业增加值占 GDP ::7.8% → 10%::",
+    "rationale": "核心指标是可核事实，用断言标题直接给出数值锚点，服务于 quantify"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "核心产业增加值占 GDP：7.8%（2020 现状）→ 10%（2025 目标）。",
+    "reader": "对比：2020 年数字经济核心产业增加值占 GDP 比重 7.8%（现状）；到 2025 年达到 10%（规划目标）。约 2.2 个百分点的结构性增量。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L3",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（指图）一个指标两张柱：7.8 到 10。注意这是『目标』不是预测——实现路径在后面的任务里。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "对比：2020 年数字经济核心产业增加值占 GDP 比重 7.8%（现状）；到 2025 年达到 10%（规划目标）。约 2.2 个百分点的结构性增量。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：规划「一」「二（三）」",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "占 GDP 比重 %",
+     "categories": [
+      "2020 现状",
+      "2025 目标"
+     ],
+     "series": [
+      {
+       "name": "数字经济核心产业增加值占 GDP 比重",
+       "data": [
+        7.8,
+        10
+       ]
+      }
+     ],
+     "caption": "口径：数字经济核心产业增加值占 GDP 比重；7.8% 为 2020 年现状，10% 为 2025 年规划目标；来源：规划「一」「二（三）」"
+    }
+   ],
+   "source_refs": [
+    "2020年，我国数字经济核心产业增加值占国内生产总值（GDP）比重达到7.8%",
+    "到2025年，数字经济迈向全面扩展期，数字经济核心产业增加值占GDP比重达到10%"
+   ],
+   "render_rationale": "核心指标对比必须图形化"
+  },
+  {
+   "id": "base",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "底座已经领先",
+   "claim": "光纤 >94%、移动宽带 108%、IPv6 4.6 亿",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "底座已经领先：光纤 >::94%::、移动宽带 ::108%::、IPv6 ::4.6 亿::",
+    "rationale": "基础设施现状是事实陈述，断言式标题压缩解读路径"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "底座已全球领先：光纤用户占比超 94%、移动宽带普及率 108%、IPv6 活跃用户 4.6 亿。",
+    "reader": "基础设施现状（截至规划发布）：建成全球规模最大的光纤和 4G 网络；光纤用户占比超过 94%，移动宽带用户普及率达到 108%，IPv6 活跃用户数达到 4.6 亿，5G 网络建设和应用加速推进。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（第二部分）底座已经全球领先。所以规划的重心不在『继续修路』，而在『路上跑什么』——数据要素和融合应用。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "基础设施现状（截至规划发布）：建成全球规模最大的光纤和 4G 网络；光纤用户占比超过 94%，移动宽带用户普及率达到 108%，IPv6 活跃用户数达到 4.6 亿，5G 网络建设和应用加速推进。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "94%+",
+       "label": "光纤用户占比"
+      },
+      {
+       "value": "108%",
+       "label": "移动宽带普及率"
+      },
+      {
+       "value": "4.6 亿",
+       "label": "IPv6 活跃用户"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "光纤用户占比超过94%，移动宽带用户普及率达到108%，互联网协议第六版（IPv6）活跃用户数达到4.6亿"
+   ]
+  },
+  {
+   "id": "task-data",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "任务一 · 数据要素",
+   "claim": "官方定位的核心引擎",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "任务一 · 数据要素：官方定位的::核心引擎::",
+    "rationale": "数据要素的官方定位是事实，断言标题直接传达『核心引擎』"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "数据要素是数字经济深化发展的核心引擎——对提高生产效率有乘数作用（官方表述）。",
+    "reader": "规划原文定位：「数据要素是数字经济深化发展的核心引擎。数据对提高生产效率的乘数作用不断凸显，成为最具时代特征的生产要素」。任务部分以专节部署数据要素的市场化与应用。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "quote",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（任务一）数据要素被放在核心引擎的位置——乘数作用是原话。对我们的含义：数据不是副产品，是生产要素。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "规划原文定位：「数据要素是数字经济深化发展的核心引擎。数据对提高生产效率的乘数作用不断凸显，成为最具时代特征的生产要素」。任务部分以专节部署数据要素的市场化与应用。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "数据要素是数字经济深化发展的::核心引擎::。",
+     "cite": "规划「一、发展现状和形势」"
+    }
+   ],
+   "source_refs": [
+    "数据要素是数字经济深化发展的核心引擎。数据对提高生产效率的乘数作用不断凸显"
+   ]
+  },
+  {
+   "id": "task-infra",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "任务二 · 基础设施",
+   "claim": "千兆 + 5G + 6G 前瞻储备",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "任务二 · 基础设施：千兆 + 5G + ::6G 前瞻储备::",
+    "rationale": "基础设施方向为事实清单，断言标题给出结论（升级而非新开局）"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "基础设施：千兆光纤与 5G 协同推进；6G 技术储备前瞻布局；卫星互联网建设。",
+    "reader": "基础设施任务：有序推进骨干网扩容，协同推进千兆光纤网络和 5G 网络基础设施建设，推动 5G 商用部署和规模应用，前瞻布局 6G 网络技术储备，加大 6G 研发支持力度，积极参与 6G 国际标准化，加快布局卫星通信网络、推动卫星互联网建设。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（任务二）网络仍在升级：千兆、5G 规模应用、6G 储备、卫星互联网——建设未毕，方向是升级不是新开局。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "基础设施任务：有序推进骨干网扩容，协同推进千兆光纤网络和 5G 网络基础设施建设，推动 5G 商用部署和规模应用，前瞻布局 6G 网络技术储备，加大 6G 研发支持力度，积极参与 6G 国际标准化，加快布局卫星通信网络、推动卫星互联网建设。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [],
+   "source_refs": [
+    "协同推进千兆光纤网络和5G网络基础设施建设",
+    "前瞻布局第六代移动通信（6G）网络技术储备"
+   ]
+  },
+  {
+   "id": "task-fusion",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "任务三 · 融合",
+   "claim": "数字技术与实体经济融合取得显著成效",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "任务三 · 融合：数字技术与实体经济融合取得::显著成效::",
+    "rationale": "融合目标是规划原文事实，断言标题保留官方限定（显著成效）"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "数字技术与实体经济融合取得显著成效，是 2025 年目标之一。",
+    "reader": "融合应用：到 2025 年「数字技术与实体经济融合取得显著成效」，产业数字化转型与数字产业化并进（详见规划任务章节）。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（任务三）融合是目标句里点名的：数字技术与实体经济。这是给产业方的信号，不只是给技术方的。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "融合应用：到 2025 年「数字技术与实体经济融合取得显著成效」，产业数字化转型与数字产业化并进（详见规划任务章节）。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [],
+   "source_refs": [
+    "数字技术与实体经济融"
+   ]
+  },
+  {
+   "id": "governance",
+   "role": "argument",
+   "cognitive_job": "challenge",
+   "topic": "治理与发展并重",
+   "claim": "治理体系完善本身是2025 目标",
+   "audience_question": null,
+   "headline": {
+    "type": "assertion",
+    "text": "治理与发展并重：治理体系完善本身是::2025 目标::",
+    "rationale": "治理目标是规划原文事实；challenge 任务用事实反证『合规是外挂』的误解"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "数字经济治理体系更加完善——治理本身就是 2025 目标之一（全文 9 次提及治理）。",
+    "reader": "治理：完善数字经济治理体系是 2025 年目标的组成部分；「数字经济治理」在规划全文出现 9 次——发展与治理并重，合规前置是规划内生的要求。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（提醒）治理 9 次出现——这不是口号，合规前置是规划内生的要求，不是外挂。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "治理：完善数字经济治理体系是 2025 年目标的组成部分；「数字经济治理」在规划全文出现 9 次——发展与治理并重，合规前置是规划内生的要求。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [],
+   "source_refs": [
+    "数字经济治理体系更加完善，我国数字经济竞争力和影响力稳步提升"
+   ]
+  },
+  {
+   "id": "implication",
+   "role": "recommendation",
+   "cognitive_job": "answer",
+   "topic": "集团的四个位置",
+   "claim": "用数据 · 上赛道 · 借底座 · 守边界",
+   "audience_question": null,
+   "headline": {
+    "type": "decision",
+    "text": "集团的四个位置：::用数据 · 上赛道 · 借底座 · 守边界::",
+    "rationale": "决策式标题匹配 answer 任务——给出可执行的四个位置"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "集团的四个位置：用数据要素（数据资产化）、上融合赛道（产业数字化）、借底座升级、守治理边界。",
+    "reader": "集团位置（推导内容，非规划原文）：①用数据要素——数据资产化与要素化应用；②上融合赛道——产业数字化方向（对应「融合取得显著成效」）；③借底座升级——5G/千兆/卫星互联网的能力红利；④守治理边界——合规前置对应治理目标。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（逐条）四个位置：用数据要素、上融合赛道、借底座升级、守治理边界。（声明）这四条是从规划推导的参考，不是规划原文。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "集团位置（推导内容，非规划原文）：①用数据要素——数据资产化与要素化应用；②上融合赛道——产业数字化方向（对应「融合取得显著成效」）；③借底座升级——5G/千兆/卫星互联网的能力红利；④守治理边界——合规前置对应治理目标。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [
+    {
+     "type": "actions",
+     "items": [
+      {
+       "k": "位置 一",
+       "title": "用数据要素",
+       "text": "数据资产化与要素化应用（对应核心引擎定位）。"
+      },
+      {
+       "k": "位置 二",
+       "title": "上融合赛道",
+       "text": "产业数字化方向（数字技术与实体经济融合）。"
+      },
+      {
+       "k": "位置 三",
+       "title": "借底座升级",
+       "text": "5G/千兆/卫星互联网的能力红利。"
+      },
+      {
+       "k": "位置 四",
+       "title": "守治理边界",
+       "text": "合规前置（治理体系完善是目标之一）。"
+      }
+     ]
+    }
+   ],
+   "source_refs": []
+  },
+  {
+   "id": "close",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "目标可考核，::位置可落",
+   "claim": "目标可考核，位置可落地",
+   "audience_question": null,
+   "headline": {
+    "type": "narrative",
+    "text": "目标可考核，::位置可落地::",
+    "rationale": "收束用叙事式一句话，不引入新信息"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "目标可考核，位置可落地。",
+    "reader": "核心判断：规划把增长写成可考核的时间表；集团的位置可以从数据要素、融合、底座、治理四条线落地。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "quote",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（收）目标可考核，位置可落地。谢谢。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "核心判断：规划把增长写成可考核的时间表；集团的位置可以从数据要素、融合、底座、治理四条线落地。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "目标可考核，::位置可落地::。",
+     "cite": "“十四五”数字经济发展规划解读 · 收束"
+    }
+   ],
+   "source_refs": []
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "附录",
+   "claim": "来源、口径与诚实声明",
+   "audience_question": null,
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "附录为备查内容，主题式标题即可"
+   },
+   "kicker": "“十四五”数字经济发展规划解读",
+   "content": {
+    "stage": "来源、口径与诚实声明。",
+    "reader": "附录：①唯一来源：国务院《“十四五”数字经济发展规划》（国发〔2021〕29号，gov.cn 原样抓取）；②口径：7.8% 为 2020 年现状值、10% 为 2025 年规划目标值，二者不可混用；③诚实声明：集团四个位置为推导内容，非规划原文；规划未提供的统计数字本简报不引用。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "plan-14th",
+     "source": "国务院《“十四五”数字经济发展规划》",
+     "unit": null,
+     "time": "2021-12",
+     "scope": "全国"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L0",
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "（备查）来源与口径。规划没给的数字，我们不引。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "附录：①唯一来源：国务院《“十四五”数字经济发展规划》（国发〔2021〕29号，gov.cn 原样抓取）；②口径：7.8% 为 2020 年现状值、10% 为 2025 年规划目标值，二者不可混用；③诚实声明：集团四个位置为推导内容，非规划原文；规划未提供的统计数字本简报不引用。",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：国务院《“十四五”数字经济发展规划》",
+   "blocks": [
+    {
+     "type": "evidence",
+     "items": [
+      {
+       "title": "唯一来源",
+       "source": "国务院《“十四五”数字经济发展规划》（国发〔2021〕29号）",
+       "grade": "官方"
+      },
+      {
+       "title": "口径说明",
+       "source": "7.8% 现状值 / 10% 目标值，严格区分",
+       "grade": "口径"
+      },
+      {
+       "title": "性质声明",
+       "source": "集团位置为推导内容，非规划原文",
+       "grade": "声明"
+      }
+     ]
+    }
+   ],
+   "source_refs": []
+  }
+ ]
+}

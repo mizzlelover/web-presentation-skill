@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数字化门户项目 · 致信息中心（技术版）</title>
+<link rel="stylesheet" href="../../../themes/technology.css">
+<link rel="stylesheet" href="../../../runtime/core/presentation.css">
+<link rel="stylesheet" href="../../../runtime/components/components.css">
+
+<link rel="stylesheet" href="../../../runtime/print/print.css" media="print">
+<style>:root{--wp-accent:#2f6df6;--wp-bg:#0f1319;--wp-fg:#eef2f7;--wp-muted:#9aa6b4;--wp-radius:10px;--wp-surface:#171d26;}</style>
+</head>
+<body data-wpui="on">
+<main class="wp-deck">
+
+  <section class="wp-scene" data-scene-id="opening" data-role="opening" data-topic="技术目标" data-claim="新增三处，其余复用">
+  <span class="wpk-kicker">致信息中心 · 技术版</span>
+  <h2>技术上只新增<em class="wpk-mark">三处组件</em>，其余全部复用</h2>
+  <p class="wpk-lead">新增三处：统一身份服务、数据服务网关、指标服务；其余复用既有系统。</p>
+  <div class="wpk-arch"><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">新增 · 统一身份服务</div><div class="wpk-layer__d">手机号/实名为统一标识；跨渠道归并；与既有账号体系对接。</div></div><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">新增 · 数据服务网关</div><div class="wpk-layer__d">统一鉴权、限流、审计；对外只暴露服务接口。</div></div><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">新增 · 指标服务</div><div class="wpk-layer__d">唯一口径解析与计算入口。</div></div><div class="wpk-layer" data-reveal data-motion-intent="reveal"><div class="wpk-layer__h">复用 · 既有系统</div><div class="wpk-layer__d">数据仓库、调度、内容管理、账号体系。</div></div></div>
+  
+  <aside class="wp-notes">（开场设边界）先划改动面：新增只有三处——统一身份服务、数据服务网关、指标服务。仓库、调度、内容管理、账号体系全部复用。不建中台，不迁历史数据。下面按集成、数据、接口、权限、运维五块讲。</aside>
+  <div class="wp-reader">新增三处：统一身份服务、数据服务网关、指标服务；复用仓库/调度/CMS/账号体系；不建中台，不迁历史数据。</div>
+  <p class="wpk-src">源材料：数字化门户项目立项材料（与 CEO / frontline 版同源）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="integration" data-role="argument" data-topic="集成方案" data-claim="五类系统五种接法">
+  <h2>集成：五类系统，<em class="wpk-mark">五种接法</em></h2>
+  <p class="wpk-lead">五类：账号、售票、报名、内容、报表。</p>
+  <div class="wpk-steps"><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">01</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">账号</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">身份服务对接既有 SSO。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">02</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">线下售票</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">供应商回传接口改造至网关。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">03</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">线上报名</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">表单直连统一身份服务。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">04</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">内容</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">复用既有 CMS 接口。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step is-gate" data-reveal data-motion-intent="reveal"><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__k">05</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__t">报表</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div><div class="wpk-step__d">连接串指向网关，双跑比对后切换。</div><div class="wpk-link" data-reveal data-motion-intent="trace"></div></div></div>
+  
+  <aside class="wp-notes">（逐类）账号走既有 SSO；线下售票让供应商把回传接口改到网关；线上报名表单直连身份服务；内容复用 CMS 接口；报表改连接串指向网关，先双跑比对再切换。（收）改动最大的是售票供应商，所以合同里写死了接口标准。</aside>
+  <div class="wp-reader">集成：①账号→SSO；②线下售票→供应商回传改网关；③线上报名→直连身份服务；④内容→既有 CMS 接口；⑤报表→连接串改网关 + 双跑比对。</div>
+  <p class="wpk-src">源材料：集成方案（样例）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="data" data-role="argument" data-topic="数据模型" data-claim="四张主表">
+  <h2>数据模型：<em class="wpk-mark">四张主表 + 一个主数据视图</em></h2>
+  <p class="wpk-lead">用户、身份映射、服务记录、事件埋点四表 + 用户主数据视图。</p>
+  <div class="wpk-matrix"><div class="wpk-mx" data-reveal data-motion-intent="reveal"><div class="wpk-mx__h">用户表</div><div class="wpk-mx__d">会员基础属性；主键为内部 UID。</div></div><div class="wpk-mx" data-reveal data-motion-intent="reveal"><div class="wpk-mx__h">身份映射表</div><div class="wpk-mx__d">渠道 × 统一标识；打通跨渠道同一人。</div></div><div class="wpk-mx" data-reveal data-motion-intent="reveal"><div class="wpk-mx__h">服务记录表</div><div class="wpk-mx__d">报名 / 预约 / 购票记录与其来源渠道。</div></div><div class="wpk-mx" data-reveal data-motion-intent="reveal"><div class="wpk-mx__h">事件埋点表 + MDM 视图</div><div class="wpk-mx__d">行为事件；主数据视图供指标服务消费。</div></div></div>
+  
+  <aside class="wp-notes">（指结构）四张主表加一个主数据视图：用户、身份映射、服务记录、事件埋点；MDM 视图供指标服务消费。全部落既有仓库，不新建库。身份映射表是打通的关键，它的主键选择需要和身份服务一起定。</aside>
+  <div class="wp-reader">数据模型：用户表 / 身份映射表 / 服务记录表 / 事件埋点表 + 用户主数据视图（MDM）；均落既有仓库。</div>
+  <p class="wpk-src">源材料：数据方案（样例）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="interface" data-role="evidence" data-topic="接口清单" data-claim="接口与冻结策略">
+  <h2>接口 <em class="wpk-mark">11 个</em>，其中 <em class="wpk-mark">6 个待标准冻结</em></h2>
+  <p class="wpk-lead">共 11 个接口，6 个依赖集团标准冻结。</p>
+  <table class="wpk-risks"><thead><tr><th>接口组</th><th>数量</th><th>依赖</th><th>冻结状态</th></tr></thead><tbody><tr><td>内部服务</td><td>5</td><td>无外部依赖</td><td>已冻结</td></tr><tr><td>集团标准接口</td><td>4</td><td>集团数据接口标准</td><td><b>待冻结</b></td></tr><tr><td>供应商接口</td><td>2</td><td>售票供应商</td><td>已约定 v0-draft</td></tr></tbody></table>
+  
+  <aside class="wp-notes">（给数）接口一共 11 个：内部 5 个，对外 6 个。对外 6 个里有 4 个依赖集团标准。（强调）策略是先用约定版本联调，标准发布后只改网关适配层——替换范围被限制在一层里，不影响业务代码。</aside>
+  <div class="wp-reader">接口 11 个（内部 5 / 对外 6）；其中 4 个依赖集团标准。策略：v0-draft 约定版本先联调，标准发布后仅替换网关适配层。</div>
+  <p class="wpk-src">源材料：接口清单（样例）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="security" data-role="argument" data-topic="权限与审计" data-claim="权限模型">
+  <h2>权限：<em class="wpk-mark">默认拒绝 + 数据级 + 全链路留痕</em></h2>
+  <p class="wpk-lead">权限三条：默认拒绝、数据级授权、全链路审计。</p>
+  <div class="wpk-grid is-3"><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">S1</div><div class="wpk-card__title">默认拒绝</div><div class="wpk-card__text">未显式授权的数据域不可访问。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">S2</div><div class="wpk-card__title">数据级授权</div><div class="wpk-card__text">字段级 + 数据域级两级授权。</div></div><div class="wpk-card" data-reveal data-motion-intent="reveal"><div class="wpk-card__no">S3</div><div class="wpk-card__title">全链路审计</div><div class="wpk-card__text">人 / 时间 / 口径 / 范围可回溯。</div></div></div>
+  
+  <aside class="wp-notes">（面向安全）三条：默认拒绝，没授权的域访问不了；数据级授权，字段级和数据域级两级；全链路审计，谁取的、什么时候、用的哪个口径、拿了多大范围，都能追。身份断言由身份服务统一提供，不在各处重复实现。</aside>
+  <div class="wp-reader">权限：默认拒绝 / 数据级授权（字段 + 数据域）/ 全链路审计；身份断言统一由身份服务提供。</div>
+  <p class="wpk-src">源材料：安全方案（样例）</p>
+  </section>
+  <section class="wp-scene" data-scene-id="ops" data-role="transition" data-topic="运维与回滚" data-claim="灰度与回滚">
+  <h2>上线策略：<em class="wpk-mark">灰度、双跑、可回滚</em></h2>
+  <p class="wpk-lead">灰度发布、双跑比对、一键回滚。</p>
+  <div class="wpk-time"><div class="wpk-time__i" data-reveal data-motion-intent="reveal"><div class="wpk-time__when">灰度</div><div class="wpk-time__t">分批切流</div><div class="wpk-time__d">按渠道分批，先 10% 流量。</div></div><div class="wpk-time__i" data-reveal data-motion-intent="reveal"><div class="wpk-time__when">双跑</div><div class="wpk-time__t">差异比对</div><div class="wpk-time__d">新旧路径并行；差异率 &gt;1% 即暂停。</div></div><div class="wpk-time__i" data-reveal data-motion-intent="reveal"><div class="wpk-time__when">回滚</div><div class="wpk-time__t">开关回退</div><div class="wpk-time__d">旧路径保留一季度；网关开关一键回退。</div></div></div>
+  
+  <aside class="wp-notes">（逐条）上线三步：灰度，按渠道分批，先放 10%；双跑，新旧路径并行比对，差异超过 1% 就暂停；回滚，旧路径保留一个季度，网关上一个开关就能退回来。身份服务和网关都是无状态，直接纳入既有监控，不增加新的运维体系。</aside>
+  <div class="wp-reader">上线：灰度（先 10%）→ 双跑（差异率 &gt;1% 暂停）→ 回滚（旧路径保留一季度，网关开关一键回退）；身份/网关无状态，纳入既有监控。</div>
+  <p class="wpk-src">源材料：上线方案（样例）</p>
+  </section>
+
+</main>
+<script src="../../../runtime/core/scene-engine.js"></script>
+<script src="../../../runtime/navigation/router.js"></script>
+<script src="../../../runtime/motion/motion-controller.js"></script>
+<script src="../../../runtime/interaction/interaction.js"></script>
+<script src="../../../runtime/presenter/presenter-view.js"></script>
+<script src="../../../runtime/reader/reader.js"></script>
+
+
+<script src="../../../runtime/core/bootstrap.js"></script>
+<script>WPBoot.start(".wp-deck");</script>
+</body>
+</html>

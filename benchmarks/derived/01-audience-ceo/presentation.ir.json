@@ -1,0 +1,77 @@
+{
+  "ir_version": "1.0",
+  "presentation": {
+    "id": "audience-ceo",
+    "title": "数字化门户项目 · 致集团一把手（结论版）",
+    "situation": "Executive Briefing（同内容多受众基准 · CEO 版）",
+    "communication_goal": ["request_decision"],
+    "audience": { "role": "集团一把手 / 分管领导", "expertise": "executive", "prior_knowledge": "只掌握结论层信息，不关心实现细节", "decision_power": "decider", "attitude": "neutral-supportive", "motivation": "用最少时间判断是否值得投、风险是否可控", "concerns": ["要不要批", "回收期", "最大风险", "谁负责"], "objections": ["是不是又要花钱改网站"], "time_budget": "5 分钟", "cognitive_load_tolerance": "low", "expected_detail": "conclusions-only", "likely_questions": ["一句话结论", "最坏情况"] },
+    "central_thesis": "值得投：首期 280 万、第二年内回收、最大风险（数据口径）需集团信息中心一句话定标准。",
+    "duration_minutes": 5,
+    "modes": ["stage", "reader", "print"],
+    "brand": { "theme": "government", "constraints": "CEO 版：结论先行、极低密度、不出现实现细节" },
+    "graph": { "core_path": ["opening", "thesis", "economics", "risk", "ask", "close"], "optional_paths": [], "deep_dives": [], "evidence_appendix": [] },
+    "qa_preparation": { "likely_questions": [{ "question": "最坏情况", "answer_scene": "risk" }], "objection_handling": [{ "objection": "又花钱改网站", "response_scene": "thesis" }] },
+    "constraints": "同内容多受众基准之 CEO 版；与 technical / frontline 版共用同一源材料"
+  },
+  "theme": { "name": "government", "css": "themes/government.css", "tokens": { "--wp-accent": "#1f4e79", "--wp-bg": "#ffffff", "--wp-fg": "#101418", "--wp-muted": "#4a5560", "--wp-radius": "6px", "--wp-surface": "#fbfcfd" } },
+  "runtime": { "navigation": { "keyboard": true, "search": true, "jump": true }, "presenter_view": { "notes": true, "timer": true, "next_scene": true }, "motion": { "respect_reduced_motion": true, "controllable": true }, "offline": true, "performance_budget": { "first_load_kb": 1400, "max_image_kb": 200, "target_fps": 60 } },
+  "modes": { "stage": true, "reader": { "enabled": true, "deep_links": true }, "print": { "enabled": true, "expand_critical": true, "show_citations": true } },
+  "scenes": [
+    { "id": "opening", "role": "opening", "cognitive_job": "orient", "topic": "结论", "claim": "一句话：值得投",
+      "headline": { "type": "decision", "text": "一句话：::值得投::，但需要集团定一个标准", "rationale": "对时间预算 5 分钟的决策者，开场即给可表决结论，后续只做最短支撑" },
+      "content": { "stage": "结论：值得投；首期 280 万，第二年内回收；唯一需集团决策的是数据接口标准。", "reader": "致一把手的结论版：项目值得投。首期预算 280 万元，回收期在第二年内；唯一需要集团层面决策的事项是数据对接标准（由信息中心明确）。本版不展开实现细节。" },
+      "speaker_notes": "（不寒暄，直接给）一句话：值得投。首期 280 万，第二年内回收。需要您在会上定的只有一件事——数据对接标准由信息中心明确。剩下四个数支撑这个结论。",
+      "reader_content": "结论：值得投。首期 280 万，第二年内回收；唯一需集团决策事项为数据接口标准。",
+      "source": "源材料：数字化门户项目立项材料（与 technical / frontline 版同源）", "render_level": "L1", "cognitive_load": "low", "kicker": "致一把手 · 结论版",
+      "blocks": [{ "type": "numbers", "items": [ { "value": "280", "label": "首期预算（万元）", "accent": true }, { "value": "第 2 年", "label": "回收期" }, { "value": "1", "label": "项需集团决策" } ] }] },
+
+    { "id": "thesis", "role": "argument", "cognitive_job": "answer", "topic": "为什么值得", "claim": "不是改版，是资产",
+      "headline": { "type": "assertion", "text": "它不是网站改版，<br>而是::把流量变成集团自己的资产::", "rationale": "用一页回应最可能的质疑（花钱改网站），不重复论证过程" },
+      "content": { "stage": "门户产出的是自有数据资产，不是网页。", "reader": "为什么值得：门户的产出不是网页，而是沉淀在集团自有库中的用户与服务数据资产。这决定了它不是一次性支出，而是资产形成。" },
+      "speaker_notes": "（一页讲完）我知道最自然的反应是「又要花钱改网站」。不是。门户产出的是我们自己的数据资产——用户是谁、来过几次、买了什么。这件事做成了，往后每年的经营分析都有根。",
+      "reader_content": "价值判断：门户产出为自有数据资产（用户/服务/经营数据），而非一次性网页支出。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "compare", "left": { "title": "如果按「改版」看", "tag": "错误框架", "items": ["一次性支出", "结束后归零", "下一年再花一次"] }, "right": { "title": "按「资产」看", "tag": "正确框架", "items": ["形成自有数据域", "每年复用并增值", "支撑后续所有分析"] } }] },
+
+    { "id": "economics", "role": "evidence", "cognitive_job": "quantify", "topic": "投入产出", "claim": "第二年内回收",
+      "headline": { "type": "assertion", "text": "投入 ::310 万::，第二年内回收", "rationale": "决策者只关心两个数：要多少、多久回；一图讲完" },
+      "content": { "stage": "三年口径：投入 310 万，收益 760 万，交叉点在第二年内。", "reader": "投入产出（三年口径，样例）：累计投入 310 万元；累计收益 760 万元；交叉点位于第二年内。即便按最保守假设（转化率不提升），回收期 34 个月。" },
+      "speaker_notes": "（指图，不解释过程）投入口径 310 万，收益 760 万，线交叉在第二年内。最保守情形——转化率完全不提升——34 个月。",
+      "reader_content": "投入 310 万 / 收益 760 万（三年口径），交叉点第二年内；最保守情形回收期 34 个月。",
+      "source": "源材料：项目财务模型（样例）", "render_level": "L3", "render_rationale": "决策者需一图看清交叉点，文字无法替代", "cognitive_load": "low",
+      "blocks": [{ "type": "chart", "kind": "bar", "unit": "万元", "categories": ["首年", "次年", "第三年"],
+        "series": [{ "name": "累计投入", "data": [280, 300, 310] }, { "name": "累计收益", "data": [180, 420, 760] }],
+        "caption": "口径：三年累计；最保守情形回收期 34 个月（样例数据）" }] },
+
+    { "id": "risk", "role": "argument", "cognitive_job": "challenge", "topic": "最坏情况", "claim": "最坏情况是什么",
+      "headline": { "type": "question", "text": "最坏会坏到哪？", "rationale": "决策者必问最坏情况；用问句式标题直接给出下限，建立信任" },
+      "content": { "stage": "最坏情况：口径不一致导致重复建设，回收期延后 4 个月。", "reader": "最坏情况：若数据口径与集团框架不一致且未及时统一，会导致返工与重复建设，回收期后移约 4 个月（至 34 个月）。该风险已有对策——把口径确认前置为一期任务。" },
+      "speaker_notes": "（直接给下限）最坏情况：口径不统一，返工，回收期往后推 4 个月，到 34 个月。不致命。对策是把口径确认前置到第一期，这也是今天我请您定那句话的原因。",
+      "reader_content": "最坏情况：口径不一致 → 返工与重复建设 → 回收期后移约 4 个月（34 个月）；对策：口径确认前置为一期任务。",
+      "source": "源材料：风险评估（样例）", "render_level": "L2", "cognitive_load": "low",
+      "blocks": [{ "type": "cards", "cols": 3, "items": [
+        { "no": "最坏", "title": "回收期 34 个月", "text": "口径不一致导致返工与重复建设。" },
+        { "no": "概率", "title": "中", "text": "可通过前置口径确认显著降低。" },
+        { "no": "对策", "title": "口径前置", "text": "一期即完成口径确认，不等二期。", "accent": true } ] }] },
+
+    { "id": "ask", "role": "decision", "cognitive_job": "decide", "topic": "请您定", "claim": "三项决策",
+      "headline": { "type": "decision", "text": "请您定三件事", "rationale": "决策幕列出可当场表决的三项，缩短会议时长" },
+      "content": { "stage": "立项、首期预算 280 万、信息中心明确口径。", "reader": "请求决策：①同意立项（分两期）；②核定首期预算 280 万元；③请信息中心明确数据对接标准。" },
+      "speaker_notes": "（逐项，停顿）三件事：同意立项，分两期；核定首期预算 280 万；请信息中心明确口径。三项定了，下周提交正式请示件。",
+      "reader_content": "请求：①立项（分两期）；②核定首期预算 280 万元；③信息中心明确数据对接标准。",
+      "source": "—", "render_level": "L2", "cognitive_load": "low",
+      "blocks": [{ "type": "actions", "items": [
+        { "k": "一", "title": "立项", "text": "同意立项，按方案 B 分两期实施。" },
+        { "k": "二", "title": "预算", "text": "核定首期预算 280 万元。" },
+        { "k": "三", "title": "口径", "text": "信息中心明确数据对接标准。" } ] }] },
+
+    { "id": "close", "role": "summary", "cognitive_job": "summarize", "topic": "收束", "claim": "一句话",
+      "headline": { "type": "narrative", "text": "花钱买的不是网站，<br>是::往后每年都用得上的用户认知::", "rationale": "收束一句话，不重复论据" },
+      "content": { "stage": "买的是持续的用户认知。", "reader": "核心：投入购买的不是网站，而是持续可复用的用户认知能力。" },
+      "speaker_notes": "（收）最后一句：这笔钱买的不是网站，是往后每年都用得上的用户认知。请您定那三件事。",
+      "reader_content": "核心：投入换取持续可复用的用户认知能力。",
+      "source": "—", "render_level": "L1", "cognitive_load": "low",
+      "blocks": [{ "type": "quote", "text": "花钱买的不是网站，<br>是往后每年都用得上的::用户认知::。", "cite": "CEO 版收束" }] }
+  ]
+}

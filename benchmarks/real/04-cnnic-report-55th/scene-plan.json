@@ -1,0 +1,189 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "第55次互联网络报告解读 · 从接入到应用：数字社会的四个切面",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "11.08 亿之后，互联网研究重心从::接入::转向::应用深度::",
+   "chart": null,
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "scale",
+   "arg_ref": "C1",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "网民 ::11.08 亿::、普及率 ::78.6%::——接入接近见顶",
+   "chart": null,
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民",
+    "我国农村网民规模达3.13亿人，占网民整体的28.2%"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "infra",
+   "arg_ref": "C2",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "底座：::26.42 亿::蜂窝物联网连接——「物」已是「人」的 2.4 倍",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "亿",
+    "categories": [
+     "蜂窝物联网终端",
+     "网民"
+    ],
+    "series": [
+     {
+      "name": "连接数（亿）",
+      "data": [
+       26.42,
+       11.08
+      ]
+     }
+    ],
+    "caption": "口径：蜂窝物联网终端用户数 vs 网民规模；来源：报告「基础资源」"
+   },
+   "source_refs": [
+    "三家基础电信企业发展蜂窝物联网终端用户26.42 亿户",
+    "已累计建成 5G基站 419.1 万个"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "consume",
+   "arg_ref": "C3",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "消费应用是基本盘：网购 ::87.9%::、支付 ::10.29 亿::",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "占网民 %",
+    "categories": [
+     "网络购物",
+     "在线旅行预订",
+     "微短剧使用"
+    ],
+    "series": [
+     {
+      "name": "占网民整体 %",
+      "data": [
+       87.9,
+       49.5,
+       59.7
+      ]
+     }
+    ],
+    "caption": "口径：各类应用用户占网民整体比例；网络支付 10.29 亿人；来源：报告「数字消费」「文旅」"
+   },
+   "source_refs": [
+    "增长 5947 万人，占网民整体的 87.9%",
+    "网络支付用户规模达10.29亿人"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "genai",
+   "arg_ref": "C4",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "新变量：生成式 AI 完成::「听说 23.5% → 使用 17.7%」::第一轮渗透",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "占整体人口 %",
+    "categories": [
+     "听说过",
+     "使用过"
+    ],
+    "series": [
+     {
+      "name": "生成式 AI",
+      "data": [
+       23.5,
+       17.7
+      ]
+     }
+    ],
+    "caption": "口径：占整体人口（非网民整体）；听说过 3.31 亿、使用过 2.49 亿；来源：报告「生成式人工智能」"
+   },
+   "source_refs": [
+    "我国有 3.31亿人表示自己听说过生成式人工智能产品",
+    "我国生成式人工智能产品的用户规模达 2.49 亿人",
+    "利用生成式人工智能产品回答问题的用户最为广泛，使用率达77.6%"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "insight",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "三个判断：接入见顶、::物超人::、生成式 AI 从认知到使用",
+   "chart": null,
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民",
+    "我国生成式人工智能产品的用户规模达 2.49 亿人，占整体人口的17.7%"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "implication",
+   "arg_ref": "C5",
+   "cognitive_job": "answer",
+   "load": "medium",
+   "headline_type": "decision",
+   "headline": "集团参考：::基本盘不动 · AI 做增量 · 微短剧试渠道::",
+   "chart": null,
+   "source_refs": [
+    "微短剧用户规模达 6.62亿人，占网民整体的 59.7%"
+   ]
+  },
+  {
+   "order": 8,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "战场从::接入::转向::应用深度::",
+   "chart": null,
+   "source_refs": [
+    "我国网民规模达 11.08亿人，较 2023 年 12 月增长 1608",
+    "互联网普及率达78.6%，占全球网民"
+   ]
+  },
+  {
+   "order": 9,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}

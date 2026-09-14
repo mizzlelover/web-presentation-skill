@@ -1,0 +1,18 @@
+{
+  "name": "wenzhi-evals-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "文质 Web-native Presentation Skill — 跨引擎运行时验证 harness（dev-only，非运行时依赖）",
+  "scripts": {
+    "verify": "node runtime_verify.cjs",
+    "stress": "node content_stress.cjs",
+    "typography": "node typography_lint.cjs",
+    "all": "node runtime_verify.cjs && node content_stress.cjs && node typography_lint.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  },
+  "dependencies": {
+    "pngjs": "^7.0.0"
+  }
+}

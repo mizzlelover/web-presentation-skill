@@ -1,0 +1,139 @@
+# Scene Examples Index — 机制 → 节点 → 组件 → 正反例（补丁 §20 的写回）
+#
+# 作用：把「机制」与「知识与运行时的实现物」连起来，避免研究停在知识库里。
+# 正/反例的完整内容与导出规则见 evals/mechanisms/（数据源 mechanisms.json）。
+# 组件类名契约见 runtime/components/components.css；渲染规则由 scripts/render_ir.py 与组件共同执行。
+
+version: "1.0"
+updated: 2026-09-10
+gallery: evals/mechanisms/index.html
+
+links:
+
+  # ── 多媒体学习 ──
+  - mechanism: M01 一致性 Coherence
+    node: knowledge/cognition/multimedia-learning.md · KN-MML-001
+    evidence_package: knowledge/evidence_packages/coherence-seductive-details.yaml
+    component: 无专用组件（约束：Renderer 不得自动添加装饰元素）
+    rule_id: R-DECORATION-FORBIDDEN
+  - mechanism: M02 线索 Signaling
+    node: knowledge/cognition/attention-fluency.md · KN-ATT-001
+    evidence_package: knowledge/evidence_packages/attention-cueing.yaml
+    component: .wpk-card.is-accent（强调上限 1 处）
+    rule_id: R-EMPHASIS-LIMIT-1
+  - mechanism: M03 冗余 Redundancy
+    node: knowledge/cognition/multimedia-learning.md · KN-MML-002
+    evidence_package: knowledge/evidence_packages/redundancy.yaml
+    component: .wp-speaker / .wp-reader 三层分流
+    rule_id: R-MODE-SPLIT-CONTENT
+  - mechanism: M04 空间临近 Spatial Contiguity
+    node: knowledge/cognition/multimedia-learning.md
+    evidence_package: knowledge/evidence_packages/segmenting.yaml  # 空间临近部分为 Ginns 2006 abstract_only，未推断效应量
+    component: .wpk-card（图注同容器）
+    rule_id: R-CAPTION-INLINE
+  - mechanism: M05 时间临近 Temporal Contiguity
+    node: knowledge/cognition/multimedia-learning.md
+    evidence_package: knowledge/evidence_packages/temporal-contiguity.yaml
+    component: .wpk-chart + .wpk-chart__cap（同幕）
+    rule_id: R-FIGURE-EXPLANATION-SAME-SCENE
+  - mechanism: M06 分段 Segmenting
+    node: knowledge/cognition/multimedia-learning.md
+    evidence_package: knowledge/evidence_packages/segmenting.yaml
+    component: [data-reveal] + .wpk-step
+    rule_id: R-PROGRESSIVE-REVEAL
+  - mechanism: M07 通道 Modality
+    node: knowledge/cognition/cognitive-load.md
+    evidence_package: knowledge/evidence_packages/cognitive-load.yaml
+    component: .wpk-lead（屏幕承载结论，解释交给讲者）
+    rule_id: R-SCREEN-VISUAL-VERBAL
+  - mechanism: M08 预训练 Pretraining
+    node: knowledge/cognition/cognitive-load.md
+    evidence_package: knowledge/evidence_packages/cognitive-load.yaml
+    component: .wpk-grid + .wpk-card
+    rule_id: R-PRETRAIN-TERMS
+
+  # ── 认知负荷与注意 ──
+  - mechanism: M09 个性化 Personalization
+    node: knowledge/communication/persuasion-elm.md
+    evidence_package: knowledge/evidence_packages/persuasion-elm.yaml
+    component: .wpk-lead（第二人称文案，Renderer 不改写）
+    rule_id: R-KEEP-AUTHORED-TONE
+  - mechanism: M10 认知负荷曲线
+    node: knowledge/cognition/cognitive-load.md
+    evidence_package: knowledge/evidence_packages/cognitive-load.yaml
+    component: （由 Scene 序列体现）
+    rule_id: R-LOAD-CURVE
+  - mechanism: M11 工作记忆组块
+    node: knowledge/cognition/working-memory.md
+    evidence_package: knowledge/evidence_packages/working-memory.yaml
+    component: .wpk-grid.is-3 / .wpk-numbers
+    rule_id: R-CHUNK-LIMIT-5
+  - mechanism: M12 注意线索 Cueing
+    node: knowledge/cognition/attention-fluency.md
+    evidence_package: knowledge/evidence_packages/attention-cueing.yaml
+    component: .wpk-num.is-accent / .wpk-mark
+    rule_id: R-PREATTENTIVE-FIRST
+
+  # ── 演示与论证 ──
+  - mechanism: M13 断言-证据
+    node: knowledge/presentation/assertion-evidence.md
+    evidence_package: knowledge/evidence_packages/assertion-evidence.yaml
+    component: h2 + .wpk-cmp / .wpk-chart
+    rule_id: R-HEADLINE-IS-SENTENCE
+  - mechanism: M14 标题类型由认知任务决定
+    node: knowledge/presentation/headline-system.md
+    evidence_package: knowledge/evidence_packages/assertion-evidence.yaml
+    component: h1/h2（类型见 headline.type）
+    rule_id: R-HEADLINE-TYPE-BY-JOB
+  - mechanism: M15 信息密度按模式决定
+    node: knowledge/presentation/information-density.md
+    component: .wpk-lead（Stage） vs .wp-reader（Reader）
+    rule_id: R-DENSITY-BY-MODE
+  - mechanism: M16 叙事传输
+    node: knowledge/communication/narrative.md
+    evidence_package: knowledge/evidence_packages/narrative-transportation.yaml
+    component: .wpk-time（仅 narrative/case 角色）
+    rule_id: R-NARRATIVE-SCOPE
+  - mechanism: M17 说服双路径 ELM
+    node: knowledge/communication/persuasion-elm.md
+    evidence_package: knowledge/evidence_packages/persuasion-elm.yaml
+    component: .wpk-evidence（decider 幕必备）
+    rule_id: R-DECIDER-NEEDS-EVIDENCE
+  - mechanism: M22 讲者-屏幕分工
+    node: knowledge/presentation/information-density.md
+    component: .wp-speaker / 屏幕层
+    rule_id: R-SCREEN-SPEAKER-DIVISION
+
+  # ── 可视化 ──
+  - mechanism: M18 图形选择由认知任务决定
+    node: knowledge/visualization/chart-selection.md
+    evidence_package: knowledge/evidence_packages/dataviz-communication.yaml
+    component: blocks[].type=chart（kind 由任务推导）
+    rule_id: R-CHART-KIND-BY-TASK
+  - mechanism: M19 图表诚信
+    node: knowledge/visualization/visual-perception.md
+    evidence_package: knowledge/evidence_packages/graphical-perception.yaml
+    component: .wpk-chart__cap（caption 必填）
+    rule_id: R-CHART-CAPTION-REQUIRED
+
+  # ── 动效与交互 ──
+  - mechanism: M20 语义动效
+    node: knowledge/motion/semantic-motion.md
+    component: runtime/motion/motion-controller.js（10 类 intent）
+    rule_id: R-MOTION-INTENT-REQUIRED
+  - mechanism: M21 核心路径不依赖交互
+    node: knowledge/interaction/interaction-patterns.md
+    component: 交互元素一律 data-interact + purpose
+    rule_id: R-INTERACTION-PURPOSE
+
+  # ── 反模式 ──
+  - mechanism: M23 普适规则谬误
+    node: knowledge/anti_patterns/universal-rule-fallacy.md
+    rule_id: R-NO-UNIVERSAL-RULE
+  - mechanism: M24 技术滥用
+    node: knowledge/anti_patterns/tech-abuse.md
+    audit: audits/TECH_DECISIONS.md
+    rule_id: R-MINIMUM-SUFFICIENT-RENDER
+  - mechanism: M25 装饰优先
+    node: knowledge/anti_patterns/decoration-first.md
+    rule_id: R-STRATEGY-FIRST

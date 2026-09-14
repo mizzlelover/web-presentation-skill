@@ -1,0 +1,729 @@
+{
+ "ir_version": "1.0",
+ "presentation": {
+  "id": "real-who-health-statistics-2025",
+  "title": "《2025年世界卫生统计》信号解读 · 全球卫生进展正在减速",
+  "situation": "Research Briefing / 集团国际化业务与公共事务团队（研究报告类）",
+  "communication_goal": [
+   "inform",
+   "explain"
+  ],
+  "audience": {
+   "role": "集团国际化业务与公共事务团队",
+   "expertise": "mixed（业务 + 政策研究）",
+   "prior_knowledge": "了解可持续发展议程常识，未读过 WHO 原报告",
+   "decision_power": "influencer",
+   "attitude": "neutral",
+   "motivation": "从全球卫生数据中识别与本集团海外业务和 ESG 议程相关的信号",
+   "concerns": [
+    "进展放缓的具体证据",
+    "区域人力缺口",
+    "哪些指标在改善"
+   ],
+   "objections": [
+    "新闻稿是不是只讲坏消息"
+   ],
+   "time_budget": "8 分钟",
+   "cognitive_load_tolerance": "medium",
+   "expected_detail": "structured-findings",
+   "likely_questions": [
+    "三个十亿目标的口径是什么"
+   ]
+  },
+  "central_thesis": "WHO 年度体检给出减速判断：预期寿命两年下降 1.8 岁是十年进展的逆转；三个十亿目标一项超额、两项滞后；若不调向，2024–2030 将失去避免 70 万孕产妇与 800 万儿童死亡的机会——而 1110 万卫生人力缺口（70% 集中于非洲与东地中海）是硬约束。",
+  "duration_minutes": 8,
+  "modes": {
+   "stage": true,
+   "reader": {
+    "enabled": true,
+    "deep_links": true
+   },
+   "print": {
+    "enabled": true,
+    "expand_critical": true,
+    "show_citations": true
+   }
+  },
+  "brand": {
+   "theme": "editorial",
+   "constraints": "新闻稿摘要层：不外推国别数据；引述标明归属；UN 式数字分节逐字保留"
+  },
+  "theme": {
+   "name": "editorial",
+   "css": "themes/editorial.css",
+   "tokens": {
+    "--wp-accent": "#8a3324",
+    "--wp-bg": "#faf7f2",
+    "--wp-fg": "#1c1a17",
+    "--wp-muted": "#6e675e",
+    "--wp-radius": "4px",
+    "--wp-surface": "#f2ede4"
+   }
+  },
+  "runtime": {
+   "navigation": {
+    "keyboard": true,
+    "search": true,
+    "jump": true
+   },
+   "presenter_view": {
+    "notes": true,
+    "timer": true,
+    "next_scene": true
+   },
+   "motion": {
+    "respect_reduced_motion": true,
+    "controllable": true
+   },
+   "offline": true,
+   "performance_budget": {
+    "first_load_kb": 1400,
+    "max_image_kb": 200,
+    "target_fps": 60
+   }
+  },
+  "graph": {
+   "core_path": [
+    "opening",
+    "reversal",
+    "scorecard",
+    "momentum",
+    "cost",
+    "workforce",
+    "bright",
+    "takeaway"
+   ],
+   "optional_paths": [],
+   "deep_dives": [],
+   "evidence_appendix": [
+    "appendix"
+   ]
+  },
+  "qa_preparation": {
+   "likely_questions": [
+    {
+     "question": "三个十亿目标的口径是什么",
+     "answer_scene": "scorecard"
+    },
+    {
+     "question": "有没有正在改善的指标",
+     "answer_scene": "bright"
+    }
+   ],
+   "objection_handling": [
+    {
+     "objection": "新闻稿是不是只讲坏消息",
+     "response_scene": "bright"
+    }
+   ]
+  },
+  "constraints": "新闻稿摘要层：不外推国别数据；引述标明归属；UN 式数字分节逐字保留"
+ },
+ "theme": {
+  "name": "editorial",
+  "css": "themes/editorial.css",
+  "tokens": {
+   "--wp-accent": "#8a3324",
+   "--wp-bg": "#faf7f2",
+   "--wp-fg": "#1c1a17",
+   "--wp-muted": "#6e675e",
+   "--wp-radius": "4px",
+   "--wp-surface": "#f2ede4"
+  }
+ },
+ "runtime": {
+  "navigation": {
+   "keyboard": true,
+   "search": true,
+   "jump": true
+  },
+  "presenter_view": {
+   "notes": true,
+   "timer": true,
+   "next_scene": true
+  },
+  "motion": {
+   "respect_reduced_motion": true,
+   "controllable": true
+  },
+  "offline": true,
+  "performance_budget": {
+   "first_load_kb": 1400,
+   "max_image_kb": 200,
+   "target_fps": 60
+  }
+ },
+ "modes": {
+  "stage": true,
+  "reader": {
+   "enabled": true,
+   "deep_links": true
+  },
+  "print": {
+   "enabled": true,
+   "expand_critical": true,
+   "show_citations": true
+  }
+ },
+ "scenes": [
+  {
+   "id": "opening",
+   "role": "opening",
+   "cognitive_job": "orient",
+   "topic": "一份年度体检的结论",
+   "claim": "全球卫生进展正在减速",
+   "headline": {
+    "type": "assertion",
+    "text": "一份年度体检的结论：全球卫生进展正在::减速::",
+    "rationale": "orient 用断言直给报告核心判断，先立后证"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读（研究报告）",
+   "content": {
+    "stage": "WHO《2025年世界卫生统计》：进展放缓、复苏更慢、需要紧急全球行动。",
+    "reader": "本简报基于 WHO《2025年世界卫生统计》官方中文新闻稿（2025-05-15，原样抓取）。报告的核心判断：大流行冲击叠加此前已开始的放缓趋势，总体进展受到威胁。新闻稿为摘要层，本简报不引用未出现的国别数据。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "本简报基于 WHO《2025年世界卫生统计》官方中文新闻稿（2025-05-15，原样抓取）。报告的核心判断：大流行冲击叠加此前已开始的放缓趋势，总体进展受到威胁。新闻稿为摘要层，本简报不引用未出现的国别数据。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "本简报基于 WHO《2025年世界卫生统计》官方中文新闻稿（2025-05-15，原样抓取）。报告的核心判断：大流行冲击叠加此前已开始的放缓趋势，总体进展受到威胁。新闻稿为摘要层，本简报不引用未出现的国别数据。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [],
+   "source_refs": [
+    "世卫组织发布了《2025年世界卫生统计》报告，揭示了COVID-19大流行对生命损失、寿命以及总体健康和福祉造成的更深层次的健康影响。"
+   ]
+  },
+  {
+   "id": "reversal",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "十年进展被两年逆转",
+   "claim": "预期寿命下降 1.8 岁",
+   "headline": {
+    "type": "assertion",
+    "text": "十年进展被两年逆转：预期寿命::下降 1.8 岁::",
+    "rationale": "explain 减速的最直接证据，先给量级再给机制（焦虑抑郁）"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "2019–2021 两年间全球预期寿命下降 1.8 岁，为近年来最大降幅；COVID 相关焦虑抑郁使健康预期寿命再减 6 周。",
+    "reader": "减速判断的直接证据：2019 年至 2021 年短短两年，全球预期寿命下降 1.8 岁——近些年来最大降幅，扭转了十年来的卫生进展。同期，COVID 相关焦虑和抑郁水平上升使全球健康预期寿命减少 6 周，抵消了非传染性疾病死亡率降低带来的大部分收益。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "减速判断的直接证据：2019 年至 2021 年短短两年，全球预期寿命下降 1.8 岁——近些年来最大降幅，扭转了十年来的卫生进展。同期，COVID 相关焦虑和抑郁水平上升使全球健康预期寿命减少 6 周，抵消了非传染性疾病死亡率降低带来的大部分收益。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "减速判断的直接证据：2019 年至 2021 年短短两年，全球预期寿命下降 1.8 岁——近些年来最大降幅，扭转了十年来的卫生进展。同期，COVID 相关焦虑和抑郁水平上升使全球健康预期寿命减少 6 周，抵消了非传染性疾病死亡率降低带来的大部分收益。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "1.8 岁",
+       "label": "全球预期寿命降幅（2019–2021）",
+       "accent": true
+      },
+      {
+       "value": "6 周",
+       "label": "健康预期寿命额外损失"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "在2019年至2021年的短短两年时间里，全球预期寿命下降了1.8岁，这是近些年来最大的降幅，扭转了十年来的卫生进展。",
+    "与COVID-19相关的焦虑和抑郁水平的上升使全球健康预期寿命减少了6周，抵消了同期非传染性疾病死亡率降低所带来的大部分收益。"
+   ]
+  },
+  {
+   "id": "scorecard",
+   "role": "evidence",
+   "cognitive_job": "quantify",
+   "topic": "三个十亿目标",
+   "claim": "一项超额，两项滞后",
+   "headline": {
+    "type": "assertion",
+    "text": "三个十亿目标：一项超额，::两项滞后::",
+    "rationale": "quantify 成绩单是本报告的核心数据结构，用条形图对比三项进展与目标线"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "更健康人口 +14 亿（目标 10 亿，超额）；基本服务覆盖 +4.31 亿、应急保护 +6.37 亿——双双进展缓慢。",
+    "reader": "三个十亿目标成绩单（到 2024 年底）：过上更健康生活的人口估计增加 14 亿人，超过 10 亿人目标；能够获得基本卫生服务而不遭遇经济困难的人口只增加 4.31 亿人；面对突发卫生事件受到更好保护的人口增加近 6.37 亿人。一图读法：第一项越过目标线，后两项与目标线的差距就是「放缓」的结构位置。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "data_insight",
+   "layout_intent": null,
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "三个十亿目标成绩单（到 2024 年底）：过上更健康生活的人口估计增加 14 亿人，超过 10 亿人目标；能够获得基本卫生服务而不遭遇经济困难的人口只增加 4.31 亿人；面对突发卫生事件受到更好保护的人口增加近 6.37 亿人。一图读法：第一项越过目标线，后两项与目标线的差距就是「放缓」的结构位置。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "三个十亿目标成绩单（到 2024 年底）：过上更健康生活的人口估计增加 14 亿人，超过 10 亿人目标；能够获得基本卫生服务而不遭遇经济困难的人口只增加 4.31 亿人；面对突发卫生事件受到更好保护的人口增加近 6.37 亿人。一图读法：第一项越过目标线，后两项与目标线的差距就是「放缓」的结构位置。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": "图表见 caption",
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [
+    {
+     "type": "chart",
+     "kind": "bar",
+     "unit": "亿人",
+     "categories": [
+      "更健康生活（目标 10 亿）",
+      "基本服务覆盖（目标 10 亿）",
+      "应急保护（目标 10 亿）"
+     ],
+     "series": [
+      {
+       "name": "实际进展",
+       "data": [
+        14,
+        4.31,
+        6.37
+       ]
+      },
+      {
+       "name": "目标线",
+       "data": [
+        10,
+        10,
+        10
+       ]
+      }
+     ],
+     "caption": "口径：三个十亿目标 2018 年以来累计新增人口（亿人）；目标线均为 10 亿；来源：WHO 新闻稿「卫生方面的进展和挫折」节"
+    }
+   ],
+   "source_refs": [
+    "到2024年底，过上更健康生活的人口估计增加了14亿人，超过了10亿人的目标。",
+    "能够获得基本卫生服务而不会遭遇经济困难的人口只增加了4.31亿人，面对突发卫生事件受到更好保护的人口增加了近6.37亿人。"
+   ]
+  },
+  {
+   "id": "momentum",
+   "role": "argument",
+   "cognitive_job": "explain",
+   "topic": "历史动能是真的",
+   "claim": "孕产妇死亡率降 40% 以上、<br>儿童死亡率减半——但动",
+   "headline": {
+    "type": "assertion",
+    "text": "历史动能是真的：孕产妇死亡率::降 40% 以上::、<br>儿童死亡率::减半::——但动能正在消失",
+    "rationale": "explain 先立历史成绩再点停滞，避免单向唱衰，构成对比张力"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "2000–2023 孕产妇死亡率下降 40% 以上、5 岁以下儿童死亡率下降一半以上；但初级卫生保健投资不足、熟练卫生工作者短缺、服务差距正在拖住进展。",
+    "reader": "报告并不否认二十年成绩：2000 年至 2023 年，孕产妇死亡率下降 40% 以上，5 岁以下儿童死亡率下降一半以上。但下降速度不够快、无法实现全球目标——拖住进展的是初级卫生保健投资不足、熟练卫生工作者短缺以及免疫接种和安全分娩等服务的差距。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "报告并不否认二十年成绩：2000 年至 2023 年，孕产妇死亡率下降 40% 以上，5 岁以下儿童死亡率下降一半以上。但下降速度不够快、无法实现全球目标——拖住进展的是初级卫生保健投资不足、熟练卫生工作者短缺以及免疫接种和安全分娩等服务的差距。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "报告并不否认二十年成绩：2000 年至 2023 年，孕产妇死亡率下降 40% 以上，5 岁以下儿童死亡率下降一半以上。但下降速度不够快、无法实现全球目标——拖住进展的是初级卫生保健投资不足、熟练卫生工作者短缺以及免疫接种和安全分娩等服务的差距。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [],
+   "source_refs": [
+    "2000年至2023年，孕产妇死亡率下降了40%以上，5岁以下儿童死亡率下降了一半以上。",
+    "但是，初级卫生保健投资不足、熟练卫生工作者短缺以及免疫接种和安全分娩等服务方面的差距正在阻碍各国的发展。"
+   ]
+  },
+  {
+   "id": "cost",
+   "role": "argument",
+   "cognitive_job": "quantify",
+   "topic": "不调向的代价",
+   "claim": "70 万孕产妇、<br>800 万儿童",
+   "headline": {
+    "type": "assertion",
+    "text": "不调向的代价：::70 万::孕产妇、<br>::800 万::儿童",
+    "rationale": "quantify 把「放缓」翻译成可感的生命代价，是报告最有说服力的一句"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "不紧急调向，2024–2030 年世界将失去避免另外 70 万孕产妇与 800 万 5 岁以下儿童死亡的机会。",
+    "reader": "报告把「不调向」量化：如果不紧急调整方向以实现 2030 年目标，世界可能会失去在 2024 年至 2030 年期间避免另外 70 万孕产妇和 800 万 5 岁以下儿童死亡的机会。这是本简报中最应被记住的一句——放缓不是统计现象，是可计数的生命后果。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "high",
+   "cognitive_load": "high",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "报告把「不调向」量化：如果不紧急调整方向以实现 2030 年目标，世界可能会失去在 2024 年至 2030 年期间避免另外 70 万孕产妇和 800 万 5 岁以下儿童死亡的机会。这是本简报中最应被记住的一句——放缓不是统计现象，是可计数的生命后果。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "报告把「不调向」量化：如果不紧急调整方向以实现 2030 年目标，世界可能会失去在 2024 年至 2030 年期间避免另外 70 万孕产妇和 800 万 5 岁以下儿童死亡的机会。这是本简报中最应被记住的一句——放缓不是统计现象，是可计数的生命后果。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      {
+       "value": "70 万",
+       "label": "可能失去避免死亡的孕产妇（2024–2030）",
+       "accent": true
+      },
+      {
+       "value": "800 万",
+       "label": "可能失去避免死亡的 5 岁以下儿童"
+      }
+     ]
+    }
+   ],
+   "source_refs": [
+    "如果不紧急调整方向以实现2030年目标，世界可能会失去在2024年至2030年期间避免另外70万孕产妇和800万5岁以下儿童死亡的机会。"
+   ]
+  },
+  {
+   "id": "workforce",
+   "role": "evidence",
+   "cognitive_job": "explain",
+   "topic": "2030 硬约束",
+   "claim": "1 110 万卫生人力缺口，<br>近 70% 集中在两个区",
+   "headline": {
+    "type": "assertion",
+    "text": "2030 硬约束：::1 110 万::卫生人力缺口，<br>近 70% 集中在两个区域",
+    "rationale": "explain 点出结构性约束与区域分布，是受众最可操作的信号"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "到 2030 年预计短缺 1 110 万卫生工作者，近 70% 的缺口集中在世卫组织非洲区域和东地中海区域。",
+    "reader": "结构约束：预计到 2030 年仍将短缺 1 110 万卫生工作者，其中近 70% 的缺口集中在世卫组织非洲区域和东地中海区域。对国际化业务而言，这是区域人力与服务可得性的长期背景变量。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "结构约束：预计到 2030 年仍将短缺 1 110 万卫生工作者，其中近 70% 的缺口集中在世卫组织非洲区域和东地中海区域。对国际化业务而言，这是区域人力与服务可得性的长期背景变量。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "结构约束：预计到 2030 年仍将短缺 1 110 万卫生工作者，其中近 70% 的缺口集中在世卫组织非洲区域和东地中海区域。对国际化业务而言，这是区域人力与服务可得性的长期背景变量。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [],
+   "source_refs": [
+    "预计到2030年仍将短缺1 110万卫生工作者，其中近70%的缺口集中在世卫组织非洲区域和东地中海区域。"
+   ]
+  },
+  {
+   "id": "bright",
+   "role": "evidence",
+   "cognitive_job": "compare",
+   "topic": "不是全是坏消息",
+   "claim": "酒精5.7 → 5.0 升，<br>烟草与空气质量仍在改善",
+   "headline": {
+    "type": "contrast",
+    "text": "不是全是坏消息：酒精::5.7 → 5.0 升::，<br>烟草与空气质量仍在改善",
+    "rationale": "compare 亮暗对照防止单向叙事，同时交代反例（疟疾）"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "2010–2022 全球人均酒精消费 5.7 升降至 5.0 升；烟草使用减少、空气质量改善推动更健康生活进展。反例：疟疾自 2015 年以来死灰复燃。",
+    "reader": "报告同样记录了进展：2010 年至 2022 年，全球人均酒精消费量从 5.7 升降至 5.0 升；烟草使用的减少、空气质量的改善以及水与环境卫生的改善，推动了更健康生活方面的进展。对照面：自 2015 年以来疟疾一直在死灰复燃，抗微生物药物耐药性仍是公共卫生挑战。对「新闻稿只讲坏消息」的回应：它讲的是分化，不是单向恶化。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "hierarchy",
+   "layout_intent": null,
+   "information_density": "medium",
+   "cognitive_load": "medium",
+   "render_level": "L2",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "报告同样记录了进展：2010 年至 2022 年，全球人均酒精消费量从 5.7 升降至 5.0 升；烟草使用的减少、空气质量的改善以及水与环境卫生的改善，推动了更健康生活方面的进展。对照面：自 2015 年以来疟疾一直在死灰复燃，抗微生物药物耐药性仍是公共卫生挑战。对「新闻稿只讲坏消息」的回应：它讲的是分化，不是单向恶化。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "报告同样记录了进展：2010 年至 2022 年，全球人均酒精消费量从 5.7 升降至 5.0 升；烟草使用的减少、空气质量的改善以及水与环境卫生的改善，推动了更健康生活方面的进展。对照面：自 2015 年以来疟疾一直在死灰复燃，抗微生物药物耐药性仍是公共卫生挑战。对「新闻稿只讲坏消息」的回应：它讲的是分化，不是单向恶化。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [],
+   "source_refs": [
+    "2010年至2022年期间，全球人均酒精消费量从5.7升降至5.0升。",
+    "烟草使用的减少、空气质量的改善以及获取水、个人卫生和环境卫生设施的机会改善推动了更健康生活方面的进展。",
+    "但自2015年以来，疟疾一直在死灰复燃"
+   ]
+  },
+  {
+   "id": "takeaway",
+   "role": "summary",
+   "cognitive_job": "summarize",
+   "topic": "每一个数据点的背后，都是",
+   "claim": "每一个数据点的背后，都是一个人",
+   "headline": {
+    "type": "narrative",
+    "text": "每一个数据点的背后，::都是一个人::",
+    "rationale": "叙事式收束，用总干事引语把统计拉回人本立场，标注引述归属"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "「每一个数据点的背后都是一个人……每一个政府都有责任采取行动，要有紧迫感，作出承诺，对所服务的人民负责。」——WHO 总干事谭德塞（引述）。",
+    "reader": "立场信号（引述归属 WHO，不代表本集团立场）：总干事谭德塞在新闻稿中说，「每一个数据点的背后都是一个人——一个未满五岁的儿童，一个在分娩中丧生的母亲，一个因可预防的疾病而夭折的生命」，并强调「每一个政府都有责任采取行动，要有紧迫感，作出承诺，对所服务的人民负责」。对受众的收束：跟踪这份报告的意义在于把全球信号转译为区域业务与 ESG 议程的输入变量。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "立场信号（引述归属 WHO，不代表本集团立场）：总干事谭德塞在新闻稿中说，「每一个数据点的背后都是一个人——一个未满五岁的儿童，一个在分娩中丧生的母亲，一个因可预防的疾病而夭折的生命」，并强调「每一个政府都有责任采取行动，要有紧迫感，作出承诺，对所服务的人民负责」。对受众的收束：跟踪这份报告的意义在于把全球信号转译为区域业务与 ESG 议程的输入变量。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "立场信号（引述归属 WHO，不代表本集团立场）：总干事谭德塞在新闻稿中说，「每一个数据点的背后都是一个人——一个未满五岁的儿童，一个在分娩中丧生的母亲，一个因可预防的疾病而夭折的生命」，并强调「每一个政府都有责任采取行动，要有紧迫感，作出承诺，对所服务的人民负责」。对受众的收束：跟踪这份报告的意义在于把全球信号转译为区域业务与 ESG 议程的输入变量。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [
+    {
+     "type": "quote",
+     "text": "每一个数据点的背后<br>::都是一个人::。",
+     "cite": "世卫组织总干事谭德塞 ·《2025年世界卫生统计》新闻稿（引述）"
+    }
+   ],
+   "source_refs": [
+    "「每一个数据点的背后都是一个人——一个未满五岁的儿童，一个在分娩中丧生的母亲，一个因可预防的疾病而夭折的生命，」世卫组织总干事谭德塞博士说。",
+    "每一个政府都有责任采取行动，要有紧迫感，作出承诺，对所服务的人民负责。"
+   ]
+  },
+  {
+   "id": "appendix",
+   "role": "appendix",
+   "cognitive_job": "prove",
+   "topic": "附录",
+   "claim": "来源、口径与诚实声明",
+   "headline": {
+    "type": "topic",
+    "text": "附录：来源、口径与诚实声明",
+    "rationale": "附录备查：来源唯一性与摘要层声明"
+   },
+   "kicker": "WHO 世界卫生统计 2025 解读",
+   "content": {
+    "stage": "来源、口径与诚实声明。",
+    "reader": "附录：唯一来源为 WHO 官方中文新闻稿（who.int/zh，2025-05-15，原样抓取）。新闻稿是《2025年世界卫生统计》报告的摘要层，不含报告全文的分国别数据，本简报不外推。三个十亿目标图中目标线为统一 10 亿（各自口径详见 WHO 原报告）。数字 UN 式分节（如「1 110万」）在引文中逐字保留。"
+   },
+   "evidence": [
+    {
+     "type": "official",
+     "ref": "who-whs-2025",
+     "source": "世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+     "unit": null,
+     "time": "2025-05-15",
+     "scope": "全球"
+    }
+   ],
+   "visual_semantics": "assertion_evidence",
+   "layout_intent": null,
+   "information_density": "low",
+   "cognitive_load": "low",
+   "render_level": "L1",
+   "render_rationale": null,
+   "reveal_strategy": "none",
+   "motion_intent": [],
+   "interaction": [],
+   "deep_dive": null,
+   "speaker_notes": "附录：唯一来源为 WHO 官方中文新闻稿（who.int/zh，2025-05-15，原样抓取）。新闻稿是《2025年世界卫生统计》报告的摘要层，不含报告全文的分国别数据，本简报不外推。三个十亿目标图中目标线为统一 10 亿（各自口径详见 WHO 原报告）。数字 UN 式分节（如「1 110万」）在引文中逐字保留。",
+   "screen_role": null,
+   "speaker_role": null,
+   "reader_content": "附录：唯一来源为 WHO 官方中文新闻稿（who.int/zh，2025-05-15，原样抓取）。新闻稿是《2025年世界卫生统计》报告的摘要层，不含报告全文的分国别数据，本简报不外推。三个十亿目标图中目标线为统一 10 亿（各自口径详见 WHO 原报告）。数字 UN 式分节（如「1 110万」）在引文中逐字保留。（口径与限定语以原文为准；推导内容已声明。）",
+   "print_state": "完整打印",
+   "branch_targets": [],
+   "accessibility": {
+    "alt_text": null,
+    "notes": null
+   },
+   "source": "来源：世卫组织在新的统计报告中警告说全球卫生进展正在放缓（《2025年世界卫生统计》官方中文新闻稿）",
+   "blocks": [
+    {
+     "type": "evidence",
+     "items": [
+      {
+       "title": "唯一来源",
+       "source": "WHO 官方中文新闻稿（who.int/zh，2025-05-15）",
+       "grade": "官方"
+      },
+      {
+       "title": "摘要层声明",
+       "source": "新闻稿不含报告全文的分国别数据，不外推",
+       "grade": "声明"
+      },
+      {
+       "title": "引述归属",
+       "source": "总干事引语的立场归属 WHO",
+       "grade": "声明"
+      }
+     ]
+    }
+   ],
+   "source_refs": []
+  }
+ ]
+}

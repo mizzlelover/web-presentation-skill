@@ -1,0 +1,182 @@
+{
+ "schema": "scene-plan.v1",
+ "deck_title": "联合国 NCD 政治宣言解读 · 一份全球健康承诺的续期",
+ "argument_map_ref": "argument-map.json",
+ "load_curve_rule": "连续 HIGH ≤2 幕",
+ "scenes": [
+  {
+   "order": 1,
+   "id": "opening",
+   "arg_ref": "THESIS",
+   "cognitive_job": "orient",
+   "load": "low",
+   "headline_type": "assertion",
+   "headline": "一份全球健康承诺的::续期文件::：第 80/117 号决议",
+   "chart": null,
+   "source_refs": [
+    "通过日期 联合国大会2025年12月15日第80/117号决议通过",
+    "我们各国元首和政府首脑以及国家和政府的代表，于2025年9月25日齐聚联合国，审查在预防和控制非传染性疾病及促进精神卫生和健康方面取得的进展，承诺加快实施一套循证、具有成本效益、可负担的优先行动"
+   ]
+  },
+  {
+   "order": 2,
+   "id": "renewal",
+   "arg_ref": "C1",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "核心承诺续期：2030 年前::过早死亡减少三分之一::",
+   "chart": null,
+   "source_refs": [
+    "1. 坚定重申我们的承诺，通过预防和控制非传染性疾病及促进精神卫生和健康，到2030年将非传染性疾病导致的过早死亡减少三分之一，为此加快执行2011年、2014年和2018年举行的大会关于预防和控制非传染性疾病的历次高级别会议核准的政治宣言和成果文件；"
+   ]
+  },
+  {
+   "order": 3,
+   "id": "burden",
+   "arg_ref": "C2",
+   "cognitive_job": "quantify",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "负担总量：每年::4 300 万::死亡，<br>::1 800 万::属于过早死亡",
+   "chart": null,
+   "source_refs": [
+    "强调非传染性疾病造成的负担，此类疾病每年总共导致超过4 300万人死亡，其中1 800万人属于过早死亡(70岁前)，涵盖了在死亡人数中占比最大的心血管疾病以及癌症、糖尿病和慢性呼吸系统疾病"
+   ]
+  },
+  {
+   "order": 4,
+   "id": "conditions",
+   "arg_ref": "C3",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "疾病谱的精确规模：::13 亿::高血压、<br>::8 亿::糖尿病、::37 亿::口腔疾病",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "亿人",
+    "categories": [
+     "口腔疾病",
+     "高血压",
+     "慢性肾病",
+     "糖尿病",
+     "罕见病"
+    ],
+    "series": [
+     {
+      "name": "全球患病人口",
+      "data": [
+       37,
+       13,
+       6.74,
+       8,
+       3
+      ]
+     }
+    ],
+    "caption": "口径：宣言第 9 条 (a)–(f) 项患病人口规模（亿）；高血压为成年人、糖尿病为成年人、罕见病为「超过 3 亿」；来源：UN 第 80/117 号决议中文文本"
+   },
+   "source_refs": [
+    "(a) 13亿成年人患有高血压，其中只有五分之一的人病情得到控制；(b) 8亿成年人患有糖尿病；(c) 五分之一的人在一生中会罹患癌症，每年新增癌症病例2 000万，其中400 000例是儿童；(d) 37亿人患有口腔疾病；(e) 超过6.74亿人受慢性肾病影响；(f) 超过3亿人患有罕见病；"
+   ]
+  },
+  {
+   "order": 5,
+   "id": "mental",
+   "arg_ref": "C5",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "精神健康进入 NCD 主议程：::近 10 亿::人受影响",
+   "chart": null,
+   "source_refs": [
+    "强调包括焦虑、抑郁和精神病在内的精神健康问题影响全世界近10亿人",
+    "还强调自杀是15至29岁人群的第三大死因；"
+   ]
+  },
+  {
+   "order": 6,
+   "id": "risks",
+   "arg_ref": "C4",
+   "cognitive_job": "quantify",
+   "load": "high",
+   "headline_type": "assertion",
+   "headline": "风险三巨头全部::可预防::：烟草、<br>空气污染、饮酒",
+   "chart": {
+    "type": "chart",
+    "kind": "bar",
+    "unit": "万人/年",
+    "categories": [
+     "烟草（含二手烟 160 万）",
+     "空气污染",
+     "饮酒"
+    ],
+    "series": [
+     {
+      "name": "年相关死亡",
+      "data": [
+       700,
+       700,
+       260
+      ]
+     }
+    ],
+    "caption": "口径：宣言第 13 条 (a)(b)(e) 项年相关死亡人数（万人）；烟草与空气污染均为「超过/近 700 万」；来源：UN 第 80/117 号决议中文文本"
+   },
+   "source_refs": [
+    "又认识到非传染性疾病的主要可改变风险因素是使用烟草、有害使用酒精、不健康饮食、缺乏身体活动和空气污染，这些因素在很大程度上可以预防，需要采取跨部门行动；",
+    "(a)有13亿人使用烟草，每年有超过700万人的死亡与烟草有关，其中估计有160万人是接触二手烟雾的非吸烟者；(b) 每年有260万人死于饮酒；",
+    "(e) 每年有近700万人因空气污染而死亡，99%人口所处环境的空气污染达到不安全水平；"
+   ]
+  },
+  {
+   "order": 7,
+   "id": "children",
+   "arg_ref": "C5",
+   "cognitive_job": "explain",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "最重的信号在下一代：::3 500 万::幼儿超重",
+   "chart": null,
+   "source_refs": [
+    "(c) 目前有3 500万名5岁以下儿童超重；(d) 有3.9亿名5至19岁儿童超重或肥胖，而成人肥胖自1990年以来增加一倍多；"
+   ]
+  },
+  {
+   "order": 8,
+   "id": "window",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "medium",
+   "headline_type": "assertion",
+   "headline": "政策窗口：2030 冲刺叠加::公平与融合::主线",
+   "chart": null,
+   "source_refs": [
+    "和专门机构协作，在2030年底前向大会提交一份进展报告，说明关于预防和控制非传染性疾病及促进精神卫生和健康的本政治宣言的执行情况，该报告将为定于2031年召开的下次高级别会议提供参考信息。"
+   ]
+  },
+  {
+   "order": 9,
+   "id": "close",
+   "arg_ref": "THESIS",
+   "cognitive_job": "summarize",
+   "load": "low",
+   "headline_type": "narrative",
+   "headline": "承诺已续期，::杠杆在可预防::",
+   "chart": null,
+   "source_refs": []
+  },
+  {
+   "order": 10,
+   "id": "appendix",
+   "arg_ref": null,
+   "cognitive_job": "prove",
+   "load": "low",
+   "headline_type": "topic",
+   "headline": "附录：来源、口径与诚实声明",
+   "chart": null,
+   "source_refs": []
+  }
+ ]
+}
